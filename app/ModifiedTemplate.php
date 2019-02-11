@@ -78,7 +78,7 @@ class ModifiedTemplate extends Model
     public function updateStatus($jobId,$jobStatus) {
       DB::table('templates_modified')
         ->where('job_id', $jobId)
-        ->update(['job_status' => $jobStatus['status'],'url' => $jobStatus['url'],'thumbnail' => $jobStatus['thumbnailUrl']]);
+        ->update(['job_status' => $jobStatus['status'],'url_modified' => $jobStatus['url'],'thumbnail_modified' => $jobStatus['thumbnailUrl']]);
       return '{"success":"OK"}';
     }
 

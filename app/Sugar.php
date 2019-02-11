@@ -3,15 +3,18 @@
 namespace App;
 
 use Cache;
-//use Storage;
 use Log;
-//use Carbon\Carbon;
-//use GuzzleHttp;
+use Illuminate\Database\Eloquent\Model;
+use DB;
 
 // SugarCRM (Expand) helper
 // http://10.1.9.145/rest/v10/help
-class Sugar
+class Sugar extends Model
 {
+  // Table Name
+  protected $table = 'oem_codes';
+  // Primary Key
+  public $primaryKey = 'code';
 
   private $pagelimit = 20;
   private $cacheminutes = 1440;
@@ -131,6 +134,12 @@ class Sugar
       $fields = "name,accounts_nets_channels,description,deleted,screenorientation_c,harrisplayerid_c,account_number_c";
       $channels = $this->CallSugarAPI("GET", "nets_channels?fields=".$fields."&".$filters."","", $this->token);
       return $channels;
+  }
+
+  // Get OEMs
+  public function scopeGetOems($query)
+  {
+    return DB::select('SELECT code,oems FROM oem_codes');
   }
 
 }

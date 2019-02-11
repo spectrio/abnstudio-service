@@ -42,6 +42,8 @@ class Template extends Model
     }
 
     // Get incomplete jobs
+    // if you're trying to figure out why job status isn't refreshing, keep in
+    // mind the difference between /refresh and /modified/refresh
     public function scopeIncompleteJobs($query)
     {
       return $query

@@ -59,13 +59,24 @@ class ModifyTemplateController extends Controller
       //  return($renderResult);
       //}
 
+      if(isset($data['template']['playlists'])) {
+        $playlists = implode(',', $data['template']['playlists']);
+      } else {
+        $playlists = null;
+      }
+
+
       // Save the modified template to database
       $save->tid = $data['template']['tid'];
       $save->acct = $data['template']['acct'];
+      $save->name_modified = $data['template']['name_modified'];
+      $save->oem = $data['template']['oem'] ?? null;
+      $save->logotype = $data['template']['logotype'] ?? null;
+      $save->playlists = $playlists;
       $save->job_id = $output['render']['jobId'] ?? null;
       $save->job_status = null;
-      $save->url = null;
-      $save->thumbnail = null;
+      $save->url_modified = null;
+      $save->thumbnail_modified = null;
       if(!$renderOnly) {
         $save->save();
       }

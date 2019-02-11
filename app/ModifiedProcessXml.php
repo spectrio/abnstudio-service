@@ -4,6 +4,7 @@ namespace App;
 use DOMDocument;
 use SimpleXMLElement;
 use App\Branding;
+use App\Scala;
 
 class ModifiedProcessXml
 {
@@ -93,6 +94,36 @@ class ModifiedProcessXml
   // Apply branding data
   public function loadBrandingData($xmlObj,$data,$xmlMeta)
   {
+
+    // Non OEM-specific data (logo)
+    foreach ($xmlMeta as $layer => $meta) {
+      // Apply branding to image elements
+      $result = $xmlObj->xpath('//*[@title="' . $layer . '"]/image|//*[@title="' . $layer . '"]/video');
+      if(!empty($result)) {
+        foreach ($result as $node) {
+          // Apply logotype (dealer logo or none)
+          if(isset($xmlMeta[$layer]['clo']) && isset($data['template']['logotype'])) { // && isset($data['template']['logotype'])
+            if($data['template']['logotype'] == 'dealer') {
+              $id = '20170'; // TODO
+              $white = 0;
+              if($xmlMeta[$layer]['clo'] == 'w') {
+                $white = 1;
+              }
+              $Scala = new Scala();
+              $output['logo'] = $Scala->get_logo($id);
+              if($white) {
+                $output['logo'] = str_replace('.png','_WHITE.png',$output['logo']);
+              }
+              $node->attributes()->src = $output['logo'];//'http://10.1.10.141/img/abnlogo.png';
+            } else {
+              $node->attributes()->src = '';
+            }
+
+          }
+        }
+      }
+    }
+
     // If OEM was passed in, apply branding template
     if($data['template']['oem'] ?? '') {
       $brandTemplate = Branding::getBranding($data['template']['oem'])->first();
@@ -308,6 +339,8 @@ class ModifiedProcessXml
               $bir = $json[$xmlMeta[$layer]['bir']];
               $node->attributes()->src = $bir;
             }
+
+
 
             // Apply bis meta (Brand Image Swap)
             if(isset($xmlMeta[$layer]['bis'])) {

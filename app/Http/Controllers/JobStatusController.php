@@ -25,7 +25,6 @@ class JobStatusController extends Controller
   public function refresh()
   {
     $jobs = Template::incompleteJobs()->get();
-
     // Loop through all incomplete jobs and get their status from WeVideo
     foreach ($jobs as $job) {
       $processXml = new ProcessXml;

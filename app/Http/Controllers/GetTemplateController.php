@@ -7,6 +7,7 @@ use App\Template;
 use App\FormFields;
 use App\ProcessXml;
 use App\Scala;
+use App\Sugar;
 use Illuminate\Support\Facades\Auth;
 
 class GetTemplateController extends Controller
@@ -76,7 +77,7 @@ class GetTemplateController extends Controller
   public function delete(Request $request)
   {
     $this->middleware('auth');
-    
+
     $id = $request->input('id') ?? 0;
     if(isset($id)) {
       $deleteTemplate = Template::getTemplate($id)->delete();
