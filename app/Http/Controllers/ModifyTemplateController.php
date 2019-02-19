@@ -61,18 +61,25 @@ class ModifyTemplateController extends Controller
 
       if(isset($data['template']['playlists'])) {
         $playlists = implode(',', $data['template']['playlists']);
-      } else {
-        $playlists = null;
+      }
+
+      if(isset($data['template']['publish']) && $data['template']['publish']) {
+        $publish = 1;
       }
 
 
       // Save the modified template to database
       $save->tid = $data['template']['tid'];
       $save->acct = $data['template']['acct'];
+      $save->acct_name = $data['template']['acctName'];
       $save->name_modified = $data['template']['name_modified'];
       $save->oem = $data['template']['oem'] ?? null;
       $save->logotype = $data['template']['logotype'] ?? null;
-      $save->playlists = $playlists;
+      $save->publish = $publish ?? null;
+      $save->username = $data['template']['username'] ?? null;
+      $save->playlists = $playlists ?? null;
+      //$save->start_date = $output['template']['startdate'] ?? null;
+      //$save->end_date = $output['template']['enddate'] ?? null;
       $save->job_id = $output['render']['jobId'] ?? null;
       $save->job_status = null;
       $save->url_modified = null;
@@ -193,6 +200,24 @@ class ModifyTemplateController extends Controller
         return json_encode($output);
       } else {
         return '{"success":false, "message":"Account number required."}';
+      }
+    }
+
+    public function delete(Request $request)
+    {
+      //$this->middleware('auth');
+      $id = $request->input('id') ?? 0;
+      if(isset($id)) {
+        $modifiedTemplate = new ModifiedTemplate;
+        $deleteTemplate = $modifiedTemplate->GetModifiedTemplate($id)->delete();
+        if($deleteTemplate) {
+          $deleteRows = ModifiedFields::where('mtid', $id)->delete();
+          $output['success'] = "Modified Template deleted.";
+        } else {
+          $output['error'] = "Modified Template not found.";
+        }
+
+        return $output;
       }
     }
 

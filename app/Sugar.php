@@ -136,6 +136,16 @@ class Sugar extends Model
       return $channels;
   }
 
+  // Get list of accounts (without blank account numbers)
+  public function get_accounts() {
+      $filters = 'filter=[{"account_c":{"$not_equals":""}}]';
+      $fields = "name,account_c";
+      $order_by = "name";
+      $max_num = "-1";
+      $accounts = $this->CallSugarAPI("GET", "Accounts?fields=".$fields."&order_by=".$order_by."&max_num=".$max_num."&".$filters."","", $this->token);
+      return $accounts;
+  }
+
   // Get OEMs
   public function scopeGetOems($query)
   {

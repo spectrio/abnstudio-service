@@ -1,0 +1,22 @@
+{
+"fields":
+  {
+    "project":{"key":"NO"},
+    "summary":"",
+    "description":"",
+    "issuetype":{"name":"SWO"},
+    "customfield_10702":[
+      {"value":"(Orientations)"}
+    ],
+    "customfield_10505":{"name":"(DMM - username from LDAP)"},
+    "customfield_10705":"
+      ACME Corp - 12345
+      DTV Channels:
+      DSH Channels:
+      DSV Channels:
+      MB Channels:
+      VW Channels:",
+    "customfield_10716":"(Spot Start Date YYYY-MM-DDThh:mm:ss.sTZD)",
+    "customfield_10717":"(Spot End Date YYYY-MM-DDThh:mm:ss.sTZD)"
+  }
+}

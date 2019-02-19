@@ -21,6 +21,7 @@ class GetTemplateController extends Controller
   {
     $id = $request->input('id') ?? 0;
     $oem = $request->input('oem') ?? '';
+    $oems = $request->input('oems') ?? '';
     // ID was passed in
     if($id) {
       $template = Template::getTemplate($id)->get();
@@ -58,12 +59,34 @@ class GetTemplateController extends Controller
       }
 
     }
+    
     // OEM was passed in
     else if($oem) {
       if(strtolower($oem) == 'all') {$oem = '';}
       $templates = Template::getTemplatesByOem($oem)->get();
       $output['templates'] = $templates;
     }
+
+    // Multiple OEMs passed in
+    else if($oems) {
+      $oemsGood = array();
+      $oemArr = explode(',',$oems);
+      $oemArr[] = 'all';
+      $templates = Template::sortTemplates()->get();
+      $templates = json_decode(json_encode($templates),1);
+      foreach($templates as $k => $v) {
+          foreach($oemArr as $oemQuery) {
+            if(stripos($v['oems'],$oemQuery) !== false) {
+              $oemsGood[$k] = $k;
+            }
+          }
+        if(!isset($oemsGood[$k])) {
+          unset($templates[$k]);
+        }
+      }
+      $output['templates'] = $templates;
+    }
+
     // Return all templates
     else {
       $templates = Template::sortTemplates()->get();

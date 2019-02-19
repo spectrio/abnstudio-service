@@ -55,7 +55,7 @@ class ModifiedTemplate extends Model
     {
       return $query
         ->whereRaw('(job_id != "" AND job_id IS NOT NULL) AND (job_status != "COMPLETED" OR job_status IS NULL)')
-        ->select('tid', 'job_id', 'job_status', 'email');
+        ->select('tid', 'job_id', 'job_status', 'email', 'mtid', 'publish', 'playlists', 'username', 'acct', 'acct_name');
     }
 
     // Get template XML

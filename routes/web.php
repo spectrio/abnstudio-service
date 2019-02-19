@@ -33,9 +33,12 @@ $router->post('/modified/save', 'ModifyTemplateController@index');
 $router->patch('/modified/save', 'ModifyTemplateController@index');
 $router->get('/modified/get/{id}', 'ModifyTemplateController@get');
 $router->get('/modified/list[/{mode}/{id}]', 'ModifyTemplateController@list');
+$router->delete('modified/delete', 'ModifyTemplateController@delete');
 $router->get('/modified/status', 'ModifiedJobStatusController@index');
 $router->get('/modified/refresh', 'ModifiedJobStatusController@refresh');
 $router->get('/modified/queue', 'ModifiedJobStatusController@queue');
 
 $router->get('/channels[/{id}]', 'SugarController@index');
+$router->get('/accounts[/{cache}]', 'SugarController@getAccounts');
+$router->get('/accounts_cache', 'SugarController@getAccountsFromCache');
 $router->get('/jira[/{id}]', 'JiraController@index');

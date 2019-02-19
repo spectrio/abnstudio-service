@@ -6,6 +6,7 @@ use App\ModifiedProcessXml;
 use App\ModifiedTemplate;
 use Illuminate\Support\Facades\DB;
 use Mail;
+use App\Jira;
 
 class ModifiedJobStatusController extends Controller
 {
@@ -28,15 +29,31 @@ class ModifiedJobStatusController extends Controller
 
     // Loop through all incomplete jobs and get their status from WeVideo
     foreach ($jobs as $job) {
+      //print_r($job);die();
       $process = new ModifiedProcessXml;
       $jobId = $job->job_id;
       $jobEmail = $job->email;
+      $jobMtid = $job->mtid;
+      $jobPublish = $job->publish;
+      $jobAcct = $job->acct;
+      $jobAcctName = $job->acct_name;
+      $jobUsername = $job->username;
+      $jobPlaylists = $job->playlists;
       $jobStatus = $process->jobStatus($jobId);
       $jobStatus = json_decode($jobStatus,1);
 
       // If missing, add default values
       if(!isset($jobStatus['status'])) {
         $jobStatus['status'] = 'UNKNOWN';
+      }
+
+      // If completed, send JIRA ticket
+      if(isset($jobStatus['status']) && $jobStatus['status'] == 'COMPLETED') {
+        // Job marked as publish, so send out a JIRA ticket
+        if($jobPublish) {
+          $Jira = new Jira();
+          $output = $Jira->createIssue($jobMtid, $jobAcct, $jobAcctName, $jobUsername, $jobPlaylists, $jobStatus['url']);
+        }
       }
 
       if(!isset($jobStatus['url'])) {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Sugar;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class SugarController extends Controller
 {
@@ -13,6 +14,8 @@ class SugarController extends Controller
     //$this->middleware('auth');
   }
 
+
+  // Create a list of customer channels
   public function index($id = null)
   {
     $output = 'No response with ID: ' . $id;
@@ -29,6 +32,7 @@ class SugarController extends Controller
   }
 
 
+  // Create a list of OEMs from customer channels
   public function getOemList($channels)
   {
     $Sugar = new Sugar();
@@ -45,6 +49,42 @@ class SugarController extends Controller
     $oems = explode(',',$oems);
     $oems = array_map('trim',$oems);
     return array_filter(array_unique($oems));
+  }
+
+
+  // Create a list of all customer accounts. Optionally cache results to DB
+  public function getAccounts($cache = null)
+  {
+    $Sugar = new Sugar();
+    $accounts = json_decode(json_encode($Sugar->get_accounts()),1);
+    $accounts = $accounts['records'];
+    $accountList = array();
+    if($cache) {
+      //DB::table('accounts')->truncate();
+      DB::table('accounts')->where('id', 'like', '%%')->delete();
+    }
+    foreach($accounts as $v) {
+      $accountList[$v['account_c']]['guid'] = $v['id'];
+      $accountList[$v['account_c']]['name'] = $v['name'];
+      $accountList[$v['account_c']]['modified'] = $v['date_modified'];
+      if($cache) {
+        DB::table('accounts')->insert([
+          'id' => $v['account_c'],
+          'name' => $v['name'],
+          'guid' => $v['id'],
+          'modified' => $v['date_modified']
+        ]);
+      }
+    }
+    return $accountList;
+  }
+
+
+  // Create a list of all customer accounts. Optionally cache results to DB
+  public function getAccountsFromCache()
+  {
+    $accountsCache = DB::table('accounts')->get();
+    return $accountsCache;
   }
 
 }

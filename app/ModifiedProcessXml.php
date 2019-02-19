@@ -104,7 +104,7 @@ class ModifiedProcessXml
           // Apply logotype (dealer logo or none)
           if(isset($xmlMeta[$layer]['clo']) && isset($data['template']['logotype'])) { // && isset($data['template']['logotype'])
             if($data['template']['logotype'] == 'dealer') {
-              $id = '20170'; // TODO
+              $id = $data['template']['acct']; // '20170';
               $white = 0;
               if($xmlMeta[$layer]['clo'] == 'w') {
                 $white = 1;
