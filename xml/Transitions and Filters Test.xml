@@ -1,0 +1,528 @@
+<timeline version="1">
+  <layers>
+    <layer title="Video%204%20%7B%22noc%22%3A1%7D" volume="1.0">
+      <text begin="239680" duration="2640" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;">Complex filter</span></div>]]>
+        <opacity>
+          <entry time="2000" value="0"/>
+          <entry time="4000" value="1"/>
+          <entry time="4640" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="240" endTop="240" endWidth="1920" startHeight="1080" startLeft="240" startTop="440" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="242320" duration="2640" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;">Complex filter</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="2640" value="1"/>
+          <entry time="4640" value="0"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="240" endTop="240" endWidth="1920" startHeight="1080" startLeft="240" startTop="240" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="247360" duration="2640" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;">Complex filter 2</span></div>]]>
+        <opacity>
+          <entry time="2000" value="0"/>
+          <entry time="3000" value="1"/>
+          <entry time="3640" value="1"/>
+          <entry time="4640" value="0"/>
+        </opacity>
+        <filter endHeight="86.4" endLeft="1123.1999999999994" endTop="936.7999999999998" endWidth="153.6" startHeight="1425.6000000000001" startLeft="-67.20000000000005" startTop="67.19999999999993" startWidth="2534.4" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="Video%203%20%7B%22noc%22%3A1%7D" volume="1.0">
+      <text begin="231440" duration="2640" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Filter Scale</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4640" value="1"/>
+        </opacity>
+        <filter endHeight="2160" endLeft="-720" endTop="-300" endWidth="3840" startHeight="1080" startLeft="240" startTop="240" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="234080" duration="2640" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Filter Position</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4640" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="240" endTop="440" endWidth="1920" startHeight="1080" startLeft="240" startTop="240" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="236720" duration="2640" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Filter Opacity</span></div>]]>
+        <opacity>
+          <entry time="2000" value="0"/>
+          <entry time="3000" value="1"/>
+          <entry time="3640" value="1"/>
+          <entry time="4640" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%202%20%7B%22rot%22%3A350%2C%22css%22%3A%22opacity%3A0.5%22%7D" volume="1.0">
+      <transition begin="360" duration="2000" type="crossFade"/>
+      <text begin="2360" duration="3200" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Cross fade</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="5200" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="5960" duration="2000" type="crossBlur"/>
+      <text begin="7960" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Cross blur</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="11200" duration="2000" type="crossZoom"/>
+      <text begin="13200" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Cross zoom</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="16480" duration="2000" type="crossDissolve"/>
+      <text begin="18480" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Cross dissolve</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="21800" duration="2000" type="crossMosaic"/>
+      <text begin="23800" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Cross mosaic</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="27120" duration="2000" type="fadeThroughBlack"/>
+      <text begin="29120" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Dip to black</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="32440" duration="2000" type="fadeThroughWhite"/>
+      <text begin="34440" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Dip to white</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="37720" duration="2000" type="burn"/>
+      <text begin="39720" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Burn</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="43040" duration="2000" type="mosaic"/>
+      <text begin="45040" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Mosaic</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="48280" duration="2000" type="puzzleRight"/>
+      <text begin="50280" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Puzzle right</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="53560" duration="2000" type="slide"/>
+      <text begin="55560" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">S</span><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">lide</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="58880" duration="2000" type="directionalWipe"/>
+      <text begin="60880" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">DirectionalWipe</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="64160" duration="2000" type="wipeUp"/>
+      <text begin="66160" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Wipe up</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="69480" duration="2000" type="wipeDown"/>
+      <text begin="71480" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Wipe down</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="74760" duration="2000" type="wipeRight"/>
+      <text begin="76760" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Wipe right</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="80000" duration="2000" type="wipeLeft"/>
+      <text begin="82000" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Wipe left</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="85240" duration="2000" type="animationCurtains"/>
+      <text begin="87240" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Curtains</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="90480" duration="2000" type="animationPaperPlane"/>
+      <text begin="92480" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Paper plane</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="95760" duration="2000" type="animationOrnamentalForm"/>
+      <text begin="97760" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Ornamental form</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="101040" duration="2000" type="animationRainbow"/>
+      <text begin="103040" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Rainbow</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="106320" duration="2000" type="animationFilmstrip"/>
+      <text begin="108320" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Filmstrip</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="111560" duration="2000" type="animationParasol"/>
+      <text begin="113560" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Parasol</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="116800" duration="2000" type="3dTileHorizontal"/>
+      <text begin="118800" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">3d-tile horizontal</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="122080" duration="2000" type="3dTileVertical"/>
+      <text begin="124080" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">3d-ti</span><span style="font-size: 172px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">le </span><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">vertical</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="127360" duration="2000" type="3dFlipHorizontal"/>
+      <text begin="129360" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">3d-flip</span><span style="font-size: 172px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;"> </span><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">horizon</span><span style="font-size: 172px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">t</span><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">al</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="132640" duration="2000" type="3dFlipVertical"/>
+      <text begin="134640" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">3d-flip vertical</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="137880" duration="2000" type="3dCubeVertical"/>
+      <text begin="139880" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">3d-cube vertical</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="143160" duration="2000" type="3dCubeHorizontal"/>
+      <text begin="145160" duration="2880" height="489" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">3d-cub</span><span style="font-size: 172px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">e </span><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">horizontal</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="148440" duration="2000" type="ripple"/>
+      <text begin="150440" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Ripple</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="153760" duration="2000" type="flyEye"/>
+      <text begin="155760" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Flyeye</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="159080" duration="2000" type="swap"/>
+      <text begin="161080" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">S</span><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">wap</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="164360" duration="2000" type="radial"/>
+      <text begin="166360" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Radial</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="169640" duration="2000" type="pageCurl"/>
+      <text begin="171640" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Page curl</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="174960" duration="2000" type="atmospheric"/>
+      <text begin="176960" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Atmospheric</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="180280" duration="2000" type="crossHatch"/>
+      <text begin="182280" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Cross hatch</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="185600" duration="2000" type="gridCircle"/>
+      <text begin="187600" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Circle grid</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="190920" duration="2000" type="gridDiagonal"/>
+      <text begin="192920" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Diagonal grid</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="196240" duration="2000" type="gridFalling"/>
+      <text begin="198240" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Falling grid</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="201480" duration="2000" type="gridRandom"/>
+      <text begin="203480" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Random grid</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="206800" duration="2000" type="gridSequential"/>
+      <text begin="208800" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">S</span><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">equential grid</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="212080" duration="2000" type="gridSliding"/>
+      <text begin="214080" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">S</span><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">liding grid</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="217560" duration="2000" type="patternBubble"/>
+      <text begin="219560" duration="2880" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Bubble pattern</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4880" value="1"/>
+        </opacity>
+      </text>
+      <text begin="223160" duration="2640" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Filter Scale</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4640" value="1"/>
+        </opacity>
+        <filter endHeight="2160" endLeft="-720" endTop="-300" endWidth="3840" startHeight="1080" startLeft="240" startTop="240" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="225800" duration="2640" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Filter Position</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="4640" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="240" endTop="440" endWidth="1920" startHeight="1080" startLeft="240" startTop="240" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="228440" duration="2640" height="408" left="240" processHtml="false" top="240" width="1464"><![CDATA[<div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Filter Opacity</span></div>]]>
+        <opacity>
+          <entry time="2000" value="0"/>
+          <entry time="3000" value="1"/>
+          <entry time="3640" value="1"/>
+          <entry time="4640" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%201" volume="1.0">
+      <video begin="0" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="10000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="20000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="30000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="40000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="50000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="60000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="70000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="80000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="90000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="100000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="110000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="120000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="130000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="140000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="150000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="160000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="170000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="180000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="190000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="200000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="210000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+      </video>
+      <video begin="220000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+        <filter brightness="-90" contrast="0" hue="0" saturation="0" type="colorCorrection"/>
+      </video>
+      <video begin="230000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+        <filter brightness="-90" contrast="0" hue="0" saturation="0" type="colorCorrection"/>
+      </video>
+      <video begin="240000" duration="10000" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d1d0e8d5-5a8f-4902-9a23-268a0ef24936" title="White+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10000" value="1"/>
+        </opacity>
+        <filter brightness="-90" contrast="0" hue="0" saturation="0" type="colorCorrection"/>
+      </video>
+    </layer>
+  </layers>
+</timeline>

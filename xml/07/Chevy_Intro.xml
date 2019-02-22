@@ -1,0 +1,65 @@
+<timeline version="1">
+  <layers>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="0" duration="16600" height="127" left="50" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="923" volume="1.0" width="250">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16600" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="name_title_editable%20%7B%22mtc%22%3A%5B%22l%22%2C%22a%22%5D%2C%20%22mtf%22%3A%5B%22bi%22%2C%22i%22%5D%7D" volume="1.0">
+      <motionTitle begin="0" duration="16600" height="1080" id="908187092" left="2" top="-668" width="1920">
+        <lines>
+          <line font="Louis-Bold" fontSize="180">{{Name Here}}</line>
+          <line font="Louis-Regular" fontSize="70"> {{Title here}}</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(255,185,0,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16600" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="intro_editable%20%7B%22bfc%22%3A%22l%22%2C%20%22bff%22%3A%22r%22%7D" volume="1.0">
+      <text begin="2080" duration="680" height="479" left="137" processHtml="false" top="311" valign="top" width="863"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: 115%; letter-spacing: 0px;">{{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus ultrices ipsum, malesuada fringilla mi aliquet nec. Curabitur eget vulputate nunc. Donec convallis viverra elit, a molestie erat facilisis id. Pellentesque scelerisque, mauris non consequat facilisis, metus mi euismod diam, at Lorem euismod diam, fdhn}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="312" value="0"/>
+          <entry time="487" value="0.16"/>
+          <entry time="680" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="150" endTop="369.9999999999999" endWidth="1920" startHeight="1080" startLeft="150" startTop="170" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="2760" duration="13840" height="479" left="137" processHtml="false" top="311" valign="top" width="863"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: 115%; letter-spacing: 0px;">{{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus ultrices ipsum, malesuada fringilla mi aliquet nec. Curabitur eget vulputate nunc. Donec convallis viverra elit, a molestie erat facilisis id. Pellentesque scelerisque, mauris non consequat facilisis, metus mi euismod diam, at Lorem euismod diam, fdhn}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="13259" value="1"/>
+          <entry time="13471" value="0"/>
+          <entry time="13840" value="0"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="150" endTop="369" endWidth="1920" startHeight="1080" startLeft="150" startTop="369" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="frame%20%7B%22bis%22%3A%221189291331%22%7D" volume="1.0">
+      <image begin="0" duration="16600" height="1210" left="-138" src="http://wevideo-images.s3.amazonaws.com/2018_07_18_aa61db29-792d-4494-8b97-9d44859cfbc8" title="chevy_bk" top="-63" volume="1.0" width="1701">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16600" value="1"/>
+        </opacity>
+        <filter brightness="0" contrast="0" hue="0" saturation="0" type="colorCorrection"/>
+      </image>
+    </layer>
+    <layer title="image_editable" volume="1.0">
+      <image begin="0" duration="16600" height="1080" left="905" src="http://wevideo-images.s3.amazonaws.com/2018_07_18_228b5d33-667d-4c93-b45a-c2168071088d" title="woman_bk" top="0" volume="1.0" width="1070">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16600" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+  </layers>
+</timeline>

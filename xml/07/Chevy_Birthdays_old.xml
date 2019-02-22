@@ -1,0 +1,127 @@
+<timeline version="1">
+  <layers>
+    <layer title="line_top%20%7B%22bts%22%3A%22hr%22%7D" volume="1.0">
+      <text backgroundColor="#e1b334" begin="4000" duration="48080" flipH="true" height="9" inPoint="35200" left="1225" processHtml="false" rotation="180" top="135" width="575"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2276" value="1"/>
+          <entry time="48080" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="52080" duration="2000" type="crossFade"/>
+    </layer>
+    <layer title="line_bottom%20%7B%22bts%22%3A%22hr%22%7D" volume="1.0">
+      <text backgroundColor="#e1b334" begin="4000" duration="48080" flipH="true" height="9" inPoint="6920" left="1225" processHtml="false" rotation="180" top="950" width="575"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2684" value="1"/>
+          <entry time="48080" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="52080" duration="2000" type="crossFade"/>
+    </layer>
+    <layer title="mask_1" volume="1.0">
+      <video begin="4000" duration="48080" src="http://wevideo-original-videos.s3.amazonaws.com/2017_09_14_525e344d-5d0f-4161-ae43-ebf66671bc3f" title="box" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="48080" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="48080" value="1"/>
+        </volume>
+        <filter endHeight="356" endLeft="1219" endTop="930" endWidth="634" startHeight="356" startLeft="1228.27536231884" startTop="959.68115942029" startWidth="634" type="kenBurns"/>
+      </video>
+    </layer>
+    <layer title="mask_2" volume="1.0">
+      <video begin="4000" duration="48080" height="356" left="1219" src="http://wevideo-original-videos.s3.amazonaws.com/2017_09_14_525e344d-5d0f-4161-ae43-ebf66671bc3f" title="box" top="-220" volume="1.0" width="634">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="48080" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="48080" value="1"/>
+        </volume>
+      </video>
+    </layer>
+    <layer title="Names%20%7B%22cie%22%3A%22/2500%22%2C%20%22bts%22%3A%22p%22%2C%20%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevy%22%3A%22w%22%2C%22buick%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="5640" duration="1000" type="crossFade"/>
+      <text begin="6640" duration="43440" height="2642" inPoint="17840" left="808" processHtml="false" top="213" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">{{Month/Day - Name}}</span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center"><span style="font-size: 44px; font-family: Louis-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="43440" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1210" endTop="-2400" endWidth="1920" startHeight="1080" startLeft="1210" startTop="950" startWidth="1920" type="kenBurns"/>
+      </text>
+      <transition begin="50080" duration="2000" type="crossFade"/>
+    </layer>
+    <layer title="Month%20%7B%22bts%22%3A%22h3%22%2C%20%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevy%22%3A%22w%22%2C%22buick%22%3A%22w%22%7D%7D" volume="1.0">
+      <text begin="1800" duration="50280" height="165" inPoint="19680" left="100" processHtml="false" rotation="344" top="100" width="804"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 86px; color: rgb(255, 255, 255); font-family: Louis-BoldItalic; line-height: 105%; letter-spacing: -1px;">{{Month}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="50280" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="440" duration="1000" type="crossBlur"/>
+      <image begin="1440" duration="50640" height="127" inPoint="1000" left="45" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="927" volume="1.0" width="250">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="50640" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="52080" duration="2000" type="crossFade"/>
+    </layer>
+    <layer title="Birthday%20%7B%22bts%22%3A%22h3%22%2C%20%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevy%22%3A%22w%22%2C%22buick%22%3A%22w%22%7D%7D" volume="1.0">
+      <text begin="1800" duration="50280" height="165" inPoint="19680" left="116" processHtml="false" rotation="344" top="200" width="804"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 86px; color: rgb(255, 255, 255); font-family: Louis-BoldItalic; line-height: 105%; letter-spacing: -1px;">{{Birthday}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="50280" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="ribbon%20%7B%22bis%22%3A%221189286406%22%7D" volume="1.0">
+      <image begin="1440" duration="360" inPoint="800" src="http://wevideo-images.s3.amazonaws.com/2018_07_03_cdfc66ae-7616-46b4-a057-7f205ee69c53" title="banner-01-01-01" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="360" value="1"/>
+        </opacity>
+        <filter endHeight="508" endLeft="91" endTop="47" endWidth="792" startHeight="10.8" startLeft="478.5700000000001" startTop="295.59999999999997" startWidth="16.86" type="kenBurns"/>
+      </image>
+      <image begin="1800" duration="50280" height="508" left="91" src="http://wevideo-images.s3.amazonaws.com/2018_07_03_cdfc66ae-7616-46b4-a057-7f205ee69c53" title="banner-01-01-01" top="47" volume="1.0" width="792">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="50280" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="52080" duration="2000" type="crossFade"/>
+    </layer>
+    <layer title="cupcakes" volume="1.0">
+      <transition begin="0" duration="3000" type="crossFade"/>
+      <video begin="3000" duration="47080" height="1080" inPoint="3000" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2017_09_14_fd2deb12-cf2b-4073-b8a9-23601ddd21fa" title="Cupcakes" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="47080" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="47080" value="1"/>
+        </volume>
+        <filter brightness="0" contrast="0" hue="0" saturation="0" type="colorCorrection"/>
+      </video>
+      <video begin="50080" duration="2000" height="1080" inPoint="3000" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2017_09_14_fd2deb12-cf2b-4073-b8a9-23601ddd21fa" title="Cupcakes" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2000" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="2000" value="1"/>
+        </volume>
+      </video>
+      <transition begin="52080" duration="2000" type="crossFade"/>
+    </layer>
+  </layers>
+</timeline>

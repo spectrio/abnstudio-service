@@ -1,0 +1,95 @@
+<timeline version="1">
+  <layers>
+    <layer title="Follow%20Us" volume="1.0">
+      <transition begin="1120" duration="1720" type="crossHatch"/>
+      <text begin="2840" duration="7160" height="411" left="236" processHtml="false" top="567" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 130px; color: rgb(225, 179, 52); font-family: Louis-Bold; line-height: normal; letter-spacing: 0px;">FOLLOW US</span></div><div align="center"><span style="font-size: 172px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="1720" value="1"/>
+          <entry time="8880" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="icon_youtube_1_6" volume="1.0">
+      <image begin="1440" duration="8560" height="119" inPoint="3200" left="1353" src="http://wevideo-images.s3.amazonaws.com/2018_04_04_2e8e4e78-5509-45e1-bc41-0be8f4eab9b7" title="youtube" top="806" volume="1.0" width="122">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="8560" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="icon_google%20_plus_2_6" volume="1.0">
+      <image begin="1440" duration="8560" height="119" inPoint="2600" left="1175" src="http://wevideo-images.s3.amazonaws.com/2018_04_04_66e0698a-3aa4-4813-a136-ffdf42d20e16" title="google+" top="806" volume="1.0" width="122">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="8560" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="icon_instagram_3_6" volume="1.0">
+      <image begin="1440" duration="8560" height="119" inPoint="1960" left="1000" src="http://wevideo-images.s3.amazonaws.com/2018_04_04_8eaa7ab8-b180-4483-b3bd-b841918dca6e" title="instagram" top="806" volume="1.0" width="122">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="8560" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="icon_linkedin_4_6" volume="1.0">
+      <image begin="1440" duration="8560" height="119" left="825" src="http://wevideo-images.s3.amazonaws.com/2018_04_04_1e2d4afa-2f8d-473b-ace2-8ee142d6201a" title="LinkedIn" top="806" volume="1.0" width="122">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="8560" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="icon_twitter_5_6" volume="1.0">
+      <image begin="1440" duration="8560" height="119" left="650" src="http://wevideo-images.s3.amazonaws.com/2018_04_04_168d0cc2-6384-4ec7-9f2a-eb8f465a5e2f" title="twitter" top="806" volume="1.0" width="122">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="8560" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="icon_facebook_6_6" volume="1.0">
+      <image begin="1440" duration="8560" height="119" left="475" src="http://wevideo-images.s3.amazonaws.com/2018_04_04_bcc2827b-f991-466b-93a7-38f4d26805d6" title="facebook" top="806" volume="1.0" width="122">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="8560" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="banner_1" volume="1.0">
+      <text begin="1120" duration="1000" height="177" left="-50" processHtml="false" top="779" volume="1.0" width="2066"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="1000" value="0"/>
+          <entry time="2000" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="-50" endTop="779" endWidth="1920" startHeight="1080" startLeft="-2500" startTop="779" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="2120" duration="8360" height="177" left="-50" processHtml="false" top="779" volume="1.0" width="2066"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="1200" value="1"/>
+          <entry time="9560" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="-50" endTop="779" endWidth="1920" startHeight="1080" startLeft="-50" startTop="779" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="banner_2" volume="1.0">
+      <transition begin="760" duration="720" type="pageCurl"/>
+      <text begin="1480" duration="8520" height="495" left="-53" processHtml="false" top="598" volume="1.0" width="2076"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="720" value="1"/>
+          <entry time="9240" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="bk" volume="1.0">
+      <transition begin="0" duration="480" type="crossFade"/>
+      <image begin="480" duration="9520" height="1080" inPoint="480" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_04_04_6d62543f-2f28-44c8-aead-6107080ae507" title="bk" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9520" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+  </layers>
+</timeline>

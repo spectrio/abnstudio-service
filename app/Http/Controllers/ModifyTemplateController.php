@@ -175,8 +175,9 @@ class ModifyTemplateController extends Controller
       }
     }
 
-    public function list($mode,$id)
+    public function list(Request $request,$mode,$id,$filter=null)
     {
+      $filter = $request->input('filter') ?? '';
       if($id) {
         if($mode == 'oems' || $mode == 'categories' || $mode == 'tags') {
           if(env('DB_CONNECTION') == 'sqlite') {
@@ -187,7 +188,13 @@ class ModifyTemplateController extends Controller
 
         }
         else {
-          $templates = ModifiedTemplate::getModifiedTemplates($mode,$id)->get();
+          if(!$filter) {
+            $templates = ModifiedTemplate::getModifiedTemplates($mode,$id)->get();
+          } else {
+            $templates = ModifiedTemplate::getModifiedTemplates($mode,$id)->where('grp',$filter)->get();
+            //return "!!".$filter;
+          }
+
         }
         foreach($templates as $temp) {
           unset($temp['template']);

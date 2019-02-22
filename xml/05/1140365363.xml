@@ -1,0 +1,87 @@
+<timeline version="1">
+  <layers>
+    <layer title="fade" volume="1.0">
+      <text begin="40" duration="1000" height="1417" left="-74" processHtml="false" top="-22" volume="1.0" width="2107"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="218" value="1"/>
+          <entry time="1000" value="0"/>
+        </opacity>
+      </text>
+      <text begin="29000" duration="1000" height="1417" left="-74" processHtml="false" top="-22" volume="1.0" width="2107"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="227" value="0"/>
+          <entry time="1000" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="award_of_recognition" volume="1.0">
+      <transition begin="640" duration="2000" type="directionalWipe"/>
+      <text begin="2640" duration="27360" height="344" left="757" processHtml="false" top="3" valign="top" volume="1.0" width="1150"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 144px; color: rgb(255, 255, 255); font-family: Louis-BoldItalic; line-height: 100%; letter-spacing: 0px;">AWARD OF RECOGNITION</span></div>]]>
+        <opacity>
+          <entry time="3000" value="1"/>
+          <entry time="3000" value="1"/>
+          <entry time="30360" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="mask_1" volume="1.0">
+      <text begin="40" duration="29960" height="470" left="809" processHtml="false" top="-12" volume="1.0" width="977"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="29960" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="name_of_employee" volume="1.0">
+      <text begin="1160" duration="1200" height="408" left="544" processHtml="false" top="300" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 90px; color: rgb(225, 179, 52); font-family: Louis-Bold; line-height: normal; letter-spacing: 0px;">NAME GOES HERE</span></div>]]>
+        <opacity>
+          <entry time="520" value="0.03977172851562505"/>
+          <entry time="1222" value="0"/>
+          <entry time="1606" value="0.258692626953125"/>
+          <entry time="1720" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="544" endTop="300" endWidth="1920" startHeight="1080" startLeft="544" startTop="0" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="2360" duration="27640" height="146" left="883" processHtml="false" top="418" valign="top" volume="1.0" width="989"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 90px; color: rgb(225, 179, 52); font-family: Louis-Bold; line-height: normal; letter-spacing: 0px;">NAME GOES HERE</span></div>]]>
+        <opacity>
+          <entry time="4000" value="1"/>
+          <entry time="31640" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="mask_2" volume="1.0">
+      <text begin="40" duration="29960" height="575" left="809" processHtml="false" top="-12" volume="1.0" width="977"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="29960" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="paragraph" volume="1.0">
+      <text begin="3640" duration="26360" height="759" left="895" processHtml="false" top="558" valign="top" volume="1.0" width="861"><![CDATA[<div align="center" style="text-align: left;"><span style="color: rgb(255, 255, 255); font-family: Louis-Regular; font-size: 40px; line-height: normal; letter-spacing: 0px;">INTRO - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget massa ut massa tincidunt posuere. Donec pulvinar tincidunt enim, ut tempus quam vestibulum et. Phasellus at quam vitae ante rhoncus faucibus id nec mi. Praesent sed purus ante. Sed varius placerat nisi, eu laoreet orci molestie sed. Phasellus tincidunt cursus mauris, a pharetra mauris. Vivamus gravida dignissim nunc eu tempus.</span></div>]]>
+        <opacity>
+          <entry time="9800" value="1"/>
+          <entry time="36160" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="frame" volume="1.0">
+      <image begin="40" duration="29960" src="http://wevideo-images.s3.amazonaws.com/2017_09_28_e85bf543-bd32-42c2-884e-77fa38c86c81" title="award_of_recognition_bk" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="29960" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="employee" volume="1.0">
+      <image begin="40" duration="29960" height="983" left="-6" src="http://wevideo-images.s3.amazonaws.com/2017_09_27_0caf9c93-9955-43d4-ba31-a7279be5d3a2" title="template" top="99" volume="1.0" width="1747">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="29960" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+  </layers>
+</timeline>

@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<timeline version="1">
+  <layers>
+    <layer title="HTML%204" volume="1.0">
+      <html begin="0" duration="5000"><![CDATA[<html><head>
+      <style>body {overflow:hidden;}
+@font-face {font-family: "Roboto";}
+</style>
+      </head><body>
+    <div style='border:2px dotted #f00;;;padding:25px 20px;position:absolute;width:248px;height:224px;top:441px;left:1484px;'><div align="center"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">HTML</span></div><div align="center"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Layer</span></div></div></body></html>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="4000" value="1"/>
+          <entry time="4000" value="1"/>
+          <entry time="5000" value="0"/>
+        </opacity>
+      </html>
+    </layer>
+    <layer title="HTML%203" volume="1.0">
+      <html begin="0" duration="5000"><![CDATA[<html><head>
+      <style>body {overflow:hidden;}
+@font-face {font-family: "Roboto";}
+</style>
+      </head><body>
+    <div style='border:2px dotted #f00;;;padding:25px 20px;position:absolute;width:248px;height:224px;top:432px;left:1026px;'><div align="center"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">HTML</span></div><div align="center"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Layer</span></div></div></body></html>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1026" endTop="732" endWidth="1920" startHeight="1080" startLeft="1026" startTop="432" startWidth="1920" type="kenBurns"/>
+      </html>
+    </layer>
+    <layer title="HTML%202" volume="1.0">
+      <html begin="0" duration="5000"><![CDATA[<html><head>
+      <style>body {overflow:hidden;}
+@font-face {font-family: "Roboto";}
+</style>
+      </head><body>
+    <div style='border:2px dotted #f00;;;padding:25px 20px;position:absolute;width:248px;height:224px;top:432px;left:594px;'><div align="center"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">HTML</span></div><div align="center"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Layer</span></div></div></body></html>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+        <filter endHeight="1684.8" endLeft="56.399999999999864" endTop="129.60000000000002" endWidth="2995.2000000000003" startHeight="1080" startLeft="594" startTop="432" startWidth="1920" type="kenBurns"/>
+      </html>
+    </layer>
+    <layer title="HTML%201" volume="1.0">
+      <html begin="0" duration="5000"><![CDATA[<html><head>
+      <style>body {overflow:hidden;}
+@font-face {font-family: "Roboto";}
+</style>
+      </head><body>
+    <div style='border:2px dotted #f00;;;padding:25px 20px;position:absolute;width:248px;height:224px;top:435px;left:186px;'><div align="center"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">HTML</span></div><div align="center"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Layer</span></div></div></body></html>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+      </html>
+    </layer>
+    <layer title="Logo%204" volume="1.0">
+      <image begin="0" duration="5000" height="118" left="1489" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="156" volume="1.0" width="230">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="4000" value="1"/>
+          <entry time="4000" value="1"/>
+          <entry time="5000" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Logo%203" volume="1.0">
+      <image begin="0" duration="5000" height="118" left="1024" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="156" volume="1.0" width="230">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+        <filter endHeight="118" endLeft="1024" endTop="456" endWidth="230" startHeight="118" startLeft="1024" startTop="156" startWidth="230" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="Logo%202" volume="1.0">
+      <image begin="0" duration="5000" height="118" left="596" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="153" volume="1.0" width="230">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+        <filter endHeight="490" endLeft="230.99999999999994" endTop="-33" endWidth="960" startHeight="118" startLeft="596" startTop="153" startWidth="230" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="Logo%201" volume="1.0">
+      <image begin="0" duration="5000" height="118" left="170" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="153" volume="1.0" width="230">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Text%20%7B%22noc%22%3A1%7D" volume="1.0">
+      <text begin="0" duration="5000" height="167" inPoint="2000" left="30" processHtml="false" rotation="346" top="881" width="614" >&lt;div align="center"&gt;&lt;span style="font-size: 102px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;"&gt;Text&lt;/span&gt;&lt;/div&gt;
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%201" volume="1.0">
+      <video begin="0" duration="10120" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d8f0734c-da72-4db6-949a-1e1890d8f53e" title="Red+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10120" value="1"/>
+        </opacity>
+        <filter brightness="-100" contrast="0" hue="0" saturation="0" type="colorCorrection"/>
+      </video>
+    </layer>
+  </layers>
+</timeline>

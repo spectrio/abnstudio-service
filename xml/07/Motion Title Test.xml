@@ -1,0 +1,592 @@
+<timeline version="1">
+  <layers>
+    <layer title="HTML%203" volume="1.0">
+      <motionTitle begin="0" duration="4560" height="1080" id="908187636" left="922" top="-815" width="1920">
+        <lines>
+          <line font="CantataOne" fontSize="75">Primary text</line>
+          <line font="Roboto" fontSize="48">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(11,83,148, 1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4560" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="4560" duration="4760" height="1080" id="908187767" left="534" top="-537" width="1920">
+        <lines>
+          <line font="CantataOne" fontSize="100">Primary text</line>
+          <line font="Existence" fontSize="82">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(0,58,86,1)"/>
+          <color key="2" value="rgba(0,105,156,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4760" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="9320" duration="5400" height="1080" id="908186169" left="1012" top="-516" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="50">Secondary text</line>
+          <line font="AlfaSlabOne" fontSize="85">Primary text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255, 255, 255, 1)"/>
+          <color key="1" value="rgba(0, 255, 255, 1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5400" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="14720" duration="4800" height="1080" id="908187462" left="908" top="-171" width="1920">
+        <lines>
+          <line font="CantataOne" fontSize="110">Primary text</line>
+          <line font="SecretTypewriter" fontSize="78">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(255, 255, 255, 1)"/>
+          <color key="0" value="rgba(255, 0, 0, 1)"/>
+          <color key="2" value="rgba(0,0,0, 1)"/>
+          <color key="3" value="rgba(255, 211, 30, 1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="HTML%202" volume="1.0">
+      <motionTitle begin="0" duration="4560" height="1080" id="908187740" left="-496" top="-397" width="1920">
+        <lines>
+          <line font="CantataOne" fontSize="68">Primary text</line>
+          <line font="Roboto" fontSize="48">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(11,83,148, 1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4560" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="4560" duration="4760" height="1080" id="908187800" left="247" top="-447" width="1920">
+        <lines>
+          <line font="CantataOne" fontSize="100">Primary text</line>
+          <line font="Existence" fontSize="88">Secondary</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(0,58,86,1)"/>
+          <color key="2" value="rgba(0,105,156,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4760" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="9320" duration="5400" height="1080" id="908186217" left="505" top="168" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="124">Upper</line>
+          <line font="AlfaSlabOne" fontSize="130">Middle</line>
+          <line font="AlfaSlabOne" fontSize="208">Lower</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(0,255, 255, 1)"/>
+          <color key="1" value="rgba(255, 255, 255, 1)"/>
+          <color key="2" value="rgba(0, 255, 255, 1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5400" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="14720" duration="4800" height="1080" id="908187513" left="400" top="493" width="1920">
+        <lines>
+          <line font="CantataOne" fontSize="120">Primary</line>
+          <line font="SecretTypewriter" fontSize="88">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(255, 255, 255, 1)"/>
+          <color key="0" value="rgba(255, 0, 0, 1)"/>
+          <color key="2" value="rgba(0,0,0, 1)"/>
+          <color key="3" value="rgba(255, 211, 30, 1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="HTML%201" volume="1.0">
+      <motionTitle begin="0" duration="4560" height="1080" id="908188063" left="867" top="41" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="95">Primary text</line>
+          <line font="AlfaSlabOne" fontSize="50">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(117,177,89,1)"/>
+          <color key="1" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4560" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="4560" duration="4760" height="1080" id="908188452" left="539" top="319" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="198">Sample</line>
+          <line font="AlfaSlabOne" fontSize="310">Text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(255,217,102,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4760" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="9320" duration="5400" height="1080" id="908185771" left="992" top="49" width="1920">
+        <lines>
+          <line font="Alike" fontSize="90">Primary text</line>
+          <line font="Alike" fontSize="40">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5400" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="14720" duration="4800" height="1080" id="908188316" left="972" top="-336" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="160">Primary text</line>
+          <line font="AlfaSlabOne" fontSize="100">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="2" value="rgba(0,58,86,1)"/>
+          <color key="1" value="rgba(255,169,0,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Logo%204" volume="1.0">
+      <motionTitle begin="0" duration="4560" height="1080" id="908188119" left="574" top="61" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="100">ONE</line>
+          <line font="AlfaSlabOne" fontSize="238">TWO</line>
+          <line font="AlfaSlabOne" fontSize="238">THREE</line>
+          <line font="AlfaSlabOne" fontSize="165">FOUR</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(117,177,89,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4560" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="4560" duration="4760" height="1080" id="908186356" left="-160" top="-780" width="1920">
+        <lines>
+          <line font="ExistenceStencil" fontSize="90">Primary text</line>
+          <line font="Habibi" fontSize="44">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255,255,255,1)"/>
+          <color key="1" value="rgba(60,120,216,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4760" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="9320" duration="5400" height="1080" id="908185895" left="-632" top="-310" width="1920">
+        <lines>
+          <line font="Alike" fontSize="34">Upper text</line>
+          <line font="Alike" fontSize="95">Middle text</line>
+          <line font="Alike" fontSize="34">Lower text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5400" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="14720" duration="4800" height="1080" id="908188373" left="-6" top="-276" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="500">ONE</line>
+          <line font="AlfaSlabOne" fontSize="500">TWO</line>
+          <line font="AlfaSlabOne" fontSize="500">THREE</line>
+          <line font="AlfaSlabOne" fontSize="160">SAMPLE</line>
+          <line font="AlfaSlabOne" fontSize="123">TEXT</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(0,58,86,1)"/>
+          <color key="2" value="rgba(255,169,0,1)"/>
+          <color key="1" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Logo%203" volume="1.0">
+      <motionTitle begin="0" duration="4560" height="1080" id="908187887" left="-99" top="-545" width="1920">
+        <lines>
+          <line font="CantataOne" fontSize="90">Primary text</line>
+          <line font="Existence" fontSize="50">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255,255,255,1)"/>
+          <color key="1" value="rgba(0,139,192,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4560" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="4560" duration="4760" height="1080" id="908186433" left="-615" top="-229" width="1920">
+        <lines>
+          <line font="ExistenceStencil" fontSize="105">Primary text</line>
+          <line font="Habibi" fontSize="45">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255,255,255,1)"/>
+          <color key="1" value="rgba(60,120,216,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4760" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="9320" duration="5400" height="1080" id="908187092" left="-145" top="-508" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="128">Primary text</line>
+          <line font="AnticSlab" fontSize="70">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(255,185,0,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5400" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="14720" duration="4800" height="1080" id="908187979" left="-151" top="-374" width="1920">
+        <lines>
+          <line font="FluxArchitect" fontSize="115">Primary text</line>
+          <line font="Cabin" fontSize="60">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Logo%202" volume="1.0">
+      <motionTitle begin="0" duration="4560" height="1080" id="908187901" left="-455" top="-6" width="1920">
+        <lines>
+          <line font="CantataOne" fontSize="90">Primary text</line>
+          <line font="Existence" fontSize="48">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255,255,255,1)"/>
+          <color key="1" value="rgba(0,139,192,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4560" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="4560" duration="4760" height="1080" id="908188221" left="-67" top="-418" width="1920">
+        <lines>
+          <line font="CantataOne" fontSize="75">Secondary Text</line>
+          <line font="CantataOne" fontSize="150">Primary Text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(255,255,255, 1)"/>
+          <color key="0" value="rgba(255,172,0, 1)"/>
+          <color key="2" value="rgba(255, 255, 255, 1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4760" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="9320" duration="5400" height="1080" id="908187168" left="-386" top="44" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="126">Primary text</line>
+          <line font="AnticSlab" fontSize="70">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(255,185,0,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5400" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="14720" duration="4800" height="1080" id="908188028" left="-415" top="212" width="1920">
+        <lines>
+          <line font="FluxArchitect" fontSize="110">Primary text</line>
+          <line font="Cabin" fontSize="63">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="19520" duration="3520" height="1080" id="908186852" left="-133" top="-513" width="1920">
+        <lines>
+          <line font="Existence" fontSize="110">Primary text</line>
+          <line font="Cabin" fontSize="45">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(74,134,232,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3520" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Logo%201" volume="1.0">
+      <motionTitle begin="0" duration="4560" height="1080" id="908187234" left="-162" top="84" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="107">Primary text</line>
+          <line font="AnticSlab" fontSize="75">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(255,200,30,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4560" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="4560" duration="4760" height="1080" id="908188256" left="-603" top="99" width="1920">
+        <lines>
+          <line font="CantataOne" fontSize="84">Sample</line>
+          <line font="CantataOne" fontSize="138">Text</line>
+        </lines>
+        <colors>
+          <color key="2" value="rgba(255,255,255, 1)"/>
+          <color key="0" value="rgba(255,172,0, 1)"/>
+          <color key="1" value="rgba(255, 255, 255, 1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4760" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="9320" duration="5400" height="1080" id="908186446" left="-142" top="-110" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="104">Primary text</line>
+          <line font="AlfaSlabOne" fontSize="40">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5400" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="14720" duration="4800" height="1080" id="908186255" left="-107" top="-104" width="1920">
+        <lines>
+          <line font="Cabin" fontSize="100">Sample text</line>
+        </lines>
+        <colors>
+          <color key="2" value="rgba(182, 215, 168,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+          <color key="1" value="rgba(56, 118, 29,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="19520" duration="3520" height="1080" id="908185924" left="-73" top="-276" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="80">Primary text</line>
+          <line font="TwoDumb" fontSize="50">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="2" value="rgba(142, 124, 195,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+          <color key="1" value="rgba(166, 77, 121,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3520" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Text%20%7B%22noc%22%3A1%7D" volume="1.0">
+      <motionTitle begin="0" duration="4560" height="1080" id="908187315" left="-476" top="209" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="105">Primary text</line>
+          <line font="AnticSlab" fontSize="75">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(255,200,30,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4560" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="4560" duration="4760" id="908187832">
+        <lines>
+          <line font="Bangers" fontSize="220">Primary text</line>
+          <line font="Bangers" fontSize="130">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(60,119,161,1)"/>
+          <color key="2" value="rgba(255,179,0,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4760" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="9320" duration="5400" height="1080" id="908186518" left="-383" top="441" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="180">Sample text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5400" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="14720" duration="4800" height="1080" id="908186309" left="-513" top="444" width="1920">
+        <lines>
+          <line font="Cabin" fontSize="100">Sample text</line>
+        </lines>
+        <colors>
+          <color key="2" value="rgba(182, 215, 168,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+          <color key="1" value="rgba(56, 118, 29,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="19520" duration="3520" height="1080" id="908186016" left="-345" top="374" width="1920">
+        <lines>
+          <line font="AlfaSlabOne" fontSize="90">Primary text</line>
+          <line font="TwoDumb" fontSize="40">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="2" value="rgba(142, 124, 195,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+          <color key="1" value="rgba(166, 77, 121,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3520" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="23040" duration="4800" id="908186892">
+        <lines>
+          <line font="Existence" fontSize="130">Primary text</line>
+          <line font="Cabin" fontSize="50">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(74,134,232,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="27840" duration="3800" id="908187867">
+        <lines>
+          <line font="Bangers" fontSize="110">Top text</line>
+          <line font="Bangers" fontSize="200">Main text</line>
+          <line font="Bangers" fontSize="110">Bottom text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(60,119,161,1)"/>
+          <color key="2" value="rgba(255,179,0,1)"/>
+          <color key="1" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3800" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="31640" duration="3640" id="1145075975">
+        <lines>
+          <line font="Alike" fontSize="140">ONE LAND</line>
+          <line font="Alike" fontSize="140">ONE HEART</line>
+          <line font="Alike" fontSize="60">ONE NATION EVERMORE</line>
+        </lines>
+        <colors>
+          <color key="1" value="rgba(224,0,15,1)"/>
+          <color key="0" value="rgba(255,255,255,1)"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3640" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Video%201" volume="1.0">
+      <video begin="0" duration="10120" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d8f0734c-da72-4db6-949a-1e1890d8f53e" title="Red+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10120" value="1"/>
+        </opacity>
+        <filter brightness="-100" contrast="0" hue="0" saturation="0" type="colorCorrection"/>
+      </video>
+      <video begin="10120" duration="10120" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d8f0734c-da72-4db6-949a-1e1890d8f53e" title="Red+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10120" value="1"/>
+        </opacity>
+        <filter brightness="-100" contrast="0" hue="0" saturation="0" type="colorCorrection"/>
+      </video>
+      <video begin="20240" duration="10120" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_d8f0734c-da72-4db6-949a-1e1890d8f53e" title="Red+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10120" value="1"/>
+        </opacity>
+        <filter brightness="-100" contrast="0" hue="0" saturation="0" type="colorCorrection"/>
+      </video>
+    </layer>
+  </layers>
+</timeline>

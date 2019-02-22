@@ -1,0 +1,144 @@
+<timeline version="1">
+  <layers>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="0" duration="32080" height="196" left="1486" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="847" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="4070" value="1"/>
+          <entry time="32080" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Weekdays%20Parts%20%7B%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevy%22%3A%22w%22%7D%7D" volume="1.0">
+      <text begin="21720" duration="10360" height="706" left="525" processHtml="false" top="275" width="929"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 7:30PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{Closed}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="610" value="0"/>
+          <entry time="1404" value="1"/>
+          <entry time="10360" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Label%20Parts%20%7B%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevy%22%3A%22w%22%7D%7D" volume="1.0">
+      <text begin="21720" duration="10360" height="706" left="36" processHtml="false" top="275" width="528"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Monday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Tuesday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Wednesday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Thursday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Friday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Saturday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Sunday:</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="611" value="0"/>
+          <entry time="1402" value="1"/>
+          <entry time="10360" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Title%20Parts%20%7B%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevy%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="21440" duration="1240" type="slide"/>
+      <text begin="22680" duration="80" height="227" inPoint="3440" left="27" processHtml="false" top="73" width="1073"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 120px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{PARTS}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0.42000000000000004"/>
+          <entry time="80" value="1"/>
+        </opacity>
+      </text>
+      <text begin="22760" duration="9320" height="227" inPoint="2880" left="27" processHtml="false" top="73" width="1073"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 120px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{PARTS}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9320" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Weekdays%20Service%20%7B%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevy%22%3A%22w%22%7D%7D" volume="1.0">
+      <text begin="11240" duration="10280" height="706" left="525" processHtml="false" top="275" width="828"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 7:30PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{Closed}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="623" value="0"/>
+          <entry time="1315" value="0.999930419921875"/>
+          <entry time="9677" value="1"/>
+          <entry time="9700" value="1"/>
+          <entry time="10280" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Label%20Service%20%7B%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevy%22%3A%22w%22%7D%7D" volume="1.0">
+      <text begin="11240" duration="10280" height="706" left="36" processHtml="false" top="275" width="1092"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Monday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Tuesday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Wednesday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Thursday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Friday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Saturday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Sunday:</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="614" value="0"/>
+          <entry time="1354" value="0.969375"/>
+          <entry time="9686" value="0.999930419921875"/>
+          <entry time="9700" value="1"/>
+          <entry time="10280" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Title%20Service%20%7B%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevy%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="10880" duration="1240" type="slide"/>
+      <text begin="12120" duration="80" height="227" inPoint="3440" left="27" processHtml="false" top="73" width="1073"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 120px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{</span><span style="color: rgb(106, 106, 122); font-family: Roboto; font-size: 120px; line-height: normal; letter-spacing: 0px;">S</span><span style="font-size: 120px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">ERVICE}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0.46"/>
+          <entry time="80" value="1"/>
+          <entry time="80" value="0.46"/>
+        </opacity>
+      </text>
+      <text begin="12200" duration="9320" height="227" inPoint="2880" left="27" processHtml="false" top="73" width="1073"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 120px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{</span><span style="color: rgb(106, 106, 122); font-family: Roboto; font-size: 120px; line-height: normal; letter-spacing: 0px;">S</span><span style="font-size: 120px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">ERVICE}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9024" value="1"/>
+          <entry time="9320" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Weekdays%20Sales%20%7B%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevy%22%3A%22w%22%7D%7D" volume="1.0">
+      <text begin="720" duration="10240" height="706" left="525" processHtml="false" top="275" width="971"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 9:00PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{8:30AM - 7:30PM}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{Closed}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="657" value="0"/>
+          <entry time="1170" value="1"/>
+          <entry time="9740" value="1"/>
+          <entry time="10240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Label%20Sales%20%7B%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevy%22%3A%22w%22%7D%7D" volume="1.0">
+      <text begin="720" duration="10240" height="706" left="27" processHtml="false" top="275" width="528"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Monday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Tuesday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Wednesday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Thursday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Friday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Saturday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Sunday:</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="668" value="0"/>
+          <entry time="1170" value="1"/>
+          <entry time="9740" value="1"/>
+          <entry time="10240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Title%20Sales%20%7B%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevy%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="320" duration="1240" type="slide"/>
+      <text begin="1560" duration="80" height="227" inPoint="3440" left="27" processHtml="false" top="73" width="1073"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 120px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{</span><span style="color: rgb(106, 106, 122); font-family: Roboto; font-size: 120px; line-height: normal; letter-spacing: 0px;">S</span><span style="font-size: 120px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">ALES}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0.45999999999999996"/>
+          <entry time="80" value="1"/>
+        </opacity>
+      </text>
+      <text begin="1640" duration="9320" height="227" inPoint="2880" left="27" processHtml="false" top="73" width="1073"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 120px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{</span><span style="color: rgb(106, 106, 122); font-family: Roboto; font-size: 120px; line-height: normal; letter-spacing: 0px;">S</span><span style="font-size: 120px; color: rgb(106, 106, 122); font-family: Roboto; line-height: normal; letter-spacing: 0px;">ALES}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9069" value="1"/>
+          <entry time="9320" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="line%20%7B%22bts%22%3A%22hr%22%2C%22bto%22%3A%7B%22honda%22%3A%221%22%7D%7D" volume="1.0">
+      <transition begin="0" duration="1000" type="crossBlur"/>
+      <text backgroundColor="#ffd000" begin="1000" duration="31080" height="8" inPoint="1000" left="48" processHtml="false" top="270" width="1200"><![CDATA[<div align="left"><span style="font-size: 172px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="31080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="bk%20%7B%22bis%22%3A%221189286078%22%7D" volume="1.0">
+      <video begin="0" duration="32080" height="1080" left="-320" src="http://wevideo-original-videos.s3.amazonaws.com/2018_09_06_a7561608-eab7-4c1b-af53-04356d899c32" title="WHITE_BLUE_BK" top="0" volume="1.0" width="2560">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="32080" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

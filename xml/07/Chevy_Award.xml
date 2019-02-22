@@ -1,0 +1,91 @@
+<timeline version="1">
+  <layers>
+    <layer title="fade_in_out" volume="1.0">
+      <text backgroundColor="#000000" begin="0" duration="1000" height="1417" left="-74" processHtml="false" top="-22" width="2107"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="218" value="1"/>
+          <entry time="1000" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="0" duration="20000" height="196" left="1468" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="872" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Title%20Line%201%20%7B%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevy%22%3A%22w%22%2C%22buick%22%3A%22g%22%2C%22gmc%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="600" duration="2000" type="directionalWipe"/>
+      <text begin="2600" duration="17400" height="203" inPoint="3000" left="890" processHtml="false" top="22" width="935"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 100px; color: rgb(100, 98, 98); font-family: AvenirNextRoundedStd-Demi; line-height: 90%; letter-spacing: -1px;">{{Employee}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="17400" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="891" endTop="22" endWidth="1920" startHeight="1080" startLeft="891" startTop="22" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="Title%20Line%202%20%7B%22bts%22%3A%22h1i%22%2C%22bto%22%3A%7B%22chevy%22%3A%22w%22%2C%22buick%22%3A%22g%22%2C%22gmc%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="600" duration="2000" type="directionalWipe"/>
+      <text begin="2600" duration="17400" height="198" inPoint="5000" left="891" processHtml="false" top="137" width="969"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 100px; color: rgb(100, 98, 98); font-family: AvenirNextRoundedStd-Demi; line-height: 90%; letter-spacing: -1px;">{{of the Month}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="17400" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Name%20%7B%22bts%22%3A%22h2%22%2C%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevy%22%3A%221%22%2C%22buick%22%3A%221%22%2C%22gmc%22%3A%221%22%7D%7D" volume="1.0">
+      <text begin="1160" duration="1120" height="154" inPoint="5600" left="893" processHtml="false" top="396" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: 90%; letter-spacing: -1px;">{{Name Goes Here}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="747" value="0"/>
+          <entry time="1120" value="1"/>
+          <entry time="1120" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="891" endTop="350" endWidth="1920" startHeight="1080" startLeft="891" startTop="280" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="2280" duration="17720" height="154" inPoint="5760" left="893" processHtml="false" top="350" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: 90%; letter-spacing: -1px;">{{Name Goes Here}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="17720" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="891" endTop="350" endWidth="1920" startHeight="1080" startLeft="891" startTop="350" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="Paragraph%20%7B%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevy%22%3A%22w%22%2C%22buick%22%3A%22g%22%2C%22gmc%22%3A%22w%22%7D%7D" volume="1.0">
+      <text begin="1680" duration="1120" height="417" inPoint="3680" left="975" processHtml="false" top="525" valign="top" width="892"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">{{</span><span style="color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; font-size: 32px; line-height: normal; letter-spacing: 0px;">INTRO - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget massa ut massa tincidunt posuere. Doec pulvinar tincidunt enim, ut tempus quam vestibulum et. Phasellus at quam vitae ante rhoncus faucibus id nec mi. Praesent sed purus ante. Sed varius placerat nisi, eu laoreet orci molestie sed.</span><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="647" value="0"/>
+          <entry time="1120" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="891" endTop="475" endWidth="1920" startHeight="1080" startLeft="891" startTop="290" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="2800" duration="17200" height="417" inPoint="4320" left="900" processHtml="false" top="475" valign="top" width="892"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">{{</span><span style="color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; font-size: 32px; line-height: normal; letter-spacing: 0px;">INTRO - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget massa ut massa tincidunt posuere. Doec pulvinar tincidunt enim, ut tempus quam vestibulum et. Phasellus at quam vitae ante rhoncus faucibus id nec mi. Praesent sed purus ante. Sed varius placerat nisi, eu laoreet orci molestie sed.</span><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="17200" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="891" endTop="475" endWidth="1920" startHeight="1080" startLeft="891" startTop="475" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="background%20%7B%22bis%22%3A%221189285641%22%7D" volume="1.0">
+      <image begin="0" duration="20000" height="1080" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_09_05_b82927df-a4d4-442b-8371-53432fd0eee4" title="honda" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Employee%20Photo" volume="1.0">
+      <image begin="0" duration="20000" height="1080" left="-44" src="http://wevideo-images.s3.amazonaws.com/2018_07_31_923242c7-5336-472d-8f41-651410e9e917" title="woman_bk_left" top="-2" volume="1.0" width="1070">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+  </layers>
+</timeline>

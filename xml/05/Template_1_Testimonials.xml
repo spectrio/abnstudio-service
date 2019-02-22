@@ -1,0 +1,716 @@
+<timeline version="1">
+  <layers>
+    <layer title="mask1_do_not_touch" volume="1.0">
+      <image begin="720" duration="760" height="475" inPoint="1280" left="255" rotation="90" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="304" volume="1.0" width="845">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="760" value="1"/>
+        </opacity>
+        <filter endHeight="259.2" endLeft="414.2000000000001" endTop="-400" endWidth="460.79999999999995" startHeight="259.2" startLeft="414.2" startTop="190.79999999999998" startWidth="460.79999999999995" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="mask2_do_not_touch" volume="1.0">
+      <image begin="720" duration="760" height="475" inPoint="1280" left="255" rotation="90" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="304" volume="1.0" width="845">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="760" value="1"/>
+        </opacity>
+        <filter endHeight="259.2" endLeft="414.2" endTop="1225" endWidth="460.79999999999995" startHeight="259.2" startLeft="416.2000000000001" startTop="638.8" startWidth="460.79999999999995" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="divider1_5_do_not_touch" volume="1.0">
+      <image begin="720" duration="18760" height="929" left="-50" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_f992da27-8f69-4440-ac2f-a7bcf297c991" title="line" top="71" volume="1.0" width="1651">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1000" value="1"/>
+          <entry time="18200" value="1"/>
+          <entry time="18760" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="mask3_do_not_touch" volume="1.0">
+      <image begin="1480" duration="1240" height="410" inPoint="1280" left="698" rotation="180" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="331" volume="1.0" width="730">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="customerName1_5" volume="1.0">
+      <text begin="1480" duration="760" height="223" left="250" processHtml="false" top="402" valign="center" volume="1.0" width="400"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 52px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: 155%; letter-spacing: 0px;">NAME HERE</span></div>]]>
+        <opacity>
+          <entry time="560" value="0"/>
+          <entry time="1100" value="0.22"/>
+          <entry time="1100" value="0.22"/>
+          <entry time="1320" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="255" endTop="331" endWidth="1920" startHeight="1080" startLeft="704" startTop="331.4049195837274" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="2240" duration="17240" height="223" left="250" processHtml="false" top="402" valign="center" volume="1.0" width="400"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 52px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: 155%; letter-spacing: 0px;">NAME HERE</span></div>]]>
+        <opacity>
+          <entry time="560" value="1"/>
+          <entry time="17230" value="1"/>
+          <entry time="17800" value="0"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="275" endTop="331" endWidth="1920" startHeight="1080" startLeft="275" startTop="331" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="dealerRater1_5" volume="1.0">
+      <text begin="1920" duration="800" height="408" left="-340" processHtml="false" top="379" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Dealer Rater</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="800" value="1"/>
+          <entry time="800" value="1"/>
+        </opacity>
+        <filter endHeight="1252.8" endLeft="-600.7152317880793" endTop="210.46830652790916" endWidth="2227.2" startHeight="1252.8" startLeft="-213" startTop="210" startWidth="2227.2" type="kenBurns"/>
+      </text>
+      <text begin="2720" duration="16760" height="408" left="-340" processHtml="false" top="379" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;">Dealer Rater</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16190" value="1"/>
+          <entry time="16760" value="0"/>
+        </opacity>
+        <filter endHeight="1252.8" endLeft="-588" endTop="210" endWidth="2227.2" startHeight="1252.8" startLeft="-588" startTop="210" startWidth="2227.2" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="stars5_1" volume="1.0">
+      <image begin="1920" duration="1240" height="1080" left="-2785" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_a6c92386-9b70-40dd-bee3-d90f19cd01a5" title="starRating1_1" top="0" volume="1.0" width="7490">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+          <entry time="1240" value="0"/>
+        </opacity>
+        <filter endHeight="36.01" endLeft="319" endTop="597" endWidth="249.60000000000002" startHeight="36.01" startLeft="700" startTop="596" startWidth="249.60000000000002" type="kenBurns"/>
+      </image>
+      <image begin="3160" duration="16320" height="1080" left="-2785" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_a6c92386-9b70-40dd-bee3-d90f19cd01a5" title="starRating1_1" top="0" volume="1.0" width="7490">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="15750" value="1"/>
+          <entry time="16320" value="0"/>
+        </opacity>
+        <filter endHeight="36.01" endLeft="319" endTop="596" endWidth="249.60000000000002" startHeight="36.01" startLeft="319" startTop="596" startWidth="249.60000000000002" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="stars4_1" volume="1.0">
+      <image begin="1920" duration="1240" height="1080" left="-2001" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_4119ded4-e3fe-4fa2-a8bc-0684f5409345" title="starRating1_2" top="0" volume="1.0" width="5923">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+        <filter endHeight="35" endLeft="319" endTop="596.1201513718073" endWidth="192" startHeight="35" startLeft="700" startTop="596" startWidth="192" type="kenBurns"/>
+      </image>
+      <image begin="3160" duration="16320" height="1080" left="-2001" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_4119ded4-e3fe-4fa2-a8bc-0684f5409345" title="starRating1_2" top="0" volume="1.0" width="5923">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="15750" value="1"/>
+          <entry time="16320" value="0"/>
+        </opacity>
+        <filter endHeight="35" endLeft="319" endTop="596" endWidth="192" startHeight="35" startLeft="319" startTop="596" startWidth="192" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="mask_4_do_not_touch" volume="1.0">
+      <image begin="2520" duration="1560" height="1080" left="-1278" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1560" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="-1228" endTop="0" endWidth="1920" startHeight="1080" startLeft="-1228" startTop="0" startWidth="1920" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="customerReview1_5" volume="1.0">
+      <text begin="2520" duration="1240" height="448" left="675" processHtml="false" top="325" volume="1.0" width="975"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;">TEXT GOES HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis semper metus eget dictum. Cras volutpat pharetra justo, id rhoncus leo blandit vel. Etiam at dapibus arcu. Nam fringilla facilisis tempor. Nam dolor tellus, ornare vel ipsum a, eleifend imperdiet tortor. Quisque gravida gravida mi, in viverra mi porttitor at. In dignissim, est </span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="725" endTop="325" endWidth="1920" startHeight="1080" startLeft="-275" startTop="325" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="3760" duration="15720" height="448" left="725" processHtml="false" top="325" volume="1.0" width="975"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;">TEXT GOES HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis semper metus eget dictum. Cras volutpat pharetra justo, id rhoncus leo blandit vel. Etiam at dapibus arcu. Nam fringilla facilisis tempor. Nam dolor tellus, ornare vel ipsum a, eleifend imperdiet tortor. Quisque gravida gravida mi, in viverra mi porttitor at. In dignissim, est </span></span></div>]]>
+        <opacity>
+          <entry time="1200" value="1"/>
+          <entry time="16350" value="1"/>
+          <entry time="16920" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="bk1_5_do_not_touch" volume="1.0">
+      <image begin="0" duration="19480" height="2765" left="-2776" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="-842" volume="1.0" width="4915">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="415" value="1"/>
+          <entry time="19480" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="mask5_4_do_not_touch" volume="1.0">
+      <image begin="20960" duration="760" height="475" inPoint="1280" left="255" rotation="90" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="304" volume="1.0" width="845">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="760" value="1"/>
+        </opacity>
+        <filter endHeight="259.2" endLeft="414.2000000000001" endTop="-400" endWidth="460.79999999999995" startHeight="259.2" startLeft="414.2" startTop="190.79999999999998" startWidth="460.79999999999995" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="mask6_4_do_not_touch" volume="1.0">
+      <image begin="20960" duration="760" height="475" inPoint="1280" left="255" rotation="90" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="304" volume="1.0" width="845">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="760" value="1"/>
+        </opacity>
+        <filter endHeight="259.2" endLeft="414.2" endTop="1225" endWidth="460.79999999999995" startHeight="259.2" startLeft="416.2000000000001" startTop="638.8" startWidth="460.79999999999995" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="divider2_5_do_not_touch" volume="1.0">
+      <image begin="20960" duration="19200" height="929" left="-50" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_f992da27-8f69-4440-ac2f-a7bcf297c991" title="line" top="71" volume="1.0" width="1651">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1000" value="1"/>
+          <entry time="18640" value="1"/>
+          <entry time="19200" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="mask7_do_not_touch" volume="1.0">
+      <image begin="21720" duration="1240" height="410" inPoint="1280" left="698" rotation="180" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="331" volume="1.0" width="730">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="customerName2_5" volume="1.0">
+      <text begin="21720" duration="760" height="223" left="250" processHtml="false" top="402" valign="center" volume="1.0" width="400"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 52px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: 155%; letter-spacing: 0px;">NAME HERE</span></div>]]>
+        <opacity>
+          <entry time="560" value="0"/>
+          <entry time="1100" value="0.22"/>
+          <entry time="1100" value="0.22"/>
+          <entry time="1320" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="255" endTop="331" endWidth="1920" startHeight="1080" startLeft="704" startTop="331.4049195837274" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="22480" duration="17680" height="223" left="250" processHtml="false" top="402" valign="center" volume="1.0" width="400"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 52px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: 155%; letter-spacing: 0px;">NAME HERE</span></div>]]>
+        <opacity>
+          <entry time="560" value="1"/>
+          <entry time="17670" value="1"/>
+          <entry time="18240" value="0"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="275" endTop="331" endWidth="1920" startHeight="1080" startLeft="275" startTop="331" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="dealerRater2_5" volume="1.0">
+      <text begin="22160" duration="800" height="408" left="-340" processHtml="false" top="379" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Dealer Rater</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="800" value="1"/>
+          <entry time="800" value="1"/>
+        </opacity>
+        <filter endHeight="1252.8" endLeft="-600.7152317880793" endTop="210.46830652790916" endWidth="2227.2" startHeight="1252.8" startLeft="-213" startTop="210" startWidth="2227.2" type="kenBurns"/>
+      </text>
+      <text begin="22960" duration="17200" height="408" left="-340" processHtml="false" top="379" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;">Dealer Rater</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16630" value="1"/>
+          <entry time="17200" value="0"/>
+        </opacity>
+        <filter endHeight="1252.8" endLeft="-588" endTop="210" endWidth="2227.2" startHeight="1252.8" startLeft="-588" startTop="210" startWidth="2227.2" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="starRating5_2" volume="1.0">
+      <image begin="22160" duration="1240" height="1080" left="-2785" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_a6c92386-9b70-40dd-bee3-d90f19cd01a5" title="starRating1_1" top="0" volume="1.0" width="7490">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+          <entry time="1240" value="0"/>
+        </opacity>
+        <filter endHeight="36.01" endLeft="319" endTop="597" endWidth="249.60000000000002" startHeight="36.01" startLeft="700" startTop="596" startWidth="249.60000000000002" type="kenBurns"/>
+      </image>
+      <image begin="23400" duration="16760" height="1080" left="-2785" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_a6c92386-9b70-40dd-bee3-d90f19cd01a5" title="starRating1_1" top="0" volume="1.0" width="7490">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16190" value="1"/>
+          <entry time="16760" value="0"/>
+        </opacity>
+        <filter endHeight="36.01" endLeft="319" endTop="596" endWidth="249.60000000000002" startHeight="36.01" startLeft="319" startTop="596" startWidth="249.60000000000002" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="starRating4_2" volume="1.0">
+      <image begin="22160" duration="1240" height="1080" left="-2001" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_4119ded4-e3fe-4fa2-a8bc-0684f5409345" title="starRating1_2" top="0" volume="1.0" width="5923">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+        <filter endHeight="35" endLeft="319" endTop="596.1201513718073" endWidth="192" startHeight="35" startLeft="700" startTop="596" startWidth="192" type="kenBurns"/>
+      </image>
+      <image begin="23400" duration="16760" height="1080" left="-2001" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_4119ded4-e3fe-4fa2-a8bc-0684f5409345" title="starRating1_2" top="0" volume="1.0" width="5923">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16190" value="1"/>
+          <entry time="16760" value="0"/>
+        </opacity>
+        <filter endHeight="35" endLeft="319" endTop="596" endWidth="192" startHeight="35" startLeft="319" startTop="596" startWidth="192" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="mask8_do_not_touch" volume="1.0">
+      <image begin="22760" duration="1560" height="1080" left="-1278" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1560" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="-1228" endTop="0" endWidth="1920" startHeight="1080" startLeft="-1228" startTop="0" startWidth="1920" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="customerReview2_5" volume="1.0">
+      <text begin="22760" duration="1240" height="448" left="675" processHtml="false" top="325" volume="1.0" width="975"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;">TEXT GOES HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis semper metus eget dictum. Cras volutpat pharetra justo, id rhoncus leo blandit vel. Etiam at dapibus arcu. Nam fringilla facilisis tempor. Nam dolor tellus, ornare vel ipsum a, eleifend imperdiet tortor. Quisque gravida gravida mi, in viverra mi porttitor at. In dignissim, est </span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="725" endTop="325" endWidth="1920" startHeight="1080" startLeft="-275" startTop="325" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="24000" duration="16160" height="448" left="725" processHtml="false" top="325" volume="1.0" width="975"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;">TEXT GOES HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis semper metus eget dictum. Cras volutpat pharetra justo, id rhoncus leo blandit vel. Etiam at dapibus arcu. Nam fringilla facilisis tempor. Nam dolor tellus, ornare vel ipsum a, eleifend imperdiet tortor. Quisque gravida gravida mi, in viverra mi porttitor at. In dignissim, est </span></span></div>]]>
+        <opacity>
+          <entry time="1200" value="1"/>
+          <entry time="16790" value="1"/>
+          <entry time="17360" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="bk2_5_do_not_touch" volume="1.0">
+      <image begin="19480" duration="20680" height="2765" inPoint="2160" left="-2776" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="-842" volume="1.0" width="4915">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20680" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="mask9_do_not_touch" volume="1.0">
+      <image begin="41640" duration="760" height="475" inPoint="1280" left="255" rotation="90" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="304" volume="1.0" width="845">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="760" value="1"/>
+        </opacity>
+        <filter endHeight="259.2" endLeft="414.2000000000001" endTop="-400" endWidth="460.79999999999995" startHeight="259.2" startLeft="414.2" startTop="190.79999999999998" startWidth="460.79999999999995" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="mask10_do_not_touch" volume="1.0">
+      <image begin="41640" duration="760" height="475" inPoint="1280" left="255" rotation="90" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="304" volume="1.0" width="845">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="760" value="1"/>
+        </opacity>
+        <filter endHeight="259.2" endLeft="414.2" endTop="1225" endWidth="460.79999999999995" startHeight="259.2" startLeft="416.2000000000001" startTop="638.8" startWidth="460.79999999999995" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="divider3_5_do_not_touch" volume="1.0">
+      <image begin="41640" duration="19200" height="929" left="-50" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_f992da27-8f69-4440-ac2f-a7bcf297c991" title="line" top="71" volume="1.0" width="1651">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1000" value="1"/>
+          <entry time="18640" value="1"/>
+          <entry time="19200" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="mask11_do_not_touch" volume="1.0">
+      <image begin="42400" duration="1240" height="410" inPoint="1280" left="698" rotation="180" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="331" volume="1.0" width="730">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="customerName3_5" volume="1.0">
+      <text begin="42400" duration="760" height="223" left="250" processHtml="false" top="402" valign="center" volume="1.0" width="400"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 52px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: 155%; letter-spacing: 0px;">NAME HERE</span></div>]]>
+        <opacity>
+          <entry time="560" value="0"/>
+          <entry time="1100" value="0.22"/>
+          <entry time="1100" value="0.22"/>
+          <entry time="1320" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="255" endTop="331" endWidth="1920" startHeight="1080" startLeft="704" startTop="331.4049195837274" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="43160" duration="17680" height="223" left="250" processHtml="false" top="402" valign="center" volume="1.0" width="400"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 52px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: 155%; letter-spacing: 0px;">NAME HERE</span></div>]]>
+        <opacity>
+          <entry time="560" value="1"/>
+          <entry time="17670" value="1"/>
+          <entry time="18240" value="0"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="275" endTop="331" endWidth="1920" startHeight="1080" startLeft="275" startTop="331" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="dealerRater3_5" volume="1.0">
+      <text begin="42840" duration="800" height="408" left="-340" processHtml="false" top="379" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Dealer Rater</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="800" value="1"/>
+          <entry time="800" value="1"/>
+        </opacity>
+        <filter endHeight="1252.8" endLeft="-600.7152317880793" endTop="210.46830652790916" endWidth="2227.2" startHeight="1252.8" startLeft="-213" startTop="210" startWidth="2227.2" type="kenBurns"/>
+      </text>
+      <text begin="43640" duration="17200" height="408" left="-340" processHtml="false" top="379" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;">Dealer Rater</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16630" value="1"/>
+          <entry time="17200" value="0"/>
+        </opacity>
+        <filter endHeight="1252.8" endLeft="-588" endTop="210" endWidth="2227.2" startHeight="1252.8" startLeft="-588" startTop="210" startWidth="2227.2" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="starRating5_3" volume="1.0">
+      <image begin="42840" duration="1240" height="1080" left="-2785" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_a6c92386-9b70-40dd-bee3-d90f19cd01a5" title="starRating1_1" top="0" volume="1.0" width="7490">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+          <entry time="1240" value="0"/>
+        </opacity>
+        <filter endHeight="36.01" endLeft="319" endTop="597" endWidth="249.60000000000002" startHeight="36.01" startLeft="700" startTop="596" startWidth="249.60000000000002" type="kenBurns"/>
+      </image>
+      <image begin="44080" duration="16760" height="1080" left="-2785" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_a6c92386-9b70-40dd-bee3-d90f19cd01a5" title="starRating1_1" top="0" volume="1.0" width="7490">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16190" value="1"/>
+          <entry time="16760" value="0"/>
+        </opacity>
+        <filter endHeight="36.01" endLeft="319" endTop="596" endWidth="249.60000000000002" startHeight="36.01" startLeft="319" startTop="596" startWidth="249.60000000000002" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="starRating4_3" volume="1.0">
+      <image begin="42840" duration="1240" height="1080" left="-2001" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_4119ded4-e3fe-4fa2-a8bc-0684f5409345" title="starRating1_2" top="0" volume="1.0" width="5923">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+        <filter endHeight="35" endLeft="319" endTop="596.1201513718073" endWidth="192" startHeight="35" startLeft="700" startTop="596" startWidth="192" type="kenBurns"/>
+      </image>
+      <image begin="44080" duration="16760" height="1080" left="-2001" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_4119ded4-e3fe-4fa2-a8bc-0684f5409345" title="starRating1_2" top="0" volume="1.0" width="5923">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16190" value="1"/>
+          <entry time="16760" value="0"/>
+        </opacity>
+        <filter endHeight="35" endLeft="319" endTop="596" endWidth="192" startHeight="35" startLeft="319" startTop="596" startWidth="192" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="mask12_do_not_touch" volume="1.0">
+      <image begin="43440" duration="1560" height="1080" left="-1278" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1560" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="-1228" endTop="0" endWidth="1920" startHeight="1080" startLeft="-1228" startTop="0" startWidth="1920" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="customerReview3_5" volume="1.0">
+      <text begin="43440" duration="1240" height="448" left="675" processHtml="false" top="325" volume="1.0" width="975"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;">TEXT GOES HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis semper metus eget dictum. Cras volutpat pharetra justo, id rhoncus leo blandit vel. Etiam at dapibus arcu. Nam fringilla facilisis tempor. Nam dolor tellus, ornare vel ipsum a, eleifend imperdiet tortor. Quisque gravida gravida mi, in viverra mi porttitor at. In dignissim, est </span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="725" endTop="325" endWidth="1920" startHeight="1080" startLeft="-275" startTop="325" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="44680" duration="16160" height="448" left="725" processHtml="false" top="325" volume="1.0" width="975"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;">TEXT GOES HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis semper metus eget dictum. Cras volutpat pharetra justo, id rhoncus leo blandit vel. Etiam at dapibus arcu. Nam fringilla facilisis tempor. Nam dolor tellus, ornare vel ipsum a, eleifend imperdiet tortor. Quisque gravida gravida mi, in viverra mi porttitor at. In dignissim, est </span></span></div>]]>
+        <opacity>
+          <entry time="1200" value="1"/>
+          <entry time="16790" value="1"/>
+          <entry time="17360" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="bk3_5_do_not_touch" volume="1.0">
+      <image begin="40160" duration="20680" height="2765" inPoint="2160" left="-2776" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="-842" volume="1.0" width="4915">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20680" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="mask13_do_not_touch" volume="1.0">
+      <image begin="61800" duration="760" height="475" inPoint="1280" left="255" rotation="90" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="304" volume="1.0" width="845">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="760" value="1"/>
+        </opacity>
+        <filter endHeight="259.2" endLeft="414.2000000000001" endTop="-400" endWidth="460.79999999999995" startHeight="259.2" startLeft="414.2" startTop="190.79999999999998" startWidth="460.79999999999995" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="mask14_do_not_touch" volume="1.0">
+      <image begin="61800" duration="760" height="475" inPoint="1280" left="255" rotation="90" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="304" volume="1.0" width="845">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="760" value="1"/>
+        </opacity>
+        <filter endHeight="259.2" endLeft="414.2" endTop="1225" endWidth="460.79999999999995" startHeight="259.2" startLeft="416.2000000000001" startTop="638.8" startWidth="460.79999999999995" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="divider4_5_do_not_touch" volume="1.0">
+      <image begin="61800" duration="19200" height="929" left="-50" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_f992da27-8f69-4440-ac2f-a7bcf297c991" title="line" top="71" volume="1.0" width="1651">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1000" value="1"/>
+          <entry time="18640" value="1"/>
+          <entry time="19200" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="mask15_do_not_touch" volume="1.0">
+      <image begin="62560" duration="1240" height="410" inPoint="1280" left="698" rotation="180" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="331" volume="1.0" width="730">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="customerName4_5" volume="1.0">
+      <text begin="62560" duration="760" height="223" left="250" processHtml="false" top="402" valign="center" volume="1.0" width="400"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 52px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: 155%; letter-spacing: 0px;">NAME HERE</span></div>]]>
+        <opacity>
+          <entry time="560" value="0"/>
+          <entry time="1100" value="0.22"/>
+          <entry time="1100" value="0.22"/>
+          <entry time="1320" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="255" endTop="331" endWidth="1920" startHeight="1080" startLeft="704" startTop="331.4049195837274" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="63320" duration="17680" height="223" left="250" processHtml="false" top="402" valign="center" volume="1.0" width="400"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 52px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: 155%; letter-spacing: 0px;">NAME HERE</span></div>]]>
+        <opacity>
+          <entry time="560" value="1"/>
+          <entry time="17670" value="1"/>
+          <entry time="18240" value="0"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="275" endTop="331" endWidth="1920" startHeight="1080" startLeft="275" startTop="331" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="dealerRater4_5" volume="1.0">
+      <text begin="63000" duration="800" height="408" left="-340" processHtml="false" top="379" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Dealer Rater</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="800" value="1"/>
+          <entry time="800" value="1"/>
+        </opacity>
+        <filter endHeight="1252.8" endLeft="-600.7152317880793" endTop="210.46830652790916" endWidth="2227.2" startHeight="1252.8" startLeft="-213" startTop="210" startWidth="2227.2" type="kenBurns"/>
+      </text>
+      <text begin="63800" duration="17200" height="408" left="-340" processHtml="false" top="379" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;">Dealer Rater</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16630" value="1"/>
+          <entry time="17200" value="0"/>
+        </opacity>
+        <filter endHeight="1252.8" endLeft="-588" endTop="210" endWidth="2227.2" startHeight="1252.8" startLeft="-588" startTop="210" startWidth="2227.2" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="starRating5_4" volume="1.0">
+      <image begin="63000" duration="1240" height="1080" left="-2785" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_a6c92386-9b70-40dd-bee3-d90f19cd01a5" title="starRating1_1" top="0" volume="1.0" width="7490">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+          <entry time="1240" value="0"/>
+        </opacity>
+        <filter endHeight="36.01" endLeft="319" endTop="597" endWidth="249.60000000000002" startHeight="36.01" startLeft="700" startTop="596" startWidth="249.60000000000002" type="kenBurns"/>
+      </image>
+      <image begin="64240" duration="16760" height="1080" left="-2785" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_a6c92386-9b70-40dd-bee3-d90f19cd01a5" title="starRating1_1" top="0" volume="1.0" width="7490">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16190" value="1"/>
+          <entry time="16760" value="0"/>
+        </opacity>
+        <filter endHeight="36.01" endLeft="319" endTop="596" endWidth="249.60000000000002" startHeight="36.01" startLeft="319" startTop="596" startWidth="249.60000000000002" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="starRating4_4" volume="1.0">
+      <image begin="63000" duration="1240" height="1080" left="-2001" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_4119ded4-e3fe-4fa2-a8bc-0684f5409345" title="starRating1_2" top="0" volume="1.0" width="5923">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+        <filter endHeight="35" endLeft="319" endTop="596.1201513718073" endWidth="192" startHeight="35" startLeft="700" startTop="596" startWidth="192" type="kenBurns"/>
+      </image>
+      <image begin="64240" duration="16760" height="1080" left="-2001" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_4119ded4-e3fe-4fa2-a8bc-0684f5409345" title="starRating1_2" top="0" volume="1.0" width="5923">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16190" value="1"/>
+          <entry time="16760" value="0"/>
+        </opacity>
+        <filter endHeight="35" endLeft="319" endTop="596" endWidth="192" startHeight="35" startLeft="319" startTop="596" startWidth="192" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="mask16_do_not_touch" volume="1.0">
+      <image begin="63600" duration="1560" height="1080" left="-1278" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1560" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="-1228" endTop="0" endWidth="1920" startHeight="1080" startLeft="-1228" startTop="0" startWidth="1920" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="customerReview4_5" volume="1.0">
+      <text begin="63600" duration="1240" height="448" left="675" processHtml="false" top="325" volume="1.0" width="975"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;">TEXT GOES HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis semper metus eget dictum. Cras volutpat pharetra justo, id rhoncus leo blandit vel. Etiam at dapibus arcu. Nam fringilla facilisis tempor. Nam dolor tellus, ornare vel ipsum a, eleifend imperdiet tortor. Quisque gravida gravida mi, in viverra mi porttitor at. In dignissim, est </span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="725" endTop="325" endWidth="1920" startHeight="1080" startLeft="-275" startTop="325" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="64840" duration="16160" height="448" left="725" processHtml="false" top="325" volume="1.0" width="975"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;">TEXT GOES HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis semper metus eget dictum. Cras volutpat pharetra justo, id rhoncus leo blandit vel. Etiam at dapibus arcu. Nam fringilla facilisis tempor. Nam dolor tellus, ornare vel ipsum a, eleifend imperdiet tortor. Quisque gravida gravida mi, in viverra mi porttitor at. In dignissim, est </span></span></div>]]>
+        <opacity>
+          <entry time="1200" value="1"/>
+          <entry time="16790" value="1"/>
+          <entry time="17360" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="bk4_5_do_not_touch" volume="1.0">
+      <image begin="60320" duration="20680" height="2765" inPoint="2160" left="-2776" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="-842" volume="1.0" width="4915">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20680" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="mask17_do_not_touch" volume="1.0">
+      <image begin="82480" duration="760" height="475" inPoint="1280" left="255" rotation="90" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="304" volume="1.0" width="845">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="760" value="1"/>
+        </opacity>
+        <filter endHeight="259.2" endLeft="414.2000000000001" endTop="-400" endWidth="460.79999999999995" startHeight="259.2" startLeft="414.2" startTop="190.79999999999998" startWidth="460.79999999999995" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="mask18_do_not_touch" volume="1.0">
+      <image begin="82480" duration="760" height="475" inPoint="1280" left="255" rotation="90" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="304" volume="1.0" width="845">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="760" value="1"/>
+        </opacity>
+        <filter endHeight="259.2" endLeft="414.2" endTop="1225" endWidth="460.79999999999995" startHeight="259.2" startLeft="416.2000000000001" startTop="638.8" startWidth="460.79999999999995" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="divider5_5_do_not_touch" volume="1.0">
+      <image begin="82480" duration="19200" height="929" left="-50" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_f992da27-8f69-4440-ac2f-a7bcf297c991" title="line" top="71" volume="1.0" width="1651">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1000" value="1"/>
+          <entry time="18640" value="1"/>
+          <entry time="19200" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="mask19_do_not_touch" volume="1.0">
+      <image begin="83240" duration="1240" height="410" inPoint="1280" left="698" rotation="180" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="331" volume="1.0" width="730">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="customerName5_5" volume="1.0">
+      <text begin="83240" duration="760" height="223" left="250" processHtml="false" top="402" valign="center" volume="1.0" width="400"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 52px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: 155%; letter-spacing: 0px;">NAME HERE</span></div>]]>
+        <opacity>
+          <entry time="560" value="0"/>
+          <entry time="1100" value="0.22"/>
+          <entry time="1100" value="0.22"/>
+          <entry time="1320" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="255" endTop="331" endWidth="1920" startHeight="1080" startLeft="704" startTop="331.4049195837274" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="84000" duration="17680" height="223" left="250" processHtml="false" top="402" valign="center" volume="1.0" width="400"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 52px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: 155%; letter-spacing: 0px;">NAME HERE</span></div>]]>
+        <opacity>
+          <entry time="560" value="1"/>
+          <entry time="17670" value="1"/>
+          <entry time="18240" value="0"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="275" endTop="331" endWidth="1920" startHeight="1080" startLeft="275" startTop="331" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="dealerRater5_5" volume="1.0">
+      <text begin="83680" duration="800" height="408" left="-340" processHtml="false" top="379" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;">Dealer Rater</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="800" value="1"/>
+          <entry time="800" value="1"/>
+        </opacity>
+        <filter endHeight="1252.8" endLeft="-600.7152317880793" endTop="210.46830652790916" endWidth="2227.2" startHeight="1252.8" startLeft="-213" startTop="210" startWidth="2227.2" type="kenBurns"/>
+      </text>
+      <text begin="84480" duration="17200" height="408" left="-340" processHtml="false" top="379" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 32px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;">Dealer Rater</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16630" value="1"/>
+          <entry time="17200" value="0"/>
+        </opacity>
+        <filter endHeight="1252.8" endLeft="-588" endTop="210" endWidth="2227.2" startHeight="1252.8" startLeft="-588" startTop="210" startWidth="2227.2" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="starRating5_5" volume="1.0">
+      <image begin="83680" duration="1240" height="1080" left="-2785" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_a6c92386-9b70-40dd-bee3-d90f19cd01a5" title="starRating1_1" top="0" volume="1.0" width="7490">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+          <entry time="1240" value="0"/>
+        </opacity>
+        <filter endHeight="36.01" endLeft="319" endTop="597" endWidth="249.60000000000002" startHeight="36.01" startLeft="700" startTop="596" startWidth="249.60000000000002" type="kenBurns"/>
+      </image>
+      <image begin="84920" duration="16760" height="1080" left="-2785" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_a6c92386-9b70-40dd-bee3-d90f19cd01a5" title="starRating1_1" top="0" volume="1.0" width="7490">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16190" value="1"/>
+          <entry time="16760" value="0"/>
+        </opacity>
+        <filter endHeight="36.01" endLeft="319" endTop="596" endWidth="249.60000000000002" startHeight="36.01" startLeft="319" startTop="596" startWidth="249.60000000000002" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="starRating4_5" volume="1.0">
+      <image begin="83680" duration="1240" height="1080" left="-2001" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_4119ded4-e3fe-4fa2-a8bc-0684f5409345" title="starRating1_2" top="0" volume="1.0" width="5923">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+        <filter endHeight="35" endLeft="319" endTop="596.1201513718073" endWidth="192" startHeight="35" startLeft="700" startTop="596" startWidth="192" type="kenBurns"/>
+      </image>
+      <image begin="84920" duration="16760" height="1080" left="-2001" src="http://wevideo-images.s3.amazonaws.com/2018_01_25_4119ded4-e3fe-4fa2-a8bc-0684f5409345" title="starRating1_2" top="0" volume="1.0" width="5923">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16190" value="1"/>
+          <entry time="16760" value="0"/>
+        </opacity>
+        <filter endHeight="35" endLeft="319" endTop="596" endWidth="192" startHeight="35" startLeft="319" startTop="596" startWidth="192" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="mask20_do_not_touch" volume="1.0">
+      <image begin="84280" duration="1560" height="1080" left="-1278" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1560" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="-1228" endTop="0" endWidth="1920" startHeight="1080" startLeft="-1228" startTop="0" startWidth="1920" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="customerReview5_5" volume="1.0">
+      <text begin="84280" duration="1240" height="448" left="675" processHtml="false" top="325" volume="1.0" width="975"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;">TEXT GOES HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis semper metus eget dictum. Cras volutpat pharetra justo, id rhoncus leo blandit vel. Etiam at dapibus arcu. Nam fringilla facilisis tempor. Nam dolor tellus, ornare vel ipsum a, eleifend imperdiet tortor. Quisque gravida gravida mi, in viverra mi porttitor at. In dignissim, est </span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1240" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="725" endTop="325" endWidth="1920" startHeight="1080" startLeft="-275" startTop="325" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="85520" duration="16160" height="448" left="725" processHtml="false" top="325" volume="1.0" width="975"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;">TEXT GOES HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis semper metus eget dictum. Cras volutpat pharetra justo, id rhoncus leo blandit vel. Etiam at dapibus arcu. Nam fringilla facilisis tempor. Nam dolor tellus, ornare vel ipsum a, eleifend imperdiet tortor. Quisque gravida gravida mi, in viverra mi porttitor at. In dignissim, est </span></span></div>]]>
+        <opacity>
+          <entry time="1200" value="1"/>
+          <entry time="16790" value="1"/>
+          <entry time="17360" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="bk5_5_do_not_touch" volume="1.0">
+      <image begin="81000" duration="20680" height="2765" inPoint="2160" left="-2776" src="http://wevideo-images.s3.amazonaws.com/2017_09_18_6d1593a3-edad-4eb5-a9c8-4cac3446e792" title="bk" top="-842" volume="1.0" width="4915">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20680" value="1"/>
+        </opacity>
+        <filter balance="1.0" clipBlack="0.0" clipWhite="1.0" color="#56565a" screenWeight="1.0" type="chromaKey"/>
+      </image>
+    </layer>
+  </layers>
+</timeline>

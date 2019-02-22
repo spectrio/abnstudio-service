@@ -1,0 +1,159 @@
+<timeline version="1">
+  <layers>
+    <layer title="Video%201" volume="1.0">
+      <image begin="0" duration="32080" height="127" left="1598" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="907" volume="1.0" width="250">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="4070" value="1"/>
+          <entry time="31660" value="1"/>
+          <entry time="32080" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Hours%201_3" volume="1.0">
+      <text begin="22120" duration="9960" height="706" left="536" processHtml="false" top="275" volume="1.0" width="1464"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 7:30PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Closed</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="610" value="0"/>
+          <entry time="1004" value="1"/>
+          <entry time="9700" value="1"/>
+          <entry time="9960" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Days%201_3" volume="1.0">
+      <text begin="22120" duration="9960" height="706" left="36" processHtml="false" top="275" volume="1.0" width="1464"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Monday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Tuesday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Wednesday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Thursday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Friday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Saturday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Sunday:</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="611" value="0"/>
+          <entry time="1002" value="1"/>
+          <entry time="9700" value="1"/>
+          <entry time="9960" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Title%201_3" volume="1.0">
+      <text begin="21520" duration="1160" height="227" left="-99" processHtml="false" top="73" volume="1.0" width="1096"><![CDATA[<div align="center"><span style="font-size: 120px; color: rgb(255, 255, 255); font-family: Louis-Bold; line-height: normal; letter-spacing: 0px;">SALES HOURS</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="788" value="0"/>
+          <entry time="1069" value="0.47"/>
+          <entry time="1160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="-99" endTop="73" endWidth="1920" startHeight="1080" startLeft="-100" startTop="225" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="22680" duration="9400" height="227" left="-99" processHtml="false" top="73" volume="1.0" width="1096"><![CDATA[<div align="center"><span style="font-size: 120px; color: rgb(255, 255, 255); font-family: Louis-Bold; line-height: normal; letter-spacing: 0px;">SALES HOURS</span></div>]]>
+        <opacity>
+          <entry time="1160" value="1"/>
+          <entry time="10300" value="1"/>
+          <entry time="10560" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Hours%202_3" volume="1.0">
+      <text begin="11560" duration="9960" height="706" left="536" processHtml="false" top="275" volume="1.0" width="1464"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 7:30PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Closed</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="623" value="0"/>
+          <entry time="1315" value="0.999930419921875"/>
+          <entry time="9677" value="1"/>
+          <entry time="9700" value="1"/>
+          <entry time="9960" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Days%202_3" volume="1.0">
+      <text begin="11560" duration="9960" height="706" left="36" processHtml="false" top="275" volume="1.0" width="1464"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Monday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Tuesday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Wednesday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Thursday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Friday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Saturday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Sunday:</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="614" value="0"/>
+          <entry time="1296" value="1"/>
+          <entry time="9686" value="0.999930419921875"/>
+          <entry time="9700" value="1"/>
+          <entry time="9960" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Title%202_3" volume="1.0">
+      <text begin="10960" duration="1200" height="227" left="-46" processHtml="false" top="73" volume="1.0" width="1096"><![CDATA[<div align="center"><span style="font-size: 120px; color: rgb(255, 255, 255); font-family: Louis-Bold; line-height: normal; letter-spacing: 0px;">SERVICE HOURS</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="757" value="0"/>
+          <entry time="1050" value="0.39"/>
+          <entry time="1200" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="-46" endTop="73" endWidth="1920" startHeight="1080" startLeft="-43.2133526850508" startTop="217.90566037735837" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="12160" duration="9360" height="227" left="-46" processHtml="false" top="73" volume="1.0" width="1096"><![CDATA[<div align="center"><span style="font-size: 120px; color: rgb(255, 255, 255); font-family: Louis-Bold; line-height: normal; letter-spacing: 0px;">SERVICE HOURS</span></div>]]>
+        <opacity>
+          <entry time="1120" value="1"/>
+          <entry time="10212" value="1"/>
+          <entry time="10480" value="0"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="-46" endTop="73" endWidth="1920" startHeight="1080" startLeft="-46" startTop="73" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="Hours%203_3" volume="1.0">
+      <text begin="960" duration="10000" height="706" left="536" processHtml="false" top="275" volume="1.0" width="1464"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 9:00PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">8:30AM - 7:30PM</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Closed</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="657" value="0"/>
+          <entry time="1170" value="1"/>
+          <entry time="9740" value="1"/>
+          <entry time="10000" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Days%203_3" volume="1.0">
+      <text begin="960" duration="10000" height="706" left="36" processHtml="false" top="275" volume="1.0" width="1464"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Monday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Tuesday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Wednesday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Thursday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Friday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Saturday:</span></div><div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Sunday:</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="668" value="0"/>
+          <entry time="1170" value="1"/>
+          <entry time="9740" value="1"/>
+          <entry time="10000" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Title%203_3" volume="1.0">
+      <text begin="400" duration="1200" height="227" left="10" processHtml="false" top="73" volume="1.0" width="874"><![CDATA[<div align="center"><span style="color: rgb(255, 255, 255); font-family: Louis-Bold; font-size: 120px; line-height: normal; letter-spacing: 0px;">PARTS HOURS</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="771" value="0"/>
+          <entry time="1046" value="0.39"/>
+          <entry time="1200" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="10" endTop="73" endWidth="1920" startHeight="1080" startLeft="25" startTop="220.00000000000009" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="1600" duration="9360" height="227" left="10" processHtml="false" top="73" volume="1.0" width="874"><![CDATA[<div align="center"><span style="color: rgb(255, 255, 255); font-family: Louis-Bold; font-size: 120px; line-height: normal; letter-spacing: 0px;">PARTS HOURS</span></div>]]>
+        <opacity>
+          <entry time="2200" value="1"/>
+          <entry time="11300" value="1"/>
+          <entry time="11560" value="0"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="10" endTop="73" endWidth="1920" startHeight="1080" startLeft="10" startTop="73" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="divider" volume="1.0">
+      <transition begin="0" duration="1000" type="crossFade"/>
+      <image begin="1000" duration="31080" flipH="true" height="7" inPoint="1000" left="75" rotation="180" src="http://wevideo-images.s3.amazonaws.com/2018_01_26_68e2c08d-47d9-40e1-bb43-2dae6bd816c9" title="LINE" top="275" volume="1.0" width="1041">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16773" value="1"/>
+          <entry time="30605" value="1"/>
+          <entry time="31080" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="BK" volume="1.0">
+      <video begin="0" duration="32080" height="1080" left="-320" src="http://wevideo-original-videos.s3.amazonaws.com/2018_02_05_6dba6e13-c613-4ba7-80e2-dd041862ed6b" title="clock" top="0" volume="1.0" width="2560">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3451" value="1"/>
+          <entry time="31599" value="1"/>
+          <entry time="32080" value="0"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

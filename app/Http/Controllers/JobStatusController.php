@@ -5,7 +5,8 @@ use Illuminate\Http\Request;
 use App\ProcessXml;
 use App\Template;
 use Illuminate\Support\Facades\DB;
-use Mail;
+//use Mail; // Laravel
+use Illuminate\Support\Facades\Mail; // Lumen
 
 class JobStatusController extends Controller
 {
@@ -67,9 +68,9 @@ class JobStatusController extends Controller
     // Refresh the DB before returning the view
     $refresh = $this->refresh();
 
-    //$templates = JobStatus::all();
-    $templates = Template::idDescending()->get();
-    return view('queue')->with('templates',$templates);
+    $templates = Template::idDescending()->select('tid', 'name', 'job_id', 'job_status', 'url', 'thumbnail')->where('job_id', '!=', '')->get();
+    return $templates;
+    //return view('queue')->with('templates',$templates);
   }
 
   public function email(Request $request) {

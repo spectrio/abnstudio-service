@@ -1,0 +1,36 @@
+<timeline version="1">
+  <layers>
+    <layer title="mask" volume="1.0">
+      <text begin="0" duration="40000" height="385" left="-495" processHtml="false" top="216" volume="1.0" width="1486"><![CDATA[<div align="center" style="text-align: right;"><span style="font-size: 106px; color: rgb(225, 179, 52); font-family: Louis-BoldItalic; line-height: normal; letter-spacing: 0px;">NAME GOES HERE</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="40000" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="LOGO" volume="1.0">
+      <text begin="0" duration="40000" height="408" left="-465" processHtml="false" top="317" volume="1.0" width="1464"><![CDATA[<div align="center" style="text-align: right;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Title goes here</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="40000" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="mask" volume="1.0">
+      <image begin="0" duration="40000" src="http://wevideo-images.s3.amazonaws.com/2017_09_28_fb15df6f-0459-482d-9758-6f73f815b810" title="H_VW4_VW9_ACURA_CHEVY_INTROhorizontal" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="40000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="bk" volume="1.0">
+      <image begin="0" duration="40000" src="http://wevideo-images.s3.amazonaws.com/2017_09_28_97c9f4a7-50bd-49c0-bfde-0050ece2d18d" title="H_VW4_VW9_ACURA_CHEVY_INTROhorizontal" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="40000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+  </layers>
+</timeline>

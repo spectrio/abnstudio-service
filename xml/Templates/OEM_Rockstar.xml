@@ -1,0 +1,155 @@
+<timeline version="1">
+  <layers>
+    <layer title="Title%20%7B%22bts%22%3A%22h3%22%2C%20%22bto%22%3A%7B%22chevy%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="8200" duration="1000" type="crossFade"/>
+      <text begin="9200" duration="5720" height="117" inPoint="2160" left="4" processHtml="false" top="612" width="828"><![CDATA[<div align="center" style="text-align: right;"><span style="font-size: 54px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 90%; letter-spacing: 0px;">{{Title}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5720" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="1440" duration="4480" height="196" inPoint="1440" left="1491" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="847" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="463" value="1"/>
+          <entry time="4480" value="0.9986424088463838"/>
+        </opacity>
+      </image>
+      <transition begin="5920" duration="1000" type="animationPaperPlane"/>
+      <transition begin="8920" duration="1000" type="crossFade"/>
+      <image begin="9920" duration="5000" height="196" inPoint="8280" left="38" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="851" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="0.9986424088463838"/>
+          <entry time="5000" value="0.9925712306491564"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+      <transition begin="16960" duration="1000" type="crossFade"/>
+      <image begin="17960" duration="15440" height="196" inPoint="15680" left="1502" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="850" volume="1.0" width="384">
+        <opacity>
+          <entry time="1000" value="0.9925712306491564"/>
+          <entry time="15440" value="0.9870916031480691"/>
+        </opacity>
+      </image>
+      <transition begin="33400" duration="1000" type="patternBubble"/>
+      <transition begin="34440" duration="1000" type="crossBlur"/>
+      <image begin="35440" duration="6320" height="196" inPoint="16640" left="40" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="49" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="0.9925712306491564"/>
+          <entry time="6320" value="0.9870916031480691"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="blank%202%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevy%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22w%22%2C%22honda%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="33400" duration="2000" type="patternBubble"/>
+      <text begin="35400" duration="6360" height="339" inPoint="2000" left="0" processHtml="false" top="761" width="1920"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 114px; color: rgb(255, 255, 255); font-family: BUIFUMED; line-height: 90%; letter-spacing: 0px;">Thanks for being awesome</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6360" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="crowd_bk" volume="1.0">
+      <transition begin="33400" duration="2000" type="patternBubble"/>
+      <image begin="35400" duration="6360" height="1080" inPoint="2000" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_09_17_0fb56677-3f3e-4fae-bb33-3a62cc92e70a" title="4" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6360" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="text_02%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevy%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22g%22%7D%7D" volume="1.0">
+      <transition begin="15040" duration="2000" type="3dTileHorizontal"/>
+      <text begin="17040" duration="16600" height="237" inPoint="2000" left="786" processHtml="false" top="7" width="1105"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 146px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 90%; letter-spacing: 0px;">Fun Facts</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16600" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="33640" duration="2000" type="patternBubble"/>
+    </layer>
+    <layer title="paragraph%20%7B%22bts%22%3A%22p%22%2C%20%22bto%22%3A%7B%22chevy%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22g%22%7D%7D" volume="1.0">
+      <transition begin="15040" duration="2000" type="3dTileHorizontal"/>
+      <text begin="17040" duration="16600" height="673" inPoint="2000" left="789" processHtml="false" top="127" width="1025"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">•  {{Banging your head against a wall burns 150 calories an hour.}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 172px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); font-family: Roboto; line-height: 110%; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">•  {{When hippos are upset, their sweat turns red.}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 172px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); font-family: Roboto; line-height: 110%; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">•  {{There is a species of spider called the Hobo Spider.}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16600" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="33640" duration="2000" type="patternBubble"/>
+    </layer>
+    <layer title="frame_01%20%7B%22bis%22%3A%221202875970%22%7D" volume="1.0">
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+      <image begin="16920" duration="16480" height="1080" inPoint="2000" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_09_17_f195f2b8-d66a-4675-a37f-30681abaee54" title="default+slide+3" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16480" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="33400" duration="2000" type="patternBubble"/>
+    </layer>
+    <layer title="image" volume="1.0">
+      <transition begin="15040" duration="2000" type="3dTileHorizontal"/>
+      <image begin="17040" duration="16600" height="1123" inPoint="4240" left="-23" src="http://wevideo-images.s3.amazonaws.com/2018_07_25_ed5b5b4a-6f3a-4127-8987-a8e67aac43ac" title="woman+2" top="1" volume="1.0" width="802">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16600" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="33640" duration="2000" type="patternBubble"/>
+    </layer>
+    <layer title="name%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevy%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%20%22buick%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="7680" duration="1000" type="crossFade"/>
+      <text begin="8680" duration="6240" height="192" inPoint="1000" left="-117" processHtml="false" top="474" width="951"><![CDATA[<div align="center" style="text-align: right;"><span style="font-size: 80px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{Name goes here}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="frame_02" volume="1.0">
+      <transition begin="5920" duration="2000" type="3dTileHorizontal"/>
+      <image begin="7920" duration="7000" height="950" inPoint="2000" left="982" src="http://wevideo-images.s3.amazonaws.com/2018_05_15_d263802e-9778-4e09-9d78-b419e206eff1" title="FRAME" top="55" volume="1.0" width="714">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Employee%20Photo" volume="1.0">
+      <transition begin="5920" duration="2000" type="3dTileHorizontal"/>
+      <image begin="7920" duration="7000" height="799" inPoint="2240" left="1048" src="http://wevideo-images.s3.amazonaws.com/2018_07_25_ed5b5b4a-6f3a-4127-8987-a8e67aac43ac" title="woman+2" top="131" volume="1.0" width="571">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="7000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="banner_02%20%7B%22bis%22%3A%221202875662%22%7D" volume="1.0">
+      <transition begin="6400" duration="2000" type="gridDiagonal"/>
+      <image begin="8400" duration="6520" height="1080" inPoint="2000" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_09_17_3c866484-b411-4918-818a-01c5ff28568c" title="default" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6520" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="default_bk" volume="1.0">
+      <transition begin="200" duration="2000" type="animationPaperPlane"/>
+      <image begin="2200" duration="2720" height="1080" inPoint="2000" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_09_13_d07102d5-dfe8-4b27-bdca-0e925daf2525" title="slide+1" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="720" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="4920" duration="2000" type="animationPaperPlane"/>
+    </layer>
+  </layers>
+</timeline>

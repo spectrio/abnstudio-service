@@ -7,9 +7,21 @@ class ProcessXml
 {
     public function process($filename, $orgFilename)
     {
+      if (!function_exists('public_path')) {
+        function public_path($path = null) {
+          return rtrim(app()->basePath('public/' . $path), '/');
+        }
+      }
+      if (!function_exists('storage_path')) {
+        function storage_path($path = null) {
+          return rtrim(app()->basePath('storage/' . $path), '/');
+        }
+      }
+
       if($filename[0] != '<') {
         // Filename passed in, load it to a string
-        $xml = file_get_contents(public_path()."/uploads/xml/$filename");
+        //$xml = file_get_contents(public_path()."/uploads/xml/$filename");
+        $xml = file_get_contents(storage_path()."/app/public/xml/$filename");
       } else {
         // XML string was passed in, use as-is
         $xml = $filename;

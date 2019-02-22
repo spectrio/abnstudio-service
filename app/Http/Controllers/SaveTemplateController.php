@@ -5,13 +5,13 @@ use Illuminate\Http\Request;
 use App\Template;
 use App\FormFields;
 use App\ProcessXml;
-use Illuminate\Support\Facades\Auth;
+//use Illuminate\Support\Facades\Auth;
 
 class SaveTemplateController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     public function index(Request $request)
@@ -64,7 +64,7 @@ class SaveTemplateController extends Controller
       $save->visible = $this->fixBool($request->input('publish'));
       $save->email = $request->input('renderEmail');
       $save->thumbnail_time = $request->input('thumbnailTime');
-      $save->user = Auth::id();
+      $save->user = $request->input('uid');//Auth::id();
       $save->save();
       $tid = $save->tid;
 

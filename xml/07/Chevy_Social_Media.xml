@@ -1,0 +1,88 @@
+<timeline version="1">
+  <layers>
+    <layer title="icons%20%7B%22bfc%22%3A%22l%22%7D" volume="1.0">
+      <transition begin="3080" duration="1000" type="wipeRight"/>
+      <text begin="4080" duration="8920" height="151" inPoint="1280" left="0" processHtml="false" top="750" width="1920"><![CDATA[<div align="center"><span style="font-size: 112px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: 90%; letter-spacing: -1px;"><span style="color: rgb(255, 255, 255); line-height: 90%; letter-spacing: -1px;">{{</span></span><span style="font-size: 112px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 90%; letter-spacing: -1px;">  </span><span style="font-size: 112px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: 90%; letter-spacing: -1px;"><span style="color: rgb(255, 255, 255); line-height: 90%; letter-spacing: -1px;">}}{{</span></span><span style="font-size: 112px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 90%; letter-spacing: -1px;">  </span><span style="font-size: 112px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: 90%; letter-spacing: -1px;"><span style="color: rgb(255, 255, 255); line-height: 90%; letter-spacing: -1px;">}}{{</span></span><span style="font-size: 112px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 90%; letter-spacing: -1px;">  </span><span style="font-size: 112px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: 90%; letter-spacing: -1px;"><span style="color: rgb(255, 255, 255); line-height: 90%; letter-spacing: -1px;">}}{{</span></span><span style="font-size: 112px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 90%; letter-spacing: -1px;">  </span><span style="font-size: 112px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: 90%; letter-spacing: -1px;"><span style="color: rgb(255, 255, 255); line-height: 90%; letter-spacing: -1px;">}}</span></span><span style="font-size: 112px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 90%; letter-spacing: -1px;">{{  }}{{  }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="8920" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="2800" duration="1000" type="crossBlur"/>
+      <image begin="3800" duration="9200" height="127" inPoint="2800" left="1600" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="923" volume="1.0" width="250">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9200" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="frame" volume="1.0">
+      <transition begin="0" duration="600" type="directionalWipe"/>
+      <image begin="600" duration="2200" height="1080" inPoint="600" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_05_15_e2419b94-607f-4a7e-8846-a74b1dbd9fc3" title="Untitled-1-01" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1941" value="1"/>
+          <entry time="2200" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="stay_in_touch%20%7B%22bfc%22%3A%22d%22%2C%20%22bff%22%3A%22b%22%7D" volume="1.0">
+      <transition begin="360" duration="400" type="3dFlipVertical"/>
+      <text begin="760" duration="2040" height="217" inPoint="400" left="32" processHtml="false" top="404" width="1846"><![CDATA[<div align="center"><span style="font-size: 160px; background-color: rgba(0, 0, 0, 0); color: rgb(74, 77, 82); font-family: Louis-Bold; line-height: 90%; letter-spacing: -1px;">S</span><span style="font-size: 160px; color: rgb(74, 77, 82); font-family: Louis-Bold; line-height: 90%; letter-spacing: -1px;">TAY IN TOUCH</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1790" value="1"/>
+          <entry time="2040" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="white_bk2_1" volume="1.0">
+      <text backgroundColor="#efefef" begin="0" duration="2800" height="1184" left="-104" processHtml="false" top="-122" width="2300"><![CDATA[<div align="left"><span style="font-size: 172px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); font-family: Roboto; line-height: 205%; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2543" value="1"/>
+          <entry time="2800" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="follow_us%20%7B%22bfc%22%3A%22a%22%2C%20%22bff%22%3A%22b%22%7D" volume="1.0">
+      <transition begin="2800" duration="480" type="3dFlipHorizontal"/>
+      <text begin="3280" duration="9720" height="179" inPoint="480" left="25" processHtml="false" top="600" width="1869"><![CDATA[<div align="center"><span style="font-size: 118px; color: rgb(225, 179, 52); font-family: Louis-Bold; line-height: 90%; letter-spacing: -1px;">FOLLOW US</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9720" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="banner%20%7B%22bbc%22%3A%22d%22%7D" volume="1.0">
+      <transition begin="3080" duration="1000" type="wipeRight"/>
+      <text backgroundColor="#84878d" begin="4080" duration="8920" height="134" inPoint="2080" left="-58" processHtml="false" top="807" width="2066"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="8920" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="-58" endTop="769" endWidth="1920" startHeight="1080" startLeft="-58" startTop="769" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="white_bk2_2" volume="1.0">
+      <transition begin="2520" duration="720" type="pageCurl"/>
+      <text backgroundColor="#ffffff" begin="3240" duration="9760" height="473" inPoint="720" left="-53" processHtml="false" top="620" width="2076"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9760" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="fingers_bk%20%7B%22bit%22%3A%22b%22%7D" volume="1.0">
+      <image begin="1600" duration="11400" height="1728" left="2" src="http://wevideo-images.s3.amazonaws.com/2018_05_15_35e4843e-6743-419a-a27b-16964cd43f31" title="AdobeStock_42270488" top="-213" volume="1.0" width="1949">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="11400" value="1"/>
+        </opacity>
+        <filter brightness="0" contrast="0" hue="0" saturation="0" type="colorCorrection"/>
+      </image>
+    </layer>
+  </layers>
+</timeline>

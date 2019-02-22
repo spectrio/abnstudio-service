@@ -23,10 +23,12 @@ $router->get('/get', 'GetTemplateController@index');
 $router->delete('/delete', 'GetTemplateController@delete');
 $router->get('/status', 'JobStatusController@index');
 $router->get('/refresh', 'JobStatusController@refresh');
-//$router->get('/queue', 'JobStatusController@queue');
+$router->get('/queue', 'JobStatusController@queue');
 $router->post('/email', 'JobStatusController@email');
 $router->get('/getlogo', 'GetTemplateController@getLogo');
+$router->post('/save', 'SaveTemplateController@index');
 $router->get('/save', 'SaveTemplateController@index');
+$router->patch('/save', 'SaveTemplateController@index');
 $router->post('/upload', 'UploadController@upload');
 
 $router->post('/modified/save', 'ModifyTemplateController@index');

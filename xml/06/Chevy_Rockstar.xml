@@ -1,0 +1,169 @@
+<timeline version="1">
+  <layers>
+    <layer title="Video%2010" volume="1.0">
+      <image begin="2000" duration="3680" height="127" inPoint="840" left="1611" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="924" volume="1.0" width="250">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1223" value="1"/>
+          <entry time="3680" value="0.9986424088463838"/>
+        </opacity>
+      </image>
+      <transition begin="5680" duration="2000" type="3dTileVertical"/>
+      <transition begin="7920" duration="1000" type="crossFade"/>
+      <image begin="8920" duration="6000" height="127" inPoint="7280" left="58" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="922" volume="1.0" width="250">
+        <opacity>
+          <entry time="0" value="0.9986424088463838"/>
+          <entry time="6000" value="0.9925712306491564"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+      <transition begin="17360" duration="1000" type="crossFade"/>
+      <image begin="18360" duration="5040" height="127" inPoint="16080" left="1611" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="924" volume="1.0" width="250">
+        <opacity>
+          <entry time="0" value="0.9925712306491564"/>
+          <entry time="5040" value="0.9870916031480691"/>
+        </opacity>
+      </image>
+      <transition begin="23400" duration="2000" type="patternBubble"/>
+      <transition begin="25440" duration="1000" type="crossFade"/>
+      <image begin="26440" duration="5000" height="196" inPoint="19840" left="771" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="692" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="0.9870916031480691"/>
+          <entry time="4602" value="1"/>
+          <entry time="5000" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Video%209" volume="1.0">
+      <transition begin="26320" duration="2000" type="crossFade"/>
+      <text begin="28320" duration="3120" height="408" left="4" processHtml="false" top="105" volume="1.0" width="1916"><![CDATA[<div align="center"><span style="font-size: 166px; color: rgb(255, 255, 255); font-family: Louis-CondensedDemi; line-height: normal; letter-spacing: 0px;">THANKS FOR BEING </span><span style="font-size: 166px; color: rgb(225, 179, 52); font-family: Louis-CondensedDemi; line-height: normal; letter-spacing: 0px;">AWESOME!</span></div>]]>
+        <opacity>
+          <entry time="3000" value="1"/>
+          <entry time="5120" value="1"/>
+          <entry time="6120" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%207" volume="1.0">
+      <transition begin="25080" duration="2000" type="gridDiagonal"/>
+      <image begin="27080" duration="4360" height="1123" inPoint="2000" left="-37" src="http://wevideo-images.s3.amazonaws.com/2017_09_25_a4f18159-ca3e-4383-be0d-ee4253ef2069" title="banner_02" top="-47" volume="1.0" width="1997">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3784" value="1"/>
+          <entry time="4360" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Video%206" volume="1.0">
+      <transition begin="23840" duration="2000" type="patternBubble"/>
+      <image begin="25840" duration="5600" inPoint="4000" src="http://wevideo-images.s3.amazonaws.com/2017_09_25_59a98fd3-6ebc-4dfa-8095-bf0486fccc03" title="bk_04" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5037" value="1"/>
+          <entry time="5600" value="0"/>
+        </opacity>
+        <filter endHeight="1209.6000000000001" endLeft="-115.20000000000005" endTop="-64.80000000000007" endWidth="2150.4" startHeight="1080" startLeft="0" startTop="0" startWidth="1920" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="Video%205" volume="1.0">
+      <transition begin="15360" duration="2000" type="crossFade"/>
+      <text begin="17360" duration="5400" height="408" left="600" processHtml="false" top="0" volume="1.0" width="1464"><![CDATA[<div align="center"><span style="font-size: 190px; color: rgb(255, 255, 255); font-family: Louis-CondensedRegular; line-height: normal; letter-spacing: 0px;">Fun Facts</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="7400" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="22760" duration="2000" type="patternBubble"/>
+    </layer>
+    <layer title="Video%204" volume="1.0">
+      <transition begin="15360" duration="2000" type="crossFade"/>
+      <text begin="17360" duration="5400" height="578" left="861" processHtml="false" top="322" volume="1.0" width="1464"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Banging your head against a wall burns </span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">150 calories an hour.</span></div><div align="center" style="text-align: left;"><span style="font-size: 172px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">When hippos are upset, their sweat </span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">turns red.</span></div><div align="center" style="text-align: left;"><span style="font-size: 172px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">There is a species of spider called </span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">the Hobo Spider.</span></div>]]>
+        <opacity>
+          <entry time="2000" value="1"/>
+          <entry time="7400" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="22760" duration="2000" type="patternBubble"/>
+    </layer>
+    <layer title="Video%203" volume="1.0">
+      <transition begin="15040" duration="2000" type="3dTileHorizontal"/>
+      <image begin="17040" duration="5720" inPoint="2000" src="http://wevideo-images.s3.amazonaws.com/2017_10_04_b4d807e0-fee5-4192-858b-6aa48fd8020b" title="H_VW4_VW9_ACURA_CHEVY_ROCKSTAR3" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5720" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="22760" duration="2000" type="patternBubble"/>
+    </layer>
+    <layer title="Video%202" volume="1.0">
+      <transition begin="15040" duration="2000" type="3dTileHorizontal"/>
+      <image begin="17040" duration="5720" height="1123" inPoint="2000" left="-381" src="http://wevideo-images.s3.amazonaws.com/2018_05_16_b6c63fad-8d90-4c19-a400-de8891cc9be4" title="AdobeStock_94001299" top="-21" volume="1.0" width="1498">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5720" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="22760" duration="2000" type="patternBubble"/>
+    </layer>
+    <layer title="Video%201" volume="1.0">
+      <transition begin="7680" duration="1000" type="crossFade"/>
+      <text begin="8680" duration="6240" height="408" left="36" processHtml="false" top="417" volume="1.0" width="1464"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 106px; color: rgb(255, 255, 255); font-family: Louis-Bold; line-height: normal; letter-spacing: 0px;">Mark Williamson</span></div><div align="center" style="text-align: left;"><span style="font-size: 54px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Supervisor</span></div>]]>
+        <opacity>
+          <entry time="1000" value="1"/>
+          <entry time="7240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Video%208" volume="1.0">
+      <transition begin="5920" duration="2000" type="3dTileHorizontal"/>
+      <image begin="7920" duration="7000" height="950" inPoint="2000" left="982" src="http://wevideo-images.s3.amazonaws.com/2018_05_15_d263802e-9778-4e09-9d78-b419e206eff1" title="FRAME" top="55" volume="1.0" width="714">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="not_editable" volume="1.0">
+      <transition begin="5920" duration="2000" type="3dTileHorizontal"/>
+      <image begin="7920" duration="7000" height="1015" inPoint="2000" left="76" src="http://wevideo-images.s3.amazonaws.com/2017_09_25_742cb249-8a6c-440b-aa38-d2d0cdbf8dac" title="picture" top="27" volume="1.0" width="1805">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="picture_02_editable" volume="1.0">
+      <transition begin="6480" duration="2000" type="gridDiagonal"/>
+      <image begin="8480" duration="6440" height="385" inPoint="2800" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_05_16_5a12dd32-381e-4a68-95a7-e38a753af19f" title="WHITE+LINES+copy+%28merged%29" top="440" volume="1.0" width="1997">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4440" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="not_editable" volume="1.0">
+      <transition begin="5920" duration="2000" type="3dTileHorizontal"/>
+      <image begin="7920" duration="7000" height="1080" inPoint="2000" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_05_15_f10ac4f0-5fb1-4818-aeb7-a29a6e0fe9f5" title="2" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="7000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="picture_editable" volume="1.0">
+      <transition begin="0" duration="2000" type="animationPaperPlane"/>
+      <image begin="2000" duration="3680" inPoint="2000" src="http://wevideo-images.s3.amazonaws.com/2017_09_25_5e2d161c-5206-492b-b135-5551f6a2fa27" title="rockstar" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3680" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="5680" duration="2000" type="3dTileVertical"/>
+    </layer>
+  </layers>
+</timeline>

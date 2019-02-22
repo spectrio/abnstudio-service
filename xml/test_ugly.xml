@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<timeline version="1">
+  <layers>
+    <layer title="banner_1" volume="1.0">
+      <text processHtml="false" volume="1.0">TEST
+        <filter/>
+      </text>
+    </layer>
+  </layers>
+</timeline>

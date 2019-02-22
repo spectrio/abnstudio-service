@@ -1,0 +1,243 @@
+<timeline version="1">
+  <layers>
+    <layer title="Video%201" volume="1.0">
+      <transition begin="2440" duration="1000" type="crossFade"/>
+      <image begin="3440" duration="55200" height="127" inPoint="1000" left="45" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="927" volume="1.0" width="250">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="55200" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="title" volume="1.0">
+      <text begin="0" duration="1440" height="425" left="-264" processHtml="false" top="-10" volume="1.0" width="1399"><![CDATA[<div align="center"><span style="font-size: 128px; color: rgb(255, 255, 255); font-family: Louis-BoldItalic; line-height: 115%; letter-spacing: 0px;">DECEMBER</span></div><div align="center"><span style="font-size: 128px; color: rgb(255, 255, 255); font-family: Louis-BoldItalic; line-height: 115%; letter-spacing: 0px;">                 BIRTHDAYS</span></div>]]>
+        <opacity>
+          <entry time="17480" value="0"/>
+          <entry time="18920" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="-264" endTop="-10" endWidth="1920" startHeight="777.6" startLeft="229.26376811594213" startTop="226.53333333333333" startWidth="1382.3999999999999" type="kenBurns"/>
+      </text>
+      <text begin="1440" duration="57200" height="425" left="-264" processHtml="false" top="-10" volume="1.0" width="1399"><![CDATA[<div align="center"><span style="font-size: 128px; color: rgb(255, 255, 255); font-family: Louis-BoldItalic; line-height: 115%; letter-spacing: 0px;">DECEMBER</span></div><div align="center"><span style="font-size: 128px; color: rgb(255, 255, 255); font-family: Louis-BoldItalic; line-height: 115%; letter-spacing: 0px;">                 BIRTHDAYS</span></div>]]>
+        <opacity>
+          <entry time="19360" value="1"/>
+          <entry time="76560" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="ribbon" volume="1.0">
+      <image begin="0" duration="1440" height="1166" inPoint="680" left="-22" src="http://wevideo-images.s3.amazonaws.com/2017_09_13_22023b62-1992-4c29-9dd0-24c7586e5cc3" title="bow-01" top="-274" volume="1.0" width="1166">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1440" value="1"/>
+        </opacity>
+        <filter endHeight="1166" endLeft="-22" endTop="-274" endWidth="1166" startHeight="874.8000000000001" startLeft="123.59999999999997" startTop="-128.40000000000003" startWidth="874.8000000000001" type="kenBurns"/>
+      </image>
+      <image begin="1440" duration="57200" height="1166" inPoint="2760" left="-22" src="http://wevideo-images.s3.amazonaws.com/2017_09_13_22023b62-1992-4c29-9dd0-24c7586e5cc3" title="bow-01" top="-274" volume="1.0" width="1166">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="57200" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="bottom_line" volume="1.0">
+      <transition begin="1440" duration="3000" type="crossFade"/>
+      <text begin="4440" duration="54200" flipH="true" height="9" left="1225" processHtml="false" rotation="180" top="950" volume="1.0" width="575"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="3000" value="1"/>
+          <entry time="57200" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="top_line" volume="1.0">
+      <transition begin="1440" duration="3000" type="crossFade"/>
+      <text begin="4440" duration="54200" flipH="true" height="9" left="1225" processHtml="false" rotation="180" top="125" volume="1.0" width="575"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="3000" value="1"/>
+          <entry time="57200" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="mask_1" volume="1.0">
+      <video begin="3000" duration="50080" height="356" left="1219" src="http://wevideo-original-videos.s3.amazonaws.com/2017_09_14_525e344d-5d0f-4161-ae43-ebf66671bc3f" title="box" top="-222" volume="1.0" width="634">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="50080" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="50080" value="1"/>
+        </volume>
+      </video>
+      <video begin="53080" duration="5560" height="356" left="1219" src="http://wevideo-original-videos.s3.amazonaws.com/2017_09_14_525e344d-5d0f-4161-ae43-ebf66671bc3f" title="box" top="-222" volume="1.0" width="634">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5560" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="5560" value="1"/>
+        </volume>
+      </video>
+    </layer>
+    <layer title="mask_2" volume="1.0">
+      <video begin="3000" duration="50080" height="356" left="1190" src="http://wevideo-original-videos.s3.amazonaws.com/2017_09_14_525e344d-5d0f-4161-ae43-ebf66671bc3f" title="box" top="959" volume="1.0" width="634">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="50080" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="50080" value="1"/>
+        </volume>
+      </video>
+      <video begin="53080" duration="5560" height="356" left="1219" src="http://wevideo-original-videos.s3.amazonaws.com/2017_09_14_525e344d-5d0f-4161-ae43-ebf66671bc3f" title="box" top="-222" volume="1.0" width="634">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5560" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="5560" value="1"/>
+        </volume>
+      </video>
+    </layer>
+    <layer title="birthdays_5" volume="1.0">
+      <text begin="16000" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="31160" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="46120" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="birthdays_4" volume="1.0">
+      <text begin="13000" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="28160" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="43120" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="birthdays_3" volume="1.0">
+      <text begin="10000" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="25160" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="40120" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="birthdays_2" volume="1.0">
+      <text begin="7000" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="22160" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="37120" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="birthdays_1" volume="1.0">
+      <text begin="4000" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="19160" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+      <text begin="34120" duration="12520" height="408" left="1240" processHtml="false" top="100" volume="1.0" width="585"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Month/Day Goes Here   </span></div><div align="center"><span style="font-size: 44px; color: rgb(255, 255, 255); font-family: Louis-Regular; line-height: normal; letter-spacing: 0px;">Name Goes Here</span></div>]]>
+        <opacity>
+          <entry time="15640" value="1"/>
+          <entry time="28160" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1240" endTop="-120" endWidth="1920" startHeight="1080" startLeft="1240" startTop="900" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="cupcakes" volume="1.0">
+      <transition begin="0" duration="3000" type="crossFade"/>
+      <video begin="3000" duration="47080" height="1080" inPoint="3000" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2017_09_14_fd2deb12-cf2b-4073-b8a9-23601ddd21fa" title="Cupcakes" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="47080" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="47080" value="1"/>
+        </volume>
+      </video>
+      <video begin="50080" duration="8560" height="1080" inPoint="3000" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2017_09_14_fd2deb12-cf2b-4073-b8a9-23601ddd21fa" title="Cupcakes" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="8560" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="8560" value="1"/>
+        </volume>
+      </video>
+    </layer>
+  </layers>
+</timeline>

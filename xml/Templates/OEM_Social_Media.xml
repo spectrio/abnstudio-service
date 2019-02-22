@@ -1,0 +1,85 @@
+<timeline version="1">
+  <layers>
+    <layer title="icons" volume="1.0">
+      <transition begin="2560" duration="1000" type="directionalWipe"/>
+      <text begin="3560" duration="9440" height="408" inPoint="1000" left="-409" processHtml="false" top="567" width="2757"><![CDATA[<div align="center"><span style="font-size: 120px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">{{  }} {{  }} {{  }} {{  }} {{  }} {{  }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9440" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="headline%202%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevy%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="2560" duration="1000" type="directionalWipe"/>
+      <text begin="3560" duration="9440" height="408" inPoint="1000" left="236" processHtml="false" top="392" width="1464"><![CDATA[<div align="center"><span style="font-size: 104px; color: rgb(85, 86, 90); font-family: AvenirNextRoundedStd-Demi; line-height: normal; letter-spacing: 0px;">{{Connect With Us!}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9440" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="2560" duration="1000" type="directionalWipe"/>
+      <image begin="3560" duration="9440" height="196" inPoint="1000" left="791" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="875" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9440" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="banner%202%20%7B%22bts%22%3A%22obj%22%2C%20%22bto%22%3A%7B%22gmc%22%3A%221%22%2C%20%22chevy%22%3A%221%22%2C%20%22buick%22%3A%221%22%7D%7D" volume="1.0">
+      <transition begin="2560" duration="1000" type="directionalWipe"/>
+      <text backgroundColor="#007cc3" begin="3560" duration="9440" height="182" inPoint="1000" left="0" processHtml="false" top="677" width="1921"><![CDATA[<div align="left"><span style="font-size: 88px; font-family: FontAwesome; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9440" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="bk%202%20%7B%22bts%22%3A%22bg%22%2C%20%22bto%22%3A%7B%22gmc%22%3A%22b%22%2C%20%22chevy%22%3A%223%22%7D%7D" volume="1.0">
+      <transition begin="2560" duration="1000" type="directionalWipe"/>
+      <text backgroundColor="#ffffff" begin="3560" duration="9440" height="578" inPoint="1000" left="0" processHtml="false" top="500" width="1921"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9440" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="bk2" volume="1.0">
+      <transition begin="2560" duration="1000" type="directionalWipe"/>
+      <image begin="3560" duration="9440" height="1080" inPoint="1000" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_09_26_33e9b449-a1aa-4f4d-824d-0f50d63ef496" title="Young+people+using+mobile+phones" top="-50" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9440" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="headline%201%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevy%22%3A%22w%22%2C%20%22buick%22%3A%22w%22%2C%20%22honda%22%3A%22w%22%7D%2C%20%22bta%22%3A%7B%22buick%22%3A%220%2C12%22%7D%7D" volume="1.0">
+      <text begin="0" duration="1560" height="408" left="275" processHtml="false" top="775" width="1464"><![CDATA[<div align="center"><span style="font-size: 134px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Demi; line-height: normal; letter-spacing: 0px;">{{We're Social}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1560" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="1560" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="banner%201%20%7B%22bts%22%3A%22obj%22%2C%20%22bto%22%3A%7B%22chevy%22%3A%221%22%2C%20%22buick%22%3A%221%22%2C%20%22gmc%22%3A%22b%22%7D%7D" volume="1.0">
+      <text backgroundColor="#007cc3" begin="0" duration="1560" height="340" left="-106" processHtml="false" top="853" width="2062"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1560" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="1560" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="bk%201" volume="1.0">
+      <image begin="0" duration="1560" height="1080" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_09_26_4ddd3b66-ebab-4cb9-aaf4-c1a74c558982" title="social+media" top="-136" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1560" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="1560" duration="1000" type="crossFade"/>
+    </layer>
+  </layers>
+</timeline>

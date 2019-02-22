@@ -1,0 +1,60 @@
+<timeline version="1">
+  <layers>
+    <layer title="Video%207" volume="1.0">
+      <text begin="0" duration="10080" height="185" left="48" processHtml="false" top="710" width="1741"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 118px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Bold; line-height: normal; letter-spacing: 0px;">StratumGMCWeb-Bold</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%206" volume="1.0">
+      <text begin="0" duration="10080" height="185" left="48" processHtml="false" top="600" width="1741"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 118px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Medium; line-height: normal; letter-spacing: 0px;">StratumGMCWeb-Medium</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%205" volume="1.0">
+      <text begin="0" duration="10080" height="185" left="48" processHtml="false" top="500" width="1741"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 118px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Regular; line-height: normal; letter-spacing: 0px;">StratumGMCWeb-Regular</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%204" volume="1.0">
+      <text begin="0" duration="10080" height="185" left="48" processHtml="false" top="40" width="1741"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 118px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Reg; line-height: normal; letter-spacing: 0px;">AvenirNextRoundedStd-Reg</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%203" volume="1.0">
+      <text begin="0" duration="10080" height="185" left="48" processHtml="false" top="180" width="1741"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 118px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">AvenirNextRoundedStd-Med</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%202" volume="1.0">
+      <text begin="0" duration="10080" height="185" left="48" processHtml="false" top="320" width="1741"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 118px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Demi; line-height: normal; letter-spacing: 0px;">AvenirNextRoundedStd-Demi</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%201" volume="1.0">
+      <video begin="0" duration="10080" height="1080" left="0" src="http://wevideo-original-videos.s3.amazonaws.com/2016_07_21_1d2f323e-ff10-4349-8460-dd43f82362f2" title="Golden+Streaks" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10080" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>
