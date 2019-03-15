@@ -22,6 +22,67 @@ class ModifyTemplateController extends Controller
       //]);
 
       $data = json_decode($request->getContent(), true);
+      $fields = $data['templateFields'];
+      //print_r($data);die();
+
+      // Check for cropped images
+      if(!empty($fields)) {
+        foreach($fields as $key => $field) {
+          // Field passed over an image
+          if(isset($field['crop']) && !empty($field['crop'])){
+            // Decode image
+            $cropdata = explode(',',$field['crop']['src']);
+            $mime = str_replace('data:','', str_replace(';base64','',$cropdata[0]) );
+            $cropdata = base64_decode($cropdata[1]);
+            $time = Carbon::now();
+            $filename = str_random(5).date_format($time,'d').rand(1,9).date_format($time,'h');
+
+            $im = imagecreatefromstring($cropdata);
+            imagealphablending($im, true);
+            if($im !== false) {
+              // Crop the image
+              $im2 = imagecrop($im, [
+                'x' => $field['crop']['x'],
+                'y' => $field['crop']['y'],
+                'width' => $field['crop']['w'],
+                'height' => $field['crop']['h']
+              ]);
+              if($im2 !== false) {
+                if($mime == 'image/png') {
+                  // Save PNG
+                  //header('Content-Type: ' . $mime);
+                  $extension = 'png';
+                  $filename .= ".".$extension;
+                  imagealphablending($im2, true);
+                  imagesavealpha($im2, true);
+                  imagepng($im2, 'uploads/img/' . $filename);
+                } else {
+                  // Save JPEG
+                  $extension = 'jpg';
+                  $filename .= ".".$extension;
+                  imagejpeg($im2, 'uploads/img/' . $filename);
+                }
+
+                // Upload image to CDN and set the content to result URL
+                $awsUpload = app('App\Http\Controllers\AwsController')->uploadImage($filename);
+                if($awsUpload) {
+                  // Update URL data so it gets processed and saved correctly
+                  $fields[$key]['content'] = $awsUpload;
+                  $data['templateFields'][$key]['content'] = $awsUpload;
+                }
+
+                imagedestroy($im2);
+              } else {
+                die('{"error":"Could not create cropped image!"}');
+              }
+              imagedestroy($im);
+            } else {
+              die('{"error":"Could not create image!"}');
+            }
+          }
+        }
+      }
+
 
       // Handle OPTIONS method. Chrome requires a response due to CORS
       if ($request->isMethod('options'))
@@ -90,7 +151,6 @@ class ModifyTemplateController extends Controller
       $mtid = $save->mtid;
 
       // Save each modified template field to the database
-      $fields = $data['templateFields'];
       if(!empty($fields)) {
         foreach($fields as $key => $field) {
           $saveFields = new ModifiedFields;
@@ -101,52 +161,6 @@ class ModifyTemplateController extends Controller
             $saveFields->save();
           }
 
-          // Field passed over an image
-          if(isset($field['crop']) && !empty($field['crop'])){
-            // Decode image
-            $data = explode(',',$field['crop']['src']);
-            $mime = str_replace('data:','', str_replace(';base64','',$data[0]) );
-            $data = base64_decode($data[1]);
-            $time = Carbon::now();
-            $filename = str_random(5).date_format($time,'d').rand(1,9).date_format($time,'h');
-
-            $im = imagecreatefromstring($data);
-            imagealphablending($im, true);
-            if($im !== false) {
-              // Crop the image
-              $im2 = imagecrop($im, [
-                'x' => $field['crop']['x'],
-                'y' => $field['crop']['y'],
-                'width' => $field['crop']['w'],
-                'height' => $field['crop']['h']
-              ]);
-              if($im2 !== false) {
-                if($mime == 'image/png') {
-                  // Save PNG
-                  //header('Content-Type: ' . $mime);
-                  $extension = 'png';
-                  $filename .= ".".$extension;
-                  imagealphablending($im2, true);
-                  imagesavealpha($im2, true);
-                  imagepng($im2, 'uploads/img/' . $filename);
-                } else {
-                  // Save JPEG
-                  $extension = 'jpg';
-                  $filename .= ".".$extension;
-                  imagejpeg($im2, 'uploads/img/' . $filename);
-                }
-
-                // TODO: Upload image to CDN and set the content to result URL
-
-                imagedestroy($im2);
-              } else {
-                die('{"error":"Could not create cropped image!"}');
-              }
-              imagedestroy($im);
-            } else {
-              die('{"error":"Could not create image!"}');
-            }
-          }
         }
       }
 

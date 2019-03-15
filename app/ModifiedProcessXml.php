@@ -491,7 +491,7 @@ class ModifiedProcessXml
 
     $server = env('WEVIDEO_SERVER', 'www');
     $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
-    $postdata = array('version' => '1', 'content' => $xmlFinal, 'resolution' => '1080p', 'crf' => '20', 'fps' => '25', 'thumbnailTime' => $thumbnailTime);
+    $postdata = array('version' => '1', 'content' => $xmlFinal, 'resolution' => '1080p', 'crf' => '20', 'fps' => '29.97', 'thumbnailTime' => $thumbnailTime);
     if($this->endTime) {
       $postdata['endTime'] = $this->endTime;
     }

@@ -21,6 +21,7 @@ $router->get('/test', function () use ($router) {
 
 $router->get('/get', 'GetTemplateController@index');
 $router->delete('/delete', 'GetTemplateController@delete');
+$router->get('/delete', 'GetTemplateController@delete');
 $router->get('/status', 'JobStatusController@index');
 $router->get('/refresh', 'JobStatusController@refresh');
 $router->get('/queue', 'JobStatusController@queue');

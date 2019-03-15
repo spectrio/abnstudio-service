@@ -78,17 +78,17 @@ class JobStatusController extends Controller
     $recipients = $request['recipients'];//"chris.bartek@abnetwork.com";
     $message_text = $request['body'];//"Your test render is now ready.";
     Mail::send('vendor.notifications.render', ['title' => $title, 'body' => $message_text], function ($message) use ($recipients, $title, $message_text) {
-        $message->subject($title);
-        $message->from(env('MAIL_FROM_ADDRESS', 'development@abnetwork.com'), env('MAIL_FROM_NAME', 'WeVideo Service'));
-        $message->to($recipients);
-        $message->setBody($message_text);
-        //$message->attach(public_path($file_attachment));
+      $message->subject($title);
+      $message->from(env('MAIL_FROM_ADDRESS', 'development@abnetwork.com'), env('MAIL_FROM_NAME', 'WeVideo Service'));
+      $message->to($recipients);
+      $message->setBody($message_text);
+      //$message->attach(public_path($file_attachment));
     });
 
     if (count(Mail::failures()) > 0) {
-        $response['status'] = 'fail';
+      $response['status'] = 'fail';
     } else {
-        $response['status'] = 'success';
+      $response['status'] = 'success';
     }
 
     return $response;

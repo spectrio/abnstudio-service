@@ -97,11 +97,13 @@ $app->middleware([
 |
 */
 
- $app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 $app->configure('mail');
- $app->register(\Illuminate\Mail\MailServiceProvider::class);
+$app->register(\Illuminate\Mail\MailServiceProvider::class);
+$app->register(Aws\Laravel\AwsServiceProvider::class);
+class_alias('Aws\Laravel\AwsFacade','AWS');
 
 /*
 |--------------------------------------------------------------------------
@@ -120,7 +122,6 @@ $app->configure('filesystems');
 $app->alias('mailer', Illuminate\Mail\Mailer::class);
 $app->alias('mailer', Illuminate\Contracts\Mail\Mailer::class);
 $app->alias('mailer', Illuminate\Contracts\Mail\MailQueue::class);
-
 
 $app->router->group([
     'namespace' => 'App\Http\Controllers',
