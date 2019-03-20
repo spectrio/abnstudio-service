@@ -7,6 +7,7 @@ use App\ModifiedTemplate;
 use Illuminate\Support\Facades\DB;
 use Mail;
 use App\Jira;
+use Illuminate\Support\Facades\Log;
 
 class ModifiedJobStatusController extends Controller
 {
@@ -26,6 +27,7 @@ class ModifiedJobStatusController extends Controller
   public function refresh()
   {
     $jobs = ModifiedTemplate::incompleteJobs()->get();
+    //Log::info('refresh()');
 
     // Loop through all incomplete jobs and get their status from WeVideo
     foreach ($jobs as $job) {
@@ -39,6 +41,8 @@ class ModifiedJobStatusController extends Controller
       $jobAcctName = $job->acct_name;
       $jobUsername = $job->username;
       $jobPlaylists = $job->playlists;
+      $jobStartDate = $job->start_date;
+      $jobEndDate = $job->end_date;
       $jobStatus = $process->jobStatus($jobId);
       $jobStatus = json_decode($jobStatus,1);
 
@@ -50,9 +54,10 @@ class ModifiedJobStatusController extends Controller
       // If completed, send JIRA ticket
       if(isset($jobStatus['status']) && $jobStatus['status'] == 'COMPLETED') {
         // Job marked as publish, so send out a JIRA ticket
+        Log::info('Controller: Create JIRA issue: '.print_r($jobStatus,1));
         if($jobPublish) {
           $Jira = new Jira();
-          $output = $Jira->createIssue($jobMtid, $jobAcct, $jobAcctName, $jobUsername, $jobPlaylists, $jobStatus['url']);
+          $output = $Jira->createIssue($jobMtid, $jobAcct, $jobAcctName, $jobUsername, $jobPlaylists, $jobStatus['url'], $jobStartDate, $jobEndDate);
         }
       }
 

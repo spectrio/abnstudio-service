@@ -128,6 +128,15 @@ class ModifyTemplateController extends Controller
         $publish = 1;
       }
 
+      $startdate = null;
+      if(isset($data['template']['startdate'])) {
+        $startdate = date('Y-m-d H:i:s',strtotime(str_replace('-','/',$data['template']['startdate'])));
+      }
+      $enddate = null;
+      if(isset($data['template']['startdate'])) {
+        $enddate = date('Y-m-d H:i:s',strtotime(str_replace('-','/',$data['template']['enddate'])));
+      }
+
 
       // Save the modified template to database
       $save->tid = $data['template']['tid'];
@@ -139,8 +148,8 @@ class ModifyTemplateController extends Controller
       $save->publish = $publish ?? null;
       $save->username = $data['template']['username'] ?? null;
       $save->playlists = $playlists ?? null;
-      //$save->start_date = $output['template']['startdate'] ?? null;
-      //$save->end_date = $output['template']['enddate'] ?? null;
+      $save->start_date =  $startdate;
+      $save->end_date = $enddate;
       $save->job_id = $output['render']['jobId'] ?? null;
       $save->job_status = null;
       $save->url_modified = null;
