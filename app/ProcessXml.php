@@ -88,14 +88,19 @@ class ProcessXml
   }
 
   // Submit the XML to WeVideo
-  public function render($xmlFinal, $thumbnailTime = 5) {
+  // https://wevideo-static.s3.amazonaws.com/APIdocs/VideoCreationAPI/index.html
+  public function render($xmlFinal, $thumbnailTime = 5, $orientation = 'H') {
     $thumbnailTime *= 1000; // convert to milliseconds
+
+    if(!$orientation) {$orientation = 'H';}
+    $resolution = '1080p';
+    if($orientation == 'V') {$resolution = '1080x1920';}
 
     $xmlFinal = $this->embedFonts($xmlFinal);
 
     $server = env('WEVIDEO_SERVER', 'www');
     $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
-    $postdata = array('version' => '1', 'content' => $xmlFinal, 'resolution' => '1080p', 'crf' => '20', 'fps' => '29.97', 'thumbnailTime' => $thumbnailTime);
+    $postdata = array('version' => '1', 'content' => $xmlFinal, 'resolution' => $resolution, 'crf' => '20', 'fps' => '29.97', 'thumbnailTime' => $thumbnailTime);
     $postdata = json_encode($postdata,false);
     //echo $postdata;
     $ch = curl_init();

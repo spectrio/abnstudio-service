@@ -10,7 +10,7 @@ class ModifiedProcessXml
 {
   private $endTime = 0;
 
-  public function process($filename, $data, $thumbnailTime)
+  public function process($filename, $data, $thumbnailTime, $orientation)
   {
     $xml = $filename;
 
@@ -37,7 +37,7 @@ class ModifiedProcessXml
     $xmlFinal = $this::objToXml($xmlObj);
     //die($xmlFinal);
 
-    $json = $this::renderModified($xmlFinal, $data, $thumbnailTime);
+    $json = $this::renderModified($xmlFinal, $data, $thumbnailTime, $orientation);
 
     return $json;
 
@@ -483,15 +483,19 @@ class ModifiedProcessXml
 
 
   // Submit the XML to WeVideo
-  public function renderModified($xmlFinal, $data, $thumbnailTime = 5)
+  public function renderModified($xmlFinal, $data, $thumbnailTime = 5, $orientation = 'H')
   {
     $thumbnailTime *= 1000;
+
+    if(!$orientation) {$orientation = 'H';}
+    $resolution = '1080p';
+    if($orientation == 'V') {$resolution = '1080x1920';}
 
     $xmlFinal = $this->embedFonts($xmlFinal);
 
     $server = env('WEVIDEO_SERVER', 'www');
     $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
-    $postdata = array('version' => '1', 'content' => $xmlFinal, 'resolution' => '1080p', 'crf' => '20', 'fps' => '29.97', 'thumbnailTime' => $thumbnailTime);
+    $postdata = array('version' => '1', 'content' => $xmlFinal, 'resolution' => $resolution, 'crf' => '20', 'fps' => '29.97', 'thumbnailTime' => $thumbnailTime);
     if($this->endTime) {
       $postdata['endTime'] = $this->endTime;
     }

@@ -40,7 +40,7 @@ class SaveTemplateController extends Controller
       // User requested a render, send it to WeVideo and store the jobId
       if ($request->input('render') == 'true' || $request->input('render') == 1 ) {
         $processXml = new ProcessXml;
-        $responseJson = $processXml->render($request->input('xmlDetails.xmlFinal'), $request->input('thumbnailTime'));
+        $responseJson = $processXml->render($request->input('xmlDetails.xmlFinal'), $request->input('thumbnailTime'), $request->input('orientation'));
         $response = json_decode($responseJson,1);
         if($response == null) {
           unset($output['success']);
@@ -59,6 +59,8 @@ class SaveTemplateController extends Controller
       $save->oems = $request->input('oems');
       $save->categories = $request->input('categories');
       $save->tags = $request->input('tags');
+      $save->orientation = $request->input('orientation');
+      $save->grp = $request->input('grp');
       //$save->template = file_get_contents(public_path().'/uploads/xml/'.$request->input('xmlDetails.filename'));
       $save->template = $request->input('xmlDetails.xmlFinal');
       $save->visible = $this->fixBool($request->input('publish'));
@@ -84,6 +86,7 @@ class SaveTemplateController extends Controller
           $saveFields->default_val = $field['fieldDefault'];
           //$saveFields->layer_meta = $field['fieldMeta'] ?? null;
           $saveFields->length_max = $field['fieldMax'] ?? null;
+          $saveFields->grp = $field['fieldGrp'] ?? null;
           $saveFields->save();
         }
       }

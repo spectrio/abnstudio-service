@@ -110,8 +110,9 @@ class ModifyTemplateController extends Controller
       $template = $load->getTemplate($data['template']['tid']);
       $templateData = $load->getTemplateData($data['template']['tid']);
       $thumbnailTime = $templateData['thumbnail_time'];
+      $orientation = $templateData['orientation'];
       $process = new ModifiedProcessXml;
-      $renderResult = $process->process($template,$data,$thumbnailTime);
+      $renderResult = $process->process($template,$data,$thumbnailTime,$orientation);
       $output['render'] = json_decode($renderResult,1);
       //die($renderResult);
 
