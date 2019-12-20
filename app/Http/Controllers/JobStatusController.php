@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ProcessXml;
 use App\Template;
+use App\RenderLog;
 use Illuminate\Support\Facades\DB;
 //use Mail; // Laravel
 use Illuminate\Support\Facades\Mail; // Lumen
@@ -38,7 +39,9 @@ class JobStatusController extends Controller
       if(!isset($jobStatus['status'])) {
         $jobStatus['status'] = 'UNKNOWN';
       } else {
+
         if($jobStatus['status'] == 'COMPLETED' && $jobEmail) {
+
           // Send email
           $request['title'] = "WeVideo Test Render";
           $request['body'] = "Your test render is now ready.<br><br>".$jobStatus['url'];
@@ -57,6 +60,10 @@ class JobStatusController extends Controller
 
       $template = new Template;
       $template->updateStatus($jobId,$jobStatus);
+
+      $renderLog = new RenderLog;
+      $renderLog->updateRender($jobId,$jobStatus);
+
     }
 
     return json_encode($jobs,1);

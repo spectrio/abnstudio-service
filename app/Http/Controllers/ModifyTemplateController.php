@@ -5,8 +5,13 @@ use Illuminate\Http\Request;
 use App\ModifiedTemplate;
 use App\ModifiedFields;
 use App\ModifiedProcessXml;
+use App\RenderLog;
+use App\Jira;
 use Carbon\Carbon;
 //use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+//use Mail; // Laravel
+use Illuminate\Support\Facades\Mail; // Lumen
 
 class ModifyTemplateController extends Controller
 {
@@ -105,22 +110,9 @@ class ModifyTemplateController extends Controller
         $save = new ModifiedTemplate;
       }
 
-      // Create a modified XML and render it
-      $load = new ModifiedTemplate;
-      $template = $load->getTemplate($data['template']['tid']);
-      $templateData = $load->getTemplateData($data['template']['tid']);
-      $thumbnailTime = $templateData['thumbnail_time'];
-      $orientation = $templateData['orientation'];
-      $process = new ModifiedProcessXml;
-      $renderResult = $process->process($template,$data,$thumbnailTime,$orientation);
-      $output['render'] = json_decode($renderResult,1);
-      //die($renderResult);
+      $render = $data['template']['render'];
 
-      $renderOnly = $data['template']['renderOnly'] ?? false;
-      //if($renderOnly) {
-      //  return($renderResult);
-      //}
-
+      $playlists = null;
       if(isset($data['template']['playlists'])) {
         $playlists = implode(',', $data['template']['playlists']);
       }
@@ -134,9 +126,41 @@ class ModifyTemplateController extends Controller
         $startdate = date('Y-m-d H:i:s',strtotime(str_replace('-','/',$data['template']['startdate'])));
       }
       $enddate = null;
-      if(isset($data['template']['startdate'])) {
+      if(isset($data['template']['enddate'])) {
         $enddate = date('Y-m-d H:i:s',strtotime(str_replace('-','/',$data['template']['enddate'])));
       }
+
+      // Create a modified XML and render it
+      $load = new ModifiedTemplate;
+      $template = $load->getTemplate($data['template']['tid']);
+      $templateData = $load->getTemplateData($data['template']['tid']);
+      $thumbnailTime = $templateData['thumbnail_time'];
+      $orientation = $templateData['orientation'];
+      if($render) {
+        $process = new ModifiedProcessXml;
+        $renderResult = $process->process($template,$data,$thumbnailTime,$orientation);
+        $output['render'] = json_decode($renderResult,1);
+
+
+
+
+        //die($renderResult);
+      } else {
+        // Send JIRA ticket
+        //if(isset($jobStatus['status']) && $jobStatus['status'] == 'COMPLETED') {
+          //Log::info('ModifyTemplateController: Create JIRA issue: '.print_r($jobStatus,1));
+          $Jira = new Jira();
+          $output = $Jira->createIssue($mtid, $data['template']['acct'], $data['template']['acctName'], $data['template']['username'], $playlists, $save->url_modified, $startdate, $enddate);
+        //}
+      }
+
+
+      $renderOnly = $data['template']['renderOnly'] ?? false;
+      //if($renderOnly) {
+      //  return($renderResult);
+      //}
+
+
 
 
       // Save the modified template to database
@@ -151,10 +175,13 @@ class ModifyTemplateController extends Controller
       $save->playlists = $playlists ?? null;
       $save->start_date =  $startdate;
       $save->end_date = $enddate;
-      $save->job_id = $output['render']['jobId'] ?? null;
-      $save->job_status = null;
-      $save->url_modified = null;
-      $save->thumbnail_modified = null;
+      if($render) {
+        $save->job_id = $output['render']['jobId'] ?? null;
+        $save->job_status = null;
+        $save->email = $data['template']['email'] ?? null;
+        $save->url_modified = null;
+        $save->thumbnail_modified = null;
+      }
       if(!$renderOnly) {
         $save->save();
       }
@@ -173,6 +200,22 @@ class ModifyTemplateController extends Controller
 
         }
       }
+
+      // Log render
+      $duration = $output['render']['templateDuration'];
+      if($output['render']['endTime'] > 0) {
+        $duration = $output['render']['endTime'];
+      }
+      $renderLog = new RenderLog;
+      $renderLog->tid         = $data['template']['tid'] ?? null;
+      $renderLog->mtid        = $mtid ?? null;
+      $renderLog->start_time  = date("Y-m-d H:i:s", strtotime('now'));
+      $renderLog->end_time    = null;
+      $renderLog->total_time  = null;
+      $renderLog->render_duration    = $duration;
+      $renderLog->job         = $output['render']['jobId'] ?? null;
+      $renderLog->status      = 'QUEUED';
+      $renderLog->save();
 
       // Output
       if(!$renderOnly) {
@@ -250,6 +293,116 @@ class ModifyTemplateController extends Controller
 
         return $output;
       }
+    }
+
+    public function reports()
+    {
+      //$lastMonday = date("Y-m-d", strtotime('monday this week', strtotime('now')));
+      $xDaysAgo = date("Y-m-d", strtotime('7 days ago', strtotime('now'))); // 7 days ago
+      $today = date("Y-m-d", strtotime('yesterday')); //yesterday, now
+
+      $templates = DB::table('templates')->select('tid','name','grp')->get()->toJson();
+      $templates = json_decode($templates,1);
+      //print_r($templates);
+
+      $templateArr = array();
+      $users = array();
+
+      foreach($templates as $k => $v) {
+        $templateArr[$v['tid']] = $v['name'];
+      }
+
+      $modifiedTemplates = DB::table('templates_modified')->select('tid','username','created_at','updated_at')->where('created_at', '>=', $xDaysAgo)->get();
+      $modifiedTemplates = json_decode($modifiedTemplates,1);
+      foreach($modifiedTemplates as $k => $v) {
+        $diff = strtotime($v['updated_at']) - strtotime($v['created_at']);
+        if(!isset($users[$v['username']])) {
+          $users[$v['username']] = array();
+        }
+        if(!isset($users[$v['username']]['qty'])) {
+          $users[$v['username']]['qty'] = 0;
+        }
+        $users[$v['username']]['qty'] += 1;
+        //$users[$v['username']]['templates'][] += $diff;
+        $users[$v['username']]['times'][] = $diff;
+
+        //
+        if(!isset($templateList[$templateArr[$v['tid']]])) {
+          $templateList[$templateArr[$v['tid']]] = array();
+        }
+        if(!isset($templateList[$templateArr[$v['tid']]]['qty'])) {
+          $templateList[$templateArr[$v['tid']]]['qty'] = 0;
+        }
+        $templateList[$templateArr[$v['tid']]]['qty'] += 1;
+        $templateList[$templateArr[$v['tid']]]['times'][] = $diff;
+      }
+
+      // Build user CSV
+      ksort($users);
+      $userCsv = '"username","qty","avg"'.PHP_EOL;
+      foreach($users as $k => $v) {
+        $a = array_filter($v['times']);
+        if(count($a)) {
+          $average = array_sum($a) / count($a);
+        } else {
+          $average = 0;
+        }
+        $users[$k]['avg'] = gmdate("H:i:s", $average);
+        if($average > 85399) {
+          $users[$k]['avg'] = gmdate("z H:i:s", $average);
+        }
+        $userCsv .= '"'.$k.'","'.$v['qty'].'","'.$users[$k]['avg'].'"'.PHP_EOL;
+      }
+      //echo $userCsv;
+
+      // Build template CSV
+      ksort($templateList);
+      $templateCsv = '"template","qty","avg"'.PHP_EOL;
+      foreach($templateList as $k => $v) {
+        $a = array_filter($v['times']);
+        if(count($a)) {
+          $average = array_sum($a) / count($a);
+        } else {
+          $average = 0;
+        }
+        $templateList[$k]['avg'] = gmdate("H:i:s", $average);
+        if($average > 85399) {
+          $templateList[$k]['avg'] = gmdate("z H:i:s", $average);
+        }
+        $templateCsv .= '"'.$k.'","'.$v['qty'].'","'.$templateList[$k]['avg'].'"'.PHP_EOL;
+      }
+      //echo $templateCsv;
+
+      $userFilename = 'reports/Weekly User Report ('.$xDaysAgo.' - '.$today.').csv';
+      $templateFilename = 'reports/Weekly Template Usage ('.$xDaysAgo.' - '.$today.').csv';
+      file_put_contents(storage_path($userFilename),$userCsv);
+      file_put_contents(storage_path($templateFilename),$templateCsv);
+
+      // Email
+      $title = 'ABN Studio! Usage Reports ('.$xDaysAgo.' - '.$today.')';
+      //$recipients = "chris.bartek@abnetwork.com";
+      $recipients = ["austin.phillips@abnetwork.com", "chris.bartek@abnetwork.com", "christan.miller@abnetwork.com", "cindy.goodin@abnetwork.com", "doug.porter@abnetwork.com", "jerry.daniels@abnetwork.com", "kate.carpenter@abnetwork.com", "robert.orndorff@abnetwork.com", "sean.mullins@abnetwork.com", "stephen.mcgowan@abnetwork.com", "steve.crabill@abnetwork.com"];
+      $message_text = "ABN Studio! weekly usage reports are attached.";
+      Mail::send('vendor.notifications.render', ['title' => $title, 'body' => $message_text], function ($message) use ($recipients, $title, $message_text, $templateFilename, $userFilename) {
+        $message->subject($title);
+        $message->from(env('MAIL_FROM_ADDRESS', 'development@abnetwork.com'), env('MAIL_FROM_NAME', 'ABN Studio!'));
+        $message->to($recipients);
+        $message->setBody($message_text);
+        $message->attach(storage_path($templateFilename));
+        $message->attach(storage_path($userFilename));
+      });
+
+      if (count(Mail::failures()) > 0) {
+        $response['status'] = 'fail';
+      } else {
+        $response['status'] = 'success';
+      }
+
+      unlink(storage_path($templateFilename));
+      unlink(storage_path($userFilename));
+
+      return $response;
+
     }
 
 }

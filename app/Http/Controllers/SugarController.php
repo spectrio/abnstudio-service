@@ -23,10 +23,14 @@ class SugarController extends Controller
     if($id) {
       $Sugar = new Sugar();
       $output = $Sugar->get_channels_by_account($id);
-      foreach ($output['records'] as $k => $v) {
-        $channelList[] = $v['name'];
+      if(isset($output['records'])) {
+        foreach ($output['records'] as $k => $v) {
+          $channelList[] = $v['name'];
+        }
+        $output['oemList'] = $this->getOemList($channelList);
+      } else {
+        $output['oemList'] = array();
       }
-      $output['oemList'] = $this->getOemList($channelList);
     }
     return json_encode($output);
   }

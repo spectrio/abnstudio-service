@@ -12,11 +12,11 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return 'ROES (Render On Edge Service) API <br>' . $router->app->version();
 });
 
-$router->get('/test', function () use ($router) {
-    return $router->app->version();
+$router->get('/healthcheck.html', function () use ($router) {
+    return 'Server Up';
 });
 
 $router->get('/get', 'GetTemplateController@index');
@@ -45,3 +45,12 @@ $router->get('/channels[/{id}]', 'SugarController@index');
 $router->get('/accounts[/{cache}]', 'SugarController@getAccounts');
 $router->get('/accounts_cache', 'SugarController@getAccountsFromCache');
 $router->get('/jira[/{id}]', 'JiraController@index');
+$router->get('/reports', 'ModifyTemplateController@reports');
+$router->get('/reports/templates', 'ReportController@getTemplates');
+$router->get('/reports/spots', 'ReportController@getSpots');
+$router->get('/reports/renders', 'ReportController@getRenders');
+
+$router->get('/emailtest', 'ModifiedJobStatusController@emailTest');
+
+$router->get('/wevideo/login', 'WeVideoController@login');
+$router->get('/wevideo/get[/{id}]', 'WeVideoController@get_media');

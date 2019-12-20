@@ -5,6 +5,9 @@ use DOMDocument;
 
 class ProcessXml
 {
+  //private $endTime = 0;
+  private $templateDuration = 0;
+
     public function process($filename, $orgFilename)
     {
       if (!function_exists('public_path')) {
@@ -37,6 +40,9 @@ class ProcessXml
 
       //$xmlObj = $this::cleanup($xmlObj);
 
+      // Load XML details
+      $this::loadXmlData($xmlObj);
+
       // Convert object back into XML
       $xmlFinal = $this::objToXml($xmlObj);
 
@@ -50,6 +56,24 @@ class ProcessXml
       //print_r($xmlFinal);
       //die();
 
+    }
+
+
+    // Load xml data (duration)
+    public function loadXmlData($xmlObj)
+    {
+      $result = $xmlObj->xpath('//*[@duration]');
+      foreach ($result as $node) {
+        $begin = urldecode($node['begin']);
+        $duration = urldecode($node['duration']);
+        $end = $begin + $duration;
+        if($end > $this->templateDuration) {
+          $this->templateDuration = $end;
+        }
+        //echo $this->templateDuration . ", ";
+      }
+      //die();
+      return;
     }
 
 
@@ -89,7 +113,7 @@ class ProcessXml
 
   // Submit the XML to WeVideo
   // https://wevideo-static.s3.amazonaws.com/APIdocs/VideoCreationAPI/index.html
-  public function render($xmlFinal, $thumbnailTime = 5, $orientation = 'H') {
+  public function render($xmlFinal, $thumbnailTime = 5, $orientation = 'H', $templateDuration = 0) {
     $thumbnailTime *= 1000; // convert to milliseconds
 
     if(!$orientation) {$orientation = 'H';}
@@ -115,6 +139,12 @@ class ProcessXml
     //curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     $output = curl_exec ($ch);
     curl_close ($ch);
+
+    $output = json_decode($output,1);
+    //$output['endTime'] = $this->endTime;
+    $output['templateDuration'] = $templateDuration;
+    $output = json_encode($output,1);
+
     return $output;
   }
 
@@ -246,6 +276,8 @@ class ProcessXml
     }
 
     //$xmlFixed = $this->objToXml($this->objRemoveMeta($xmlObj));
+
+    $json['templateDuration'] = $this->templateDuration;
 
     $json['filename'] = $filename;
     $json['orgFilename'] = $orgFilename;

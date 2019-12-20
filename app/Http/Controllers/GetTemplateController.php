@@ -42,7 +42,7 @@ class GetTemplateController extends Controller
           if($field['layer_type'] === 'image') {
             foreach ($output['xmlDetails']['elements'] as $k => $v) {
               if($v['title'] == $field['layer']) {
-                $size = getimagesize($v['content']);
+                $size = @getimagesize($v['content']);
                 $output['imgDetails'][$field['layer']] = $size;
                 $output['imgDetails'][$field['layer']]['url'] = $v['content'];
               }
@@ -59,7 +59,7 @@ class GetTemplateController extends Controller
       }
 
     }
-    
+
     // OEM was passed in
     else if($oem) {
       if(strtolower($oem) == 'all') {$oem = '';}

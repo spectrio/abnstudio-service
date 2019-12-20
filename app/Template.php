@@ -26,13 +26,16 @@ class Template extends Model
       return $query
         ->where('oems', 'LIKE', '%'.$oem.'%')
         ->where('visible', '=', '1')
-        ->orderBy('name','ASC');
+        ->orderBy('name','ASC')
+        ->select('tid', 'name', 'oems', 'categories', 'tags', 'grp', 'orientation', 'visible', 'user', 'job_status', 'url', 'thumbnail');
     }
 
     // Get templates by name
     public function scopeSortTemplates($query)
     {
-      return $query->orderBy('name','ASC');
+      return $query->
+        orderBy('name','ASC')
+        ->select('tid', 'name', 'oems', 'categories', 'tags', 'grp', 'orientation', 'visible', 'user', 'job_status', 'url', 'thumbnail');
     }
 
     // Job status

@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Template;
 use App\FormFields;
 use App\ProcessXml;
+use App\RenderLog;
 //use Illuminate\Support\Facades\Auth;
 
 class SaveTemplateController extends Controller
@@ -42,6 +43,9 @@ class SaveTemplateController extends Controller
         $processXml = new ProcessXml;
         $responseJson = $processXml->render($request->input('xmlDetails.xmlFinal'), $request->input('thumbnailTime'), $request->input('orientation'));
         $response = json_decode($responseJson,1);
+
+
+
         if($response == null) {
           unset($output['success']);
           $output['error'] = 'No response received from WeVideo.';
@@ -90,6 +94,19 @@ class SaveTemplateController extends Controller
           $saveFields->save();
         }
       }
+
+      // Log render
+      $duration = $request->input('templateDuration');
+      $renderLog = new RenderLog;
+      $renderLog->tid        = $tid;
+      $renderLog->mtid        = null;//($tid) * -1;
+      $renderLog->start_time  = date("Y-m-d H:i:s", strtotime('now'));
+      $renderLog->end_time    = null;
+      $renderLog->total_time  = null;
+      $renderLog->render_duration    = $duration;
+      $renderLog->job         = $response['jobId'] ?? null;
+      $renderLog->status      = 'QUEUED';
+      $renderLog->save();
 
       // Output
       return json_encode($output);

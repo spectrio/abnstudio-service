@@ -5,10 +5,12 @@ use DOMDocument;
 use SimpleXMLElement;
 use App\Branding;
 use App\Scala;
+use App\WeVideo;
 
 class ModifiedProcessXml
 {
   private $endTime = 0;
+  private $templateDuration = 0;
 
   public function process($filename, $data, $thumbnailTime, $orientation)
   {
@@ -20,6 +22,9 @@ class ModifiedProcessXml
     if ($xmlObj === false) {
       return( libxml_get_errors() );
     }
+
+    // Load XML details
+    $this::loadXmlData($xmlObj);
 
     // Load the template metadata to an array
     $xmlMeta = $this::loadMeta($xmlObj);
@@ -43,6 +48,20 @@ class ModifiedProcessXml
 
   }
 
+  // Load xml data (duration)
+  public function loadXmlData($xmlObj)
+  {
+    $result = $xmlObj->xpath('//*[@duration]');
+    foreach ($result as $node) {
+      $begin = urldecode($node['begin']);
+      $duration = urldecode($node['duration']);
+      $end = $begin + $duration;
+      if($end > $this->templateDuration) {
+        $this->templateDuration = $end;
+      }
+    }
+    return;
+  }
 
   // Load template metadata
   public function loadMeta($xmlObj)
@@ -102,6 +121,7 @@ class ModifiedProcessXml
       if(!empty($result)) {
         foreach ($result as $node) {
           // Apply logotype (dealer logo or none)
+          // If "dealer", automatically detect light or dark based on template
           if(isset($xmlMeta[$layer]['clo']) && isset($data['template']['logotype'])) { // && isset($data['template']['logotype'])
             if($data['template']['logotype'] == 'dealer') {
               $id = $data['template']['acct']; // '20170';
@@ -109,14 +129,42 @@ class ModifiedProcessXml
               if($xmlMeta[$layer]['clo'] == 'w') {
                 $white = 1;
               }
-              $Scala = new Scala();
-              $output['logo'] = $Scala->get_logo($id);
+              ////$Scala = new Scala();
+              ////$output['logo'] = $Scala->get_logo($id);
+              //$logoInfo = $this::getLogo($id, $node->attributes()->width);
+              //$output['logo'] = $logoInfo['img'];
+              //$node->attributes()->height = $logoInfo['newHeight'] ?? 0;
+              //$node->attributes()->top = $node->attributes()->top + $logoInfo['yAdj'];
+              $output['logo'] = $this::getLogo($id);
               if($white) {
-                $output['logo'] = str_replace('.png','_WHITE.png',$output['logo']);
+                ////$output['logo'] = str_replace('.png','_WHITE.png',$output['logo']);
+                //$output['logo'] = str_replace('logo_large','alternate_logo_large',$output['logo']);
+                $output['logo'] = str_replace('logo_original','alternate_logo_original',$output['logo']);
               }
               $node->attributes()->src = $output['logo'];//'http://10.1.10.141/img/abnlogo.png';
             } else {
-              $node->attributes()->src = '';
+              // logo specified as light or dark
+              if($data['template']['logotype'] == 'dark' || $data['template']['logotype'] == 'light') {
+                $id = $data['template']['acct'];
+                ////$Scala = new Scala();
+                ////$output['logo'] = $Scala->get_logo($id);
+                //$logoInfo = $this::getLogo($id, $node->attributes()->width);
+                //$output['logo'] = $logoInfo['img'];
+                //$node->attributes()->height = $logoInfo['newHeight'];
+                //$node->attributes()->top = $node->attributes()->top + $logoInfo['yAdj'];
+                $output['logo'] = $this::getLogo($id);
+                if($data['template']['logotype'] == 'dark') {
+                  ////$output['logo'] = str_replace('.png','_WHITE.png',$output['logo']);
+                  //$output['logo'] = str_replace('logo_large','alternate_logo_large',$output['logo']);
+                  $output['logo'] = str_replace('logo_original','alternate_logo_original',$output['logo']);
+                }
+                $node->attributes()->src = $output['logo'];
+              } else {
+                // blank logo
+                if($data['template']['logotype'] == 'blank') {
+                  $node->attributes()->src = '';
+                }
+              }
             }
 
           }
@@ -346,7 +394,9 @@ class ModifiedProcessXml
             if(isset($xmlMeta[$layer]['bis'])) {
               $oem = $data['template']['oem'];
               $folderId = $xmlMeta[$layer]['bis'];
-              $folder = json_decode($this->getFolder($folderId),1);
+              $WeVideo = new WeVideo();
+              $folder = $WeVideo->get_media($folderId);
+              //$folder = json_decode($this->getFolder($folderId),1);
               $url = '';
               foreach($folder['data'] as $file) {
                 if(stripos($file['title'],$oem) !== false) {
@@ -385,7 +435,11 @@ class ModifiedProcessXml
           return '';
         }
       }
-      return nl2br($replacement);
+
+      // Too many line breaks were being added by nl2br
+      $replacement = str_replace("\r\n","\n",$replacement);
+      return str_replace("\n","<br/>",$replacement);
+      //return nl2br( str_replace("\r\n","\n",$replacement) );
     };
     foreach($data['templateFields'] as $field) {
       // Find and replace TEXT or HTML
@@ -443,6 +497,14 @@ class ModifiedProcessXml
       if(!empty($result)) {
         foreach ($result as $node) {
           $node['src'] = $field['content'];
+
+          // Look for cie meta
+          if(isset($xmlMeta[$field['layer']]['cie']) && strpos($field['content'],'wevideo-images') !== false) {
+              $cie = $xmlMeta[$field['layer']]['cie'];
+              if($cie < $this->endTime || $this->endTime == 0) {
+                $this->endTime = $cie;
+              }
+          }
         }
       }
 
@@ -454,6 +516,7 @@ class ModifiedProcessXml
           $pattern = '/{{([\s\S]*?)}}/';
           preg_match_all($pattern, $field['content'], $matches);
           foreach ($matches[1] as $line) {
+            $line = addcslashes($line, '$'); // escape $ or preg_replace will give weird output
             $newStr = preg_replace($pattern, $line, $node->children()->lines->line[$i]);
             if($newStr) {
               $node->children()->lines->line[$i] = $newStr;
@@ -463,6 +526,7 @@ class ModifiedProcessXml
             }
             $i++;
           }
+
         }
       }
 
@@ -511,6 +575,10 @@ class ModifiedProcessXml
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $output = curl_exec ($ch);
     curl_close ($ch);
+    $output = json_decode($output,1);
+    $output['endTime'] = $this->endTime;
+    $output['templateDuration'] = $this->templateDuration;
+    $output = json_encode($output,1);
     return $output;
   }
 
@@ -571,6 +639,66 @@ class ModifiedProcessXml
     $pattern = '/@font-face {font-family: "(.*?)";}/';
     $xml = preg_replace_callback($pattern, $callback, $xml);
     return $xml;
+  }
+
+
+  // Given an account number, gets the Heroku API logo path
+  public function getLogo($account)
+  {
+    $output = "https://player.abn.live/api/v2/accounts/" . $account . "/logo_original";
+    return $output;
+  }
+
+
+  // Manual logo loading. Use this for logos of unknown size and aspect ratio
+  // Given an account number, gets the logo path, size metadata, and aspect ratio metadata
+  public function getLogoOld($account, $x)
+  {
+    $output = array();
+    $output['img'] = "https://player.abn.live/api/v2/accounts/" . $account . "/logo_large";
+    $output['imgSize'] = getimagesize($output['img']);
+
+    $output['newWidth'] = 0;
+    $output['newHeight'] = 0;
+    $output['yAdj'] = 0;
+
+    if(isset($x)) {
+      // Size of original WeVideo logo
+      $xSize = $x;//384;
+      if(!isset($y)) {
+        $ySize = $xSize / 1.96;
+      } else {
+        $ySize = $y;//196;
+      }
+
+      // Size of replacement logo
+      $originalWidth = $output['imgSize'][0];//995;
+      $originalHeight = $output['imgSize'][1];//415;
+
+      // Calculate new size based on aspect ratio
+      $ratio = $originalWidth / $originalHeight;
+
+      $targetWidth = $targetHeight = min($xSize, max($originalWidth, $originalHeight));
+
+      if ($ratio < 1) {
+        $targetWidth = round($targetHeight * $ratio);
+      } else {
+        $targetHeight = round($targetWidth / $ratio);
+      }
+
+      $srcWidth = $originalWidth;
+      $srcHeight = $originalHeight;
+      $srcX = $srcY = 0;
+
+      // Get y adjustment
+      $yAdj = round( ($ySize - $targetHeight) / 2 );
+
+      $output['newWidth'] = intval($targetWidth);
+      $output['newHeight'] = intval($targetHeight);
+      $output['yAdj'] = $yAdj;
+    }
+
+    return $output;
   }
 
 }
