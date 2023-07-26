@@ -34,9 +34,6 @@ class Sugar extends Model
   {
     $api_url = env('SUGAR_URL', "http://10.1.9.145/rest/v10/");
     Log::info("Sugar API Call Made: \"" . $method . "\", \"" . $url . "\"");
-    Log::info("Sugar API URL: ".$api_url);
-    Log::info("URL path: ".$url);
-
 
     $url = $api_url . $url;
     $content = json_encode($data);

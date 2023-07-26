@@ -520,8 +520,7 @@ class ModifiedProcessXml
         foreach ($data['templateFields'] as $field) {
             // Find and replace TEXT or HTML
             $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/html|//*[@title="'.$field['layer'].'"]/text');
-	    if (!empty($result)) {
-		//Log::info("TEXT or HTML found: ".print_r($result,true));
+            if (!empty($result)) {
                 foreach ($result as $node) {
                     $pattern = '/{{([\s\S]*?)}}/';
                     $content = (string) $node[0];
@@ -586,14 +585,9 @@ class ModifiedProcessXml
             }
 
             // Find and replace MOTIONTITLE
-	    $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/motionTitle');
-	    Log::info("field: ");
-	    Log::info(print_r($field,true));
-	    Log::info("field[layer]: ");
-	    Log::info(print_r($field['layer'],true));
-	    if (!empty($result)) {
-		   //Log::info("motion title text found: ".print_r($result,true));   
-		 foreach ($result as $node) {
+            $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/motionTitle');
+            if (!empty($result)) {
+                foreach ($result as $node) {
                     $i = 0;
                     $pattern = '/{{([\s\S]*?)}}/';
                     preg_match_all($pattern, $field['content'], $matches);
@@ -639,8 +633,7 @@ class ModifiedProcessXml
     // Submit the XML to WeVideo
     public function renderModified($xmlFinal, $data, $thumbnailTime = 5, $orientation = 'H', $dtv = 0)
     {
-	    Log::info('Submitting XML:');
-	    //Log::info(print_r($xmlFinal, true));
+        Log::info('Submitting XML: '.print_r($xmlFinal, true));
         $thumbnailTime *= 1000;
 
         if (!$orientation) {$orientation = 'H';}
@@ -661,30 +654,15 @@ class ModifiedProcessXml
         }
         $postdata = json_encode($postdata, false);
         $ch = curl_init();
-        //curl_setopt($ch, CURLOPT_URL, "http://$server.wevideo.com/api/3/videos/create");
-	curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/create");       
-	curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_URL, "http://$server.wevideo.com/api/3/videos/create");
+        curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             "Authorization: WEVSIMPLE $key",
             'Content-Type: application/json'
         ));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HEADERFUNCTION,
-  function($curl, $header) use (&$headers)
-  {
-    $len = strlen($header);
-    $header = explode(':', $header, 2);
-    if (count($header) < 2) // ignore invalid headers
-      return $len;
-
-    $headers[strtolower(trim($header[0]))][] = trim($header[1]);
-    
-    return $len;
-  }
-);
-	$output = curl_exec($ch);
-	Log::info("XML Post response headers: ".print_r($headers,true));
+        $output = curl_exec($ch);
 	curl_close($ch);
 	Log::info("XML post response: ".print_r($output,true));
 	$output = json_decode($output, 1);
@@ -713,7 +691,7 @@ class ModifiedProcessXml
     {
         $server = env('WEVIDEO_SERVER', 'www');
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/status/$jobId");
+        curl_setopt($ch, CURLOPT_URL, "http://$server.wevideo.com/api/3/videos/status/$jobId");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $output = curl_exec($ch);
 	curl_close($ch);
@@ -727,7 +705,7 @@ class ModifiedProcessXml
     {
         $server = env('WEVIDEO_SERVER', 'www');
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, "https://www.wevideo.com:443/api/3/media/$folder/files");
+        curl_setopt($ch, CURLOPT_URL, "http://www.wevideo.com/api/3/media/$folder/files");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $output = curl_exec($ch);
         curl_close($ch);

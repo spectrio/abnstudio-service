@@ -43,6 +43,9 @@ class ProcessXml
       // Load XML details
       $this::loadXmlData($xmlObj);
 
+      // Strip out any layers with audio
+      //$this::removeNode($xmlObj, "//audio/..");
+
       // Convert object back into XML
       $xmlFinal = $this::objToXml($xmlObj);
 
@@ -255,6 +258,26 @@ class ProcessXml
       if (property_exists($layer, 'image')) {
         $json['elements'][$friendlyTitle]['type'] = 'image';
         $json['elements'][$friendlyTitle]['content'] = strval($layer->image->attributes()->src);
+        $height = '0';
+        $width = '0';
+        if(property_exists($layer->image, 'filter')) {
+          if(isset($layer->image->filter->attributes()->startHeight)) {
+            $height = strval($layer->image->filter->attributes()->startHeight);
+          }
+          if(isset($layer->image->filter->attributes()->startWidth)) {
+            $width = strval($layer->image->filter->attributes()->startWidth);
+          }
+        }
+        if(($height == '0' || $width == '0')) {
+          if(isset($layer->image->attributes()->height)) {
+            $height = strval($layer->image->attributes()->height);
+          }
+          if(isset($layer->image->attributes()->width)) {
+            $width = strval($layer->image->attributes()->width);
+          }
+        }
+        $json['elements'][$friendlyTitle]['height'] = $height;
+        $json['elements'][$friendlyTitle]['width'] = $width;
       }
 
       // Layer has VIDEO elements

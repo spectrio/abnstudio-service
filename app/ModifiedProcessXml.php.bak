@@ -586,13 +586,9 @@ class ModifiedProcessXml
             }
 
             // Find and replace MOTIONTITLE
-	    $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/motionTitle');
-	    Log::info("field: ");
-	    Log::info(print_r($field,true));
-	    Log::info("field[layer]: ");
-	    Log::info(print_r($field['layer'],true));
-	    if (!empty($result)) {
-		   //Log::info("motion title text found: ".print_r($result,true));   
+            $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/motionTitle');
+            if (!empty($result)) {
+		    Log::info("motion title text found: ".print_r($result,true));   
 		 foreach ($result as $node) {
                     $i = 0;
                     $pattern = '/{{([\s\S]*?)}}/';
@@ -639,8 +635,7 @@ class ModifiedProcessXml
     // Submit the XML to WeVideo
     public function renderModified($xmlFinal, $data, $thumbnailTime = 5, $orientation = 'H', $dtv = 0)
     {
-	    Log::info('Submitting XML:');
-	    //Log::info(print_r($xmlFinal, true));
+        Log::info('Submitting XML: '.print_r($xmlFinal, true));
         $thumbnailTime *= 1000;
 
         if (!$orientation) {$orientation = 'H';}
@@ -684,9 +679,9 @@ class ModifiedProcessXml
   }
 );
 	$output = curl_exec($ch);
-	Log::info("XML Post response headers: ".print_r($headers,true));
+	//Log::info("XML Post response headers: ".print_r($headers,true));
 	curl_close($ch);
-	Log::info("XML post response: ".print_r($output,true));
+	//Log::info("XML post response: ".print_r($output,true));
 	$output = json_decode($output, 1);
         $output['endTime'] = $this->endTime;
         $output['templateDuration'] = $this->templateDuration;

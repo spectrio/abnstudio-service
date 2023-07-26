@@ -2,32 +2,40 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+use App\ModifiedProcessXml;
 use App\WeVideo;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
+
+//use Illuminate\Support\Facades\Auth;
+//use Illuminate\Support\Facades\DB;
 
 class WeVideoController extends Controller
 {
-  public function __construct()
-  {
-    //$this->middleware('auth');
-  }
+    public function __construct()
+    {
+        //$this->middleware('auth');
+    }
 
+    // Create a list of customer channels
+    public function login()
+    {
+        $WeVideo = new WeVideo();
+        $output = $WeVideo->login();
+        return json_encode($output);
+    }
 
-  // Create a list of customer channels
-  public function login()
-  {
-    $WeVideo = new WeVideo();
-    $output = $WeVideo->login();
-    return json_encode($output);
-  }
+    public function get_media($id)
+    {
+        $WeVideo = new WeVideo();
+        $output = $WeVideo->get_media($id);
+        return json_encode($output);
+    }
 
-  public function get_media($id)
-  {
-    $WeVideo = new WeVideo();
-    $output = $WeVideo->get_media($id);
-    return json_encode($output);
-  }
+    public function validate_media()
+    {
+        $process = new ModifiedProcessXml();
+        $output = $process->validateMediaRedirect('https: //www.wevideo.com/api/5/media/1428813755/content?suffix=');
+        return response()->json($output);
+    }
 
 }

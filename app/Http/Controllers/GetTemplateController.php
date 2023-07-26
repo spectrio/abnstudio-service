@@ -42,8 +42,8 @@ class GetTemplateController extends Controller
           if($field['layer_type'] === 'image') {
             foreach ($output['xmlDetails']['elements'] as $k => $v) {
               if($v['title'] == $field['layer']) {
-                $size = @getimagesize($v['content']);
-                $output['imgDetails'][$field['layer']] = $size;
+                $output['imgDetails'][$field['layer']]['height'] = $v['height'];
+                $output['imgDetails'][$field['layer']]['width'] = $v['width'];
                 $output['imgDetails'][$field['layer']]['url'] = $v['content'];
               }
             }

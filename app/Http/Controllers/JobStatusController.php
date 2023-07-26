@@ -8,6 +8,7 @@ use App\RenderLog;
 use Illuminate\Support\Facades\DB;
 //use Mail; // Laravel
 use Illuminate\Support\Facades\Mail; // Lumen
+use Log;
 
 class JobStatusController extends Controller
 {
@@ -26,9 +27,12 @@ class JobStatusController extends Controller
   // Refresh template job status
   public function refresh()
   {
+    Log::info("Refresh all");
     $jobs = Template::incompleteJobs()->get();
+    Log::info(print_r($jobs,true));
     // Loop through all incomplete jobs and get their status from WeVideo
     foreach ($jobs as $job) {
+      Log::info("Refreshing ".print_r($job->job_id,true));
       $processXml = new ProcessXml;
       $jobId = $job->job_id;
       $jobEmail = $job->email;

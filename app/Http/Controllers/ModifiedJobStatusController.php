@@ -29,10 +29,11 @@ class ModifiedJobStatusController extends Controller
   public function refresh()
   {
     $jobs = ModifiedTemplate::incompleteJobs()->get();
-    //Log::info('refresh()');
+    Log::info('refresh()');
 
     // Loop through all incomplete jobs and get their status from WeVideo
     foreach ($jobs as $job) {
+      Log::info('Refreshing '.print_r($job->job_id,true));
       //print_r($job);die();
       $process = new ModifiedProcessXml;
       $jobId = $job->job_id;
@@ -59,7 +60,7 @@ class ModifiedJobStatusController extends Controller
           $request['recipients'] = $jobEmail;
           $requestObj = new \Illuminate\Http\Request();
           $requestObj->replace($request);
-          $this->email($requestObj);
+          //$this->email($requestObj);
         }
       }
 

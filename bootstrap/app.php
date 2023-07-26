@@ -115,9 +115,8 @@ class_alias('Aws\Laravel\AwsFacade','AWS');
 | can respond to, as well as the controllers that may handle them.
 |
 */
-
+$app->configure('database');
 $app->configure('filesystems');
-
 
 $app->alias('mailer', Illuminate\Mail\Mailer::class);
 $app->alias('mailer', Illuminate\Contracts\Mail\Mailer::class);

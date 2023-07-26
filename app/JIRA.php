@@ -15,7 +15,7 @@ use Log;
 use DB;
 
 // JIRA helper (based on cdash JIRA API)
-class JIRA //implements JIRAContract
+class Jira //implements JIRAContract
 {
 
     //private $username = "mdavis";

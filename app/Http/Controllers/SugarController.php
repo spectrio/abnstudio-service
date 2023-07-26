@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Sugar;
+use App\SugarDatabase;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+
 
 class SugarController extends Controller
 {
@@ -22,16 +24,15 @@ class SugarController extends Controller
     // ID was passed in
     if($id) {
       $Sugar = new Sugar();
-      $output = $Sugar->get_channels_by_account($id);
-      if(isset($output['records'])) {
-        foreach ($output['records'] as $k => $v) {
-          $channelList[] = $v['name'];
+      $output = json_decode(json_encode(SugarDatabase::getAccountChannels($id),1));
+      //$output = $Sugar->get_channels_by_account($id);
+      //if(isset($output'records'])) {
+        $channelList = array();
+        foreach ($output as $k => $v) {
+            $channelList[] = $v->name;
         }
         $output['oemList'] = $this->getOemList($channelList);
-      } else {
-        $output['oemList'] = array();
       }
-    }
     return json_encode($output);
   }
 
@@ -59,23 +60,23 @@ class SugarController extends Controller
   // Create a list of all customer accounts. Optionally cache results to DB
   public function getAccounts($cache = null)
   {
-    $Sugar = new Sugar();
-    $accounts = json_decode(json_encode($Sugar->get_accounts()),1);
-    $accounts = $accounts['records'];
+    //$Sugar = new Sugar();
+    $accounts = json_decode(json_encode(SugarDatabase::listAllAccounts()),1);
+    //$accounts = $accounts['records'];
     $accountList = array();
     if($cache) {
       //DB::table('accounts')->truncate();
       DB::table('accounts')->where('id', 'like', '%%')->delete();
     }
     foreach($accounts as $v) {
-      $accountList[$v['account_c']]['guid'] = $v['id'];
+      $accountList[$v['account_c']]['guid'] = $v['guid'];
       $accountList[$v['account_c']]['name'] = $v['name'];
       $accountList[$v['account_c']]['modified'] = $v['date_modified'];
       if($cache) {
         DB::table('accounts')->insert([
           'id' => $v['account_c'],
           'name' => $v['name'],
-          'guid' => $v['id'],
+          'guid' => $v['guid'],
           'modified' => $v['date_modified']
         ]);
       }

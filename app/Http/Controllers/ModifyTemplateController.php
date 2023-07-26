@@ -111,6 +111,7 @@ class ModifyTemplateController extends Controller
       }
 
       $render = $data['template']['render'];
+      $dtv = $data['template']['dtv'] ?? 0;
 
       $playlists = null;
       if(isset($data['template']['playlists'])) {
@@ -138,7 +139,7 @@ class ModifyTemplateController extends Controller
       $orientation = $templateData['orientation'];
       if($render) {
         $process = new ModifiedProcessXml;
-        $renderResult = $process->process($template,$data,$thumbnailTime,$orientation);
+        $renderResult = $process->process($template,$data,$thumbnailTime,$orientation,$dtv);
         $output['render'] = json_decode($renderResult,1);
 
 
@@ -202,20 +203,22 @@ class ModifyTemplateController extends Controller
       }
 
       // Log render
-      $duration = $output['render']['templateDuration'];
-      if($output['render']['endTime'] > 0) {
-        $duration = $output['render']['endTime'];
+      if($render) {
+        $duration = $output['render']['templateDuration'];
+        if($output['render']['endTime'] > 0) {
+          $duration = $output['render']['endTime'];
+        }
+        $renderLog = new RenderLog;
+        $renderLog->tid         = $data['template']['tid'] ?? null;
+        $renderLog->mtid        = $mtid ?? null;
+        $renderLog->start_time  = date("Y-m-d H:i:s", strtotime('now'));
+        $renderLog->end_time    = null;
+        $renderLog->total_time  = null;
+        $renderLog->render_duration    = $duration;
+        $renderLog->job         = $output['render']['jobId'] ?? null;
+        $renderLog->status      = 'QUEUED';
+        $renderLog->save();
       }
-      $renderLog = new RenderLog;
-      $renderLog->tid         = $data['template']['tid'] ?? null;
-      $renderLog->mtid        = $mtid ?? null;
-      $renderLog->start_time  = date("Y-m-d H:i:s", strtotime('now'));
-      $renderLog->end_time    = null;
-      $renderLog->total_time  = null;
-      $renderLog->render_duration    = $duration;
-      $renderLog->job         = $output['render']['jobId'] ?? null;
-      $renderLog->status      = 'QUEUED';
-      $renderLog->save();
 
       // Output
       if(!$renderOnly) {
