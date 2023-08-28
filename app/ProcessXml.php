@@ -131,7 +131,7 @@ class ProcessXml
     $postdata = json_encode($postdata,false);
     //echo $postdata;
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "http://$server.wevideo.com/api/3/videos/create");
+    curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/create");
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -156,7 +156,7 @@ class ProcessXml
     $server = env('WEVIDEO_SERVER', 'www');
     $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "http://$server.wevideo.com/api/3/videos/convert/$timelineId");
+    curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/convert/$timelineId");
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
       "Authorization: WEVSIMPLE $key",
@@ -429,7 +429,7 @@ class ProcessXml
     // Test Job ID: '2018_05_04_317594ef-6955-4399-aaad-bc4838a79ca6'
 
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL,"http://$server.wevideo.com/api/3/videos/status/$jobId");
+    curl_setopt($ch, CURLOPT_URL,"https://$server.wevideo.com:443/api/3/videos/status/$jobId");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $output = curl_exec ($ch);
     curl_close ($ch);
