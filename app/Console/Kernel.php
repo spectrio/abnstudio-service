@@ -26,5 +26,6 @@ class Kernel extends ConsoleKernel
     {
 	    $schedule->exec('curl http://127.0.0.1/WeVidAPI/modified/refresh')->everyMinute();
 	    $schedule->exec('curl http://127.0.0.1/WeVidAPI/accounts/cache')->daily();
+        $schedule->exec('curl http://127.0.0.1/WeVidAPI/refresh')->everyMinute();
     }
 }
