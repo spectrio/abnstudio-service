@@ -15,6 +15,7 @@ class SugarDatabase extends Model
 		$results = DB::connection('expand')->select('SELECT account_c, name, id as guid, date_modified
 			FROM accounts INNER JOIN accounts_cstm on accounts.id = accounts_cstm.id_c
 			WHERE accounts.deleted = 0 AND accounts_cstm.status_c LIKE "%Customer%" AND accounts_cstm.dev_account_c = 0
+			AND account_c IS NOT NULL
 			ORDER BY accounts.name ASC');
 		return $results;
 	}

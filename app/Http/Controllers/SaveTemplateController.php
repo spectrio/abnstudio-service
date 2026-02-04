@@ -6,6 +6,7 @@ use App\Template;
 use App\FormFields;
 use App\ProcessXml;
 use App\RenderLog;
+use Illuminate\Support\Facades\Log;
 //use Illuminate\Support\Facades\Auth;
 
 class SaveTemplateController extends Controller
@@ -17,6 +18,7 @@ class SaveTemplateController extends Controller
 
     public function index(Request $request)
     {
+      Log::info("Saving new templates/form_fields/renders");
       $this->validate($request, [
         'templateName' => 'required',
       ]);

@@ -47,7 +47,11 @@ class ModifiedProcessXml
 
         // Convert object back into XML
         $xmlFinal = $this->objToXml($xmlObj);
-        //die($xmlFinal);
+	//die($xmlFinal);
+
+	//convert newer version api links in the xml to the older version 3 that we use
+	//otherwise redirects won't work properly in the rendering engine
+	$xmlFinal = $this->convertToVersionThreeLinks($xmlFinal);
 
         $json = $this->renderModified($xmlFinal, $data, $thumbnailTime, $orientation, $dtv);
 
@@ -432,6 +436,15 @@ class ModifiedProcessXml
             }
         }
         return $xmlObj;
+    }
+
+    public function convertToVersionThreeLinks($xml = null) {
+	$pattern = '/\/api\/\d+/';
+    	if(!is_null($xml) && preg_match($pattern, $xml)) {
+	    return preg_replace($pattern, '/api/3', $xml);
+	} else {
+	    return $xml;
+	}
     }
 
     public function validateMediaRedirect($url = null)
