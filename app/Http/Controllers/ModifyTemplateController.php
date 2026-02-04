@@ -28,6 +28,10 @@ class ModifyTemplateController extends Controller
 
       $data = json_decode($request->getContent(), true);
       $fields = $data['templateFields'];
+      Log::info('=== BIRTHDAY SPOT DEBUG ===');
+      Log::info('Template ID: ' . ($data['template']['tid'] ?? 'N/A'));
+      Log::info('Template Fields: ' . print_r($fields, true));
+      Log::info('Full Data: ' . print_r($data, true));
       //print_r($data);die();
 
       // Check for cropped images
