@@ -12,6 +12,29 @@ class ModifiedProcessXml
     private $endTime = 0;
     private $templateDuration = 0;
 
+    private function normalizePlaceholders($content)
+    {
+        $pattern = '/{{([^}]*(?:<[^>]+>[^}]*)*)}}/';
+
+        $normalized = preg_replace_callback($pattern, function($matches) {
+            $innerContent = $matches[1];
+            $text = strip_tags($innerContent);
+
+            preg_match('/style="([^"]*)"/', $innerContent, $styleMatch);
+            $style = isset($styleMatch[1]) ? $styleMatch[1] : '';
+            $style = preg_replace('/background-color:\s*rgba\(0,\s*0,\s*0,\s*0\);?/', '', $style);
+            $style = trim($style);
+
+            if ($style) {
+                return '<span style="' . $style . '">{{' . $text . '}}</span>';
+            }
+            return '{{' . $text . '}}';
+        }, $content);
+        
+        Log::info('Normalized placeholders - Before: ' . substr($content, 0, 200) . ' | After: ' . substr($normalized, 0, 200));
+        return $normalized;
+    }
+
     public function process($filename, $data, $thumbnailTime, $orientation, $dtv)
     {
 	$xml = $filename;
@@ -538,6 +561,9 @@ class ModifiedProcessXml
                 foreach ($result as $node) {
                     $pattern = '/{{([\s\S]*?)}}/';
                     $content = (string) $node[0];
+
+                    // normalize xml to make sure getting right thing
+                    $content = $this->normalizePlaceholders($content);
 
                     // Copy all children as a separate object to reinsert later
                     $children = $node->children();
