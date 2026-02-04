@@ -554,8 +554,11 @@ class ModifiedProcessXml
             //return nl2br( str_replace("\r\n","\n",$replacement) );
         };
         foreach ($data['templateFields'] as $field) {
+            // URL-encode the layer name to match the XML title attribute
+            $encodedLayer = rawurlencode($field['layer']);
+
             // Find and replace TEXT or HTML
-            $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/html|//*[@title="'.$field['layer'].'"]/text');
+            $result = $xmlObj->xpath('//*[@title="'.$encodedLayer.'"]/html|//*[@title="'.$encodedLayer.'"]/text');
 	    if (!empty($result)) {
 		//Log::info("TEXT or HTML found: ".print_r($result,true));
                 foreach ($result as $node) {
@@ -586,17 +589,17 @@ class ModifiedProcessXml
                     // Look for the earliest termination point (cie meta)
                     if ($type != 'list'
                         && !trim($replacement)
-                        && isset($xmlMeta[$field['layer']]['cie'])) {
-                        $cie = $xmlMeta[$field['layer']]['cie'];
+                        && isset($xmlMeta[$encodedLayer]['cie'])) {
+                        $cie = $xmlMeta[$encodedLayer]['cie'];
                         if ($cie < $this->endTime || $this->endTime == 0) {
                             $this->endTime = $cie;
                         }
                     }
                     if ($type == 'list'
                         && $foundBlank
-                        && isset($xmlMeta[$field['layer']])
-                        && isset($xmlMeta[$field['layer']]['cie_start'])) {
-                        $layer = $xmlMeta[$field['layer']];
+                        && isset($xmlMeta[$encodedLayer])
+                        && isset($xmlMeta[$encodedLayer]['cie_start'])) {
+                        $layer = $xmlMeta[$encodedLayer];
                         $this->endTime = $layer['cie_start'] + ($layer['cie_add'] * $foundBlank);
                     }
 
@@ -609,14 +612,14 @@ class ModifiedProcessXml
             }
 
             // Find and replace IMAGE
-            $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/image');
+            $result = $xmlObj->xpath('//*[@title="'.$encodedLayer.'"]/image');
             if (!empty($result)) {
                 foreach ($result as $node) {
                     $node['src'] = $field['content'];
 
                     // Look for cie meta
-                    if (isset($xmlMeta[$field['layer']]['cie']) && strpos($field['content'], 'wevideo-images') !== false) {
-                        $cie = $xmlMeta[$field['layer']]['cie'];
+                    if (isset($xmlMeta[$encodedLayer]['cie']) && strpos($field['content'], 'wevideo-images') !== false) {
+                        $cie = $xmlMeta[$encodedLayer]['cie'];
                         if ($cie < $this->endTime || $this->endTime == 0) {
                             $this->endTime = $cie;
                         }
@@ -625,7 +628,7 @@ class ModifiedProcessXml
             }
 
             // Find and replace MOTIONTITLE
-	    $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/motionTitle');
+	    $result = $xmlObj->xpath('//*[@title="'.$encodedLayer.'"]/motionTitle');
 	    Log::info("field: ");
 	    Log::info(print_r($field,true));
 	    Log::info("field[layer]: ");
