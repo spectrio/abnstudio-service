@@ -40,6 +40,9 @@ class ModifiedProcessXml
 	$xml = $filename;
 	//Log::debug('filename - '.$xml);
 
+        // Log the first 2000 characters of the XML to see the actual layer titles
+        Log::info("XML being processed (first 2000 chars): ".substr($xml, 0, 2000));
+
         // Convert XML to object
         libxml_use_internal_errors(true);
         $xmlObj = simplexml_load_string($xml, null, LIBXML_NOCDATA);
@@ -54,6 +57,14 @@ class ModifiedProcessXml
         // Load the template metadata to an array
         $xmlMeta = $this->loadMeta($xmlObj);
 	//Log::debug('Loading xmlMeta - '.print_r($xmlMeta,true));
+        Log::info("XML Metadata loaded: ".print_r(array_keys($xmlMeta), true));
+
+        // Log all layer titles in the XML
+        $allLayers = $xmlObj->xpath('//layer[@title]');
+        Log::info("All layer titles in XML:");
+        foreach ($allLayers as $layer) {
+            Log::info("  - ".(string)$layer['title']);
+        }
 
         // Load the branding data into the XML object
         $xmlObj = $this->loadBrandingData($xmlObj, $data, $xmlMeta);
@@ -100,10 +111,16 @@ class ModifiedProcessXml
     // Load template metadata
     public function loadMeta($xmlObj)
     {
+        Log::info("=== LOADMETA START ===");
         $xmlMeta = [];
         $result = $xmlObj->xpath('//layer');
+        Log::info("Found " . count($result) . " layers to process");
+
         foreach ($result as $node) {
             $title = urldecode($node['title']);
+            $encodedTitle = (string) $node['title'];
+            Log::info("Processing layer: '{$title}' (encoded: '{$encodedTitle}')");
+
             if (strpos($title, '{') !== false) {
                 $pos = strpos($title, '{');
                 $jsonStr = substr($title, $pos);
@@ -112,9 +129,50 @@ class ModifiedProcessXml
                 $xmlMeta[$key] = $json;
                 $xmlMeta[$key]['json'] = $jsonStr;
 
-                // Adjust cie value if necessary
+                Log::info("  Layer has metadata: " . json_encode($json));
+
+                // Normalize: Check if this is a list layer (has multiple placeholders)
+                Log::info("  Checking for normalization...");
+                $children = $node->children();
+                Log::info("  Found " . count($children) . " child elements");
+
+                foreach ($children as $child) {
+                    $childName = $child->getName();
+                    Log::info("    Child element type: {$childName}");
+
+                    if ($childName == 'text' || $childName == 'html') {
+                        $content = (string) $child[0];
+                        $placeholderCount = substr_count($content, '{{');
+                        $contentPreview = substr($content, 0, 200);
+
+                        Log::info("    Content preview: {$contentPreview}");
+                        Log::info("    Placeholder count: {$placeholderCount}");
+                        Log::info("    Has cie metadata: " . (isset($json['cie']) ? 'YES (' . $json['cie'] . ')' : 'NO'));
+
+                        // If this is a list layer (multiple placeholders), remove cie metadata
+                        if ($placeholderCount > 1 && isset($json['cie'])) {
+                            Log::info("    *** NORMALIZATION TRIGGERED ***");
+                            Log::info("    Removing cie metadata from list layer with {$placeholderCount} placeholders");
+                            Log::info("    Before: " . json_encode($xmlMeta[$key]));
+
+                            unset($xmlMeta[$key]['cie']);
+                            unset($xmlMeta[$key]['cie_add']);
+                            unset($xmlMeta[$key]['cie_start']);
+                            unset($json['cie']);
+
+                            Log::info("    After: " . json_encode($xmlMeta[$key]));
+                        } else {
+                            Log::info("    No normalization needed (placeholders: {$placeholderCount}, has cie: " . (isset($json['cie']) ? 'yes' : 'no') . ")");
+                        }
+                    }
+                }
+
+                // Adjust cie value if necessary (only if not removed by normalization)
                 if (isset($json['cie'])) {
+                    Log::info("  Processing cie metadata: " . $json['cie']);
+
                     if ($json['cie'] == 1 || $json['cie'][0] == '-') {
+                        Log::info("  cie type: single value or negative");
                         $end = preg_replace('/[^0-9]/', '', $json['cie']);
                         $orgEnd = $end;
                         $children = $node->children();
@@ -124,8 +182,10 @@ class ModifiedProcessXml
                             }
                             $xmlMeta[$key]['cie'] = $end - $orgEnd;
                         }
+                        Log::info("  Adjusted cie value: " . $xmlMeta[$key]['cie']);
                     }
                     if ($json['cie'][0] == '/') {
+                        Log::info("  cie type: list (starts with /)");
                         $add = preg_replace('/[^0-9]/', '', $json['cie']);
                         $start = 0;
                         $xmlMeta[$key]['cie_add'] = $add;
@@ -136,10 +196,18 @@ class ModifiedProcessXml
                             }
                             $xmlMeta[$key]['cie_start'] = $start;
                         }
+                        Log::info("  Set cie_add: {$add}, cie_start: {$start}");
                     }
+                } else {
+                    Log::info("  No cie metadata to process (removed or never existed)");
                 }
+            } else {
+                Log::info("  Layer has no metadata");
             }
         }
+
+        Log::info("=== LOADMETA END ===");
+        Log::info("Final xmlMeta keys: " . implode(', ', array_keys($xmlMeta)));
         return $xmlMeta;
     }
 
@@ -554,16 +622,19 @@ class ModifiedProcessXml
             //return nl2br( str_replace("\r\n","\n",$replacement) );
         };
         foreach ($data['templateFields'] as $field) {
-            // URL-encode the layer name to match the XML title attribute
-            $encodedLayer = rawurlencode($field['layer']);
+            Log::info("Processing field - Layer: ".$field['layer']." | Content: ".substr($field['content'], 0, 100));
 
             // Find and replace TEXT or HTML
-            $result = $xmlObj->xpath('//*[@title="'.$encodedLayer.'"]/html|//*[@title="'.$encodedLayer.'"]/text');
+            $xpath_query = '//*[@title="'.$field['layer'].'"]/html|//*[@title="'.$field['layer'].'"]/text';
+            Log::info("XPath query: ".$xpath_query);
+            $result = $xmlObj->xpath($xpath_query);
+            Log::info("XPath result count: ".count($result));
 	    if (!empty($result)) {
 		//Log::info("TEXT or HTML found: ".print_r($result,true));
                 foreach ($result as $node) {
                     $pattern = '/{{([\s\S]*?)}}/';
                     $content = (string) $node[0];
+                    Log::info("Original content: ".substr($content, 0, 200));
 
                     // normalize xml to make sure getting right thing
                     $content = $this->normalizePlaceholders($content);
@@ -584,22 +655,23 @@ class ModifiedProcessXml
                     $replacement = $field['content'];
                     $index = 0;
                     $newContent = preg_replace_callback($pattern, $callback, $content);
+                    Log::info("New content after replacement: ".substr($newContent, 0, 200));
                     $node[0] = $newContent;
 
                     // Look for the earliest termination point (cie meta)
                     if ($type != 'list'
                         && !trim($replacement)
-                        && isset($xmlMeta[$encodedLayer]['cie'])) {
-                        $cie = $xmlMeta[$encodedLayer]['cie'];
+                        && isset($xmlMeta[$field['layer']]['cie'])) {
+                        $cie = $xmlMeta[$field['layer']]['cie'];
                         if ($cie < $this->endTime || $this->endTime == 0) {
                             $this->endTime = $cie;
                         }
                     }
                     if ($type == 'list'
                         && $foundBlank
-                        && isset($xmlMeta[$encodedLayer])
-                        && isset($xmlMeta[$encodedLayer]['cie_start'])) {
-                        $layer = $xmlMeta[$encodedLayer];
+                        && isset($xmlMeta[$field['layer']])
+                        && isset($xmlMeta[$field['layer']]['cie_start'])) {
+                        $layer = $xmlMeta[$field['layer']];
                         $this->endTime = $layer['cie_start'] + ($layer['cie_add'] * $foundBlank);
                     }
 
@@ -609,17 +681,19 @@ class ModifiedProcessXml
                     $this->addSubtree($node, $childObj);
 
                 }
+            } else {
+                Log::info("No TEXT or HTML found for layer: ".$field['layer']);
             }
 
             // Find and replace IMAGE
-            $result = $xmlObj->xpath('//*[@title="'.$encodedLayer.'"]/image');
+            $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/image');
             if (!empty($result)) {
                 foreach ($result as $node) {
                     $node['src'] = $field['content'];
 
                     // Look for cie meta
-                    if (isset($xmlMeta[$encodedLayer]['cie']) && strpos($field['content'], 'wevideo-images') !== false) {
-                        $cie = $xmlMeta[$encodedLayer]['cie'];
+                    if (isset($xmlMeta[$field['layer']]['cie']) && strpos($field['content'], 'wevideo-images') !== false) {
+                        $cie = $xmlMeta[$field['layer']]['cie'];
                         if ($cie < $this->endTime || $this->endTime == 0) {
                             $this->endTime = $cie;
                         }
@@ -628,13 +702,13 @@ class ModifiedProcessXml
             }
 
             // Find and replace MOTIONTITLE
-	    $result = $xmlObj->xpath('//*[@title="'.$encodedLayer.'"]/motionTitle');
+	    $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/motionTitle');
 	    Log::info("field: ");
 	    Log::info(print_r($field,true));
 	    Log::info("field[layer]: ");
 	    Log::info(print_r($field['layer'],true));
 	    if (!empty($result)) {
-		   //Log::info("motion title text found: ".print_r($result,true));   
+		   //Log::info("motion title text found: ".print_r($result,true));
 		 foreach ($result as $node) {
                     $i = 0;
                     $pattern = '/{{([\s\S]*?)}}/';
