@@ -20,18 +20,16 @@ class ModifiedProcessXml
             $innerContent = $matches[1];
             $text = strip_tags($innerContent);
 
-            preg_match('/style="([^"]*)"/', $innerContent, $styleMatch);
-            $style = isset($styleMatch[1]) ? $styleMatch[1] : '';
-            $style = preg_replace('/background-color:\s*rgba\(0,\s*0,\s*0,\s*0\);?/', '', $style);
-            $style = trim($style);
+            Log::info('normalizePlaceholders callback - innerContent: ' . substr($innerContent, 0, 200));
+            Log::info('normalizePlaceholders callback - extracted text: ' . $text);
 
-            if ($style) {
-                return '<span style="' . $style . '">{{' . $text . '}}</span>';
-            }
+            Log::info('normalizePlaceholders callback - returning normalized placeholder without extra wrapping: {{' . $text . '}}');
             return '{{' . $text . '}}';
         }, $content);
-        
-        Log::info('Normalized placeholders - Before: ' . substr($content, 0, 200) . ' | After: ' . substr($normalized, 0, 200));
+
+        Log::info('Normalized placeholders - FULL Before: ' . substr($content, 0, 500));
+        Log::info('Normalized placeholders - FULL After: ' . substr($normalized, 0, 500));
+        Log::info('Normalization removed ' . (strlen($content) - strlen($normalized)) . ' characters of markup');
         return $normalized;
     }
 
@@ -622,24 +620,28 @@ class ModifiedProcessXml
             //return nl2br( str_replace("\r\n","\n",$replacement) );
         };
         foreach ($data['templateFields'] as $field) {
-            Log::info("Processing field - Layer: ".$field['layer']." | Content: ".substr($field['content'], 0, 100));
+            Log::info("========== PROCESSING FIELD ==========");
+            Log::info("Field layer: " . $field['layer']);
+            Log::info("Field content: " . $field['content']);
+            Log::info("Field content length: " . strlen($field['content']));
 
-            // Find and replace TEXT or HTML
             $xpath_query = '//*[@title="'.$field['layer'].'"]/html|//*[@title="'.$field['layer'].'"]/text';
             Log::info("XPath query: ".$xpath_query);
             $result = $xmlObj->xpath($xpath_query);
             Log::info("XPath result count: ".count($result));
+
+            if (count($result) === 0) {
+                Log::warning("WARNING: No layer found for: " . $field['layer']);
+            }
+
 	    if (!empty($result)) {
-		//Log::info("TEXT or HTML found: ".print_r($result,true));
                 foreach ($result as $node) {
                     $pattern = '/{{([\s\S]*?)}}/';
                     $content = (string) $node[0];
-                    Log::info("Original content: ".substr($content, 0, 200));
+                    Log::info("Original node content (FULL): " . $content);
 
-                    // normalize xml to make sure getting right thing
                     $content = $this->normalizePlaceholders($content);
 
-                    // Copy all children as a separate object to reinsert later
                     $children = $node->children();
                     $childXML = '';
                     foreach ($children as $child) {
@@ -649,16 +651,16 @@ class ModifiedProcessXml
 
                     if (substr_count($content, '{{') > 1) {
                         $type = 'list';
+                        Log::info("Detected list type layer with " . substr_count($content, '{{') . " placeholders");
                     }
 
-                    // Apply user values to template
                     $replacement = $field['content'];
                     $index = 0;
                     $newContent = preg_replace_callback($pattern, $callback, $content);
-                    Log::info("New content after replacement: ".substr($newContent, 0, 200));
+                    Log::info("Final content after replacement (FULL): " . $newContent);
+                    Log::info("Replacement value used: " . $replacement);
                     $node[0] = $newContent;
 
-                    // Look for the earliest termination point (cie meta)
                     if ($type != 'list'
                         && !trim($replacement)
                         && isset($xmlMeta[$field['layer']]['cie'])) {
@@ -666,6 +668,7 @@ class ModifiedProcessXml
                         if ($cie < $this->endTime || $this->endTime == 0) {
                             $this->endTime = $cie;
                         }
+                        Log::info("Set endTime to: " . $this->endTime);
                     }
                     if ($type == 'list'
                         && $foundBlank
@@ -673,11 +676,11 @@ class ModifiedProcessXml
                         && isset($xmlMeta[$field['layer']]['cie_start'])) {
                         $layer = $xmlMeta[$field['layer']];
                         $this->endTime = $layer['cie_start'] + ($layer['cie_add'] * $foundBlank);
+                        Log::info("Set endTime (list) to: " . $this->endTime);
                     }
 
                     $type = '';
 
-                    // Add the children back
                     $this->addSubtree($node, $childObj);
 
                 }
@@ -687,9 +690,11 @@ class ModifiedProcessXml
 
             // Find and replace IMAGE
             $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/image');
+            Log::info("Looking for IMAGE elements in layer: ".$field['layer']." - found: " . count($result));
             if (!empty($result)) {
                 foreach ($result as $node) {
                     $node['src'] = $field['content'];
+                    Log::info("Image src set to: " . $field['content']);
 
                     // Look for cie meta
                     if (isset($xmlMeta[$field['layer']]['cie']) && strpos($field['content'], 'wevideo-images') !== false) {
@@ -697,23 +702,27 @@ class ModifiedProcessXml
                         if ($cie < $this->endTime || $this->endTime == 0) {
                             $this->endTime = $cie;
                         }
+                        Log::info("Image has cie metadata, set endTime to: " . $this->endTime);
+                    } else {
+                        Log::info("Image cie check - has cie: " . (isset($xmlMeta[$field['layer']]['cie']) ? 'yes' : 'no') . ", contains wevideo-images: " . (strpos($field['content'], 'wevideo-images') !== false ? 'yes' : 'no'));
                     }
                 }
+            } else {
+                Log::info("No IMAGE elements found for layer: ".$field['layer']);
             }
 
             // Find and replace MOTIONTITLE
 	    $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/motionTitle');
-	    Log::info("field: ");
-	    Log::info(print_r($field,true));
-	    Log::info("field[layer]: ");
-	    Log::info(print_r($field['layer'],true));
+	    Log::info("Looking for MOTIONTITLE elements - found: " . count($result));
 	    if (!empty($result)) {
 		   //Log::info("motion title text found: ".print_r($result,true));
 		 foreach ($result as $node) {
                     $i = 0;
                     $pattern = '/{{([\s\S]*?)}}/';
                     preg_match_all($pattern, $field['content'], $matches);
+                    Log::info("Motion title - found " . count($matches[1]) . " lines to replace");
                     foreach ($matches[1] as $line) {
+                        Log::info("Motion title line $i: " . $line);
                         $line = addcslashes($line, '$'); // escape $ or preg_replace will give weird output
                         $newStr = preg_replace($pattern, $line, $node->children()->lines->line[$i]);
                         if ($newStr) {
@@ -755,8 +764,10 @@ class ModifiedProcessXml
     // Submit the XML to WeVideo
     public function renderModified($xmlFinal, $data, $thumbnailTime = 5, $orientation = 'H', $dtv = 0)
     {
-	    Log::info('Submitting XML:');
-	    //Log::info(print_r($xmlFinal, true));
+        Log::info('=== RENDERMODIFIED START ===');
+        Log::info('Orientation: ' . $orientation . ', DTV: ' . $dtv);
+        Log::info('EndTime: ' . $this->endTime . ', TemplateDuration: ' . $this->templateDuration);
+
         $thumbnailTime *= 1000;
 
         if (!$orientation) {$orientation = 'H';}
@@ -767,18 +778,21 @@ class ModifiedProcessXml
 
         $xmlFinal = $this->embedFonts($xmlFinal);
 
-        //Log::info('Final XML: '.$xmlFinal);
+        Log::info('Final XML to be sent (first 5000 chars): ' . substr($xmlFinal, 0, 5000));
+        Log::info('Final XML to be sent (last 2000 chars): ' . substr($xmlFinal, -2000));
 
         $server = env('WEVIDEO_SERVER', 'www');
         $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
         $postdata = array('version' => '1', 'content' => $xmlFinal, 'resolution' => $resolution, 'crf' => '20', 'fps' => '29.97', 'thumbnailTime' => $thumbnailTime);
         if ($this->endTime) {
             $postdata['endTime'] = $this->endTime;
+            Log::info('Including endTime in post data: ' . $this->endTime);
         }
         $postdata = json_encode($postdata, false);
+        Log::info('Post data size: ' . strlen($postdata) . ' bytes');
+
         $ch = curl_init();
-        //curl_setopt($ch, CURLOPT_URL, "http://$server.wevideo.com/api/3/videos/create");
-	curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/create");       
+	curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/create");
 	curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -791,11 +805,11 @@ class ModifiedProcessXml
   {
     $len = strlen($header);
     $header = explode(':', $header, 2);
-    if (count($header) < 2) // ignore invalid headers
+    if (count($header) < 2)
       return $len;
 
     $headers[strtolower(trim($header[0]))][] = trim($header[1]);
-    
+
     return $len;
   }
 );
@@ -807,6 +821,7 @@ class ModifiedProcessXml
         $output['endTime'] = $this->endTime;
         $output['templateDuration'] = $this->templateDuration;
         $output = json_encode($output, 1);
+        Log::info('=== RENDERMODIFIED END ===');
         return $output;
     }
 
@@ -820,6 +835,30 @@ class ModifiedProcessXml
 
         // Remove any insertion points
         $xmlFinal = str_replace('<c>', '', str_replace('</c>', '', $xmlFinal));
+
+        Log::info("=== FINAL XML CONVERSION ===");
+        Log::info("Final XML length: " . strlen($xmlFinal));
+
+        $layersInFinalXml = substr_count($xmlFinal, '<layer');
+        $imagesInFinalXml = substr_count($xmlFinal, '<image');
+        $textsInFinalXml = substr_count($xmlFinal, '<text');
+        $htmlsInFinalXml = substr_count($xmlFinal, '<html');
+
+        Log::info("Final XML - Layers: $layersInFinalXml, Images: $imagesInFinalXml, Texts: $textsInFinalXml, HTMLs: $htmlsInFinalXml");
+
+        preg_match_all('/<image[^>]*src="([^"]*)"/', $xmlFinal, $imageSources);
+        Log::info("Image sources in final XML:");
+        foreach ($imageSources[1] as $idx => $src) {
+            $srcPreview = strlen($src) > 100 ? substr($src, 0, 100) . '...' : $src;
+            Log::info("  Image " . ($idx + 1) . ": " . ($src === '' ? 'EMPTY' : $srcPreview));
+        }
+
+        preg_match_all('/<video[^>]*src="([^"]*)"/', $xmlFinal, $videoSources);
+        Log::info("Video sources in final XML:");
+        foreach ($videoSources[1] as $idx => $src) {
+            $srcPreview = strlen($src) > 100 ? substr($src, 0, 100) . '...' : $src;
+            Log::info("  Video " . ($idx + 1) . ": " . ($src === '' ? 'EMPTY' : $srcPreview));
+        }
 
         return ($xmlFinal);
     }
