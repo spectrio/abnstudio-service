@@ -79,11 +79,11 @@ class ModifiedProcessXml
 
         // Convert object back into XML
         $xmlFinal = $this->objToXml($xmlObj);
-	//die($xmlFinal);
+        //die($xmlFinal);
 
-	//convert newer version api links in the xml to the older version 3 that we use
-	//otherwise redirects won't work properly in the rendering engine
-	$xmlFinal = $this->convertToVersionThreeLinks($xmlFinal);
+		//convert newer version api links in the xml to the older version 3 that we use
+		//otherwise redirects won't work properly in the rendering engine
+		$xmlFinal = $this->convertToVersionThreeLinks($xmlFinal);
 
         $json = $this->renderModified($xmlFinal, $data, $thumbnailTime, $orientation, $dtv);
 
@@ -147,20 +147,11 @@ class ModifiedProcessXml
                         Log::info("    Placeholder count: {$placeholderCount}");
                         Log::info("    Has cie metadata: " . (isset($json['cie']) ? 'YES (' . $json['cie'] . ')' : 'NO'));
 
-                        // If this is a list layer (multiple placeholders), remove cie metadata
-                        if ($placeholderCount > 1 && isset($json['cie'])) {
-                            Log::info("    *** NORMALIZATION TRIGGERED ***");
-                            Log::info("    Removing cie metadata from list layer with {$placeholderCount} placeholders");
-                            Log::info("    Before: " . json_encode($xmlMeta[$key]));
-
-                            unset($xmlMeta[$key]['cie']);
-                            unset($xmlMeta[$key]['cie_add']);
-                            unset($xmlMeta[$key]['cie_start']);
-                            unset($json['cie']);
-
-                            Log::info("    After: " . json_encode($xmlMeta[$key]));
-                        } else {
-                            Log::info("    No normalization needed (placeholders: {$placeholderCount}, has cie: " . (isset($json['cie']) ? 'yes' : 'no') . ")");
+                        // NOTE: We do NOT remove cie metadata from list layers anymore
+                        // The cie metadata is required for WeVideo to render list animations correctly
+                        // We only normalize the HTML structure to fix split placeholder issues
+                        if ($placeholderCount > 1) {
+                            Log::info("    List layer detected with {$placeholderCount} placeholders - keeping cie metadata intact");
                         }
                     }
                 }
@@ -781,6 +772,17 @@ class ModifiedProcessXml
         Log::info('Final XML to be sent (first 5000 chars): ' . substr($xmlFinal, 0, 5000));
         Log::info('Final XML to be sent (last 2000 chars): ' . substr($xmlFinal, -2000));
 
+        // Save complete XML to file for debugging
+        $xmlDebugDir = storage_path('logs/xml_debug');
+        if (!is_dir($xmlDebugDir)) {
+            mkdir($xmlDebugDir, 0755, true);
+        }
+        $timestamp = date('Y-m-d_His');
+        $xmlDebugFile = $xmlDebugDir . '/wevideo_xml_' . $timestamp . '.xml';
+        file_put_contents($xmlDebugFile, $xmlFinal);
+        Log::info('*** COMPLETE XML saved to: ' . $xmlDebugFile);
+        Log::info('*** XML file size: ' . filesize($xmlDebugFile) . ' bytes');
+
         $server = env('WEVIDEO_SERVER', 'www');
         $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
         $postdata = array('version' => '1', 'content' => $xmlFinal, 'resolution' => $resolution, 'crf' => '20', 'fps' => '29.97', 'thumbnailTime' => $thumbnailTime);
@@ -814,14 +816,110 @@ class ModifiedProcessXml
   }
 );
 	$output = curl_exec($ch);
+
+	// Capture HTTP status code
+	$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+	Log::info("*** WeVideo API HTTP Status Code: " . $httpCode);
+
+	// Check for curl errors
+	if (curl_errno($ch)) {
+	    $curlError = curl_error($ch);
+	    Log::error("*** CURL ERROR: " . $curlError);
+	    Log::error("*** CURL Error Number: " . curl_errno($ch));
+	}
+
 	Log::info("XML Post response headers: ".print_r($headers,true));
 	curl_close($ch);
-	Log::info("XML post response: ".print_r($output,true));
-	$output = json_decode($output, 1);
+
+	Log::info("*** XML post response (RAW): ".print_r($output,true));
+	Log::info("*** XML post response length: " . strlen($output) . " bytes");
+
+	// Decode and check for errors in response
+	$decodedOutput = json_decode($output, 1);
+	if (json_last_error() !== JSON_ERROR_NONE) {
+	    Log::error("*** JSON DECODE ERROR: " . json_last_error_msg());
+	    Log::error("*** Response was not valid JSON");
+	}
+
+	if (is_array($decodedOutput)) {
+	    if (isset($decodedOutput['error'])) {
+	        Log::error("*** WEVIDEO API ERROR: " . print_r($decodedOutput['error'], true));
+	    }
+	    if (isset($decodedOutput['message'])) {
+	        Log::info("*** WeVideo API Message: " . $decodedOutput['message']);
+	    }
+	    if (isset($decodedOutput['id'])) {
+	        Log::info("*** WeVideo Job ID created: " . $decodedOutput['id']);
+	    }
+	    if (isset($decodedOutput['status'])) {
+	        Log::info("*** WeVideo Job Status: " . $decodedOutput['status']);
+	    }
+	}
+
+	$output = $decodedOutput;
         $output['endTime'] = $this->endTime;
         $output['templateDuration'] = $this->templateDuration;
         $output = json_encode($output, 1);
         Log::info('=== RENDERMODIFIED END ===');
+        return $output;
+    }
+
+    // Get job status from WeVideo
+    public function jobStatus($jobId)
+    {
+        Log::info('=== CHECKING JOB STATUS ===');
+        Log::info('Job ID: ' . $jobId);
+
+        $server = env('WEVIDEO_SERVER', 'www');
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/status/$jobId");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $output = curl_exec($ch);
+
+        // Capture HTTP status code
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        Log::info("*** Job Status API HTTP Code: " . $httpCode);
+
+        // Check for curl errors
+        if (curl_errno($ch)) {
+            $curlError = curl_error($ch);
+            Log::error("*** Job Status CURL ERROR: " . $curlError);
+            Log::error("*** CURL Error Number: " . curl_errno($ch));
+        }
+
+	curl_close($ch);
+
+	Log::info('Job Status Response (RAW): '.print_r($output, true));
+	Log::info('Job Status Response Length: ' . strlen($output) . ' bytes');
+
+	// Decode and check response
+	$decodedStatus = json_decode($output, 1);
+	if (json_last_error() !== JSON_ERROR_NONE) {
+	    Log::error("*** Job Status JSON DECODE ERROR: " . json_last_error_msg());
+	}
+
+	if (is_array($decodedStatus)) {
+	    if (isset($decodedStatus['error'])) {
+	        Log::error("*** WEVIDEO JOB STATUS ERROR: " . print_r($decodedStatus['error'], true));
+	    }
+	    if (isset($decodedStatus['status'])) {
+	        Log::info("*** Current Job Status: " . $decodedStatus['status']);
+	    }
+	    if (isset($decodedStatus['url'])) {
+	        Log::info("*** Video URL: " . $decodedStatus['url']);
+	    }
+	    if (isset($decodedStatus['thumbnailUrl'])) {
+	        Log::info("*** Thumbnail URL: " . $decodedStatus['thumbnailUrl']);
+	    }
+	    if (isset($decodedStatus['progress'])) {
+	        Log::info("*** Progress: " . $decodedStatus['progress'] . "%");
+	    }
+	    if (isset($decodedStatus['message'])) {
+	        Log::info("*** WeVideo Message: " . $decodedStatus['message']);
+	    }
+	}
+
+	Log::info('=== JOB STATUS CHECK COMPLETE ===');
         return $output;
     }
 
@@ -863,18 +961,7 @@ class ModifiedProcessXml
         return ($xmlFinal);
     }
 
-    // Get job status from WeVideo
-    public function jobStatus($jobId)
-    {
-        $server = env('WEVIDEO_SERVER', 'www');
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/status/$jobId");
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $output = curl_exec($ch);
-	curl_close($ch);
-	Log::info('Job Status: '.print_r($output, true));
-        return $output;
-    }
+
 
     // Get folder contents from WeVideo
     // This API call is undocumented by WeVideo
