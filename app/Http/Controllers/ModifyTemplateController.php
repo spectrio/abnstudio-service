@@ -242,6 +242,10 @@ class ModifyTemplateController extends Controller
         $template = ModifiedTemplate::getModifiedTemplate($id)->get();
         $fields = ModifiedFields::getModifiedFields($id)->get();
 
+        if ($template->isEmpty()) {
+          return '{"success":false, "message":"Template not found."}';
+        }
+
         $output['template'] = $template[0];
         $output['templateFields'] = $fields;
         return json_encode($output);
