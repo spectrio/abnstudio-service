@@ -667,7 +667,57 @@ class ModifiedProcessXml
                         && isset($xmlMeta[$field['layer']]['cie_start'])) {
                         $layer = $xmlMeta[$field['layer']];
                         $this->endTime = $layer['cie_start'] + ($layer['cie_add'] * $foundBlank);
+                        Log::info("=== LIST LAYER END TIME CALCULATION ===");
+                        Log::info("Layer: " . $field['layer']);
+                        Log::info("cie_start: " . $layer['cie_start']);
+                        Log::info("cie_add: " . $layer['cie_add']);
+                        Log::info("foundBlank (first empty item index): " . $foundBlank);
+                        Log::info("Calculated endTime: " . $this->endTime . " = " . $layer['cie_start'] . " + (" . $layer['cie_add'] . " * " . $foundBlank . ")");
                         Log::info("Set endTime (list) to: " . $this->endTime);
+
+                        // CRITICAL FIX: Modify kenBurns filter to only scroll through filled items
+                        // Find the kenBurns filter for this text element
+                        if (isset($childObj->filter)) {
+                            foreach ($childObj->filter as $filter) {
+                                if ((string)$filter['type'] === 'kenBurns') {
+                                    $startTop = (float)$filter['startTop'];
+                                    $endTop = (float)$filter['endTop'];
+                                    $totalMovement = $endTop - $startTop;
+
+                                    // Count total placeholders in the template
+                                    $totalPlaceholders = substr_count($content, '{{');
+
+                                    Log::info("=== KENBURNS FILTER ADJUSTMENT ===");
+                                    Log::info("Original startTop: " . $startTop);
+                                    Log::info("Original endTop: " . $endTop);
+                                    Log::info("Total movement: " . $totalMovement);
+                                    Log::info("Total placeholders in template: " . $totalPlaceholders);
+                                    Log::info("Filled items (foundBlank): " . $foundBlank);
+
+                                    // Calculate movement per item
+                                    $movementPerItem = $totalMovement / $totalPlaceholders;
+                                    Log::info("Movement per item: " . $movementPerItem);
+
+                                    // Calculate new endTop to only scroll through filled items
+                                    $newEndTop = $startTop + ($movementPerItem * $foundBlank);
+                                    Log::info("New endTop (to show only filled items): " . $newEndTop);
+
+                                    // Update the filter
+                                    $filter['endTop'] = $newEndTop;
+                                    Log::info("kenBurns filter endTop updated from " . $endTop . " to " . $newEndTop);
+
+                                    break;
+                                }
+                            }
+                        }
+                    } else if ($type == 'list') {
+                        Log::info("=== LIST LAYER BUT NO END TIME CALCULATION ===");
+                        Log::info("foundBlank: " . $foundBlank);
+                        Log::info("Has xmlMeta for layer: " . (isset($xmlMeta[$field['layer']]) ? 'YES' : 'NO'));
+                        if (isset($xmlMeta[$field['layer']])) {
+                            Log::info("xmlMeta contents: " . json_encode($xmlMeta[$field['layer']]));
+                            Log::info("Has cie_start: " . (isset($xmlMeta[$field['layer']]['cie_start']) ? 'YES' : 'NO'));
+                        }
                     }
 
                     $type = '';
