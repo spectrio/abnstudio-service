@@ -37,6 +37,28 @@ class ModifiedProcessXml
     {
         Log::info("=== CONVERTING TEXT KENBURNS TO POSITION KEYFRAMES ===");
 
+        // First, let's see all layers
+        $allLayers = $xmlObj->xpath('//layer');
+        Log::info("Total layers in XML: " . count($allLayers));
+
+        foreach ($allLayers as $idx => $layer) {
+            $layerTitle = urldecode((string)$layer['title']);
+            Log::info("  Layer $idx: $layerTitle");
+
+            // Check what children this layer has
+            $children = [];
+            foreach ($layer->children() as $child) {
+                $children[] = $child->getName();
+            }
+            Log::info("    Children: " . implode(', ', $children));
+
+            // Check for kenBurns filter specifically
+            $hasKenBurns = $layer->xpath('filter[@type="kenBurns"]');
+            if (!empty($hasKenBurns)) {
+                Log::info("    HAS KENBURNS FILTER!");
+            }
+        }
+
         $layersWithTextAndKenBurns = $xmlObj->xpath('//layer[text and filter[@type="kenBurns"]]');
         Log::info("Found " . count($layersWithTextAndKenBurns) . " layers with text elements and kenBurns filters");
 
@@ -582,6 +604,16 @@ class ModifiedProcessXml
 
                 $content = $this->normalizePlaceholders($content);
 
+                $parentLayer = $node->xpath('..')[0];
+                $kenBurnsFilter = null;
+                foreach ($parentLayer->children() as $sibling) {
+                    if ($sibling->getName() === 'filter' && (string)$sibling['type'] === 'kenBurns') {
+                        $kenBurnsFilter = $sibling;
+                        Log::info("Found kenBurns filter as sibling of text element - will preserve it");
+                        break;
+                    }
+                }
+
                 $children = $node->children();
                 $childXML = '';
                 foreach ($children as $child) {
@@ -626,7 +658,29 @@ class ModifiedProcessXml
                     Log::info("Calculated endTime: " . $this->endTime . " = " . $layer['cie_start'] . " + (" . $layer['cie_add'] . " * " . $foundBlank . ")");
                     Log::info("Set endTime (list) to: " . $this->endTime);
 
-                    if (isset($childObj->filter)) {
+                    if ($kenBurnsFilter !== null) {
+                        $startTop = (float)$kenBurnsFilter['startTop'];
+                        $endTop = (float)$kenBurnsFilter['endTop'];
+                        $totalMovement = $endTop - $startTop;
+
+                        $totalPlaceholders = substr_count($content, '{{');
+
+                        Log::info("=== KENBURNS FILTER ADJUSTMENT ===");
+                        Log::info("Original startTop: " . $startTop);
+                        Log::info("Original endTop: " . $endTop);
+                        Log::info("Total movement: " . $totalMovement);
+                        Log::info("Total placeholders in template: " . $totalPlaceholders);
+                        Log::info("Filled items (foundBlank): " . $foundBlank);
+
+                        $movementPerItem = $totalMovement / $totalPlaceholders;
+                        Log::info("Movement per item: " . $movementPerItem);
+
+                        $newEndTop = $startTop + ($movementPerItem * $foundBlank);
+                        Log::info("New endTop (to show only filled items): " . $newEndTop);
+
+                        $kenBurnsFilter['endTop'] = $newEndTop;
+                        Log::info("kenBurns filter endTop updated from " . $endTop . " to " . $newEndTop);
+                    } else if (isset($childObj->filter)) {
                         foreach ($childObj->filter as $filter) {
                             if ((string)$filter['type'] === 'kenBurns') {
                                 $startTop = (float)$filter['startTop'];
