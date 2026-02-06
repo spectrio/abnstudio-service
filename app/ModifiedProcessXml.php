@@ -37,7 +37,6 @@ class ModifiedProcessXml
     {
         Log::info("=== CONVERTING TEXT KENBURNS TO POSITION KEYFRAMES ===");
 
-        // First, let's see all layers
         $allLayers = $xmlObj->xpath('//layer');
         Log::info("Total layers in XML: " . count($allLayers));
 
@@ -45,26 +44,39 @@ class ModifiedProcessXml
             $layerTitle = urldecode((string)$layer['title']);
             Log::info("  Layer $idx: $layerTitle");
 
-            // Check what children this layer has
             $children = [];
             foreach ($layer->children() as $child) {
                 $children[] = $child->getName();
             }
             Log::info("    Children: " . implode(', ', $children));
 
-            // Check for kenBurns filter specifically
-            $hasKenBurns = $layer->xpath('filter[@type="kenBurns"]');
-            if (!empty($hasKenBurns)) {
-                Log::info("    HAS KENBURNS FILTER!");
+            $hasKenBurnsInText = $layer->xpath('text/filter[@type="kenBurns"]');
+            $hasKenBurnsInTextC = $layer->xpath('text/c/filter[@type="kenBurns"]');
+            if (!empty($hasKenBurnsInText)) {
+                Log::info("    HAS KENBURNS FILTER INSIDE TEXT ELEMENT!");
+            }
+            if (!empty($hasKenBurnsInTextC)) {
+                Log::info("    HAS KENBURNS FILTER INSIDE TEXT/C ELEMENT!");
             }
         }
 
-        $layersWithTextAndKenBurns = $xmlObj->xpath('//layer[text and filter[@type="kenBurns"]]');
-        Log::info("Found " . count($layersWithTextAndKenBurns) . " layers with text elements and kenBurns filters");
+        $layersWithTextAndKenBurns = $xmlObj->xpath('//layer[text/filter[@type="kenBurns"] or text/c/filter[@type="kenBurns"]]');
+        Log::info("Found " . count($layersWithTextAndKenBurns) . " layers with text elements containing kenBurns filters");
 
         foreach ($layersWithTextAndKenBurns as $layer) {
             $textElement = $layer->text;
-            $filter = $layer->xpath('filter[@type="kenBurns"]')[0];
+
+            $filter = $textElement->xpath('filter[@type="kenBurns"]');
+            if (empty($filter)) {
+                $filter = $textElement->xpath('c/filter[@type="kenBurns"]');
+            }
+
+            if (empty($filter)) {
+                Log::info("Could not find kenBurns filter in text element");
+                continue;
+            }
+
+            $filter = $filter[0];
             $layerTitle = (string)$layer['title'];
 
             Log::info("Processing kenBurns filter on text layer: " . urldecode($layerTitle));
@@ -75,20 +87,43 @@ class ModifiedProcessXml
                 continue;
             }
 
-            $top = $textElement->addChild('top');
-            $startEntry = $top->addChild('entry');
-            $startEntry->addAttribute('time', $textElement['begin']);
-            $startEntry->addAttribute('value', $filter['startTop']);
+            $textDom = dom_import_simplexml($textElement);
+            $doc = $textDom->ownerDocument;
 
-            $endEntry = $top->addChild('entry');
-            $endEntry->addAttribute('time', (int)$textElement['begin'] + (int)$textElement['duration']);
-            $endEntry->addAttribute('value', $filter['endTop']);
+            $topElement = $doc->createElement('top');
+
+            $startEntry = $doc->createElement('entry');
+            $startEntry->setAttribute('time', (string)$textElement['begin']);
+            $startEntry->setAttribute('value', (string)$filter['startTop']);
+            $topElement->appendChild($startEntry);
+
+            $endEntry = $doc->createElement('entry');
+            $endEntry->setAttribute('time', (string)((int)$textElement['begin'] + (int)$textElement['duration']));
+            $endEntry->setAttribute('value', (string)$filter['endTop']);
+            $topElement->appendChild($endEntry);
+
+            $opacityElement = $textElement->xpath('.//opacity');
+            if (!empty($opacityElement)) {
+                $opacityDom = dom_import_simplexml($opacityElement[0]);
+                $textDom->insertBefore($topElement, $opacityDom);
+                Log::info("  Inserted top element BEFORE opacity element");
+            } else {
+                $cElement = $textElement->xpath('c');
+                if (!empty($cElement)) {
+                    $cDom = dom_import_simplexml($cElement[0]);
+                    $textDom->insertBefore($topElement, $cDom);
+                    Log::info("  Inserted top element BEFORE c element");
+                } else {
+                    $textDom->appendChild($topElement);
+                    Log::info("  Appended top element (no opacity or c found)");
+                }
+            }
 
             Log::info("  Created top animation: time " . $textElement['begin'] . " -> " . ((int)$textElement['begin'] + (int)$textElement['duration']));
             Log::info("  Position values: " . $filter['startTop'] . " -> " . $filter['endTop']);
 
-            $dom = dom_import_simplexml($filter);
-            $dom->parentNode->removeChild($dom);
+            $filterDom = dom_import_simplexml($filter);
+            $filterDom->parentNode->removeChild($filterDom);
 
             Log::info("  Removed kenBurns filter, replaced with position keyframes");
         }
@@ -101,7 +136,17 @@ class ModifiedProcessXml
     {
         $xml = $filename;
 
-        Log::info("XML being processed (first 2000 chars): ".substr($xml, 0, 2000));
+        Log::info("=== ORIGINAL TEMPLATE XML (first 5000 chars) ===");
+        Log::info(substr($xml, 0, 5000));
+        Log::info("=== END ORIGINAL XML ===");
+
+        $namesLayerStart = strpos($xml, 'Names%20%7B%22cie');
+        if ($namesLayerStart !== false) {
+            $namesLayerXml = substr($xml, $namesLayerStart, 1500);
+            Log::info("=== NAMES LAYER IN ORIGINAL XML ===");
+            Log::info($namesLayerXml);
+            Log::info("=== END NAMES LAYER ===");
+        }
 
         libxml_use_internal_errors(true);
         $xmlObj = simplexml_load_string($xml, null, LIBXML_NOCDATA);
@@ -123,6 +168,27 @@ class ModifiedProcessXml
         $xmlObj = $this->loadBrandingData($xmlObj, $data, $xmlMeta);
 
         $xmlObj = $this->loadTemplateData($xmlObj, $data, $xmlMeta);
+
+        Log::info("=== XML STATE BEFORE KENBURNS CONVERSION ===");
+        $namesLayer = $xmlObj->xpath('//layer[contains(@title, "Names")]');
+        if (!empty($namesLayer)) {
+            $namesLayer = $namesLayer[0];
+            Log::info("Names layer found");
+            if (isset($namesLayer->text)) {
+                Log::info("Names layer has text element");
+                $textXml = $namesLayer->text->asXML();
+                Log::info("Text element XML: " . substr($textXml, 0, 500));
+
+                $directFilter = $namesLayer->xpath('text/filter[@type="kenBurns"]');
+                $cFilter = $namesLayer->xpath('text/c/filter[@type="kenBurns"]');
+                $anyFilter = $namesLayer->xpath('.//filter[@type="kenBurns"]');
+
+                Log::info("Direct filter (text/filter): " . count($directFilter));
+                Log::info("C filter (text/c/filter): " . count($cFilter));
+                Log::info("Any filter (.//filter): " . count($anyFilter));
+            }
+        }
+        Log::info("=== END XML STATE ===");
 
         $xmlObj = $this->convertTextKenBurnsToPosition($xmlObj);
 
@@ -604,22 +670,17 @@ class ModifiedProcessXml
 
                 $content = $this->normalizePlaceholders($content);
 
-                $parentLayer = $node->xpath('..')[0];
-                $kenBurnsFilter = null;
-                foreach ($parentLayer->children() as $sibling) {
-                    if ($sibling->getName() === 'filter' && (string)$sibling['type'] === 'kenBurns') {
-                        $kenBurnsFilter = $sibling;
-                        Log::info("Found kenBurns filter as sibling of text element - will preserve it");
-                        break;
-                    }
-                }
-
                 $children = $node->children();
                 $childXML = '';
                 foreach ($children as $child) {
                     $childXML .= $child->asXML();
                 }
                 $childObj = new SimpleXMLElement('<c>'.$childXML.'</c>');
+
+                Log::info("Text element has " . count($children) . " child elements");
+                foreach ($children as $child) {
+                    Log::info("  Child: " . $child->getName() . " (type: " . (isset($child['type']) ? (string)$child['type'] : 'N/A') . ")");
+                }
 
                 if (substr_count($content, '{{') > 1) {
                     $type = 'list';
@@ -658,29 +719,7 @@ class ModifiedProcessXml
                     Log::info("Calculated endTime: " . $this->endTime . " = " . $layer['cie_start'] . " + (" . $layer['cie_add'] . " * " . $foundBlank . ")");
                     Log::info("Set endTime (list) to: " . $this->endTime);
 
-                    if ($kenBurnsFilter !== null) {
-                        $startTop = (float)$kenBurnsFilter['startTop'];
-                        $endTop = (float)$kenBurnsFilter['endTop'];
-                        $totalMovement = $endTop - $startTop;
-
-                        $totalPlaceholders = substr_count($content, '{{');
-
-                        Log::info("=== KENBURNS FILTER ADJUSTMENT ===");
-                        Log::info("Original startTop: " . $startTop);
-                        Log::info("Original endTop: " . $endTop);
-                        Log::info("Total movement: " . $totalMovement);
-                        Log::info("Total placeholders in template: " . $totalPlaceholders);
-                        Log::info("Filled items (foundBlank): " . $foundBlank);
-
-                        $movementPerItem = $totalMovement / $totalPlaceholders;
-                        Log::info("Movement per item: " . $movementPerItem);
-
-                        $newEndTop = $startTop + ($movementPerItem * $foundBlank);
-                        Log::info("New endTop (to show only filled items): " . $newEndTop);
-
-                        $kenBurnsFilter['endTop'] = $newEndTop;
-                        Log::info("kenBurns filter endTop updated from " . $endTop . " to " . $newEndTop);
-                    } else if (isset($childObj->filter)) {
+                    if (isset($childObj->filter)) {
                         foreach ($childObj->filter as $filter) {
                             if ((string)$filter['type'] === 'kenBurns') {
                                 $startTop = (float)$filter['startTop'];
