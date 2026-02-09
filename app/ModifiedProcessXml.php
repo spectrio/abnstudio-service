@@ -102,17 +102,27 @@ class ModifiedProcessXml
             $endEntry->setAttribute('value', (string)$filter['endTop']);
             $topElement->appendChild($endEntry);
 
-            $opacityElement = $textElement->xpath('.//opacity');
+            $opacityElement = $textElement->xpath('opacity');
             if (!empty($opacityElement)) {
                 $opacityDom = dom_import_simplexml($opacityElement[0]);
-                $textDom->insertBefore($topElement, $opacityDom);
-                Log::info("  Inserted top element BEFORE opacity element");
+                if ($opacityDom->parentNode === $textDom) {
+                    $textDom->insertBefore($topElement, $opacityDom);
+                    Log::info("  Inserted top element BEFORE opacity element");
+                } else {
+                    $textDom->appendChild($topElement);
+                    Log::info("  Appended top element (opacity not a direct child)");
+                }
             } else {
                 $cElement = $textElement->xpath('c');
                 if (!empty($cElement)) {
                     $cDom = dom_import_simplexml($cElement[0]);
-                    $textDom->insertBefore($topElement, $cDom);
-                    Log::info("  Inserted top element BEFORE c element");
+                    if ($cDom->parentNode === $textDom) {
+                        $textDom->insertBefore($topElement, $cDom);
+                        Log::info("  Inserted top element BEFORE c element");
+                    } else {
+                        $textDom->appendChild($topElement);
+                        Log::info("  Appended top element (c not a direct child)");
+                    }
                 } else {
                     $textDom->appendChild($topElement);
                     Log::info("  Appended top element (no opacity or c found)");
@@ -190,7 +200,7 @@ class ModifiedProcessXml
         }
         Log::info("=== END XML STATE ===");
 
-        $xmlObj = $this->convertTextKenBurnsToPosition($xmlObj);
+        Log::info("=== SKIPPING KENBURNS CONVERSION - Filter should be in correct location after c-unwrapping ===");
 
         if (!$dtv) {
             $this->removeNode($xmlObj, '//audio/..');
@@ -198,7 +208,7 @@ class ModifiedProcessXml
 
         $xmlFinal = $this->objToXml($xmlObj);
 
-        $xmlFinal = $this->convertToVersionThreeLinks($xmlFinal);
+        // $xmlFinal = $this->convertToVersionThreeLinks($xmlFinal);
 
         $json = $this->renderModified($xmlFinal, $data, $thumbnailTime, $orientation, $dtv);
 
@@ -571,13 +581,19 @@ class ModifiedProcessXml
 
     public function validateMediaRedirect($url = null)
     {
+        Log::info('=== VALIDATE MEDIA REDIRECT START === URL: ' . $url);
         if (!is_null($url)) {
             $mediaRedirect = [];
             $mediaRedirect['url'] = $url;
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $mediaRedirect['sanitized'] = $url;
+            Log::info('Sanitized URL: ' . $url);
+
             $mediaRedirect['valid'] = filter_var($url, FILTER_VALIDATE_URL);
+            Log::info('URL is valid: ' . ($mediaRedirect['valid'] ? 'YES' : 'NO'));
+
             if ($mediaRedirect['valid']) {
+                Log::info('Making CURL request to check for redirects...');
                 $ch = curl_init();
 
                 curl_setopt($ch, CURLOPT_URL, $url);
@@ -597,12 +613,21 @@ class ModifiedProcessXml
 
                 $mediaRedirect['curl'] = curl_exec($ch);
 
+                if (curl_errno($ch)) {
+                    Log::error('CURL Error: ' . curl_error($ch));
+                    Log::error('CURL Error Number: ' . curl_errno($ch));
+                }
+
+                $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                Log::info('HTTP Status Code: ' . $httpCode);
+
                 curl_close($ch);
 
                 $headers = [];
                 $output = rtrim($mediaRedirect['curl']);
                 $data = explode("\n", $output);
                 $headers['status'] = $data[0];
+                Log::info('Response Status Line: ' . $headers['status']);
                 array_shift($data);
 
                 foreach ($data as $part) {
@@ -611,16 +636,27 @@ class ModifiedProcessXml
                     $headers[trim($middle[0])] = trim($middle[1]);
                 }
                 $mediaRedirect['headers'] = $headers;
+
                 if (array_key_exists('Location', $headers)) {
+                    Log::info('Redirect Location header found: ' . $headers['Location']);
                     $url = filter_var($headers['Location'], FILTER_SANITIZE_URL);
+                    Log::info('Sanitized redirect URL: ' . $url);
                     $urlIsValid = filter_var($url, FILTER_VALIDATE_URL);
+                    Log::info('Redirect URL is valid: ' . ($urlIsValid ? 'YES' : 'NO'));
                     if ($urlIsValid) {
+                        Log::info('Returning redirect URL: ' . $url);
+                        Log::info('=== VALIDATE MEDIA REDIRECT END ===');
                         return $url;
                     }
+                } else {
+                    Log::info('No Location header found - no redirect');
                 }
-                Log::info($mediaRedirect);
+                Log::info('Media redirect details: ' . json_encode($mediaRedirect, JSON_PRETTY_PRINT));
             }
         }
+
+        Log::info('Returning original/sanitized URL: ' . ($url ?? 'NULL'));
+        Log::info('=== VALIDATE MEDIA REDIRECT END ===');
         return $url;
     }
 
@@ -819,9 +855,32 @@ class ModifiedProcessXml
     private function addSubtree(&$xml1, &$xml2)
     {
         $dom1 = dom_import_simplexml($xml1);
-        $dom2 = dom_import_simplexml($xml2);
-        $dom2 = $dom1->ownerDocument->importNode($dom2, true);
-        $dom1->appendChild($dom2);
+
+        if ($xml2->getName() === 'c') {
+            $opacityElement = null;
+            foreach ($dom1->childNodes as $child) {
+                if ($child->nodeType === XML_ELEMENT_NODE && $child->nodeName === 'opacity') {
+                    $opacityElement = $child;
+                    break;
+                }
+            }
+
+            foreach ($xml2->children() as $child) {
+                $childDom = dom_import_simplexml($child);
+                $importedChild = $dom1->ownerDocument->importNode($childDom, true);
+
+                if ($importedChild->nodeName === 'filter' && $opacityElement !== null) {
+                    Log::info("Inserting filter element BEFORE opacity to comply with WeVideo schema");
+                    $dom1->insertBefore($importedChild, $opacityElement);
+                } else {
+                    $dom1->appendChild($importedChild);
+                }
+            }
+        } else {
+            $dom2 = dom_import_simplexml($xml2);
+            $dom2 = $dom1->ownerDocument->importNode($dom2, true);
+            $dom1->appendChild($dom2);
+        }
     }
 
     private function removeNode($xmlObj, $xpath)
@@ -848,6 +907,15 @@ class ModifiedProcessXml
         if ($dtv) {$resolution = '932x524';}
 
         $xmlFinal = $this->embedFonts($xmlFinal);
+
+        $xmlDebugDir = storage_path('logs/xml_debug');
+        if (!file_exists($xmlDebugDir)) {
+            mkdir($xmlDebugDir, 0755, true);
+        }
+        $timestamp = date('Y-m-d_H-i-s');
+        $debugFilename = $xmlDebugDir . $timestamp . '_' . uniqid() . '.xml';
+        file_put_contents($debugFilename, $xmlFinal);
+        Log::info('Final XML saved to: ' . $debugFilename);
 
         Log::info('Final XML to be sent (first 5000 chars): ' . substr($xmlFinal, 0, 5000));
         Log::info('Final XML to be sent (last 2000 chars): ' . substr($xmlFinal, -2000));
