@@ -12,210 +12,54 @@ class ModifiedProcessXml
     private $endTime = 0;
     private $templateDuration = 0;
 
-    private function normalizePlaceholders($content)
-    {
-        $pattern = '/{{([^}]*(?:<[^>]+>[^}]*)*)}}/';
-
-        $normalized = preg_replace_callback($pattern, function($matches) {
-            $innerContent = $matches[1];
-            $text = strip_tags($innerContent);
-
-            Log::info('normalizePlaceholders callback - innerContent: ' . substr($innerContent, 0, 200));
-            Log::info('normalizePlaceholders callback - extracted text: ' . $text);
-
-            Log::info('normalizePlaceholders callback - returning normalized placeholder without extra wrapping: {{' . $text . '}}');
-            return '{{' . $text . '}}';
-        }, $content);
-
-        Log::info('Normalized placeholders - FULL Before: ' . substr($content, 0, 500));
-        Log::info('Normalized placeholders - FULL After: ' . substr($normalized, 0, 500));
-        Log::info('Normalization removed ' . (strlen($content) - strlen($normalized)) . ' characters of markup');
-        return $normalized;
-    }
-
-    private function convertTextKenBurnsToPosition($xmlObj)
-    {
-        Log::info("=== CONVERTING TEXT KENBURNS TO POSITION KEYFRAMES ===");
-
-        $allLayers = $xmlObj->xpath('//layer');
-        Log::info("Total layers in XML: " . count($allLayers));
-
-        foreach ($allLayers as $idx => $layer) {
-            $layerTitle = urldecode((string)$layer['title']);
-            Log::info("  Layer $idx: $layerTitle");
-
-            $children = [];
-            foreach ($layer->children() as $child) {
-                $children[] = $child->getName();
-            }
-            Log::info("    Children: " . implode(', ', $children));
-
-            $hasKenBurnsInText = $layer->xpath('text/filter[@type="kenBurns"]');
-            $hasKenBurnsInTextC = $layer->xpath('text/c/filter[@type="kenBurns"]');
-            if (!empty($hasKenBurnsInText)) {
-                Log::info("    HAS KENBURNS FILTER INSIDE TEXT ELEMENT!");
-            }
-            if (!empty($hasKenBurnsInTextC)) {
-                Log::info("    HAS KENBURNS FILTER INSIDE TEXT/C ELEMENT!");
-            }
-        }
-
-        $layersWithTextAndKenBurns = $xmlObj->xpath('//layer[text/filter[@type="kenBurns"] or text/c/filter[@type="kenBurns"]]');
-        Log::info("Found " . count($layersWithTextAndKenBurns) . " layers with text elements containing kenBurns filters");
-
-        foreach ($layersWithTextAndKenBurns as $layer) {
-            $textElement = $layer->text;
-
-            $filter = $textElement->xpath('filter[@type="kenBurns"]');
-            if (empty($filter)) {
-                $filter = $textElement->xpath('c/filter[@type="kenBurns"]');
-            }
-
-            if (empty($filter)) {
-                Log::info("Could not find kenBurns filter in text element");
-                continue;
-            }
-
-            $filter = $filter[0];
-            $layerTitle = (string)$layer['title'];
-
-            Log::info("Processing kenBurns filter on text layer: " . urldecode($layerTitle));
-            Log::info("  Original filter - startTop: " . $filter['startTop'] . ", endTop: " . $filter['endTop']);
-
-            if (isset($textElement->top)) {
-                Log::info("  Top animation already exists, skipping");
-                continue;
-            }
-
-            $textDom = dom_import_simplexml($textElement);
-            $doc = $textDom->ownerDocument;
-
-            $topElement = $doc->createElement('top');
-
-            $startEntry = $doc->createElement('entry');
-            $startEntry->setAttribute('time', (string)$textElement['begin']);
-            $startEntry->setAttribute('value', (string)$filter['startTop']);
-            $topElement->appendChild($startEntry);
-
-            $endEntry = $doc->createElement('entry');
-            $endEntry->setAttribute('time', (string)((int)$textElement['begin'] + (int)$textElement['duration']));
-            $endEntry->setAttribute('value', (string)$filter['endTop']);
-            $topElement->appendChild($endEntry);
-
-            $opacityElement = $textElement->xpath('opacity');
-            if (!empty($opacityElement)) {
-                $opacityDom = dom_import_simplexml($opacityElement[0]);
-                if ($opacityDom->parentNode === $textDom) {
-                    $textDom->insertBefore($topElement, $opacityDom);
-                    Log::info("  Inserted top element BEFORE opacity element");
-                } else {
-                    $textDom->appendChild($topElement);
-                    Log::info("  Appended top element (opacity not a direct child)");
-                }
-            } else {
-                $cElement = $textElement->xpath('c');
-                if (!empty($cElement)) {
-                    $cDom = dom_import_simplexml($cElement[0]);
-                    if ($cDom->parentNode === $textDom) {
-                        $textDom->insertBefore($topElement, $cDom);
-                        Log::info("  Inserted top element BEFORE c element");
-                    } else {
-                        $textDom->appendChild($topElement);
-                        Log::info("  Appended top element (c not a direct child)");
-                    }
-                } else {
-                    $textDom->appendChild($topElement);
-                    Log::info("  Appended top element (no opacity or c found)");
-                }
-            }
-
-            Log::info("  Created top animation: time " . $textElement['begin'] . " -> " . ((int)$textElement['begin'] + (int)$textElement['duration']));
-            Log::info("  Position values: " . $filter['startTop'] . " -> " . $filter['endTop']);
-
-            $filterDom = dom_import_simplexml($filter);
-            $filterDom->parentNode->removeChild($filterDom);
-
-            Log::info("  Removed kenBurns filter, replaced with position keyframes");
-        }
-
-        Log::info("=== KENBURNS CONVERSION COMPLETE ===");
-        return $xmlObj;
-    }
-
     public function process($filename, $data, $thumbnailTime, $orientation, $dtv)
     {
-        $xml = $filename;
+	$xml = $filename;
+	//Log::debug('filename - '.$xml);
 
-        Log::info("=== ORIGINAL TEMPLATE XML (first 5000 chars) ===");
-        Log::info(substr($xml, 0, 5000));
-        Log::info("=== END ORIGINAL XML ===");
-
-        $namesLayerStart = strpos($xml, 'Names%20%7B%22cie');
-        if ($namesLayerStart !== false) {
-            $namesLayerXml = substr($xml, $namesLayerStart, 1500);
-            Log::info("=== NAMES LAYER IN ORIGINAL XML ===");
-            Log::info($namesLayerXml);
-            Log::info("=== END NAMES LAYER ===");
-        }
-
+        // Convert XML to object
         libxml_use_internal_errors(true);
         $xmlObj = simplexml_load_string($xml, null, LIBXML_NOCDATA);
-        if ($xmlObj === false) {
+	//Log::debug('xmlObj - '.print_r($xmlObj,true));       
+	if ($xmlObj === false) {
             return (libxml_get_errors());
         }
 
+        // Load XML details
         $this->loadXmlData($xmlObj);
 
+        // Load the template metadata to an array
         $xmlMeta = $this->loadMeta($xmlObj);
-        Log::info("XML Metadata loaded: ".print_r(array_keys($xmlMeta), true));
+	//Log::debug('Loading xmlMeta - '.print_r($xmlMeta,true));
 
-        $allLayers = $xmlObj->xpath('//layer[@title]');
-        Log::info("All layer titles in XML:");
-        foreach ($allLayers as $layer) {
-            Log::info("  - ".(string)$layer['title']);
-        }
-
+        // Load the branding data into the XML object
         $xmlObj = $this->loadBrandingData($xmlObj, $data, $xmlMeta);
+        //$xmlFinal = $this::objToXml($xmlObj);die($xmlFinal);
 
+        // Load the template data into the XML object
         $xmlObj = $this->loadTemplateData($xmlObj, $data, $xmlMeta);
+        //print_r($xmlObj);die();
 
-        Log::info("=== XML STATE BEFORE KENBURNS CONVERSION ===");
-        $namesLayer = $xmlObj->xpath('//layer[contains(@title, "Names")]');
-        if (!empty($namesLayer)) {
-            $namesLayer = $namesLayer[0];
-            Log::info("Names layer found");
-            if (isset($namesLayer->text)) {
-                Log::info("Names layer has text element");
-                $textXml = $namesLayer->text->asXML();
-                Log::info("Text element XML: " . substr($textXml, 0, 500));
-
-                $directFilter = $namesLayer->xpath('text/filter[@type="kenBurns"]');
-                $cFilter = $namesLayer->xpath('text/c/filter[@type="kenBurns"]');
-                $anyFilter = $namesLayer->xpath('.//filter[@type="kenBurns"]');
-
-                Log::info("Direct filter (text/filter): " . count($directFilter));
-                Log::info("C filter (text/c/filter): " . count($cFilter));
-                Log::info("Any filter (.//filter): " . count($anyFilter));
-            }
-        }
-        Log::info("=== END XML STATE ===");
-
-        Log::info("=== SKIPPING KENBURNS CONVERSION - Filter should be in correct location after c-unwrapping ===");
-
+        // Strip out any layers with audio
         if (!$dtv) {
             $this->removeNode($xmlObj, '//audio/..');
         }
 
+        // Convert object back into XML
         $xmlFinal = $this->objToXml($xmlObj);
+	//die($xmlFinal);
 
-        // $xmlFinal = $this->convertToVersionThreeLinks($xmlFinal);
+	//convert newer version api links in the xml to the older version 3 that we use
+	//otherwise redirects won't work properly in the rendering engine
+	// $xmlFinal = $this->convertToVersionThreeLinks($xmlFinal);
 
-        $json = $this->renderModified($xmlFinal, $data, $thumbnailTime, $orientation, $dtv);
+    $json = $this->renderModified($xmlFinal, $data, $thumbnailTime, $orientation, $dtv);
 
-        return $json;
+	return $json;
 
     }
 
+    // Load xml data (duration)
     public function loadXmlData($xmlObj)
     {
         $result = $xmlObj->xpath('//*[@duration]');
@@ -230,18 +74,13 @@ class ModifiedProcessXml
         return;
     }
 
+    // Load template metadata
     public function loadMeta($xmlObj)
     {
-        Log::info("=== LOADMETA START ===");
         $xmlMeta = [];
         $result = $xmlObj->xpath('//layer');
-        Log::info("Found " . count($result) . " layers to process");
-
         foreach ($result as $node) {
             $title = urldecode($node['title']);
-            $encodedTitle = (string) $node['title'];
-            Log::info("Processing layer: '{$title}' (encoded: '{$encodedTitle}')");
-
             if (strpos($title, '{') !== false) {
                 $pos = strpos($title, '{');
                 $jsonStr = substr($title, $pos);
@@ -250,38 +89,9 @@ class ModifiedProcessXml
                 $xmlMeta[$key] = $json;
                 $xmlMeta[$key]['json'] = $jsonStr;
 
-                Log::info("  Layer has metadata: " . json_encode($json));
-
-                Log::info("  Checking for normalization...");
-                $children = $node->children();
-                Log::info("  Found " . count($children) . " child elements");
-
-                foreach ($children as $child) {
-                    $childName = $child->getName();
-                    Log::info("    Child element type: {$childName}");
-
-
-
-                    if ($childName == 'text' || $childName == 'html') {
-                        $content = (string) $child[0];
-                        $placeholderCount = substr_count($content, '{{');
-                        $contentPreview = substr($content, 0, 200);
-
-                        Log::info("    Content preview: {$contentPreview}");
-                        Log::info("    Placeholder count: {$placeholderCount}");
-                        Log::info("    Has cie metadata: " . (isset($json['cie']) ? 'YES (' . $json['cie'] . ')' : 'NO'));
-
-                        if ($placeholderCount > 1) {
-                            Log::info("    List layer detected with {$placeholderCount} placeholders - keeping cie metadata intact");
-                        }
-                    }
-                }
-
+                // Adjust cie value if necessary
                 if (isset($json['cie'])) {
-                    Log::info("  Processing cie metadata: " . $json['cie']);
-
                     if ($json['cie'] == 1 || $json['cie'][0] == '-') {
-                        Log::info("  cie type: single value or negative");
                         $end = preg_replace('/[^0-9]/', '', $json['cie']);
                         $orgEnd = $end;
                         $children = $node->children();
@@ -291,10 +101,8 @@ class ModifiedProcessXml
                             }
                             $xmlMeta[$key]['cie'] = $end - $orgEnd;
                         }
-                        Log::info("  Adjusted cie value: " . $xmlMeta[$key]['cie']);
                     }
                     if ($json['cie'][0] == '/') {
-                        Log::info("  cie type: list (starts with /)");
                         $add = preg_replace('/[^0-9]/', '', $json['cie']);
                         $start = 0;
                         $xmlMeta[$key]['cie_add'] = $add;
@@ -305,53 +113,64 @@ class ModifiedProcessXml
                             }
                             $xmlMeta[$key]['cie_start'] = $start;
                         }
-                        Log::info("  Set cie_add: {$add}, cie_start: {$start}");
                     }
-                } else {
-                    Log::info("  No cie metadata to process (removed or never existed)");
                 }
-            } else {
-                Log::info("  Layer has no metadata");
             }
         }
-
-        Log::info("=== LOADMETA END ===");
-        Log::info("Final xmlMeta keys: " . implode(', ', array_keys($xmlMeta)));
         return $xmlMeta;
     }
 
+    // Apply branding data
     public function loadBrandingData($xmlObj, $data, $xmlMeta)
     {
 
+        // Non OEM-specific data (logo)
         foreach ($xmlMeta as $layer => $meta) {
+            // Apply branding to image elements
             $result = $xmlObj->xpath('//*[@title="'.$layer.'"]/image|//*[@title="'.$layer.'"]/video');
             if (!empty($result)) {
                 foreach ($result as $node) {
                     // Apply logotype (dealer logo or none)
-					// If "dealer", automatically detect light or dark based on template
-					if (isset($xmlMeta[$layer]['clo']) && isset($data['template']['logotype'])) {
+                    // If "dealer", automatically detect light or dark based on template
+                    if (isset($xmlMeta[$layer]['clo']) && isset($data['template']['logotype'])) { // && isset($data['template']['logotype'])
                         if ($data['template']['logotype'] == 'dealer') {
-                            $id = $data['template']['acct'];
+                            $id = $data['template']['acct']; // '20170';
                             $white = 0;
                             if ($xmlMeta[$layer]['clo'] == 'w') {
                                 $white = 1;
                             }
+                            ////$Scala = new Scala();
+                            ////$output['logo'] = $Scala->get_logo($id);
+                            //$logoInfo = $this::getLogo($id, $node->attributes()->width);
+                            //$output['logo'] = $logoInfo['img'];
+                            //$node->attributes()->height = $logoInfo['newHeight'] ?? 0;
+                            //$node->attributes()->top = $node->attributes()->top + $logoInfo['yAdj'];
                             $output['logo'] = $this->getLogo($id);
                             if ($white) {
+                                ////$output['logo'] = str_replace('.png','_WHITE.png',$output['logo']);
+                                //$output['logo'] = str_replace('logo_large','alternate_logo_large',$output['logo']);
                                 $output['logo'] = str_replace('logo_original', 'alternate_logo_original', $output['logo']);
                             }
-                            $node->attributes()->src = $output['logo'];
+                            $node->attributes()->src = $output['logo']; //'http://10.1.10.141/img/abnlogo.png';
                         } else {
+                            // logo specified as light or dark
                             if ($data['template']['logotype'] == 'dark' || $data['template']['logotype'] == 'light') {
-
-
                                 $id = $data['template']['acct'];
+                                ////$Scala = new Scala();
+                                ////$output['logo'] = $Scala->get_logo($id);
+                                //$logoInfo = $this::getLogo($id, $node->attributes()->width);
+                                //$output['logo'] = $logoInfo['img'];
+                                //$node->attributes()->height = $logoInfo['newHeight'];
+                                //$node->attributes()->top = $node->attributes()->top + $logoInfo['yAdj'];
                                 $output['logo'] = $this->getLogo($id);
                                 if ($data['template']['logotype'] == 'dark') {
+                                    ////$output['logo'] = str_replace('.png','_WHITE.png',$output['logo']);
+                                    //$output['logo'] = str_replace('logo_large','alternate_logo_large',$output['logo']);
                                     $output['logo'] = str_replace('logo_original', 'alternate_logo_original', $output['logo']);
                                 }
                                 $node->attributes()->src = $output['logo'];
                             } else {
+                                // blank logo
                                 if ($data['template']['logotype'] == 'blank') {
                                     $node->attributes()->src = '';
                                 }
@@ -386,6 +205,41 @@ class ModifiedProcessXml
                         }
                         $childObj = new SimpleXMLElement('<c>'.$childXML.'</c>');
 
+                        /* Obsolete
+                        // Apply bfc meta (Brand Font Color)
+                        if(isset($xmlMeta[$layer]['bfc']) && isset($brandTemplate['bfc'])) {
+                        $json = json_decode($brandTemplate['bfc'],1);
+                        $bfc = $json[$xmlMeta[$layer]['bfc']];
+                        $brand_pattern = '/color: rgb\(.*?\);/';
+                        $brand_replace = 'color: rgb(' . $bfc . ');';
+                        $content = preg_replace($brand_pattern, $brand_replace, $content);
+                        $node[0] = $content;
+                        $modified = true;
+                        }
+
+                        // Apply bff meta (Brand Font Face)
+                        if(isset($xmlMeta[$layer]['bff']) && isset($brandTemplate['bff'])) {
+                        $json = json_decode($brandTemplate['bff'],1);
+                        $bff = $json[$xmlMeta[$layer]['bff']] ?? $json['r'];
+                        $brand_pattern = '/font-family: .*?;/';
+                        $brand_replace = 'font-family: ' . $bff . ';';
+                        $content = preg_replace($brand_pattern, $brand_replace, $content);
+                        $node[0] = $content;
+                        $modified = true;
+                        }
+
+                        // Apply bbc meta (Brand Background Color)
+                        if(isset($xmlMeta[$layer]['bbc']) && isset($brandTemplate['bbc'])) {
+                        $json = json_decode($brandTemplate['bbc'],1);
+                        $bbc = $json[$xmlMeta[$layer]['bbc']];
+                        $bbcArr = explode(',',$bbc);
+                        $hex = sprintf("#%02x%02x%02x", $bbcArr[0], $bbcArr[1], $bbcArr[2]);
+                        $node->attributes()->backgroundColor = $hex;
+                        }
+                         */
+
+                        // Apply bta meta (Brand Theme Adjust)
+                        // X,Y coordinate adjustment per OEM
                         if (isset($xmlMeta[$layer]['bta'][strtolower($data['template']['oem'])])) {
                             $json = json_decode($brandTemplate['bta'], 1);
                             $bta = $xmlMeta[$layer]['bta'][strtolower($data['template']['oem'])];
@@ -443,22 +297,26 @@ class ModifiedProcessXml
                                 $brand_replace = 'span style="text-transform: uppercase; ';
                                 $content = preg_replace($brand_pattern, $brand_replace, $content);
                             }
+                            //print_r($content);die();
                             $node[0] = $content;
                             $modified = true;
                         }
 
                         // Apply bto meta (Brand Theme Override)
+                        //print_r($brandTemplate['bto']);die('end');
                         if (isset($xmlMeta[$layer]['bto'][strtolower($data['template']['oem'])]) && isset($brandTemplate['bto'])) {
                             $theme = $xmlMeta[$layer]['bto'][strtolower($data['template']['oem'])];
                             $json = json_decode($brandTemplate['bto'], 1);
                             $bto = $json[$theme];
                             if (trim(strip_tags($node[0]))) {
+                                // Text has content, so assume color replace
                                 $brand_pattern = '/color: rgb\(.*?\);/';
                                 $brand_replace = 'color: rgb('.$bto.');';
                                 $content = preg_replace($brand_pattern, $brand_replace, $content);
                                 $node[0] = $content;
                                 $modified = true;
                             } else {
+                                // If empty text content, assume background
                                 $colors = explode(',', $bto);
                                 $hex = sprintf('#%02x%02x%02x', $colors[0], $colors[1], $colors[2]);
                                 $node->attributes()->backgroundColor = $hex;
@@ -466,31 +324,37 @@ class ModifiedProcessXml
 
                         }
 
+                        // Add the children back
                         if ($modified) {
                             $this->addSubtree($node, $childObj);
                         }
                     }
                 }
 
+                // Apply branding to motion elements
+
                 $result = $xmlObj->xpath('//*[@title="'.$layer.'"]/motionTitle');
                 if (!empty($result)) {
                     foreach ($result as $node) {
-
-                Log::debug('Applying mtc color');
+			
+			Log::debug('Applying mtc color');
+                        // Apply mtc meta (Motion Title Color)
                         if (isset($xmlMeta[$layer]['mtc']) && isset($brandTemplate['bfc'])) {
-                $bfc = json_decode($brandTemplate['bfc'], 1);
-                Log::debug('bfc: '.print_r($bfc,true));
+			    $bfc = json_decode($brandTemplate['bfc'], 1);
+			    Log::debug('bfc: '.print_r($bfc,true));
                             foreach ($node->colors->color as $color) {
-                $key = strval($color['key']);
-                Log::debug('key: '.$key);
-                Log::debug('layer: '.print_r($xmlMeta[$layer],true));
-                if (isset($xmlMeta[$layer]['mtc'][$key]) && isset($bfc[$xmlMeta[$layer]['mtc'][$key]])) {
-                    Log::debug('key '.$key.' is set');
+				$key = strval($color['key']);
+				Log::debug('key: '.$key);
+				Log::debug('layer: '.print_r($xmlMeta[$layer],true));
+				//Log::debug('isset: '.isset($bfc[$xmlMeta[$layer]['mtc'][$key]]));
+				if (isset($xmlMeta[$layer]['mtc'][$key]) && isset($bfc[$xmlMeta[$layer]['mtc'][$key]])) {
+				    Log::debug('key '.$key.' is set');	
                                     $color->attributes()->value = 'rgba('.$bfc[$xmlMeta[$layer]['mtc'][$key]].',1)';
                                 }
                             }
                         }
 
+                        // Apply mtf meta (Motion Title Font)
                         if (isset($xmlMeta[$layer]['mtf']) && isset($brandTemplate['bff'])) {
                             $bff = json_decode($brandTemplate['bff'], 1);
                             $i = 0;
@@ -501,12 +365,15 @@ class ModifiedProcessXml
                                 $i++;
                             }
                         }
+
                     }
                 }
 
+                // Apply branding to image elements
                 $result = $xmlObj->xpath('//*[@title="'.$layer.'"]/image|//*[@title="'.$layer.'"]/video');
                 if (!empty($result)) {
                     foreach ($result as $node) {
+                        // Apply bit meta (Brand Image Tint)
                         if (isset($xmlMeta[$layer]['bit']) && isset($brandTemplate['bit'])) {
                             $json = json_decode($brandTemplate['bit'], 1);
                             $bit = $json[$xmlMeta[$layer]['bit']];
@@ -530,6 +397,7 @@ class ModifiedProcessXml
                             }
                         }
 
+                        // Apply bir meta (Brand Image Replace)
                         if (isset($xmlMeta[$layer]['bir']) && isset($brandTemplate['bir'])) {
                             $json = json_decode($brandTemplate['bir'], 1);
                             $bir = $json[$xmlMeta[$layer]['bir']];
@@ -551,7 +419,7 @@ class ModifiedProcessXml
                                     $urlExplode = explode('/', $urlParts['path']);
                                     $urlExplode[2] = '3';
                                     $urlCombine = implode('/', $urlExplode);
-                                    $url = $urlCombine;
+                                    $url = $urlCombine; //$urlParts['path']; //$this->validateMediaRedirect($file['url']);
                                     $title = $file['title'];
                                     $title = str_replace(' ', '+', $title);
                                     $title = 'chevy+compliant';
@@ -571,29 +439,23 @@ class ModifiedProcessXml
     }
 
     public function convertToVersionThreeLinks($xml = null) {
-        $pattern = '/\/api\/\d+/';
-        if(!is_null($xml) && preg_match($pattern, $xml)) {
-            return preg_replace($pattern, '/api/3', $xml);
-        } else {
-            return $xml;
-        }
+	$pattern = '/\/api\/\d+/';
+    	if(!is_null($xml) && preg_match($pattern, $xml)) {
+	    return preg_replace($pattern, '/api/3', $xml);
+	} else {
+	    return $xml;
+	}
     }
 
     public function validateMediaRedirect($url = null)
     {
-        Log::info('=== VALIDATE MEDIA REDIRECT START === URL: ' . $url);
         if (!is_null($url)) {
             $mediaRedirect = [];
             $mediaRedirect['url'] = $url;
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $mediaRedirect['sanitized'] = $url;
-            Log::info('Sanitized URL: ' . $url);
-
             $mediaRedirect['valid'] = filter_var($url, FILTER_VALIDATE_URL);
-            Log::info('URL is valid: ' . ($mediaRedirect['valid'] ? 'YES' : 'NO'));
-
             if ($mediaRedirect['valid']) {
-                Log::info('Making CURL request to check for redirects...');
                 $ch = curl_init();
 
                 curl_setopt($ch, CURLOPT_URL, $url);
@@ -613,53 +475,36 @@ class ModifiedProcessXml
 
                 $mediaRedirect['curl'] = curl_exec($ch);
 
-                if (curl_errno($ch)) {
-                    Log::error('CURL Error: ' . curl_error($ch));
-                    Log::error('CURL Error Number: ' . curl_errno($ch));
-                }
-
-                $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-                Log::info('HTTP Status Code: ' . $httpCode);
-
                 curl_close($ch);
 
                 $headers = [];
                 $output = rtrim($mediaRedirect['curl']);
                 $data = explode("\n", $output);
                 $headers['status'] = $data[0];
-                Log::info('Response Status Line: ' . $headers['status']);
                 array_shift($data);
 
                 foreach ($data as $part) {
-                    $middle = explode(':', $part,2);
+                    //some headers will contain ":" character (Location for example), and the part after ":" will be lost, Thanks to @Emanuele
+                    $middle = explode(':', $part, 2);
+                    //Supress warning message if $middle[1] does not exist, Thanks to @crayons
                     if (!isset($middle[1])) {$middle[1] = null;}
                     $headers[trim($middle[0])] = trim($middle[1]);
                 }
                 $mediaRedirect['headers'] = $headers;
-
                 if (array_key_exists('Location', $headers)) {
-                    Log::info('Redirect Location header found: ' . $headers['Location']);
                     $url = filter_var($headers['Location'], FILTER_SANITIZE_URL);
-                    Log::info('Sanitized redirect URL: ' . $url);
                     $urlIsValid = filter_var($url, FILTER_VALIDATE_URL);
-                    Log::info('Redirect URL is valid: ' . ($urlIsValid ? 'YES' : 'NO'));
                     if ($urlIsValid) {
-                        Log::info('Returning redirect URL: ' . $url);
-                        Log::info('=== VALIDATE MEDIA REDIRECT END ===');
                         return $url;
                     }
-                } else {
-                    Log::info('No Location header found - no redirect');
                 }
-                Log::info('Media redirect details: ' . json_encode($mediaRedirect, JSON_PRETTY_PRINT));
+                Log::info($mediaRedirect);
             }
         }
-
-        Log::info('Returning original/sanitized URL: ' . ($url ?? 'NULL'));
-        Log::info('=== VALIDATE MEDIA REDIRECT END ===');
         return $url;
     }
 
+    // Fill in brackets with supplied data
     public function loadTemplateData($xmlObj, $data, $xmlMeta)
     {
         $type = '';
@@ -680,161 +525,93 @@ class ModifiedProcessXml
                 }
             }
 
+            // Too many line breaks were being added by nl2br
             $replacement = str_replace("\r\n", "\n", $replacement);
             return str_replace("\n", '<br/>', $replacement);
+            //return nl2br( str_replace("\r\n","\n",$replacement) );
         };
         foreach ($data['templateFields'] as $field) {
-            Log::info("========== PROCESSING FIELD ==========");
-            Log::info("Field layer: " . $field['layer']);
-            Log::info("Field content: " . $field['content']);
-            Log::info("Field content length: " . strlen($field['content']));
+            // Find and replace TEXT or HTML
+            $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/html|//*[@title="'.$field['layer'].'"]/text');
+	    if (!empty($result)) {
+		//Log::info("TEXT or HTML found: ".print_r($result,true));
+                foreach ($result as $node) {
+                    $pattern = '/{{([\s\S]*?)}}/';
+                    $content = (string) $node[0];
 
-            $xpath_query = '//*[@title="'.$field['layer'].'"]/html|//*[@title="'.$field['layer'].'"]/text';
-            Log::info("XPath query: ".$xpath_query);
-            $result = $xmlObj->xpath($xpath_query);
-            Log::info("XPath result count: ".count($result));
-
-            if (count($result) === 0) {
-                Log::warning("WARNING: No layer found for: " . $field['layer']);
-            }
-
-        if (!empty($result)) {
-            foreach ($result as $node) {
-                $pattern = '/{{([\s\S]*?)}}/';
-                $content = (string) $node[0];
-                Log::info("Original node content (FULL): " . $content);
-
-                $content = $this->normalizePlaceholders($content);
-
-                $children = $node->children();
-                $childXML = '';
-                foreach ($children as $child) {
-                    $childXML .= $child->asXML();
-                }
-                $childObj = new SimpleXMLElement('<c>'.$childXML.'</c>');
-
-                Log::info("Text element has " . count($children) . " child elements");
-                foreach ($children as $child) {
-                    Log::info("  Child: " . $child->getName() . " (type: " . (isset($child['type']) ? (string)$child['type'] : 'N/A') . ")");
-                }
-
-                if (substr_count($content, '{{') > 1) {
-                    $type = 'list';
-                    Log::info("Detected list type layer with " . substr_count($content, '{{') . " placeholders");
-                }
-
-                $replacement = $field['content'];
-                $index = 0;
-                $newContent = preg_replace_callback($pattern, $callback, $content);
-                Log::info("Final content after replacement (FULL): " . $newContent);
-                Log::info("Replacement value used: " . $replacement);
-                $node[0] = $newContent;
-
-                if ($type != 'list'
-                    && !trim($replacement)
-                    && isset($xmlMeta[$field['layer']]['cie'])) {
-                    $cie = $xmlMeta[$field['layer']]['cie'];
-                    if ($cie < $this->endTime || $this->endTime == 0) {
-                        $this->endTime = $cie;
+                    // Copy all children as a separate object to reinsert later
+                    $children = $node->children();
+                    $childXML = '';
+                    foreach ($children as $child) {
+                        $childXML .= $child->asXML();
                     }
-                    Log::info("Set endTime to: " . $this->endTime);
-                }
-                if ($type == 'list'
+                    $childObj = new SimpleXMLElement('<c>'.$childXML.'</c>');
 
+                    if (substr_count($content, '{{') > 1) {
+                        $type = 'list';
+                    }
 
-                    && $foundBlank
-                    && isset($xmlMeta[$field['layer']])
-                    && isset($xmlMeta[$field['layer']]['cie_start'])) {
-                    $layer = $xmlMeta[$field['layer']];
-                    $this->endTime = $layer['cie_start'] + ($layer['cie_add'] * $foundBlank);
-                    Log::info("=== LIST LAYER END TIME CALCULATION ===");
-                    Log::info("Layer: " . $field['layer']);
-                    Log::info("cie_start: " . $layer['cie_start']);
-                    Log::info("cie_add: " . $layer['cie_add']);
-                    Log::info("foundBlank (first empty item index): " . $foundBlank);
-                    Log::info("Calculated endTime: " . $this->endTime . " = " . $layer['cie_start'] . " + (" . $layer['cie_add'] . " * " . $foundBlank . ")");
-                    Log::info("Set endTime (list) to: " . $this->endTime);
+                    // Apply user values to template
+                    $replacement = $field['content'];
+                    $index = 0;
+                    $newContent = preg_replace_callback($pattern, $callback, $content);
+                    $node[0] = $newContent;
 
-                    if (isset($childObj->filter)) {
-                        foreach ($childObj->filter as $filter) {
-                            if ((string)$filter['type'] === 'kenBurns') {
-                                $startTop = (float)$filter['startTop'];
-                                $endTop = (float)$filter['endTop'];
-                                $totalMovement = $endTop - $startTop;
-
-                                $totalPlaceholders = substr_count($content, '{{');
-
-                                Log::info("=== KENBURNS FILTER ADJUSTMENT ===");
-                                Log::info("Original startTop: " . $startTop);
-                                Log::info("Original endTop: " . $endTop);
-                                Log::info("Total movement: " . $totalMovement);
-                                Log::info("Total placeholders in template: " . $totalPlaceholders);
-                                Log::info("Filled items (foundBlank): " . $foundBlank);
-
-                                $movementPerItem = $totalMovement / $totalPlaceholders;
-                                Log::info("Movement per item: " . $movementPerItem);
-
-                                $newEndTop = $startTop + ($movementPerItem * $foundBlank);
-                                Log::info("New endTop (to show only filled items): " . $newEndTop);
-
-                                $filter['endTop'] = $newEndTop;
-                                Log::info("kenBurns filter endTop updated from " . $endTop . " to " . $newEndTop);
-
-                                break;
-                            }
+                    // Look for the earliest termination point (cie meta)
+                    if ($type != 'list'
+                        && !trim($replacement)
+                        && isset($xmlMeta[$field['layer']]['cie'])) {
+                        $cie = $xmlMeta[$field['layer']]['cie'];
+                        if ($cie < $this->endTime || $this->endTime == 0) {
+                            $this->endTime = $cie;
                         }
                     }
-                } else if ($type == 'list') {
-                    Log::info("=== LIST LAYER BUT NO END TIME CALCULATION ===");
-                    Log::info("foundBlank: " . $foundBlank);
-                    Log::info("Has xmlMeta for layer: " . (isset($xmlMeta[$field['layer']]) ? 'YES' : 'NO'));
-                    if (isset($xmlMeta[$field['layer']])) {
-                        Log::info("xmlMeta contents: " . json_encode($xmlMeta[$field['layer']]));
-                        Log::info("Has cie_start: " . (isset($xmlMeta[$field['layer']]['cie_start']) ? 'YES' : 'NO'));
+                    if ($type == 'list'
+                        && $foundBlank
+                        && isset($xmlMeta[$field['layer']])
+                        && isset($xmlMeta[$field['layer']]['cie_start'])) {
+                        $layer = $xmlMeta[$field['layer']];
+                        $this->endTime = $layer['cie_start'] + ($layer['cie_add'] * $foundBlank);
                     }
-                }
 
-                $type = '';
+                    $type = '';
 
-                $this->addSubtree($node, $childObj);
+                    // Add the children back
+                    $this->addSubtree($node, $childObj);
 
-            }
-        } else {
-            Log::info("No TEXT or HTML found for layer: ".$field['layer']);
-        }
-
-        $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/image');
-        Log::info("Looking for IMAGE elements in layer: ".$field['layer']." - found: " . count($result));
-        if (!empty($result)) {
-            foreach ($result as $node) {
-                $node['src'] = $field['content'];
-                Log::info("Image src set to: " . $field['content']);
-
-                if (isset($xmlMeta[$field['layer']]['cie']) && strpos($field['content'], 'wevideo-images') !== false) {
-                    $cie = $xmlMeta[$field['layer']]['cie'];
-                    if ($cie < $this->endTime || $this->endTime == 0) {
-                        $this->endTime = $cie;
-                    }
-                    Log::info("Image has cie metadata, set endTime to: " . $this->endTime);
-                } else {
-                    Log::info("Image cie check - has cie: " . (isset($xmlMeta[$field['layer']]['cie']) ? 'yes' : 'no') . ", contains wevideo-images: " . (strpos($field['content'], 'wevideo-images') !== false ? 'yes' : 'no'));
                 }
             }
-        } else {
-            Log::info("No IMAGE elements found for layer: ".$field['layer']);
-        }
 
-        $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/motionTitle');
-        Log::info("Looking for MOTIONTITLE elements - found: " . count($result));
-        if (!empty($result)) {
-            foreach ($result as $node) {
+            // Find and replace IMAGE
+            $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/image');
+            if (!empty($result)) {
+                foreach ($result as $node) {
+                    $node['src'] = $field['content'];
+
+                    // Look for cie meta
+                    if (isset($xmlMeta[$field['layer']]['cie']) && strpos($field['content'], 'wevideo-images') !== false) {
+                        $cie = $xmlMeta[$field['layer']]['cie'];
+                        if ($cie < $this->endTime || $this->endTime == 0) {
+                            $this->endTime = $cie;
+                        }
+                    }
+                }
+            }
+
+            // Find and replace MOTIONTITLE
+	    $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/motionTitle');
+	    Log::info("field: ");
+	    Log::info(print_r($field,true));
+	    Log::info("field[layer]: ");
+	    Log::info(print_r($field['layer'],true));
+	    if (!empty($result)) {
+		   //Log::info("motion title text found: ".print_r($result,true));   
+		 foreach ($result as $node) {
                     $i = 0;
                     $pattern = '/{{([\s\S]*?)}}/';
                     preg_match_all($pattern, $field['content'], $matches);
-                    Log::info("Motion title - found " . count($matches[1]) . " lines to replace");
                     foreach ($matches[1] as $line) {
-                        Log::info("Motion title line $i: " . $line);
-                        $line = addcslashes($line, '$');
+                        $line = addcslashes($line, '$'); // escape $ or preg_replace will give weird output
                         $newStr = preg_replace($pattern, $line, $node->children()->lines->line[$i]);
                         if ($newStr) {
                             $node->children()->lines->line[$i] = $newStr;
@@ -849,40 +626,20 @@ class ModifiedProcessXml
             }
 
         }
+
         return $xmlObj;
     }
 
+    // Insert SimpleXML object into another SimpleXML object
     private function addSubtree(&$xml1, &$xml2)
     {
         $dom1 = dom_import_simplexml($xml1);
-
-        if ($xml2->getName() === 'c') {
-            $opacityElement = null;
-            foreach ($dom1->childNodes as $child) {
-                if ($child->nodeType === XML_ELEMENT_NODE && $child->nodeName === 'opacity') {
-                    $opacityElement = $child;
-                    break;
-                }
-            }
-
-            foreach ($xml2->children() as $child) {
-                $childDom = dom_import_simplexml($child);
-                $importedChild = $dom1->ownerDocument->importNode($childDom, true);
-
-                if ($importedChild->nodeName === 'filter' && $opacityElement !== null) {
-                    Log::info("Inserting filter element BEFORE opacity to comply with WeVideo schema");
-                    $dom1->insertBefore($importedChild, $opacityElement);
-                } else {
-                    $dom1->appendChild($importedChild);
-                }
-            }
-        } else {
-            $dom2 = dom_import_simplexml($xml2);
-            $dom2 = $dom1->ownerDocument->importNode($dom2, true);
-            $dom1->appendChild($dom2);
-        }
+        $dom2 = dom_import_simplexml($xml2);
+        $dom2 = $dom1->ownerDocument->importNode($dom2, true);
+        $dom1->appendChild($dom2);
     }
 
+    // Remove XML node via xpath
     private function removeNode($xmlObj, $xpath)
     {
         $result = $xmlObj->xpath($xpath);
@@ -892,12 +649,11 @@ class ModifiedProcessXml
         return ($xmlObj);
     }
 
+    // Submit the XML to WeVideo
     public function renderModified($xmlFinal, $data, $thumbnailTime = 5, $orientation = 'H', $dtv = 0)
     {
-        Log::info('=== RENDERMODIFIED START ===');
-        Log::info('Orientation: ' . $orientation . ', DTV: ' . $dtv);
-        Log::info('EndTime: ' . $this->endTime . ', TemplateDuration: ' . $this->templateDuration);
-
+	    Log::info('Submitting XML:');
+	    //Log::info(print_r($xmlFinal, true));
         $thumbnailTime *= 1000;
 
         if (!$orientation) {$orientation = 'H';}
@@ -908,165 +664,50 @@ class ModifiedProcessXml
 
         $xmlFinal = $this->embedFonts($xmlFinal);
 
-        $xmlDebugDir = storage_path('logs/xml_debug');
-        if (!file_exists($xmlDebugDir)) {
-            mkdir($xmlDebugDir, 0755, true);
-        }
-        $timestamp = date('Y-m-d_H-i-s');
-        $debugFilename = $xmlDebugDir . $timestamp . '_' . uniqid() . '.xml';
-        file_put_contents($debugFilename, $xmlFinal);
-        Log::info('Final XML saved to: ' . $debugFilename);
-
-        Log::info('Final XML to be sent (first 5000 chars): ' . substr($xmlFinal, 0, 5000));
-        Log::info('Final XML to be sent (last 2000 chars): ' . substr($xmlFinal, -2000));
-
-        $xmlDebugDir = storage_path('logs/xml_debug');
-        if (!is_dir($xmlDebugDir)) {
-            mkdir($xmlDebugDir, 0755, true);
-        }
-        $timestamp = date('Y-m-d_His');
-        $xmlDebugFile = $xmlDebugDir . '/wevideo_xml_' . $timestamp . '.xml';
-        file_put_contents($xmlDebugFile, $xmlFinal);
-        Log::info('*** COMPLETE XML saved to: ' . $xmlDebugFile);
-        Log::info('*** XML file size: ' . filesize($xmlDebugFile) . ' bytes');
+        //Log::info('Final XML: '.$xmlFinal);
 
         $server = env('WEVIDEO_SERVER', 'www');
         $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
         $postdata = array('version' => '1', 'content' => $xmlFinal, 'resolution' => $resolution, 'crf' => '20', 'fps' => '29.97', 'thumbnailTime' => $thumbnailTime);
-
-
         if ($this->endTime) {
             $postdata['endTime'] = $this->endTime;
-            Log::info('Including endTime in post data: ' . $this->endTime);
         }
         $postdata = json_encode($postdata, false);
-        Log::info('Post data size: ' . strlen($postdata) . ' bytes');
-
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/create");
+        //curl_setopt($ch, CURLOPT_URL, "http://$server.wevideo.com/api/3/videos/create");
+        curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/5/videos/create");       
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            "Authorization: WEVSIMPLE $key",
-            'Content-Type: application/json'
-        ));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HEADERFUNCTION,
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                "Authorization: WEVSIMPLE $key",
+                'Content-Type: application/json'
+            ));
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_HEADERFUNCTION,
         function($curl, $header) use (&$headers)
-            {
-                $len = strlen($header);
-                $header = explode(':', $header, 2);
-                if (count($header) < 2)
-                return $len;
+        {
+            $len = strlen($header);
+            $header = explode(':', $header, 2);
+            if (count($header) < 2) // ignore invalid headers
+            return $len;
 
-                $headers[strtolower(trim($header[0]))][] = trim($header[1]);
-
-                return $len;
-            }
-        );
-        $output = curl_exec($ch);
-
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        Log::info("*** WeVideo API HTTP Status Code: " . $httpCode);
-
-        if (curl_errno($ch)) {
-            $curlError = curl_error($ch);
-            Log::error("*** CURL ERROR: " . $curlError);
-            Log::error("*** CURL Error Number: " . curl_errno($ch));
+            $headers[strtolower(trim($header[0]))][] = trim($header[1]);
+            
+            return $len;
         }
-
-        Log::info("XML Post response headers: ".print_r($headers,true));
-        curl_close($ch);
-
-        Log::info("*** XML post response (RAW): ".print_r($output,true));
-        Log::info("*** XML post response length: " . strlen($output) . " bytes");
-
-        $decodedOutput = json_decode($output, 1);
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            Log::error("*** JSON DECODE ERROR: " . json_last_error_msg());
-            Log::error("*** Response was not valid JSON");
-        }
-
-        if (is_array($decodedOutput)) {
-            if (isset($decodedOutput['error'])) {
-                Log::error("*** WEVIDEO API ERROR: " . print_r($decodedOutput['error'], true));
-            }
-            if (isset($decodedOutput['message'])) {
-                Log::info("*** WeVideo API Message: " . $decodedOutput['message']);
-            }
-            if (isset($decodedOutput['id'])) {
-                Log::info("*** WeVideo Job ID created: " . $decodedOutput['id']);
-            }
-            if (isset($decodedOutput['status'])) {
-                Log::info("*** WeVideo Job Status: " . $decodedOutput['status']);
-            }
-        }
-
-        $output = $decodedOutput;
+    );
+	$output = curl_exec($ch);
+	Log::info("XML Post response headers: ".print_r($headers,true));
+	curl_close($ch);
+	Log::info("XML post response: ".print_r($output,true));
+	$output = json_decode($output, 1);
         $output['endTime'] = $this->endTime;
         $output['templateDuration'] = $this->templateDuration;
         $output = json_encode($output, 1);
-        Log::info('=== RENDERMODIFIED END ===');
         return $output;
     }
 
-    public function jobStatus($jobId)
-    {
-        Log::info('=== CHECKING JOB STATUS ===');
-        Log::info('Job ID: ' . $jobId);
-
-        $server = env('WEVIDEO_SERVER', 'www');
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/status/$jobId");
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $output = curl_exec($ch);
-
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        Log::info("*** Job Status API HTTP Code: " . $httpCode);
-
-        if (curl_errno($ch)) {
-            $curlError = curl_error($ch);
-            Log::error("*** Job Status CURL ERROR: " . $curlError);
-            Log::error("*** CURL Error Number: " . curl_errno($ch));
-        }
-
-        curl_close($ch);
-
-        Log::info('Job Status Response (RAW): '.print_r($output, true));
-        Log::info('Job Status Response Length: ' . strlen($output) . ' bytes');
-
-        $decodedStatus = json_decode($output, 1);
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            Log::error("*** Job Status JSON DECODE ERROR: " . json_last_error_msg());
-        }
-
-        if (is_array($decodedStatus)) {
-            if (isset($decodedStatus['error'])) {
-                Log::error("*** WEVIDEO JOB STATUS ERROR: " . print_r($decodedStatus['error'], true));
-            }
-            if (isset($decodedStatus['status'])) {
-                Log::info("*** Current Job Status: " . $decodedStatus['status']);
-            }
-            if (isset($decodedStatus['url'])) {
-                Log::info("*** Video URL: " . $decodedStatus['url']);
-            }
-
-
-            if (isset($decodedStatus['thumbnailUrl'])) {
-                Log::info("*** Thumbnail URL: " . $decodedStatus['thumbnailUrl']);
-            }
-            if (isset($decodedStatus['progress'])) {
-                Log::info("*** Progress: " . $decodedStatus['progress'] . "%");
-            }
-            if (isset($decodedStatus['message'])) {
-                Log::info("*** WeVideo Message: " . $decodedStatus['message']);
-            }
-        }
-
-        Log::info('=== JOB STATUS CHECK COMPLETE ===');
-        return $output;
-    }
-
+    // Convert SimpleXml object back into XML
     public function objToXml($xmlObj)
     {
         $doc = new DOMDocument();
@@ -1074,35 +715,27 @@ class ModifiedProcessXml
         $doc->loadXML($xmlObj->asXML());
         $xmlFinal = $doc->saveXML();
 
+        // Remove any insertion points
         $xmlFinal = str_replace('<c>', '', str_replace('</c>', '', $xmlFinal));
-
-        Log::info("=== FINAL XML CONVERSION ===");
-        Log::info("Final XML length: " . strlen($xmlFinal));
-
-        $layersInFinalXml = substr_count($xmlFinal, '<layer');
-        $imagesInFinalXml = substr_count($xmlFinal, '<image');
-        $textsInFinalXml = substr_count($xmlFinal, '<text');
-        $htmlsInFinalXml = substr_count($xmlFinal, '<html');
-
-        Log::info("Final XML - Layers: $layersInFinalXml, Images: $imagesInFinalXml, Texts: $textsInFinalXml, HTMLs: $htmlsInFinalXml");
-
-        preg_match_all('/<image[^>]*src="([^"]*)"/', $xmlFinal, $imageSources);
-        Log::info("Image sources in final XML:");
-        foreach ($imageSources[1] as $idx => $src) {
-            $srcPreview = strlen($src) > 100 ? substr($src, 0, 100) . '...' : $src;
-            Log::info("  Image " . ($idx + 1) . ": " . ($src === '' ? 'EMPTY' : $srcPreview));
-        }
-
-        preg_match_all('/<video[^>]*src="([^"]*)"/', $xmlFinal, $videoSources);
-        Log::info("Video sources in final XML:");
-        foreach ($videoSources[1] as $idx => $src) {
-            $srcPreview = strlen($src) > 100 ? substr($src, 0, 100) . '...' : $src;
-            Log::info("  Video " . ($idx + 1) . ": " . ($src === '' ? 'EMPTY' : $srcPreview));
-        }
 
         return ($xmlFinal);
     }
 
+    // Get job status from WeVideo
+    public function jobStatus($jobId)
+    {
+        $server = env('WEVIDEO_SERVER', 'www');
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/status/$jobId");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $output = curl_exec($ch);
+	curl_close($ch);
+	Log::info('Job Status: '.print_r($output, true));
+        return $output;
+    }
+
+    // Get folder contents from WeVideo
+    // This API call is undocumented by WeVideo
     public function getFolder($folder)
     {
         $server = env('WEVIDEO_SERVER', 'www');
@@ -1114,6 +747,7 @@ class ModifiedProcessXml
         return $output;
     }
 
+    // Embed all font-face CSS fonts
     private function embedFonts($xml)
     {
         $callback = function ($match) {
@@ -1129,12 +763,15 @@ class ModifiedProcessXml
         return $xml;
     }
 
+    // Given an account number, gets the Heroku API logo path
     public function getLogo($account)
     {
         $output = 'https://player.abn.live/api/v2/accounts/'.$account.'/logo_original';
         return $output;
     }
 
+    // Manual logo loading. Use this for logos of unknown size and aspect ratio
+    // Given an account number, gets the logo path, size metadata, and aspect ratio metadata
     public function getLogoOld($account, $x)
     {
         $output = array();
@@ -1146,16 +783,19 @@ class ModifiedProcessXml
         $output['yAdj'] = 0;
 
         if (isset($x)) {
-            $xSize = $x;
+            // Size of original WeVideo logo
+            $xSize = $x; //384;
             if (!isset($y)) {
                 $ySize = $xSize / 1.96;
             } else {
-                $ySize = $y;
+                $ySize = $y; //196;
             }
 
-            $originalWidth = $output['imgSize'][0];
-            $originalHeight = $output['imgSize'][1];
+            // Size of replacement logo
+            $originalWidth = $output['imgSize'][0]; //995;
+            $originalHeight = $output['imgSize'][1]; //415;
 
+            // Calculate new size based on aspect ratio
             $ratio = $originalWidth / $originalHeight;
 
             $targetWidth = $targetHeight = min($xSize, max($originalWidth, $originalHeight));
@@ -1170,6 +810,7 @@ class ModifiedProcessXml
             $srcHeight = $originalHeight;
             $srcX = $srcY = 0;
 
+            // Get y adjustment
             $yAdj = round(($ySize - $targetHeight) / 2);
 
             $output['newWidth'] = intval($targetWidth);
