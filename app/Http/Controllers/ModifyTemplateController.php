@@ -118,6 +118,10 @@ class ModifyTemplateController extends Controller
       $render = $data['template']['render'];
       $dtv = $data['template']['dtv'] ?? 0;
 
+      Log::info('=== RENDER FLAG CHECK ===');
+      Log::info('Render flag value: ' . ($render ? 'TRUE' : 'FALSE'));
+      Log::info('DTV flag value: ' . ($dtv ? 'TRUE' : 'FALSE'));
+
       $playlists = null;
       if(isset($data['template']['playlists'])) {
         $playlists = implode(',', $data['template']['playlists']);
@@ -143,9 +147,11 @@ class ModifyTemplateController extends Controller
       $thumbnailTime = $templateData['thumbnail_time'];
       $orientation = $templateData['orientation'];
       if($render) {
+        Log::info('=== STARTING XML PROCESSING ===');
         $process = new ModifiedProcessXml;
         $renderResult = $process->process($template,$data,$thumbnailTime,$orientation,$dtv);
         $output['render'] = json_decode($renderResult,1);
+        Log::info('=== XML PROCESSING COMPLETE ===');
 
 
 
