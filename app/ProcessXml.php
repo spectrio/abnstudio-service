@@ -117,53 +117,45 @@ class ProcessXml
 
   public function replaceWeVideoMediaUrls($xmlFinal)
   {
-      Log::info('=== REPLACING WEVIDEO MEDIA URLS START ===');
+      Log::info('=== PROCESSXML REPLACING WEVIDEO MEDIA URLS START ===');
 
-      $pattern = '/(src|href)="([^"]+)"/i';
+      $xmlObj = simplexml_load_string($xmlFinal);
 
-      $xmlFinal = preg_replace_callback($pattern, function($matches) {
-          $attribute = $matches[1];
-          $originalUrl = $matches[2];
+      foreach ($xmlObj->xpath('//image') as $imageNode) {
+          $src = (string)$imageNode['src'];
+          $convertedSrc = str_replace('/api/3/', '/api/5/', $src);
 
-          if (preg_match('#api/\d+/media/\d+/content\?suffix=#i', $originalUrl)) {
-              Log::info("Found relative WeVideo API URL: {$originalUrl}");
+          if ($convertedSrc !== $src) {
+              Log::info("Image layer: Converting {$src} to {$convertedSrc}");
+              $imageNode['src'] = $convertedSrc;
+          }
+      }
 
-              $fullUrl = 'https://www.wevideo.com/' . ltrim($originalUrl, '/');
-              Log::info("Prepended domain to create full URL: {$fullUrl}");
+      foreach ($xmlObj->xpath('//video') as $videoNode) {
+          $src = (string)$videoNode['src'];
+          $convertedSrc = str_replace('/api/3/', '/api/5/', $src);
+
+          if (preg_match('#/api/\d+/media/(\d+)/content#i', $convertedSrc)) {
+              Log::info("Video layer: Found WeVideo API URL: {$convertedSrc}");
+
+              $fullUrl = 'https://www.wevideo.com/' . ltrim($convertedSrc, '/');
+              Log::info("Video layer: Prepended domain to create full URL: {$fullUrl}");
 
               $validatedUrl = $this->validateMediaRedirect($fullUrl);
 
               if ($validatedUrl && $validatedUrl !== $fullUrl) {
-                  Log::info("Replaced with validated URL: {$validatedUrl}");
-                  return "{$attribute}=\"{$validatedUrl}\"";
+                  Log::info("Video layer: Replaced with validated URL: {$validatedUrl}");
+                  $videoNode['src'] = $validatedUrl;
+              } else {
+                  Log::info("Video layer: No redirect found, using full URL: {$fullUrl}");
+                  $videoNode['src'] = $fullUrl;
               }
-
-              Log::info("No redirect found, using full URL: {$fullUrl}");
-              return "{$attribute}=\"{$fullUrl}\"";
           }
+      }
 
-          if (preg_match('#^https?://.*wevideo#i', $originalUrl)) {
-              Log::info("Found absolute WeVideo URL: {$originalUrl}");
+      $xmlFinal = $xmlObj->asXML();
 
-              if (strpos($originalUrl, 's3.amazonaws.com') !== false) {
-                  Log::info("S3 URL detected - keeping as-is for WeVideo to handle: {$originalUrl}");
-                  return $matches[0];
-              }
-
-              $validatedUrl = $this->validateMediaRedirect($originalUrl);
-
-              if ($validatedUrl && $validatedUrl !== $originalUrl) {
-                  Log::info("Replaced with: {$validatedUrl}");
-                  return "{$attribute}=\"{$validatedUrl}\"";
-              }
-
-              Log::info("No replacement needed, keeping original URL");
-          }
-
-          return $matches[0];
-      }, $xmlFinal);
-
-      Log::info('=== REPLACING WEVIDEO MEDIA URLS END ===');
+      Log::info('=== PROCESSXML REPLACING WEVIDEO MEDIA URLS END ===');
       return $xmlFinal;
   }
 
@@ -215,6 +207,7 @@ class ProcessXml
                       return $url;
                   }
               }
+              Log::info("end of validatemediaRedirect process xml");
               Log::info($mediaRedirect);
           }
       }
@@ -241,6 +234,7 @@ class ProcessXml
     //echo $postdata;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/create");
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
