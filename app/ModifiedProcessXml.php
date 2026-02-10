@@ -62,30 +62,31 @@ class ModifiedProcessXml
     {
         Log::info('=== REPLACING WEVIDEO MEDIA URLS START ===');
 
-        $pattern = '/(src|href)="(http:\/\/wevideo[^"]+)"/i';
+        $pattern = '/(src|href)="([^"]+)"/i';
 
         $xmlFinal = preg_replace_callback($pattern, function($matches) {
             $attribute = $matches[1];
             $originalUrl = $matches[2];
 
-            Log::info("Found WeVideo URL: {$originalUrl}");
-            Log::info("Attribute: {$attribute}");
+            Log::info("Found relative WeVideo API URL: {$originalUrl}");
+            Log::info("Found attribute: {$attribute}");
 
+            if (preg_match('#api/\d+/media/\d+/content\?suffix=#i', $originalUrl)) {
+                Log::info("Found relative WeVideo API URL: {$originalUrl}");
 
-            if (strpos($originalUrl, 's3.amazonaws.com') !== false) {
-                Log::info("S3 URL detected - keeping as-is for WeVideo to handle: {$originalUrl}");
-                return $matches[0];
+                $fullUrl = 'https://www.wevideo.com/' . ltrim($originalUrl, '/');
+                Log::info("Prepended domain to create full URL: {$fullUrl}");
+
+                $validatedUrl = $this->validateMediaRedirect($fullUrl);
+
+                if ($validatedUrl && $validatedUrl !== $fullUrl) {
+                    Log::info("Replaced with validated URL: {$validatedUrl}");
+                    return $validatedUrl;
+                }
+
+                Log::info("No redirect found, using full URL: {$fullUrl}");
+                return "{$attribute}=\"{$fullUrl}\"";
             }
-
-            $validatedUrl = $this->validateMediaRedirect($originalUrl);
-
-            if ($validatedUrl && $validatedUrl !== $originalUrl) {
-                Log::info("Replaced with: {$validatedUrl}");
-                return "{$attribute}=\"{$validatedUrl}\"";
-            }
-
-            Log::info("No replacement needed, keeping original URL");
-            return $matches[0];
         }, $xmlFinal);
 
         Log::info('=== REPLACING WEVIDEO MEDIA URLS END ===');
