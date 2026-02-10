@@ -68,9 +68,6 @@ class ModifiedProcessXml
             $attribute = $matches[1];
             $originalUrl = $matches[2];
 
-            Log::info("Found relative WeVideo API URL: {$originalUrl}");
-            Log::info("Found attribute: {$attribute}");
-
             if (preg_match('#api/\d+/media/\d+/content\?suffix=#i', $originalUrl)) {
                 Log::info("Found relative WeVideo API URL: {$originalUrl}");
 
@@ -81,12 +78,32 @@ class ModifiedProcessXml
 
                 if ($validatedUrl && $validatedUrl !== $fullUrl) {
                     Log::info("Replaced with validated URL: {$validatedUrl}");
-                    return $validatedUrl;
+                    return "{$attribute}=\"{$validatedUrl}\"";
                 }
 
                 Log::info("No redirect found, using full URL: {$fullUrl}");
                 return "{$attribute}=\"{$fullUrl}\"";
             }
+
+            if (preg_match('#^https?://.*wevideo#i', $originalUrl)) {
+                Log::info("Found absolute WeVideo URL: {$originalUrl}");
+
+                if (strpos($originalUrl, 's3.amazonaws.com') !== false) {
+                    Log::info("S3 URL detected - keeping as-is for WeVideo to handle: {$originalUrl}");
+                    return $matches[0];
+                }
+
+                $validatedUrl = $this->validateMediaRedirect($originalUrl);
+
+                if ($validatedUrl && $validatedUrl !== $originalUrl) {
+                    Log::info("Replaced with: {$validatedUrl}");
+                    return "{$attribute}=\"{$validatedUrl}\"";
+                }
+
+                Log::info("No replacement needed, keeping original URL");
+            }
+
+            return $matches[0];
         }, $xmlFinal);
 
         Log::info('=== REPLACING WEVIDEO MEDIA URLS END ===');
@@ -525,8 +542,8 @@ class ModifiedProcessXml
                     $headers[trim($middle[0])] = trim($middle[1]);
                 }
                 $mediaRedirect['headers'] = $headers;
-                if (array_key_exists('Location', $headers)) {
-                    $url = filter_var($headers['Location'], FILTER_SANITIZE_URL);
+                if (array_key_exists('location', $headers)) {
+                    $url = filter_var($headers['location'], FILTER_SANITIZE_URL);
                     $urlIsValid = filter_var($url, FILTER_VALIDATE_URL);
                     if ($urlIsValid) {
                         return $url;

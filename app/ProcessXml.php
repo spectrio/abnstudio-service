@@ -2,6 +2,7 @@
 namespace App;
 
 use DOMDocument;
+use Log;
 
 class ProcessXml
 {
@@ -114,6 +115,112 @@ class ProcessXml
     return($xmlObj);
   }
 
+  public function replaceWeVideoMediaUrls($xmlFinal)
+  {
+      Log::info('=== REPLACING WEVIDEO MEDIA URLS START ===');
+
+      $pattern = '/(src|href)="([^"]+)"/i';
+
+      $xmlFinal = preg_replace_callback($pattern, function($matches) {
+          $attribute = $matches[1];
+          $originalUrl = $matches[2];
+
+          if (preg_match('#api/\d+/media/\d+/content\?suffix=#i', $originalUrl)) {
+              Log::info("Found relative WeVideo API URL: {$originalUrl}");
+
+              $fullUrl = 'https://www.wevideo.com/' . ltrim($originalUrl, '/');
+              Log::info("Prepended domain to create full URL: {$fullUrl}");
+
+              $validatedUrl = $this->validateMediaRedirect($fullUrl);
+
+              if ($validatedUrl && $validatedUrl !== $fullUrl) {
+                  Log::info("Replaced with validated URL: {$validatedUrl}");
+                  return "{$attribute}=\"{$validatedUrl}\"";
+              }
+
+              Log::info("No redirect found, using full URL: {$fullUrl}");
+              return "{$attribute}=\"{$fullUrl}\"";
+          }
+
+          if (preg_match('#^https?://.*wevideo#i', $originalUrl)) {
+              Log::info("Found absolute WeVideo URL: {$originalUrl}");
+
+              if (strpos($originalUrl, 's3.amazonaws.com') !== false) {
+                  Log::info("S3 URL detected - keeping as-is for WeVideo to handle: {$originalUrl}");
+                  return $matches[0];
+              }
+
+              $validatedUrl = $this->validateMediaRedirect($originalUrl);
+
+              if ($validatedUrl && $validatedUrl !== $originalUrl) {
+                  Log::info("Replaced with: {$validatedUrl}");
+                  return "{$attribute}=\"{$validatedUrl}\"";
+              }
+
+              Log::info("No replacement needed, keeping original URL");
+          }
+
+          return $matches[0];
+      }, $xmlFinal);
+
+      Log::info('=== REPLACING WEVIDEO MEDIA URLS END ===');
+      return $xmlFinal;
+  }
+
+  public function validateMediaRedirect($url = null)
+  {
+      if (!is_null($url)) {
+          $mediaRedirect = [];
+          $mediaRedirect['url'] = $url;
+          $url = filter_var($url, FILTER_SANITIZE_URL);
+          $mediaRedirect['sanitized'] = $url;
+          $mediaRedirect['valid'] = filter_var($url, FILTER_VALIDATE_URL);
+          if ($mediaRedirect['valid']) {
+              $ch = curl_init();
+
+              curl_setopt($ch, CURLOPT_URL, $url);
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+              $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
+
+              curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                  'Authorization: WEVSIMPLE '.$key,
+                  'Content-Type: application/json'
+              ));
+
+              curl_setopt($ch, CURLOPT_HEADER, true);
+
+              curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+
+              $mediaRedirect['curl'] = curl_exec($ch);
+
+              curl_close($ch);
+
+              $headers = [];
+              $output = rtrim($mediaRedirect['curl']);
+              $data = explode("\n", $output);
+              $headers['status'] = $data[0];
+              array_shift($data);
+
+              foreach ($data as $part) {
+                  $middle = explode(':', $part, 2);
+                  if (!isset($middle[1])) {$middle[1] = null;}
+                  $headers[trim($middle[0])] = trim($middle[1]);
+              }
+              $mediaRedirect['headers'] = $headers;
+              if (array_key_exists('location', $headers)) {
+                  $url = filter_var($headers['location'], FILTER_SANITIZE_URL);
+                  $urlIsValid = filter_var($url, FILTER_VALIDATE_URL);
+                  if ($urlIsValid) {
+                      return $url;
+                  }
+              }
+              Log::info($mediaRedirect);
+          }
+      }
+      return $url;
+  }
+
   // Submit the XML to WeVideo
   // https://wevideo-static.s3.amazonaws.com/APIdocs/VideoCreationAPI/index.html
   public function render($xmlFinal, $thumbnailTime = 5, $orientation = 'H', $templateDuration = 0) {
@@ -124,6 +231,8 @@ class ProcessXml
     if($orientation == 'V') {$resolution = '1080x1920';}
 
     $xmlFinal = $this->embedFonts($xmlFinal);
+
+    $xmlFinal = $this->replaceWeVideoMediaUrls($xmlFinal);
 
     $server = env('WEVIDEO_SERVER', 'www');
     $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
