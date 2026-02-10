@@ -34,7 +34,7 @@ class WeVideoController extends Controller
     public function validate_media()
     {
         $process = new ModifiedProcessXml();
-        $output = $process->validateMediaRedirect('https: //www.wevideo.com/api/5/media/1428813755/content?suffix=');
+        $output = $process->validateMediaRedirect('https://www.wevideo.com/api/5/media/1428813755/content?suffix=');
         return response()->json($output);
     }
 
