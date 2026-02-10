@@ -59,6 +59,34 @@ class ModifiedProcessXml
 
     }
 
+    public function replaceWeVideoMediaUrls($xmlFinal)
+    {
+        Log::info('=== REPLACING WEVIDEO MEDIA URLS START ===');
+
+        $pattern = '/(src|href)="(http:\/\/wevideo-[^"]+)"/i';
+
+        $xmlFinal = preg_replace_callback($pattern, function($matches) {
+            $attribute = $matches[1];
+            $originalUrl = $matches[2];
+
+            Log::info("Found WeVideo URL: {$originalUrl}");
+
+            $validatedUrl = $this->validateMediaRedirect($originalUrl);
+
+            if ($validatedUrl && $validatedUrl !== $originalUrl) {
+                Log::info("Replaced with: {$validatedUrl}");
+                return "{$attribute}=\"{$validatedUrl}\"";
+            }
+
+            Log::info("No replacement needed, keeping original URL");
+            return $matches[0];
+        }, $xmlFinal);
+
+        Log::info('=== REPLACING WEVIDEO MEDIA URLS END ===');
+        return $xmlFinal;
+    }
+
+
     // Load xml data (duration)
     public function loadXmlData($xmlObj)
     {
@@ -455,22 +483,31 @@ class ModifiedProcessXml
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $mediaRedirect['sanitized'] = $url;
             $mediaRedirect['valid'] = filter_var($url, FILTER_VALIDATE_URL);
+
             if ($mediaRedirect['valid']) {
+                $isS3Url = (strpos($url, 's3.amazonaws.com') !== false);
+                $isWeVideoApiUrl = (strpos($url, 'wevideo.com/api/') !== false);
+
+                if ($isS3Url) {
+                    Log::info('Skipping validation for S3 URL (no redirect needed): ' . $url);
+                    return $url;
+                }
+
                 $ch = curl_init();
 
                 curl_setopt($ch, CURLOPT_URL, $url);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-                $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
-
-                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                    'Authorization: WEVSIMPLE '.$key,
-                    'Content-Type: application/json'
-                ));
+                if ($isWeVideoApiUrl) {
+                    $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
+                    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                        'Authorization: WEVSIMPLE '.$key,
+                        'Content-Type: application/json'
+                    ));
+                }
 
                 curl_setopt($ch, CURLOPT_HEADER, true);
 
-                // Timeout in seconds
                 curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 
                 $mediaRedirect['curl'] = curl_exec($ch);
@@ -484,9 +521,7 @@ class ModifiedProcessXml
                 array_shift($data);
 
                 foreach ($data as $part) {
-                    //some headers will contain ":" character (Location for example), and the part after ":" will be lost, Thanks to @Emanuele
                     $middle = explode(':', $part, 2);
-                    //Supress warning message if $middle[1] does not exist, Thanks to @crayons
                     if (!isset($middle[1])) {$middle[1] = null;}
                     $headers[trim($middle[0])] = trim($middle[1]);
                 }
@@ -664,7 +699,29 @@ class ModifiedProcessXml
 
         $xmlFinal = $this->embedFonts($xmlFinal);
 
-        //Log::info('Final XML: '.$xmlFinal);
+        $xmlFinal = $this->replaceWeVideoMediaUrls($xmlFinal);
+
+        $xmlDebugDir = storage_path('logs/xml_debug');
+        if (!file_exists($xmlDebugDir)) {
+            mkdir($xmlDebugDir, 0755, true);
+        }
+        $timestamp = date('Y-m-d_H-i-s');
+        $debugFilename = $xmlDebugDir . $timestamp . '_' . uniqid() . '.xml';
+        file_put_contents($debugFilename, $xmlFinal);
+        Log::info('Final XML saved to: ' . $debugFilename);
+
+        Log::info('Final XML to be sent (first 5000 chars): ' . substr($xmlFinal, 0, 5000));
+        Log::info('Final XML to be sent (last 2000 chars): ' . substr($xmlFinal, -2000));
+
+        $xmlDebugDir = storage_path('logs/xml_debug');
+        if (!is_dir($xmlDebugDir)) {
+            mkdir($xmlDebugDir, 0755, true);
+        }
+        $timestamp = date('Y-m-d_His');
+        $xmlDebugFile = $xmlDebugDir . '/wevideo_xml_' . $timestamp . '.xml';
+        file_put_contents($xmlDebugFile, $xmlFinal);
+        Log::info('*** COMPLETE XML saved to: ' . $xmlDebugFile);
+        Log::info('*** XML file size: ' . filesize($xmlDebugFile) . ' bytes');
 
         $server = env('WEVIDEO_SERVER', 'www');
         $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
@@ -674,8 +731,8 @@ class ModifiedProcessXml
         }
         $postdata = json_encode($postdata, false);
         $ch = curl_init();
-        //curl_setopt($ch, CURLOPT_URL, "http://$server.wevideo.com/api/3/videos/create");
-        curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/5/videos/create");       
+        curl_setopt($ch, CURLOPT_URL, "http://$server.wevideo.com/api/3/videos/create");
+        //curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/create");
         curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
