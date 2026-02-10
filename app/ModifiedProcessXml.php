@@ -47,29 +47,35 @@ class ModifiedProcessXml
 
         // Convert object back into XML
         $xmlFinal = $this->objToXml($xmlObj);
-	//die($xmlFinal);
+        //die($xmlFinal);
 
-	//convert newer version api links in the xml to the older version 3 that we use
-	//otherwise redirects won't work properly in the rendering engine
-	// $xmlFinal = $this->convertToVersionThreeLinks($xmlFinal);
+		//convert newer version api links in the xml to the older version 3 that we use
+		//otherwise redirects won't work properly in the rendering engine
+		// $xmlFinal = $this->convertToVersionThreeLinks($xmlFinal);
 
-    $json = $this->renderModified($xmlFinal, $data, $thumbnailTime, $orientation, $dtv);
+		$json = $this->renderModified($xmlFinal, $data, $thumbnailTime, $orientation, $dtv);
 
-	return $json;
-
+		return $json;
     }
 
     public function replaceWeVideoMediaUrls($xmlFinal)
     {
         Log::info('=== REPLACING WEVIDEO MEDIA URLS START ===');
 
-        $pattern = '/(src|href)="(http:\/\/wevideo-[^"]+)"/i';
+        $pattern = '/(src|href)="(http:\/\/wevideo[^"]+)"/i';
 
         $xmlFinal = preg_replace_callback($pattern, function($matches) {
             $attribute = $matches[1];
             $originalUrl = $matches[2];
 
             Log::info("Found WeVideo URL: {$originalUrl}");
+            Log::info("Attribute: {$attribute}");
+
+
+            if (strpos($originalUrl, 's3.amazonaws.com') !== false) {
+                Log::info("S3 URL detected - keeping as-is for WeVideo to handle: {$originalUrl}");
+                return $matches[0];
+            }
 
             $validatedUrl = $this->validateMediaRedirect($originalUrl);
 
@@ -483,28 +489,18 @@ class ModifiedProcessXml
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $mediaRedirect['sanitized'] = $url;
             $mediaRedirect['valid'] = filter_var($url, FILTER_VALIDATE_URL);
-
             if ($mediaRedirect['valid']) {
-                $isS3Url = (strpos($url, 's3.amazonaws.com') !== false);
-                $isWeVideoApiUrl = (strpos($url, 'wevideo.com/api/') !== false);
-
-                if ($isS3Url) {
-                    Log::info('Skipping validation for S3 URL (no redirect needed): ' . $url);
-                    return $url;
-                }
-
                 $ch = curl_init();
 
                 curl_setopt($ch, CURLOPT_URL, $url);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-                if ($isWeVideoApiUrl) {
-                    $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
-                    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                        'Authorization: WEVSIMPLE '.$key,
-                        'Content-Type: application/json'
-                    ));
-                }
+                $key = env('WEVIDEO_KEY', 'fvoFkqX2WtDkYmTUI9Cw3nJaBnoka2TVXV9THfvg');
+
+                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                    'Authorization: WEVSIMPLE '.$key,
+                    'Content-Type: application/json'
+                ));
 
                 curl_setopt($ch, CURLOPT_HEADER, true);
 
@@ -521,7 +517,9 @@ class ModifiedProcessXml
                 array_shift($data);
 
                 foreach ($data as $part) {
+                    //some headers will contain ":" character (Location for example), and the part after ":" will be lost, Thanks to @Emanuele
                     $middle = explode(':', $part, 2);
+                    //Supress warning message if $middle[1] does not exist, Thanks to @crayons
                     if (!isset($middle[1])) {$middle[1] = null;}
                     $headers[trim($middle[0])] = trim($middle[1]);
                 }
@@ -734,30 +732,30 @@ class ModifiedProcessXml
         curl_setopt($ch, CURLOPT_URL, "http://$server.wevideo.com/api/3/videos/create");
         //curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/create");
         curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                "Authorization: WEVSIMPLE $key",
-                'Content-Type: application/json'
-            ));
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_HEADERFUNCTION,
-        function($curl, $header) use (&$headers)
-        {
-            $len = strlen($header);
-            $header = explode(':', $header, 2);
-            if (count($header) < 2) // ignore invalid headers
-            return $len;
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+			"Authorization: WEVSIMPLE $key",
+			'Content-Type: application/json'
+		));
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_HEADERFUNCTION,
+			function($curl, $header) use (&$headers)
+			{
+				$len = strlen($header);
+				$header = explode(':', $header, 2);
+				if (count($header) < 2) // ignore invalid headers
+				return $len;
 
-            $headers[strtolower(trim($header[0]))][] = trim($header[1]);
-            
-            return $len;
-        }
-    );
-	$output = curl_exec($ch);
-	Log::info("XML Post response headers: ".print_r($headers,true));
-	curl_close($ch);
-	Log::info("XML post response: ".print_r($output,true));
-	$output = json_decode($output, 1);
+				$headers[strtolower(trim($header[0]))][] = trim($header[1]);
+
+				return $len;
+			}
+		);
+		$output = curl_exec($ch);
+		Log::info("XML Post response headers: ".print_r($headers,true));
+		curl_close($ch);
+		Log::info("XML post response: ".print_r($output,true));
+		$output = json_decode($output, 1);
         $output['endTime'] = $this->endTime;
         $output['templateDuration'] = $this->templateDuration;
         $output = json_encode($output, 1);
