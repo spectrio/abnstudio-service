@@ -106,15 +106,39 @@ try {
         }
     }
     
+    $logFile = 'template_match_log.txt';
+    $logEntries = [];
+
+    if (file_exists($logFile)) {
+        $existingLog = file_get_contents($logFile);
+        $lines = explode("\n", trim($existingLog));
+
+        foreach ($lines as $line) {
+            if (empty($line)) continue;
+
+            if (preg_match('/^(.+?)\s*->\s*Template ID:\s*(\d+)\s*\|\s*Name:\s*(.+)$/', $line, $matches)) {
+                $loggedFile = $matches[1];
+                if ($loggedFile !== $xmlFilePath) {
+                    $logEntries[] = $line;
+                }
+            }
+        }
+    }
+
     if (count($matchingTemplates) > 0) {
         echo "Found " . count($matchingTemplates) . " matching template(s):" . PHP_EOL;
         foreach ($matchingTemplates as $template) {
             echo "  - Template ID: " . $template['tid'] . " | Name: " . $template['name'] . PHP_EOL;
+            $logEntries[] = $xmlFilePath . " -> Template ID: " . $template['tid'] . " | Name: " . $template['name'];
         }
     } else {
         echo "No matching templates found in database." . PHP_EOL;
+        $logEntries[] = $xmlFilePath . " -> No match found";
     }
-    
+
+    file_put_contents($logFile, implode("\n", $logEntries) . "\n");
+    echo PHP_EOL . "Match result logged to: $logFile" . PHP_EOL;
+
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage() . PHP_EOL;
     exit(1);
