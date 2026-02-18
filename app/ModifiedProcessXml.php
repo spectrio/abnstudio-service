@@ -755,29 +755,7 @@ class ModifiedProcessXml
 
         $xmlFinal = $this->embedFonts($xmlFinal);
 
-        Log::info('=== BEFORE replaceWeVideoMediaUrls ===');
-        if (strpos($xmlFinal, '<![CDATA[') !== false) {
-            Log::info('CDATA found before replaceWeVideoMediaUrls');
-            preg_match('/<text[^>]*>.*?<!\[CDATA\[(.*?)\]\]>.*?<\/text>/s', $xmlFinal, $matches);
-            if (!empty($matches)) {
-                Log::info('CDATA content sample: ' . substr($matches[1], 0, 200));
-            }
-        } else {
-            Log::info('NO CDATA found before replaceWeVideoMediaUrls - PROBLEM!');
-        }
-
         $xmlFinal = $this->replaceWeVideoMediaUrls($xmlFinal, $orientation);
-
-        Log::info('=== AFTER replaceWeVideoMediaUrls ===');
-        if (strpos($xmlFinal, '<![CDATA[') !== false) {
-            Log::info('CDATA found after replaceWeVideoMediaUrls');
-            preg_match('/<text[^>]*>.*?<!\[CDATA\[(.*?)\]\]>.*?<\/text>/s', $xmlFinal, $matches);
-            if (!empty($matches)) {
-                Log::info('CDATA content sample: ' . substr($matches[1], 0, 200));
-            }
-        } else {
-            Log::info('NO CDATA found after replaceWeVideoMediaUrls - PROBLEM!');
-        }
 
         $xmlDebugDir = storage_path('logs/xml_debug');
         if (!file_exists($xmlDebugDir)) {
