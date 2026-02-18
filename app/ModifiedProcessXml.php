@@ -53,7 +53,7 @@ class ModifiedProcessXml
 		return $json;
     }
 
-    public function replaceWeVideoMediaUrls($xmlFinal)
+    public function replaceWeVideoMediaUrls($xmlFinal, $templateOrientation = 'H')
     {
         Log::info('=== REPLACING WEVIDEO MEDIA URLS START ===');
 
@@ -78,12 +78,13 @@ class ModifiedProcessXml
         // Convert /api/3/ to /api/5/ in video src attributes and validate to CDN
         $xmlFinal = preg_replace_callback(
             '/<video([^>]*?)src="([^"]*)"([^>]*?)>/i',
-            function($matches) {
+            function($matches) use ($templateOrientation) {
                 $beforeSrc = $matches[1];
                 $src = $matches[2];
                 $afterSrc = $matches[3];
 
-                if($templateOrientation == 'V'){
+                Log::info("Video Orientation: {$templateOrientation}");
+                if($templateOrientation != 'V'){
                     $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
                     if (preg_match('#/api/\d+/media/(\d+)/content#i', $convertedSrc)) {
                     Log::info("Video layer: Found WeVideo API URL: {$convertedSrc}");
@@ -718,7 +719,7 @@ class ModifiedProcessXml
 
         $xmlFinal = $this->embedFonts($xmlFinal);
 
-        $xmlFinal = $this->replaceWeVideoMediaUrls($xmlFinal);
+        $xmlFinal = $this->replaceWeVideoMediaUrls($xmlFinal, $orientation);
 
         $xmlDebugDir = storage_path('logs/xml_debug');
         if (!file_exists($xmlDebugDir)) {
