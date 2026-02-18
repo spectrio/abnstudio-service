@@ -60,15 +60,18 @@ class ModifiedProcessXml
         // Convert /api/3/ to /api/5/ in image src attributes
         $xmlFinal = preg_replace_callback(
             '/<image([^>]*?)src="([^"]*)"([^>]*?)>/i',
-            function($matches) {
+            function($matches) use ($templateOrientation) {
                 $beforeSrc = $matches[1];
                 $src = $matches[2];
                 $afterSrc = $matches[3];
-                $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
-
-                if ($convertedSrc !== $src) {
-                    Log::info("Image layer: Converting {$src} to {$convertedSrc}");
+                // $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
+                if($templateOrientation == 'V'){
+                    $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
+                }else{
+                    $convertedSrc = str_replace('/api/3/', '/api/5/', $src);
                 }
+
+                Log::info("Image layer: Converting {$src} to {$convertedSrc}");
 
                 return "<image{$beforeSrc}src=\"{$convertedSrc}\"{$afterSrc}>";
             },
@@ -84,29 +87,29 @@ class ModifiedProcessXml
                 $afterSrc = $matches[3];
 
                 Log::info("Video Orientation: {$templateOrientation}");
-                if($templateOrientation != 'V'){
+                if($templateOrientation == 'V'){
                     $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
-                    if (preg_match('#/api/\d+/media/(\d+)/content#i', $convertedSrc)) {
-                    Log::info("Video layer: Found WeVideo API URL: {$convertedSrc}");
-
-                    $fullUrl = 'https://www.wevideo.com/' . ltrim($convertedSrc, '/');
-                    Log::info("Video layer: Prepended domain to create full URL: {$fullUrl}");
-
-                    $validatedUrl = $this->validateMediaRedirect($fullUrl);
-
-                    if ($validatedUrl && $validatedUrl !== $fullUrl) {
-                        Log::info("Video layer: Replaced with validated URL: {$validatedUrl}");
-                        $convertedSrc = $validatedUrl;
-                    } else {
-                        Log::info("Video layer: No redirect found, using full URL: {$fullUrl}");
-                        $convertedSrc = $fullUrl;
-                    }
-
-                    // Escape ampersands for XML validity
-                    $convertedSrc = str_replace('&', '&amp;', $convertedSrc);
-                }
                 }else{
                     $convertedSrc = str_replace('/api/3/', '/api/5/', $src);
+                    if (preg_match('#/api/\d+/media/(\d+)/content#i', $convertedSrc)) {
+                        Log::info("Video layer: Found WeVideo API URL: {$convertedSrc}");
+
+                        $fullUrl = 'https://www.wevideo.com/' . ltrim($convertedSrc, '/');
+                        Log::info("Video layer: Prepended domain to create full URL: {$fullUrl}");
+
+                        $validatedUrl = $this->validateMediaRedirect($fullUrl);
+
+                        if ($validatedUrl && $validatedUrl !== $fullUrl) {
+                            Log::info("Video layer: Replaced with validated URL: {$validatedUrl}");
+                            $convertedSrc = $validatedUrl;
+                        } else {
+                            Log::info("Video layer: No redirect found, using full URL: {$fullUrl}");
+                            $convertedSrc = $fullUrl;
+                        }
+
+                        // Escape ampersands for XML validity
+                        $convertedSrc = str_replace('&', '&amp;', $convertedSrc);
+                    }
                 }
 
                 if ($convertedSrc !== $src) {
