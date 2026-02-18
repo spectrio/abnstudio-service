@@ -61,34 +61,57 @@ class ModifiedProcessXml
 
         foreach ($xmlObj->xpath('//image') as $imageNode) {
             $src = (string)$imageNode['src'];
-            $convertedSrc = str_replace('/api/3/', '/api/5/', $src);
+            $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
 
             if ($convertedSrc !== $src) {
                 Log::info("Image layer: Converting {$src} to {$convertedSrc}");
                 $imageNode['src'] = $convertedSrc;
             }
+
+            // if (preg_match('#/api/\d+/media/(\d+)/content#i', $convertedSrc)) {
+            //     Log::info("Image layer: Found WeVideo API URL: {$convertedSrc}");
+
+            //     $imageFullUrl = 'https://www.wevideo.com/' . ltrim($convertedSrc, '/');
+            //     Log::info("Image layer: Prepended domain to create full URL: {$imageFullUrl}");
+
+            //     $imageValidatedUrl = $this->validateMediaRedirect($imageFullUrl);
+
+            //     if ($imageValidatedUrl && $imageValidatedUrl !== $imageFullUrl) {
+            //         Log::info("image layer: Replaced with validated URL: {$imageValidatedUrl}");
+            //         $imageNode['src'] = $imageValidatedUrl;
+            //     } else {
+            //         Log::info("image layer: No redirect found, using full URL: {$imageFullUrl}");
+            //         $imageNode['src'] = $imageFullUrl;
+            //     }
+            // }
         }
 
         foreach ($xmlObj->xpath('//video') as $videoNode) {
             $src = (string)$videoNode['src'];
-            $convertedSrc = str_replace('/api/3/', '/api/5/', $src);
+            $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
 
-            if (preg_match('#/api/\d+/media/(\d+)/content#i', $convertedSrc)) {
-                Log::info("Video layer: Found WeVideo API URL: {$convertedSrc}");
-
-                $fullUrl = 'https://www.wevideo.com/' . ltrim($convertedSrc, '/');
-                Log::info("Video layer: Prepended domain to create full URL: {$fullUrl}");
-
-                $validatedUrl = $this->validateMediaRedirect($fullUrl);
-
-                if ($validatedUrl && $validatedUrl !== $fullUrl) {
-                    Log::info("Video layer: Replaced with validated URL: {$validatedUrl}");
-                    $videoNode['src'] = $validatedUrl;
-                } else {
-                    Log::info("Video layer: No redirect found, using full URL: {$fullUrl}");
-                    $videoNode['src'] = $fullUrl;
-                }
+            if ($convertedSrc !== $src) {
+                Log::info("Video layer: Converting {$src} to {$convertedSrc}");
+                $videoNode['src'] = $convertedSrc;
             }
+
+            // seems like still needed on birthday but not for anniversary
+            // if (preg_match('#/api/\d+/media/(\d+)/content#i', $convertedSrc)) {
+            //     Log::info("Video layer: Found WeVideo API URL: {$convertedSrc}");
+
+            //     $fullUrl = 'https://www.wevideo.com/' . ltrim($convertedSrc, '/');
+            //     Log::info("Video layer: Prepended domain to create full URL: {$fullUrl}");
+
+            //     $validatedUrl = $this->validateMediaRedirect($fullUrl);
+
+            //     if ($validatedUrl && $validatedUrl !== $fullUrl) {
+            //         Log::info("Video layer: Replaced with validated URL: {$validatedUrl}");
+            //         $videoNode['src'] = $validatedUrl;
+            //     } else {
+            //         Log::info("Video layer: No redirect found, using full URL: {$fullUrl}");
+            //         $videoNode['src'] = $fullUrl;
+            //     }
+            // }
         }
 
         $xmlFinal = $xmlObj->asXML();

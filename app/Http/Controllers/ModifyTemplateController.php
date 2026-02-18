@@ -58,19 +58,21 @@ class ModifyTemplateController extends Controller
                 'height' => $field['crop']['h']
               ]);
               if($im2 !== false) {
+                $uploadDir = public_path('uploads/img/');
+                if (!file_exists($uploadDir)) {
+                  mkdir($uploadDir, 0755, true);
+                }
+
                 if($mime == 'image/png') {
-                  // Save PNG
-                  //header('Content-Type: ' . $mime);
                   $extension = 'png';
                   $filename .= ".".$extension;
                   imagealphablending($im2, true);
                   imagesavealpha($im2, true);
-                  imagepng($im2, 'uploads/img/' . $filename);
+                  imagepng($im2, $uploadDir . $filename);
                 } else {
-                  // Save JPEG
                   $extension = 'jpg';
                   $filename .= ".".$extension;
-                  imagejpeg($im2, 'uploads/img/' . $filename);
+                  imagejpeg($im2, $uploadDir . $filename);
                 }
 
                 // Upload image to CDN and set the content to result URL
