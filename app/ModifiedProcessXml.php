@@ -38,6 +38,18 @@ class ModifiedProcessXml
 
         // Load the template data into the XML object
         $xmlObj = $this->loadTemplateData($xmlObj, $data, $xmlMeta);
+
+        Log::info('=== AFTER loadTemplateData (checking SimpleXML object) ===');
+        $tempXml = $xmlObj->asXML();
+        if (strpos($tempXml, '<![CDATA[') !== false) {
+            Log::info('CDATA found in SimpleXML object after loadTemplateData');
+        } else {
+            Log::info('NO CDATA in SimpleXML object after loadTemplateData - CDATA was stripped!');
+            preg_match('/<text[^>]*>(.*?)<\/text>/s', $tempXml, $matches);
+            if (!empty($matches)) {
+                Log::info('Text content sample: ' . substr($matches[1], 0, 200));
+            }
+        }
         //print_r($xmlObj);die();
 
         // Strip out any layers with audio
@@ -47,6 +59,21 @@ class ModifiedProcessXml
 
         // Convert object back into XML
         $xmlFinal = $this->objToXml($xmlObj);
+
+        Log::info('=== AFTER objToXml ===');
+        if (strpos($xmlFinal, '<![CDATA[') !== false) {
+            Log::info('CDATA found after objToXml conversion');
+            preg_match('/<text[^>]*>.*?<!\[CDATA\[(.*?)\]\]>.*?<\/text>/s', $xmlFinal, $matches);
+            if (!empty($matches)) {
+                Log::info('CDATA content sample: ' . substr($matches[1], 0, 200));
+            }
+        } else {
+            Log::info('NO CDATA found after objToXml - PROBLEM STARTS HERE!');
+            preg_match('/<text[^>]*>(.*?)<\/text>/s', $xmlFinal, $matches);
+            if (!empty($matches)) {
+                Log::info('Text content sample: ' . substr($matches[1], 0, 200));
+            }
+        }
 
 		$json = $this->renderModified($xmlFinal, $data, $thumbnailTime, $orientation, $dtv);
 
@@ -613,7 +640,13 @@ class ModifiedProcessXml
                     $replacement = $field['content'];
                     $index = 0;
                     $newContent = preg_replace_callback($pattern, $callback, $content);
-                    $node[0] = $newContent;
+
+                    $dom = dom_import_simplexml($node);
+                    while ($dom->firstChild) {
+                        $dom->removeChild($dom->firstChild);
+                    }
+                    $cdata = $dom->ownerDocument->createCDATASection($newContent);
+                    $dom->appendChild($cdata);
 
                     // Look for the earliest termination point (cie meta)
                     if ($type != 'list'
@@ -722,7 +755,29 @@ class ModifiedProcessXml
 
         $xmlFinal = $this->embedFonts($xmlFinal);
 
+        Log::info('=== BEFORE replaceWeVideoMediaUrls ===');
+        if (strpos($xmlFinal, '<![CDATA[') !== false) {
+            Log::info('CDATA found before replaceWeVideoMediaUrls');
+            preg_match('/<text[^>]*>.*?<!\[CDATA\[(.*?)\]\]>.*?<\/text>/s', $xmlFinal, $matches);
+            if (!empty($matches)) {
+                Log::info('CDATA content sample: ' . substr($matches[1], 0, 200));
+            }
+        } else {
+            Log::info('NO CDATA found before replaceWeVideoMediaUrls - PROBLEM!');
+        }
+
         $xmlFinal = $this->replaceWeVideoMediaUrls($xmlFinal, $orientation);
+
+        Log::info('=== AFTER replaceWeVideoMediaUrls ===');
+        if (strpos($xmlFinal, '<![CDATA[') !== false) {
+            Log::info('CDATA found after replaceWeVideoMediaUrls');
+            preg_match('/<text[^>]*>.*?<!\[CDATA\[(.*?)\]\]>.*?<\/text>/s', $xmlFinal, $matches);
+            if (!empty($matches)) {
+                Log::info('CDATA content sample: ' . substr($matches[1], 0, 200));
+            }
+        } else {
+            Log::info('NO CDATA found after replaceWeVideoMediaUrls - PROBLEM!');
+        }
 
         $xmlDebugDir = storage_path('logs/xml_debug');
         if (!file_exists($xmlDebugDir)) {
