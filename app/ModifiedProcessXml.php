@@ -91,13 +91,11 @@ class ModifiedProcessXml
                 $beforeSrc = $matches[1];
                 $src = $matches[2];
                 $afterSrc = $matches[3];
-                // $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
-                if($templateOrientation == 'V'){
+                if ($templateOrientation == 'V') {
                     $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
                 }else{
-                    $convertedSrc = str_replace('/api/3/', '/api/5/', $src);
+                    $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
                 }
-
                 Log::info("Image layer: Converting {$src} to {$convertedSrc}");
 
                 return "<image{$beforeSrc}src=\"{$convertedSrc}\"{$afterSrc}>";
