@@ -58,9 +58,12 @@ class ModifyTemplateController extends Controller
                 'height' => $field['crop']['h']
               ]);
               if($im2 !== false) {
-                $uploadDir = public_path('uploads/img/');
+                $uploadDir = public_path('uploads/img') . '/';
+                Log::info('Upload dir: ' . $uploadDir);
+                Log::info('Dir exists: ' . (file_exists($uploadDir) ? 'yes' : 'no'));
+                Log::info('Dir writable: ' . (is_writable($uploadDir) ? 'yes' : 'no'));
                 if (!file_exists($uploadDir)) {
-                  mkdir($uploadDir, 0755, true);
+                  mkdir($uploadDir, 0777, true);
                 }
 
                 if($mime == 'image/png') {
@@ -68,11 +71,13 @@ class ModifyTemplateController extends Controller
                   $filename .= ".".$extension;
                   imagealphablending($im2, true);
                   imagesavealpha($im2, true);
-                  imagepng($im2, $uploadDir . $filename);
+                  $saved = imagepng($im2, $uploadDir . $filename);
+                  Log::info('imagepng result: ' . ($saved ? 'success' : 'failed') . ' path: ' . $uploadDir . $filename);
                 } else {
                   $extension = 'jpg';
                   $filename .= ".".$extension;
-                  imagejpeg($im2, $uploadDir . $filename);
+                  $saved = imagejpeg($im2, $uploadDir . $filename);
+                  Log::info('imagejpeg result: ' . ($saved ? 'success' : 'failed') . ' path: ' . $uploadDir . $filename);
                 }
 
                 // Upload image to CDN and set the content to result URL
