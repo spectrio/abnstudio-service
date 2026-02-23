@@ -1,0 +1,231 @@
+<timeline version="1">
+  <layers>
+    <layer title="Particles" volume="1.0">
+      <video begin="0" duration="30280" height="1080" left="0" loopable="true" src="/api/5/media/1431701283/content?suffix=" title="Paticles" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="0.5238095238095238"/>
+          <entry time="30280" value="0.5238095238095238"/>
+        </opacity>
+        <filter brightness="100" contrast="100" hue="0" saturation="0" type="colorCorrection"/>
+      </video>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="4560" duration="400" type="wipeDown"/>
+      <image begin="4960" duration="25320" height="196" inPoint="400" left="1483" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="836" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="25320" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Happy%20Customers%20Text" volume="1.0">
+      <transition begin="4560" duration="1000" type="directionalWipe"/>
+      <image begin="5560" duration="24720" height="119" inPoint="1000" left="34" src="/api/5/media/4016464972/content?suffix=" title="H_HAPPYCUSTOMERS_HEADER_GENERIC" top="35" volume="1.0" width="845">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="24720" value="1"/>
+        </opacity>
+        <filter balance="1.0" clipBlack="0.0" clipWhite="1.0" color="#ff00" screenWeight="0.48" type="chromaKey"/>
+      </image>
+    </layer>
+    <layer title="Color" volume="1.0">
+      <transition begin="27680" duration="400" type="wipeLeft"/>
+      <text autoFit="false" backgroundColor="#59bfff" begin="28080" duration="280" height="1207" inPoint="400" left="-18" processHtml="false" top="-58" width="1972"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="280" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Photo%2010%20%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="25040" duration="400" type="wipeDown"/>
+      <text autoFit="false" backgroundColor="#76a5af" begin="25440" duration="280" height="1207" inPoint="400" left="-18" processHtml="false" top="-58" width="1972"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="280" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="27680" duration="400" type="wipeLeft"/>
+      <image begin="28080" duration="2200" inPoint="400" src="/api/5/media/1436987339/content?suffix=" title="woman-square" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2200" value="1"/>
+        </opacity>
+        <filter endHeight="972" endLeft="529" endTop="162" endWidth="972" startHeight="972" startLeft="420" startTop="162" startWidth="972" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="Photo%209%20%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="22400" duration="400" type="wipeRight"/>
+      <text autoFit="false" backgroundColor="#134f5c" begin="22800" duration="280" height="1207" inPoint="400" left="-18" processHtml="false" top="-58" width="1972"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="192" value="0.1513518797997142"/>
+          <entry time="280" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="25040" duration="400" type="wipeDown"/>
+      <image begin="25440" duration="2240" inPoint="400" src="/api/5/media/1436987339/content?suffix=" title="woman-square" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2240" value="1"/>
+        </opacity>
+        <filter endHeight="972" endLeft="474" endTop="54" endWidth="972" startHeight="972" startLeft="474" startTop="162" startWidth="972" type="kenBurns"/>
+      </image>
+      <transition begin="27680" duration="400" type="wipeDown"/>
+    </layer>
+    <layer title="Photo%208%20%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="19760" duration="400" type="wipeUp"/>
+      <text autoFit="false" backgroundColor="#1155cc" begin="20160" duration="280" height="1207" inPoint="400" left="-18" processHtml="false" top="-58" width="1972"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="280" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="22400" duration="400" type="wipeUp"/>
+      <image begin="22800" duration="2240" inPoint="400" src="/api/5/media/1436987339/content?suffix=" title="woman-square" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2240" value="1"/>
+        </opacity>
+        <filter endHeight="972" endLeft="534" endTop="54" endWidth="972" startHeight="972" startLeft="404" startTop="54" startWidth="972" type="kenBurns"/>
+      </image>
+      <transition begin="25040" duration="400" type="wipeUp"/>
+    </layer>
+    <layer title="Photo%207%20%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="17160" duration="400" type="wipeLeft"/>
+      <text autoFit="false" backgroundColor="#59bfff" begin="17560" duration="280" height="1207" inPoint="400" left="-18" processHtml="false" top="-58" width="1972"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="280" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="19760" duration="400" type="wipeDown"/>
+      <image begin="20160" duration="2240" inPoint="400" src="/api/5/media/1436987339/content?suffix=" title="woman-square" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2240" value="1"/>
+        </opacity>
+        <filter endHeight="972" endLeft="474" endTop="162" endWidth="972" startHeight="972" startLeft="474" startTop="54" startWidth="972" type="kenBurns"/>
+      </image>
+      <transition begin="22400" duration="400" type="wipeDown"/>
+    </layer>
+    <layer title="Photo%206%20%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="14520" duration="400" type="wipeDown"/>
+      <text autoFit="false" backgroundColor="#6aa84f" begin="14920" duration="280" height="1207" inPoint="400" left="-18" processHtml="false" top="-58" width="1972"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="280" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="17160" duration="400" type="wipeLeft"/>
+      <image begin="17560" duration="2200" inPoint="400" src="/api/5/media/1436987339/content?suffix=" title="woman-square" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2200" value="1"/>
+        </opacity>
+        <filter endHeight="972" endLeft="529" endTop="114" endWidth="972" startHeight="972" startLeft="420" startTop="95" startWidth="972" type="kenBurns"/>
+      </image>
+      <transition begin="19760" duration="400" type="wipeLeft"/>
+    </layer>
+    <layer title="Photo%205%20%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="11880" duration="400" type="wipeRight"/>
+      <text autoFit="false" backgroundColor="#134f5c" begin="12280" duration="280" height="1207" inPoint="400" left="-18" processHtml="false" top="-58" width="1972"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="192" value="0.1513518797997142"/>
+          <entry time="280" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="14520" duration="400" type="wipeDown"/>
+      <image begin="14920" duration="2240" inPoint="400" src="/api/5/media/1436987339/content?suffix=" title="woman-square" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2240" value="1"/>
+        </opacity>
+        <filter endHeight="972" endLeft="474" endTop="54" endWidth="972" startHeight="972" startLeft="474" startTop="162" startWidth="972" type="kenBurns"/>
+      </image>
+      <transition begin="17160" duration="400" type="wipeDown"/>
+    </layer>
+    <layer title="Photo%204%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="9440" duration="400" type="wipeUp"/>
+      <text autoFit="false" backgroundColor="#0b5394" begin="9840" duration="280" height="1207" inPoint="400" left="-18" processHtml="false" top="-58" width="1972"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="280" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="11880" duration="400" type="wipeUp"/>
+      <image begin="12280" duration="2240" inPoint="400" src="/api/5/media/1436987339/content?suffix=" title="woman-square" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2240" value="1"/>
+        </opacity>
+        <filter endHeight="972" endLeft="504" endTop="54" endWidth="972" startHeight="972" startLeft="404" startTop="54" startWidth="972" type="kenBurns"/>
+      </image>
+      <transition begin="14520" duration="400" type="wipeUp"/>
+    </layer>
+    <layer title="Photo%203%20%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="6960" duration="400" type="wipeLeft"/>
+      <text autoFit="false" backgroundColor="#59bfff" begin="7360" duration="280" height="1207" inPoint="400" left="-18" processHtml="false" top="-58" width="1972"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="280" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="9440" duration="400" type="wipeDown"/>
+      <image begin="9840" duration="2040" inPoint="400" src="/api/5/media/1436987339/content?suffix=" title="woman-square" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2040" value="1"/>
+        </opacity>
+        <filter endHeight="972" endLeft="474" endTop="162" endWidth="972" startHeight="972" startLeft="474" startTop="54" startWidth="972" type="kenBurns"/>
+      </image>
+      <transition begin="11880" duration="400" type="wipeDown"/>
+    </layer>
+    <layer title="Photo%202%20%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="4560" duration="400" type="wipeDown"/>
+      <text autoFit="false" backgroundColor="#134f5c" begin="4960" duration="280" height="1207" inPoint="400" left="-18" processHtml="false" top="-58" width="1972"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="280" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="6960" duration="400" type="wipeLeft"/>
+      <image begin="7360" duration="2080" inPoint="400" src="/api/5/media/1436987339/content?suffix=" title="woman-square" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2080" value="1"/>
+        </opacity>
+        <filter endHeight="972" endLeft="529" endTop="114" endWidth="972" startHeight="972" startLeft="420" startTop="95" startWidth="972" type="kenBurns"/>
+      </image>
+      <transition begin="9440" duration="400" type="wipeLeft"/>
+    </layer>
+    <layer title="Photo%201%20%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="4560" duration="400" type="wipeDown"/>
+      <image begin="4960" duration="2000" inPoint="400" src="/api/5/media/1436987339/content?suffix=" title="woman-square" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2000" value="1"/>
+        </opacity>
+        <filter endHeight="972" endLeft="474" endTop="54" endWidth="972" startHeight="972" startLeft="474" startTop="162" startWidth="972" type="kenBurns"/>
+      </image>
+      <transition begin="6960" duration="400" type="wipeDown"/>
+    </layer>
+    <layer title="BG%201" volume="1.0">
+      <video begin="0" duration="4560" height="1080" left="0" loopable="false" src="/api/5/media/3779371209/content?suffix=" title="H_HAPPYCUSTOMERS_INTRO_GENERIC" top="1" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4560" value="1"/>
+        </opacity>
+        <filter brightness="0" contrast="0" hue="5" saturation="0" type="colorCorrection"/>
+      </video>
+      <transition begin="4560" duration="400" type="wipeDown"/>
+      <video begin="4960" duration="25320" height="1080" inPoint="400" left="0" loopable="false" src="/api/5/media/3779356368/content?suffix=" title="H_HAPPYCUSTOMERS_BG_GENERIC" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="25320" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

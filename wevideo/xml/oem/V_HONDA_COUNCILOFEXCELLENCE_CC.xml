@@ -1,0 +1,43 @@
+<timeline version="1">
+  <layers>
+    <layer title="Year" volume="1.0">
+      <transition begin="23040" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="24040" duration="6040" height="408" inPoint="4320" left="153" processHtml="false" top="331" width="762"><![CDATA[<div align="center"><span style="font-size: 36px; color: rgb(15, 158, 214); font-family: AvenirNextRoundedStd-Reg; line-height: normal; letter-spacing: 0px;">{{2023}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6040" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Dealer%20Name" volume="1.0">
+      <transition begin="16320" duration="2000" type="directionalWipe"/>
+      <text autoFit="false" begin="18320" duration="11760" height="118" inPoint="2000" left="41" processHtml="false" top="187" valign="top" width="1001"><![CDATA[<div align="center"><span style="font-size: 70px; color: rgb(15, 158, 214); font-family: AvenirNextRoundedStd-Demi; line-height: normal; letter-spacing: 0px;">{{David Hobbs Honda}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="11760" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%201" volume="1.0">
+      <video begin="0" duration="30080" loopable="false" src="/api/5/media/3198274558/content?suffix=" title="V_DS_10011_DAVID_HOBBS_HONDA_COUNCIL_OF_EXCELLENCE_2023_GG" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="30080" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="30080" value="1"/>
+        </volume>
+      </video>
+    </layer>
+    <layer title="Audio%201" volume="1.0">
+      <audio begin="0" duration="30080" src="/api/5/media/2434710575/content?suffix=" title="Inspiring-Motivational-Corporate_AdobeStock_399519954" volume="0.63">
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="28080" value="1"/>
+          <entry time="30080" value="0"/>
+        </volume>
+      </audio>
+    </layer>
+  </layers>
+</timeline>

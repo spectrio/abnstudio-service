@@ -1,0 +1,90 @@
+<timeline version="1">
+  <layers>
+    <layer title="border%20%7B%22bis%22%3A%221424161578%22%7D" volume="1.0">
+      <video begin="0" duration="20000" height="1920" left="0" loopable="true" src="/api/5/media/1419008667/content?suffix=" title="V_GENERIC_MISSIONSTATEMENT_TEMPLATE_01_CORNERCOLOR_TRANSITION_BORDER_" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20000" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="0" duration="1000" type="directionalWipe"/>
+      <image begin="1000" duration="1880" height="441" inPoint="4160" left="111" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="600" volume="1.0" width="864">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="1880" value="1"/>
+        </opacity>
+      </image>
+      <image begin="3000" duration="17000" height="220" inPoint="2040" left="106" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1593" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="17000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Headline%201%20%7B%22bts%22%3A%22h3%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%20%22buick%22%3A%221%22%2C%20%22gmc%22%3A%221%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="0" duration="640" height="210" left="13" processHtml="false" top="1248" width="1061"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 108px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{OUR MISSION}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="640" value="1"/>
+        </opacity>
+        <filter endHeight="1920" endLeft="13" endTop="1100" endWidth="1080" startHeight="1920" startLeft="13" startTop="1900" startWidth="1080" type="kenBurns"/>
+      </text>
+      <text autoFit="false" begin="640" duration="2240" height="210" inPoint="640" left="13" processHtml="false" top="1100" width="1061"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 108px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{OUR MISSION}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2240" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="intro%20%7B%22bis%22%3A%221424161567%22%7D" volume="1.0">
+      <video begin="0" duration="2880" height="1920" left="0" loopable="true" src="/api/5/media/1422504951/content?suffix=" title="V_GENERIC_MISSIONSTATEMENT_TEMPLATE_01_CORNERCOLOR_INTRO_" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2880" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Headline%202%20%7B%22bts%22%3A%22h3%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%2C%22gmc%22%3A%22w%22%2C%22honda%22%3A%221%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="4600" duration="1520" height="332" inPoint="1200" left="69" processHtml="false" top="103" width="947"><![CDATA[<div align="center" style="text-align: center;"><span style="font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;"><span style="font-size: 130px; color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(35, 31, 32); line-height: normal; letter-spacing: 0px;">{{</span></span></span><span style="font-size: 130px; color: rgb(0, 0, 0); font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(35, 31, 32); line-height: normal; letter-spacing: 0px;">MISSION</span></span></span><span style="font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;"><span style="font-size: 130px; color: rgb(35, 31, 32); line-height: normal; letter-spacing: 0px;"> </span></span><span style="font-size: 130px; color: rgb(0, 0, 0); font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(35, 31, 32); line-height: normal; letter-spacing: 0px;">STATEMENT</span></span></span><span style="font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;"><span style="font-size: 130px; color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(35, 31, 32); line-height: normal; letter-spacing: 0px;">}}</span></span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1177" value="0"/>
+          <entry time="1520" value="1"/>
+        </opacity>
+        <filter endHeight="1920" endLeft="69" endTop="90" endWidth="1080" startHeight="1920" startLeft="69" startTop="400" startWidth="1080" type="kenBurns"/>
+      </text>
+      <text autoFit="false" begin="6120" duration="13880" height="332" inPoint="840" left="69" processHtml="false" top="103" width="947"><![CDATA[<div align="center" style="text-align: center;"><span style="font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;"><span style="font-size: 130px; color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(35, 31, 32); line-height: normal; letter-spacing: 0px;">{{</span></span></span></span></span><span style="font-size: 130px; color: rgb(0, 0, 0); font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(35, 31, 32); line-height: normal; letter-spacing: 0px;">MISSION</span></span></span><span style="font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;"><span style="font-size: 130px; color: rgb(35, 31, 32); line-height: normal; letter-spacing: 0px;"> </span><span style="font-size: 130px; color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(35, 31, 32); line-height: normal; letter-spacing: 0px;">S</span></span></span><span style="font-size: 130px; color: rgb(0, 0, 0); font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(35, 31, 32); line-height: normal; letter-spacing: 0px;">TATEMENT</span></span></span><span style="font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;"><span style="font-size: 130px; color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(35, 31, 32); line-height: normal; letter-spacing: 0px;">}}</span></span></span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="13880" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Body%20%7B%22bts%22%3A%22h5%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%2C%22gmc%22%3A%22w%22%2C%22honda%22%3A%221%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="4760" duration="2000" height="767" inPoint="5760" left="111" processHtml="false" top="473" width="855"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: 150%; letter-spacing: 0px;"><span style="color: rgb(96, 96, 97); line-height: 150%; letter-spacing: 0px;">{{</span></span></span><span style="font-size: 36px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: 150%; letter-spacing: 0px;"><span style="color: rgb(96, 96, 97); line-height: 150%; letter-spacing: 0px;">Sample text</span></span></span><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: 150%; letter-spacing: 0px;"><span style="color: rgb(96, 96, 97); line-height: 150%; letter-spacing: 0px;"> Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text}}</span></span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1643" value="0"/>
+          <entry time="2000" value="1"/>
+        </opacity>
+        <filter endHeight="1920" endLeft="111" endTop="473" endWidth="1080" startHeight="1920" startLeft="111" startTop="-100" startWidth="1080" type="kenBurns"/>
+      </text>
+      <text autoFit="false" begin="6760" duration="13240" height="767" inPoint="2040" left="111" processHtml="false" top="473" width="855"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: 150%; letter-spacing: 0px;"><span style="color: rgb(96, 96, 97); line-height: 150%; letter-spacing: 0px;">{{</span></span></span><span style="font-size: 36px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: 150%; letter-spacing: 0px;"><span style="color: rgb(96, 96, 97); line-height: 150%; letter-spacing: 0px;">Sample text</span></span></span><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: 150%; letter-spacing: 0px;"><span style="color: rgb(96, 96, 97); line-height: 150%; letter-spacing: 0px;"> Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text}}</span></span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="13240" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Background%20%7B%22bts%22%3A%22bg%22%2C%22bto%22%3A%7B%22gmc%22%3A%22b%22%7D%7D" volume="1.0">
+      <text autoFit="false" backgroundColor="#ffffff" begin="1000" duration="19000" height="1905" left="10" processHtml="false" top="7" width="1061"><![CDATA[<div align="center"><span style="font-size: 150px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: 150%; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="19000" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+  </layers>
+</timeline>

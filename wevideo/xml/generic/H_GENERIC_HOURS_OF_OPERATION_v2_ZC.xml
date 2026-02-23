@@ -1,0 +1,243 @@
+<timeline version="1">
+  <layers>
+    <layer title="Headline%204%20%7B%22cie%22%3A%22-3200%22%7D" volume="1.0">
+      <transition begin="49360" duration="1000" type="wipeRight"/>
+      <text autoFit="false" begin="50360" duration="12640" height="160" inPoint="34960" left="90" processHtml="false" top="5" valign="top" width="1066"><![CDATA[<div align="center" style="text-align: left;"><b style="font-family: Roboto;"><span style="font-size: 85px; color: rgb(67, 67, 67); line-height: normal; letter-spacing: 5px;">{{BODY SHOP</span></b><span style="font-size: 85px; color: rgb(67, 67, 67); font-family: Roboto; line-height: normal; letter-spacing: 5px;"><b> HOURS}}</b></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12640" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Headline%203%20%7B%22cie%22%3A%22-3200%22%7D" volume="1.0">
+      <transition begin="33640" duration="1000" type="wipeRight"/>
+      <text autoFit="false" begin="34640" duration="13040" height="160" inPoint="26360" left="90" processHtml="false" top="5" valign="top" width="1066"><![CDATA[<div align="center" style="text-align: left;"><b style="font-family: Roboto;"><span style="font-size: 85px; color: rgb(67, 67, 67); line-height: normal; letter-spacing: 5px;">{{PARTS</span></b><span style="font-size: 85px; color: rgb(67, 67, 67); font-family: Roboto; line-height: normal; letter-spacing: 5px;"><b> HOURS}}</b></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12884" value="1"/>
+          <entry time="13040" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Headline%202%20%7B%22cie%22%3A%22-3200%22%7D" volume="1.0">
+      <transition begin="18200" duration="1000" type="wipeRight"/>
+      <text autoFit="false" begin="19200" duration="12400" height="160" inPoint="17720" left="90" processHtml="false" top="5" valign="top" width="1066"><![CDATA[<div align="center" style="text-align: left;"><b style="font-family: Roboto;"><span style="font-size: 85px; color: rgb(67, 67, 67); line-height: normal; letter-spacing: 5px;">{{SERVICE</span></b><span style="font-size: 85px; color: rgb(67, 67, 67); font-family: Roboto; line-height: normal; letter-spacing: 5px;"><b> HOURS}}</b></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12238" value="1"/>
+          <entry time="12400" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Headline%201%20%7B%22cie%22%3A%22-3200%22%7D" volume="1.0">
+      <transition begin="2680" duration="1000" type="wipeRight"/>
+      <text autoFit="false" begin="3680" duration="12200" height="160" inPoint="9400" left="90" processHtml="false" top="5" valign="top" width="1066"><![CDATA[<div align="center" style="text-align: left;"><b style="font-family: Roboto;"><span style="font-size: 85px; color: rgb(67, 67, 67); line-height: normal; letter-spacing: 5px;">{{SALES</span></b><span style="font-size: 85px; color: rgb(67, 67, 67); font-family: Roboto; line-height: normal; letter-spacing: 5px;"><b> HOURS}}</b></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12031" value="1"/>
+          <entry time="12200" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Hours%204" volume="1.0">
+      <transition begin="50360" duration="1000" type="slide"/>
+      <text autoFit="false" begin="51360" duration="11640" height="817" inPoint="1000" left="376" processHtml="false" top="200" valign="top" width="828"><![CDATA[<div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}</span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}    </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}        </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}            </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}                </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}                    </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}                        </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="11536" value="1"/>
+          <entry time="11640" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Hours%203" volume="1.0">
+      <transition begin="34640" duration="1000" type="slide"/>
+      <text autoFit="false" begin="35640" duration="12040" height="817" inPoint="1000" left="376" processHtml="false" top="200" valign="top" width="828"><![CDATA[<div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}</span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}    </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}        </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}            </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}                </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}                    </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}                        </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="11936" value="1"/>
+          <entry time="12040" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Hours%202" volume="1.0">
+      <transition begin="19400" duration="1000" type="slide"/>
+      <text autoFit="false" begin="20400" duration="11200" height="817" inPoint="1000" left="376" processHtml="false" top="200" valign="top" width="828"><![CDATA[<div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}</span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}    </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}        </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}            </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}                </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}                    </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}                        </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="11096" value="1"/>
+          <entry time="11200" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Hours%201" volume="1.0">
+      <transition begin="3680" duration="1000" type="slide"/>
+      <text autoFit="false" begin="4680" duration="11200" height="817" inPoint="1000" left="376" processHtml="false" top="200" valign="top" width="828"><![CDATA[<div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}</span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}    </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}        </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}            </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}                </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}                    </span></div><div align="center" style="text-align: right;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">{{12:00am - 12:00pm}}                        </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="11096" value="1"/>
+          <entry time="11200" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Labels" volume="1.0">
+      <transition begin="3680" duration="1000" type="slide"/>
+      <text autoFit="false" begin="4680" duration="11200" height="805" inPoint="1000" left="90" processHtml="false" top="200" valign="top" width="376"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">MONDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">TUESDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">WEDNESDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">THURSDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">FRIDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">SATURDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">SUNDAY</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="11096" value="1"/>
+          <entry time="11200" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="19400" duration="1000" type="slide"/>
+      <text autoFit="false" begin="20400" duration="11200" height="805" inPoint="1000" left="90" processHtml="false" top="200" valign="top" width="376"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">MONDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">TUESDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">WEDNESDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">THURSDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">FRIDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">SATURDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">SUNDAY</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="11096" value="1"/>
+          <entry time="11200" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="34640" duration="1000" type="slide"/>
+      <text autoFit="false" begin="35640" duration="12040" height="805" inPoint="1000" left="90" processHtml="false" top="200" valign="top" width="376"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">MONDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">TUESDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">WEDNESDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">THURSDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">FRIDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">SATURDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">SUNDAY</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="11936" value="1"/>
+          <entry time="12040" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="50360" duration="1000" type="slide"/>
+      <text autoFit="false" begin="51360" duration="11640" height="805" inPoint="1000" left="90" processHtml="false" top="200" valign="top" width="376"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">MONDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">TUESDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">WEDNESDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">THURSDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">FRIDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">SATURDAY</span></div><div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 255%; letter-spacing: 0px;">SUNDAY</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="11536" value="1"/>
+          <entry time="11640" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Tues%20Bar" volume="1.0">
+      <transition begin="3680" duration="1000" type="slide"/>
+      <image begin="4680" duration="11200" height="260" inPoint="1000" left="-81" src="/api/5/media/1479062744/content?suffix=" title="Grey_Bar" top="262" volume="1.0" width="1402">
+        <opacity>
+          <entry time="0" value="0.76"/>
+          <entry time="11102" value="0.76"/>
+          <entry time="11200" value="0"/>
+        </opacity>
+      </image>
+      <transition begin="19400" duration="1000" type="slide"/>
+      <image begin="20400" duration="11200" height="260" inPoint="1000" left="-81" src="/api/5/media/1479062744/content?suffix=" title="Grey_Bar" top="262" volume="1.0" width="1402">
+        <opacity>
+          <entry time="0" value="0.76"/>
+          <entry time="11102" value="0.76"/>
+          <entry time="11200" value="0"/>
+        </opacity>
+      </image>
+      <transition begin="34640" duration="1000" type="slide"/>
+      <image begin="35640" duration="12040" height="260" inPoint="1000" left="-81" src="/api/5/media/1479062744/content?suffix=" title="Grey_Bar" top="262" volume="1.0" width="1402">
+        <opacity>
+          <entry time="0" value="0.76"/>
+          <entry time="11942" value="0.76"/>
+          <entry time="12040" value="0"/>
+        </opacity>
+      </image>
+      <transition begin="50360" duration="1000" type="slide"/>
+      <image begin="51360" duration="11640" height="260" inPoint="1000" left="-81" src="/api/5/media/1479062744/content?suffix=" title="Grey_Bar" top="262" volume="1.0" width="1402">
+        <opacity>
+          <entry time="0" value="0.76"/>
+          <entry time="11542" value="0.76"/>
+          <entry time="11640" value="0.759930419921875"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Thurs%20Bar" volume="1.0">
+      <transition begin="3680" duration="1000" type="slide"/>
+      <image begin="4680" duration="11200" height="260" inPoint="1000" left="-128" src="/api/5/media/1479062744/content?suffix=" title="Grey_Bar" top="464" volume="1.0" width="1402">
+        <opacity>
+          <entry time="0" value="0.76"/>
+          <entry time="11102" value="0.76"/>
+          <entry time="11200" value="0"/>
+        </opacity>
+      </image>
+      <transition begin="19400" duration="1000" type="slide"/>
+      <image begin="20400" duration="11200" height="260" inPoint="1000" left="-128" src="/api/5/media/1479062744/content?suffix=" title="Grey_Bar" top="464" volume="1.0" width="1402">
+        <opacity>
+          <entry time="0" value="0.76"/>
+          <entry time="11102" value="0.76"/>
+          <entry time="11200" value="0"/>
+        </opacity>
+      </image>
+      <transition begin="34640" duration="1000" type="slide"/>
+      <image begin="35640" duration="12040" height="260" inPoint="1000" left="-128" src="/api/5/media/1479062744/content?suffix=" title="Grey_Bar" top="464" volume="1.0" width="1402">
+        <opacity>
+          <entry time="0" value="0.76"/>
+          <entry time="11942" value="0.76"/>
+          <entry time="12040" value="0"/>
+        </opacity>
+      </image>
+      <transition begin="50360" duration="1000" type="slide"/>
+      <image begin="51360" duration="11640" height="260" inPoint="1000" left="-128" src="/api/5/media/1479062744/content?suffix=" title="Grey_Bar" top="464" volume="1.0" width="1402">
+        <opacity>
+          <entry time="0" value="0.76"/>
+          <entry time="11542" value="0.76"/>
+          <entry time="11640" value="0.759930419921875"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Sat%20Bar" volume="1.0">
+      <transition begin="3680" duration="1000" type="slide"/>
+      <image begin="4680" duration="11200" height="260" inPoint="1000" left="-203" src="/api/5/media/1479062744/content?suffix=" title="Grey_Bar" top="669" volume="1.0" width="1402">
+        <opacity>
+          <entry time="0" value="0.76"/>
+          <entry time="11102" value="0.76"/>
+          <entry time="11200" value="0"/>
+        </opacity>
+      </image>
+      <transition begin="19400" duration="1000" type="slide"/>
+      <image begin="20400" duration="11200" height="260" inPoint="1000" left="-203" src="/api/5/media/1479062744/content?suffix=" title="Grey_Bar" top="669" volume="1.0" width="1402">
+        <opacity>
+          <entry time="0" value="0.76"/>
+          <entry time="11102" value="0.76"/>
+          <entry time="11200" value="0"/>
+        </opacity>
+      </image>
+      <transition begin="34640" duration="1000" type="slide"/>
+      <image begin="35640" duration="12040" height="260" inPoint="1000" left="-203" src="/api/5/media/1479062744/content?suffix=" title="Grey_Bar" top="669" volume="1.0" width="1402">
+        <opacity>
+          <entry time="0" value="0.76"/>
+          <entry time="11942" value="0.76"/>
+          <entry time="12040" value="0"/>
+        </opacity>
+      </image>
+      <transition begin="50360" duration="1000" type="slide"/>
+      <image begin="51360" duration="11640" height="260" inPoint="1000" left="-203" src="/api/5/media/1479062744/content?suffix=" title="Grey_Bar" top="669" volume="1.0" width="1402">
+        <opacity>
+          <entry time="0" value="0.76"/>
+          <entry time="11542" value="0.76"/>
+          <entry time="11640" value="0.759930419921875"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Transition" volume="1.0">
+      <video begin="0" duration="63000" height="1080" left="0" loopable="true" src="/api/5/media/1431718750/content?suffix=" title="H_GENERIC_HOURSOFOPERATION_TEMPLATE_01_LINES" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="63000" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="1160" duration="61840" height="196" left="1483" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="812" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="61840" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="BG" volume="1.0">
+      <video begin="0" duration="63000" height="1080" left="0" loopable="true" src="/api/5/media/1431719060/content?suffix=" title="H_GENERIC_HOURSOFOPERATION_TEMPLATE_01_PICS" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="63000" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

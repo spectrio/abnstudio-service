@@ -1,0 +1,272 @@
+<timeline version="1">
+  <layers>
+    <layer title="Quotation%20Mark" volume="1.0">
+      <image begin="6000" duration="72000" flipH="true" flipV="true" height="108" left="62" src="/api/5/media/1606141551/content?suffix=" title="quotationmarksgray" top="57" volume="1.0" width="132">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1810" value="1"/>
+          <entry time="72000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%22w%22%7D" volume="1.0">
+      <image begin="6000" duration="72000" height="196" inPoint="7800" left="1488" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="847" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1810" value="1"/>
+          <entry time="72000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Headline%20%7B%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22w%22%7D%7D" volume="1.0">
+      <motionTitle begin="560" duration="5560" height="1080" id="908187168" left="0" top="2" width="1920">
+        <lines>
+          <line font="Roboto-Bold" fontSize="126">See What Our</line>
+          <line font="Roboto" fontSize="70">Customers are saying</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255,255,255,1)" version="2"/>
+          <color key="1" value="rgba(255,255,255,1)" version="2"/>
+          <color key="2" value="rgb(255, 255, 255)" version="2"/>
+          <color key="3" value="rgb(255, 255, 255)" version="2"/>
+          <color key="4" value="rgb(255, 255, 255)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5560" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="headline_bg%20%7B%22bts%22%3A%22bg%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%221%22%2C%22honda%22%3A%221%22%2C%22buick%22%3A%221%22%2C%22gmc%22%3A%22b%22%7D%7D" volume="0">
+      <video begin="0" duration="6120" height="1080" left="0" loopable="true" src="/api/5/media/1607496370/content?suffix=" title="H_DS_OEM_TESTIMONIALS_FRAME_BM" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6120" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="6120" value="1"/>
+        </volume>
+      </video>
+    </layer>
+    <layer title="intro_slide%20%7B%22bmc%22%3A%221189290064%22%7D" volume="1.0">
+      <image begin="0" duration="5000" height="1080" inPoint="1000" left="0" src="/api/5/media/1195053350/content?suffix=" title="default_cover" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="5000" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Name%201%20%7B%22mtc%22%3A%5B%224%22%2C%224%22%2C%221%22%5D%2C%20%22mtf%22%3A%5B%22b%22%2C%22r%22%5D%7D" volume="1.0">
+      <motionTitle begin="6000" duration="14400" height="1080" id="908187234" left="175" top="-50" width="1920">
+        <lines>
+          <line font="Roboto" fontSize="80">Name Goes Here</line>
+          <line font="Roboto" fontSize="60">Website</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(45,47,48,1)" version="2"/>
+          <color key="1" value="rgba(45,47,48,1)" version="2"/>
+          <color key="2" value="rgba(14,102,92,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14400" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Stars%201%20%7B%22bts%22%3A%22bg%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%221%22%2C%22buick%22%3A%221%22%2C%22gmc%22%3A%221%22%2C%22honda%22%3A%221%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="6000" duration="14400" height="168" left="319" processHtml="false" top="907" width="798"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(45, 47, 48); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">    </span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2242" value="1"/>
+          <entry time="13655" value="1"/>
+          <entry time="14400" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Review%201%20%7B%22cie%22%3A%221%22%2C%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%7D%7D" volume="1.0">
+      <text autoFit="true" begin="6000" duration="14400" height="527" inPoint="5320" left="306" processHtml="false" top="123" valign="center" width="1344"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 80px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2000" value="1"/>
+          <entry time="13650" value="1"/>
+          <entry time="14400" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Name%202%20%7B%22mtc%22%3A%5B%224%22%2C%224%22%2C%221%22%5D%2C%20%22mtf%22%3A%5B%22b%22%2C%22r%22%5D%7D" volume="1.0">
+      <motionTitle begin="20400" duration="14400" height="1080" id="908187234" left="175" top="-50" width="1920">
+        <lines>
+          <line font="Roboto" fontSize="80">Name Goes Here</line>
+          <line font="Roboto" fontSize="60">Website</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(45,47,48,1)" version="2"/>
+          <color key="1" value="rgba(45,47,48,1)" version="2"/>
+          <color key="2" value="rgba(14,102,92,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14400" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Stars%202%20%7B%22bts%22%3A%22bg%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%221%22%2C%22buick%22%3A%221%22%2C%22gmc%22%3A%221%22%2C%22honda%22%3A%221%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="20400" duration="14400" height="168" left="319" processHtml="false" top="907" width="798"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(45, 47, 48); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">    </span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2242" value="1"/>
+          <entry time="13655" value="1"/>
+          <entry time="14400" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Review%202%20%7B%22cie%22%3A%221%22%2C%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%7D%7D" volume="1.0">
+      <text autoFit="true" begin="20400" duration="14400" height="527" inPoint="5320" left="306" processHtml="false" top="123" valign="center" width="1344"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 80px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2000" value="1"/>
+          <entry time="13650" value="1"/>
+          <entry time="14400" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Name%203%20%7B%22mtc%22%3A%5B%224%22%2C%224%22%2C%221%22%5D%2C%20%22mtf%22%3A%5B%22b%22%2C%22r%22%5D%7D" volume="1.0">
+      <motionTitle begin="34800" duration="14400" height="1080" id="908187234" left="175" top="-50" width="1920">
+        <lines>
+          <line font="Roboto" fontSize="80">Name Goes Here</line>
+          <line font="Roboto" fontSize="60">Website</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(45,47,48,1)" version="2"/>
+          <color key="1" value="rgba(45,47,48,1)" version="2"/>
+          <color key="2" value="rgba(14,102,92,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14400" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Stars%203%20%7B%22bts%22%3A%22bg%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%221%22%2C%22buick%22%3A%221%22%2C%22gmc%22%3A%221%22%2C%22honda%22%3A%221%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="34800" duration="14400" height="168" left="319" processHtml="false" top="907" width="798"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(45, 47, 48); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">    </span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2242" value="1"/>
+          <entry time="13655" value="1"/>
+          <entry time="14400" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Review%203%20%7B%22cie%22%3A%221%22%2C%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%7D%7D" volume="1.0">
+      <text autoFit="true" begin="34800" duration="14400" height="527" inPoint="5320" left="306" processHtml="false" top="123" valign="center" width="1344"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 80px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2000" value="1"/>
+          <entry time="13650" value="1"/>
+          <entry time="14400" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Name%204%20%7B%22mtc%22%3A%5B%224%22%2C%224%22%2C%221%22%5D%2C%20%22mtf%22%3A%5B%22b%22%2C%22r%22%5D%7D" volume="1.0">
+      <motionTitle begin="49200" duration="14400" height="1080" id="908187234" left="175" top="-50" width="1920">
+        <lines>
+          <line font="Roboto" fontSize="80">Name Goes Here</line>
+          <line font="Roboto" fontSize="60">Website</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(45,47,48,1)" version="2"/>
+          <color key="1" value="rgba(45,47,48,1)" version="2"/>
+          <color key="2" value="rgba(14,102,92,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14400" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Stars%204%20%7B%22bts%22%3A%22bg%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%221%22%2C%22buick%22%3A%221%22%2C%22gmc%22%3A%221%22%2C%22honda%22%3A%221%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="49200" duration="14400" height="168" left="319" processHtml="false" top="907" width="798"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(45, 47, 48); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">    </span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2242" value="1"/>
+          <entry time="13655" value="1"/>
+          <entry time="14400" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Review%204%20%7B%22cie%22%3A%221%22%2C%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%7D%7D" volume="1.0">
+      <text autoFit="true" begin="49200" duration="14400" height="527" inPoint="5320" left="306" processHtml="false" top="123" valign="center" width="1344"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 80px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2000" value="1"/>
+          <entry time="13650" value="1"/>
+          <entry time="14400" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Name%205%20%7B%22mtc%22%3A%5B%224%22%2C%224%22%2C%221%22%5D%2C%20%22mtf%22%3A%5B%22b%22%2C%22r%22%5D%7D" volume="1.0">
+      <motionTitle begin="63600" duration="14400" height="1080" id="908187234" left="175" top="-50" width="1920">
+        <lines>
+          <line font="Roboto" fontSize="80">Name Goes Here</line>
+          <line font="Roboto" fontSize="60">Website</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(45,47,48,1)" version="2"/>
+          <color key="1" value="rgba(45,47,48,1)" version="2"/>
+          <color key="2" value="rgba(14,102,92,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14400" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Stars%205%20%7B%22bts%22%3A%22bg%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%221%22%2C%22buick%22%3A%221%22%2C%22gmc%22%3A%221%22%2C%22honda%22%3A%221%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="63600" duration="14400" height="168" left="319" processHtml="false" top="907" width="798"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(45, 47, 48); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">    </span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2242" value="1"/>
+          <entry time="13655" value="1"/>
+          <entry time="14400" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Review%205%20%7B%22cie%22%3A%221%22%2C%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%7D%7D" volume="1.0">
+      <text autoFit="true" begin="63600" duration="14400" height="527" inPoint="5320" left="306" processHtml="false" top="123" valign="center" width="1344"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 80px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2000" value="1"/>
+          <entry time="13650" value="1"/>
+          <entry time="14400" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="color_bk%20%7B%22bts%22%3A%22bg%22%7D" volume="1.0">
+      <text autoFit="false" backgroundColor="#ffffff" begin="0" duration="78000" height="1160" inPoint="56680" left="-25" processHtml="false" top="-36" width="1962"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1000" value="0.9"/>
+          <entry time="78000" value="0.9"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="main_bk" volume="1.0">
+      <image begin="0" duration="78000" height="1080" left="0" src="/api/5/media/1195053350/content?suffix=" title="default_cover" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="78000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Audio%201" volume="1.0">
+      <audio begin="560" duration="71240" src="/api/5/media/2434710575/content?suffix=" title="Inspiring-Motivational-Corporate_AdobeStock_399519954" volume="1.0">
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="71240" value="1"/>
+        </volume>
+      </audio>
+    </layer>
+  </layers>
+</timeline>

@@ -1,0 +1,359 @@
+<timeline version="1">
+  <layers>
+    <layer title="NAME" volume="1.0">
+      <text autoFit="false" begin="360" duration="240" height="388" inPoint="360" left="70" processHtml="false" top="1350" width="764"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{A. INITIALS}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="240" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="600" duration="13400" height="388" inPoint="240" left="70" processHtml="false" top="1350" width="744"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{A. INITIALS}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="13400" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="14000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="15160" duration="120" height="388" left="70" processHtml="false" top="100" width="848"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{A. INITIALS}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="120" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="15280" duration="12720" height="388" inPoint="80" left="70" processHtml="false" top="100" width="902"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{A. INITIALS}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12720" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="28000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="29040" duration="240" height="388" inPoint="360" left="70" processHtml="false" top="1350" width="805"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{A. INITIALS}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="240" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="29280" duration="12720" height="388" inPoint="240" left="70" processHtml="false" top="1350" width="868"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{A. INITIALS}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12720" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="42000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="43160" duration="120" height="388" left="70" processHtml="false" top="100" width="838"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{A. INITIALS}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="120" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="43280" duration="12720" height="388" inPoint="80" left="70" processHtml="false" top="100" width="861"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{A. INITIALS}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12720" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="56000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="57040" duration="240" height="388" inPoint="360" left="70" processHtml="false" top="1350" width="973"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{A. INITIALS}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="240" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="57280" duration="12720" height="388" inPoint="240" left="70" processHtml="false" top="1350" width="975"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{A. INITIALS}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12720" value="1"/>
+          <entry time="12720" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="STARS" volume="1.0">
+      <text autoFit="false" begin="360" duration="240" height="544" left="-221" processHtml="false" top="1397" width="1062"><![CDATA[<div align="center"><span style="font-size: 58px; color: rgb(241, 194, 50); font-family: FontAwesome; line-height: 150%; letter-spacing: -1px;">{{    }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="240" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="600" duration="13400" height="544" inPoint="240" left="-221" processHtml="false" top="1397" width="1062"><![CDATA[<div align="center"><span style="font-size: 58px; color: rgb(241, 194, 50); font-family: FontAwesome; line-height: 150%; letter-spacing: -1px;">{{    }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="13400" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="14000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="15160" duration="120" height="544" left="-221" processHtml="false" top="149" width="1062"><![CDATA[<div align="center"><span style="font-size: 58px; color: rgb(241, 194, 50); font-family: FontAwesome; line-height: 150%; letter-spacing: -1px;">{{    }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="120" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="15280" duration="12720" height="544" inPoint="80" left="-221" processHtml="false" top="149" width="1062"><![CDATA[<div align="center"><span style="font-size: 58px; color: rgb(241, 194, 50); font-family: FontAwesome; line-height: 150%; letter-spacing: -1px;">{{    }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12720" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="28000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="29040" duration="240" height="544" left="-221" processHtml="false" top="1397" width="1062"><![CDATA[<div align="center"><span style="font-size: 58px; color: rgb(241, 194, 50); font-family: FontAwesome; line-height: 150%; letter-spacing: -1px;">{{    }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="240" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="29280" duration="12720" height="544" inPoint="240" left="-221" processHtml="false" top="1397" width="1062"><![CDATA[<div align="center"><span style="font-size: 58px; color: rgb(241, 194, 50); font-family: FontAwesome; line-height: 150%; letter-spacing: -1px;">{{    }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12720" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="42000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="43160" duration="120" height="544" left="-221" processHtml="false" top="149" width="1062"><![CDATA[<div align="center"><span style="font-size: 58px; color: rgb(241, 194, 50); font-family: FontAwesome; line-height: 150%; letter-spacing: -1px;">{{    }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="120" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="43280" duration="12720" height="544" inPoint="80" left="-221" processHtml="false" top="149" width="1062"><![CDATA[<div align="center"><span style="font-size: 58px; color: rgb(241, 194, 50); font-family: FontAwesome; line-height: 150%; letter-spacing: -1px;">{{    }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12720" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="56000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="57040" duration="240" height="544" left="-221" processHtml="false" top="1397" width="1062"><![CDATA[<div align="center"><span style="font-size: 58px; color: rgb(241, 194, 50); font-family: FontAwesome; line-height: 150%; letter-spacing: -1px;">{{    }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="240" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="57280" duration="12720" height="544" inPoint="240" left="-221" processHtml="false" top="1397" width="1062"><![CDATA[<div align="center"><span style="font-size: 58px; color: rgb(241, 194, 50); font-family: FontAwesome; line-height: 150%; letter-spacing: -1px;">{{    }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12720" value="1"/>
+          <entry time="12720" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="WEBSITE" volume="1.0">
+      <text autoFit="false" begin="360" duration="240" height="91" left="80" processHtml="false" top="1690" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{google}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="240" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="600" duration="13400" height="91" inPoint="240" left="80" processHtml="false" top="1690" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{google}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="13400" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="14000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="15160" duration="120" height="91" left="80" processHtml="false" top="433" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{google}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="120" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="15280" duration="12720" height="91" inPoint="80" left="80" processHtml="false" top="433" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{google}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12720" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="28000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="29040" duration="240" height="91" left="80" processHtml="false" top="1690" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{google}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="240" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="29280" duration="12720" height="91" inPoint="240" left="80" processHtml="false" top="1690" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{google}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12720" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="42000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="43160" duration="120" height="91" left="80" processHtml="false" top="433" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{google}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="120" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="43280" duration="12720" height="91" inPoint="80" left="80" processHtml="false" top="433" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{google}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12720" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="56000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="57040" duration="240" height="91" left="80" processHtml="false" top="1690" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{google}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="240" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="57280" duration="12720" height="91" inPoint="240" left="80" processHtml="false" top="1690" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{google}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12720" value="1"/>
+          <entry time="12720" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="BODY" volume="1.0">
+      <text autoFit="false" begin="960" duration="120" height="799" inPoint="360" left="143" processHtml="false" top="550" valign="top" width="792"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{</span><span style="font-size: 40px; background-color: rgba(0, 0, 0, 0); color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">Sample text</span><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="120" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="1080" duration="12920" height="799" inPoint="320" left="143" processHtml="false" top="550" valign="top" width="792"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{</span><span style="font-size: 40px; background-color: rgba(0, 0, 0, 0); color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">Sample text</span><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12920" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="14000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="15080" duration="120" height="799" inPoint="80" left="143" processHtml="false" top="850" valign="top" width="792"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{</span><span style="font-size: 40px; background-color: rgba(0, 0, 0, 0); color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">Sample text</span><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="120" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="15200" duration="12800" height="799" inPoint="200" left="143" processHtml="false" top="850" valign="top" width="792"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{</span><span style="font-size: 40px; background-color: rgba(0, 0, 0, 0); color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">Sample text</span><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12800" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="28000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="29640" duration="120" height="799" inPoint="360" left="143" processHtml="false" top="550" valign="top" width="792"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{</span><span style="font-size: 40px; background-color: rgba(0, 0, 0, 0); color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">Sample text</span><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="120" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="29760" duration="12240" height="799" inPoint="320" left="143" processHtml="false" top="550" valign="top" width="792"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{</span><span style="font-size: 40px; background-color: rgba(0, 0, 0, 0); color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">Sample text</span><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="42000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="43080" duration="120" height="799" inPoint="80" left="143" processHtml="false" top="850" valign="top" width="792"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{</span><span style="font-size: 40px; background-color: rgba(0, 0, 0, 0); color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">Sample text</span><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="120" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="43200" duration="12800" height="799" inPoint="200" left="143" processHtml="false" top="850" valign="top" width="792"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{</span><span style="font-size: 40px; background-color: rgba(0, 0, 0, 0); color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">Sample text</span><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12800" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="56000" duration="1000" type="3dCubeVertical"/>
+      <text autoFit="false" begin="57640" duration="120" height="799" inPoint="360" left="143" processHtml="false" top="550" valign="top" width="792"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{</span><span style="font-size: 40px; background-color: rgba(0, 0, 0, 0); color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">Sample text</span><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="120" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="false" begin="57760" duration="12240" height="799" inPoint="320" left="143" processHtml="false" top="550" valign="top" width="792"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">{{</span><span style="font-size: 40px; background-color: rgba(0, 0, 0, 0); color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;">Sample text</span><span style="font-size: 40px; color: rgb(67, 67, 67); font-family: Roboto; line-height: 150%; letter-spacing: 0px;"> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12240" value="1"/>
+          <entry time="12240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="LOGO" volume="1.0">
+      <image begin="1320" duration="12680" height="220" inPoint="560" left="625" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="40" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="211" value="1"/>
+          <entry time="12680" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14000" duration="1000" type="3dCubeVertical"/>
+      <image begin="15000" duration="13000" height="220" inPoint="1040" left="625" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1650" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="12" value="1"/>
+          <entry time="13000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="28000" duration="1000" type="3dCubeVertical"/>
+      <image begin="29320" duration="12680" height="220" inPoint="40" left="625" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="40" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="114" value="1"/>
+          <entry time="12680" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="42000" duration="1000" type="3dCubeVertical"/>
+      <image begin="43000" duration="13000" height="220" inPoint="1040" left="625" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1650" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="58" value="1"/>
+          <entry time="13000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="56000" duration="1000" type="3dCubeVertical"/>
+      <image begin="57320" duration="12680" height="220" inPoint="40" left="625" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="40" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="145" value="1"/>
+          <entry time="12591" value="1"/>
+          <entry time="12680" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="BANNERS" volume="1.0">
+      <video begin="0" duration="14000" height="1920" left="0" loopable="true" src="/api/5/media/1434644608/content?suffix=" title="V_CUBE_2" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14000" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="14000" duration="1000" type="3dCubeVertical"/>
+      <video begin="15000" duration="13000" height="1920" inPoint="1000" left="0" loopable="true" src="/api/5/media/1434644547/content?suffix=" title="V_CUBE_1" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="13000" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="28000" duration="1000" type="3dCubeVertical"/>
+      <video begin="29000" duration="13000" height="1920" inPoint="1000" left="0" loopable="true" src="/api/5/media/1434644608/content?suffix=" title="V_CUBE_2" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="13000" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="42000" duration="1000" type="3dCubeVertical"/>
+      <video begin="43000" duration="13000" height="1920" inPoint="1000" left="0" loopable="true" src="/api/5/media/1434644547/content?suffix=" title="V_CUBE_1" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="13000" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="56000" duration="1000" type="3dCubeVertical"/>
+      <video begin="57000" duration="13000" height="1920" inPoint="1000" left="0" loopable="true" src="/api/5/media/1434644608/content?suffix=" title="V_CUBE_2" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="13000" value="1"/>
+          <entry time="13000" value="0"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="BG" volume="1.0">
+      <text autoFit="false" backgroundColor="#9bbbb4" begin="0" duration="70000" height="1966" left="-65" processHtml="false" top="-19" width="1224"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="70000" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+  </layers>
+</timeline>

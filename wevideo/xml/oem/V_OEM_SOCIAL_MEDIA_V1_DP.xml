@@ -1,0 +1,87 @@
+<timeline version="1">
+  <layers>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="3920" duration="1000" type="crossFade"/>
+      <image begin="4920" duration="9080" height="220" inPoint="2360" left="325" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1630" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9080" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Icons%20%7B%22bts%22%3A%22bg%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="3920" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="4920" duration="9080" height="158" inPoint="2360" left="25" processHtml="false" top="1317" valign="center" width="1025"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 120px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">{{  }}{{  }}{{  }}{{  }}{{  }} </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Headline%202%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%223%22%7D%7D" volume="1.0">
+      <transition begin="3920" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="4920" duration="9080" height="200" inPoint="2360" left="25" processHtml="false" top="1056" width="1025"><![CDATA[<div align="center"><span style="font-size: 88px; color: rgb(8, 56, 52); font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;">{{ Connect With Us! }}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="banner%203%20%7B%22bts%22%3A%22obj%22%2C%20%22bto%22%3A%7B%22gmc%22%3A%221%22%2C%20%22chevrolet%22%3A%221%22%2C%20%22buick%22%3A%221%22%2C%22honda%22%3A%221%22%7D%7D" volume="1.0">
+      <transition begin="3920" duration="1000" type="crossFade"/>
+      <text autoFit="false" backgroundColor="#083834" begin="4920" duration="9080" height="200" inPoint="2360" left="-20" processHtml="false" top="1306" width="1130"><![CDATA[<div align="left"><span style="font-size: 60px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="banner%202%20%7B%22bts%22%3A%22bg%22%2C%20%22bto%22%3A%7B%22gmc%22%3A%22b%22%2C%20%22chevrolet%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="3920" duration="1000" type="crossFade"/>
+      <text autoFit="false" backgroundColor="#ffffff" begin="4920" duration="9080" height="934" inPoint="2360" left="-6" processHtml="false" top="1017" width="1096"><![CDATA[<div align="left"><span style="font-size: 60px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="bk%202" volume="1.0">
+      <transition begin="3920" duration="1000" type="directionalWipe"/>
+      <image begin="4920" duration="9080" inPoint="1000" src="/api/5/media/1505842844/content?suffix=" title="Diverse_group_looking_at_phone_V" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9080" value="1"/>
+        </opacity>
+        <filter endHeight="1920" endLeft="0" endTop="-600" endWidth="1080" startHeight="2112" startLeft="-54" startTop="-696" startWidth="1188" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="Headline%201%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%20%22buick%22%3A%22w%22%2C%20%22honda%22%3A%22w%22%7D%2C%20%22bta%22%3A%7B%22buick%22%3A%220%2C12%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="0" duration="3000" height="300" left="0" processHtml="false" top="1462" width="1080"><![CDATA[<div align="center"><span style="font-size: 96px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;">{{We're Social}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3000" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="3000" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="banner%201%20%7B%22bts%22%3A%22obj%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%221%22%2C%20%22buick%22%3A%221%22%2C%20%22gmc%22%3A%22b%22%2C%22honda%22%3A%221%22%7D%7D" volume="1.0">
+      <text autoFit="false" backgroundColor="#083834" begin="0" duration="2960" height="274" left="0" processHtml="false" top="1475" width="1110"><![CDATA[<div align="left"><span style="font-size: 60px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2960" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="2960" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="bk%201" volume="1.0">
+      <image begin="0" duration="2960" src="/api/5/media/1505842857/content?suffix=" title="Diverse_group_of_young_people_on_phones_V" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2960" value="1"/>
+        </opacity>
+        <filter endHeight="1977.6000000000001" endLeft="-20" endTop="-25" endWidth="1112.4" startHeight="2112" startLeft="-100" startTop="-96" startWidth="1188" type="kenBurns"/>
+      </image>
+      <transition begin="2960" duration="1000" type="crossFade"/>
+    </layer>
+  </layers>
+</timeline>

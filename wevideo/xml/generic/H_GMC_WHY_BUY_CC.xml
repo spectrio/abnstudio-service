@@ -1,0 +1,238 @@
+<timeline version="1">
+  <layers>
+    <layer title="Shapes%20Overlay" volume="1.0">
+      <video begin="0" duration="53840" height="1080" left="0" loopable="true" src="/api/5/media/1983266276/content?suffix=" title="H_GMC_SHAPESOVERLAY" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="53840" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Transition" volume="1.0">
+      <video begin="0" duration="53840" height="1080" left="0" loopable="true" src="/api/5/media/1983254781/content?suffix=" title="H_GMC_TRANSITION" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="53840" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="5360" duration="48480" height="196" left="1450" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="83" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="48480" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Reason%2010%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="50160" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="51160" duration="2680" height="327" inPoint="1000" left="138" processHtml="false" top="610" valign="center" width="1000"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Medium; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2680" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%2010" volume="1.0">
+      <text autoFit="false" begin="49880" duration="3960" height="396" left="1313" processHtml="false" top="505" width="389"><![CDATA[<div align="center"><span style="font-size: 215px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3960" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%209%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="45320" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="46320" duration="4200" height="327" inPoint="1000" left="138" processHtml="false" top="610" valign="center" width="1000"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Medium; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3623" value="1"/>
+          <entry time="4200" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%209" volume="1.0">
+      <text autoFit="false" begin="45080" duration="4800" height="396" left="1313" processHtml="false" top="505" width="389"><![CDATA[<div align="center"><span style="font-size: 215px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%208%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="40520" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="41520" duration="4200" height="327" inPoint="1000" left="138" processHtml="false" top="610" valign="center" width="1000"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Medium; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3623" value="1"/>
+          <entry time="4200" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%208" volume="1.0">
+      <text autoFit="false" begin="40280" duration="4800" height="396" left="1313" processHtml="false" top="505" width="389"><![CDATA[<div align="center"><span style="font-size: 215px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%207%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="35720" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="36720" duration="4200" height="327" inPoint="1000" left="138" processHtml="false" top="610" valign="center" width="1000"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Medium; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3623" value="1"/>
+          <entry time="4200" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%207" volume="1.0">
+      <text autoFit="false" begin="35480" duration="4800" height="396" left="1313" processHtml="false" top="505" width="389"><![CDATA[<div align="center"><span style="font-size: 215px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%206%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="30880" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="31880" duration="4200" height="327" inPoint="1000" left="138" processHtml="false" top="610" valign="center" width="1000"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Medium; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3623" value="1"/>
+          <entry time="4200" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%206" volume="1.0">
+      <text autoFit="false" begin="30680" duration="4800" height="396" left="1313" processHtml="false" top="505" width="389"><![CDATA[<div align="center"><span style="font-size: 215px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%205%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="26120" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="27120" duration="4200" height="327" inPoint="1000" left="138" processHtml="false" top="610" valign="center" width="1000"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Medium; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="872" value="1"/>
+          <entry time="3623" value="1"/>
+          <entry time="4200" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%205" volume="1.0">
+      <text autoFit="false" begin="25880" duration="4800" height="396" left="1313" processHtml="false" top="505" width="389"><![CDATA[<div align="center"><span style="font-size: 215px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%204%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="21320" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="22320" duration="4200" height="327" inPoint="1000" left="138" processHtml="false" top="610" valign="center" width="1000"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Medium; line-height: 109%; letter-spacing: 5px;">{{ |f</span><span style="font-size: 85px; color: rgb(0, 0, 0); font-family: StratumGMCWeb-Medium; line-height: 109%; letter-spacing: 5px;"><span style="color: rgb(255, 255, 255); line-height: 109%; letter-spacing: 5px;">a</span></span><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Medium; line-height: 109%; letter-spacing: 5px;">mily owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3623" value="1"/>
+          <entry time="4200" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%204" volume="1.0">
+      <text autoFit="false" begin="21080" duration="4800" height="396" left="1313" processHtml="false" top="505" width="389"><![CDATA[<div align="center"><span style="font-size: 215px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%203%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="16480" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="17480" duration="4200" height="327" inPoint="1000" left="138" processHtml="false" top="610" valign="center" width="1000"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Medium; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3623" value="1"/>
+          <entry time="4200" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%203" volume="1.0">
+      <text autoFit="false" begin="16280" duration="4800" height="396" left="1313" processHtml="false" top="505" width="389"><![CDATA[<div align="center"><span style="font-size: 215px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%202%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="11680" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="12680" duration="4200" height="327" inPoint="1000" left="138" processHtml="false" top="610" valign="center" width="1000"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Medium; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3623" value="1"/>
+          <entry time="4200" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%202" volume="1.0">
+      <text autoFit="false" begin="11480" duration="4800" height="396" left="1313" processHtml="false" top="505" width="389"><![CDATA[<div align="center"><span style="font-size: 215px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4800" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%201" volume="1.0">
+      <transition begin="6920" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="7920" duration="4200" height="327" inPoint="1000" left="138" processHtml="false" top="610" valign="center" width="1000"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 85px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Medium; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3623" value="1"/>
+          <entry time="4200" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%201" volume="1.0">
+      <text autoFit="false" begin="6920" duration="4560" height="396" inPoint="240" left="1313" processHtml="false" top="505" width="389"><![CDATA[<div align="center"><span style="font-size: 215px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4560" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Logo%20Reveal" volume="1.0">
+      <video begin="0" duration="5320" height="1080" left="0" loopable="true" src="/api/5/media/1983249639/content?suffix=" title="H_GMC_LINEREVEAL" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5320" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Dealership%20Name" volume="1.0">
+      <text autoFit="true" begin="2840" duration="2520" height="311" inPoint="2840" left="264" processHtml="false" top="508" valign="center" width="1373"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 140px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Bold; line-height: 105%; letter-spacing: 0px;">{{Dealership}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2520" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="true" begin="5360" duration="48480" height="170" left="166" processHtml="false" top="188" valign="top" width="1222"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 68px; color: rgb(255, 255, 255); font-family: StratumGMCWeb-Bold; line-height: 90%; letter-spacing: 0px;">{{Dealership}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="48480" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Background" volume="1.0">
+      <video begin="0" duration="53840" height="1080" left="0" loopable="false" src="/api/5/media/1983266418/content?suffix=" title="H_GMC_BACKGROUND" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="53840" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

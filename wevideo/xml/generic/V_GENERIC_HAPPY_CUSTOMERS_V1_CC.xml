@@ -1,0 +1,352 @@
+<timeline version="1">
+  <layers>
+    <layer title="Particles" volume="1.0">
+      <video begin="0" duration="40160" height="1080" left="-420" loopable="true" rotation="90" src="/api/5/media/1431701283/content?suffix=" title="Paticles" top="420" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="40160" value="1"/>
+        </opacity>
+        <filter brightness="100" contrast="100" hue="0" saturation="0" type="colorCorrection"/>
+      </video>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="4560" duration="400" type="wipeDown"/>
+      <image begin="4960" duration="35200" height="220" inPoint="400" left="323" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1649" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="35200" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Vignette" volume="1.0">
+      <video begin="0" duration="40160" height="1080" left="-420" loopable="true" rotation="90" src="/api/5/media/1430786167/content?suffix=" title="Hard+Vignette" top="420" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="40160" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Happy%20Customers%20Text" volume="1.0">
+      <transition begin="4560" duration="400" type="wipeDown"/>
+      <video begin="4960" duration="35200" height="973" inPoint="400" left="-76" loopable="true" src="/api/5/media/1431069572/content?suffix=" title="HappyCustomers+Overlay" top="15" volume="1.0" width="1728">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="35200" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Bokeh" volume="1.0">
+      <video begin="0" duration="40160" height="1080" left="-420" loopable="true" rotation="90" src="/api/5/media/1431071863/content?suffix=" title="Bokeh_Overlay" top="420" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="0.5238095238095238"/>
+          <entry time="1935" value="0.5238095238095238"/>
+          <entry time="40160" value="0.5238095238095238"/>
+        </opacity>
+        <filter type="blur"/>
+        <filter brightness="100" contrast="100" hue="0" saturation="0" type="colorCorrection"/>
+      </video>
+    </layer>
+    <layer title="Color" volume="1.0">
+      <transition begin="36240" duration="400" type="wipeLeft"/>
+      <text autoFit="false" backgroundColor="#59bfff" begin="36640" duration="320" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="162" value="0.23557776957488974"/>
+          <entry time="320" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Photo%2010%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="32720" duration="400" type="wipeDown"/>
+      <text autoFit="false" backgroundColor="#fff56f" begin="33120" duration="320" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="320" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="36240" duration="400" type="wipeLeft"/>
+      <image begin="36640" duration="3520" inPoint="400" src="/api/5/media/1359957092/content?suffix=" title="Layer+8+copy" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3520" value="1"/>
+        </opacity>
+        <filter endHeight="927.3000000000001" endLeft="4.909090909090901" endTop="540.1818181818184" endWidth="1188" startHeight="1011.5999999999999" startLeft="-159.5454545454547" startTop="397.5454545454548" startWidth="1296" type="kenBurns"/>
+      </image>
+    </layer>
+    <layer title="Photo%209%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="29200" duration="400" type="wipeRight"/>
+      <text autoFit="false" backgroundColor="#ff3700" begin="29600" duration="320" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="162" value="0.23557776957488974"/>
+          <entry time="320" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="32720" duration="400" type="wipeDown"/>
+      <image begin="33120" duration="3120" inPoint="400" src="/api/5/media/1359957092/content?suffix=" title="Layer+8+copy" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+        <filter endHeight="1011.5999999999999" endLeft="-66.2727272727273" endTop="454" endWidth="1296" startHeight="1011.5999999999999" startLeft="-191.45454545454552" startTop="454" startWidth="1296" type="kenBurns"/>
+      </image>
+      <transition begin="36240" duration="400" type="wipeDown"/>
+    </layer>
+    <layer title="Photo%208%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="25680" duration="400" type="wipeUp"/>
+      <text autoFit="false" backgroundColor="#ff9d20" begin="26080" duration="320" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="162" value="0.23557776957488974"/>
+          <entry time="320" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="29200" duration="400" type="wipeRight"/>
+      <image begin="29600" duration="3120" inPoint="400" src="/api/5/media/1359957092/content?suffix=" title="Layer+8+copy" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+        <filter endHeight="843" endLeft="0" endTop="539" endWidth="1080" startHeight="1011.5999999999999" startLeft="-88.36363636363637" startTop="463.81818181818176" startWidth="1296" type="kenBurns"/>
+      </image>
+      <transition begin="32720" duration="400" type="wipeRight"/>
+    </layer>
+    <layer title="Photo%207%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="22160" duration="400" type="wipeLeft"/>
+      <text autoFit="false" backgroundColor="#59bfff" begin="22560" duration="320" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="162" value="0.23557776957488974"/>
+          <entry time="320" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="25680" duration="400" type="wipeUp"/>
+      <image begin="26080" duration="3120" inPoint="400" src="/api/5/media/1359957092/content?suffix=" title="Layer+8+copy" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+        <filter endHeight="843" endLeft="0" endTop="539" endWidth="1080" startHeight="1011.5999999999999" startLeft="-125.18181818181817" startTop="417.18181818181836" startWidth="1296" type="kenBurns"/>
+      </image>
+      <transition begin="29200" duration="400" type="wipeUp"/>
+    </layer>
+    <layer title="Photo%206%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="18640" duration="400" type="wipeDown"/>
+      <text autoFit="false" backgroundColor="#fff56f" begin="19040" duration="320" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="320" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="22160" duration="400" type="wipeLeft"/>
+      <image begin="22560" duration="3120" inPoint="400" src="/api/5/media/1359957092/content?suffix=" title="Layer+8+copy" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+        <filter endHeight="1011.5999999999999" endLeft="-125.18181818181817" endTop="402.4545454545456" endWidth="1296" startHeight="1011.5999999999999" startLeft="-58.45454545454547" startTop="515.2727272727271" startWidth="1296" type="kenBurns"/>
+      </image>
+      <transition begin="25680" duration="400" type="wipeLeft"/>
+    </layer>
+    <layer title="Photo%205%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="15120" duration="400" type="wipeRight"/>
+      <text autoFit="false" backgroundColor="#ff3700" begin="15520" duration="320" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="162" value="0.23557776957488974"/>
+          <entry time="320" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="18640" duration="400" type="wipeDown"/>
+      <image begin="19040" duration="3120" inPoint="400" src="/api/5/media/1359957092/content?suffix=" title="Layer+8+copy" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+        <filter endHeight="927.3000000000001" endLeft="-54" endTop="454" endWidth="1188" startHeight="1011.5999999999999" startLeft="-108" startTop="454" startWidth="1296" type="kenBurns"/>
+      </image>
+      <transition begin="22160" duration="400" type="wipeDown"/>
+    </layer>
+    <layer title="Photo%204%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="11600" duration="400" type="wipeUp"/>
+      <text autoFit="false" backgroundColor="#ff9d20" begin="12000" duration="320" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="162" value="0.23557776957488974"/>
+          <entry time="320" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="15120" duration="400" type="wipeRight"/>
+      <image begin="15520" duration="3120" inPoint="400" src="/api/5/media/1359957092/content?suffix=" title="Layer+8+copy" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+        <filter endHeight="1011.5999999999999" endLeft="-112.9090909090909" endTop="488.3636363636363" endWidth="1296" startHeight="1011.5999999999999" startLeft="-98.18181818181819" startTop="392.6363636363637" startWidth="1296" type="kenBurns"/>
+      </image>
+      <transition begin="18640" duration="400" type="wipeRight"/>
+    </layer>
+    <layer title="Photo%203%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="8080" duration="400" type="wipeLeft"/>
+      <text autoFit="false" backgroundColor="#59bfff" begin="8480" duration="320" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="162" value="0.23557776957488974"/>
+          <entry time="320" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="11600" duration="400" type="wipeUp"/>
+      <image begin="12000" duration="3120" inPoint="400" src="/api/5/media/1359957092/content?suffix=" title="Layer+8+copy" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+        <filter endHeight="1011.5999999999999" endLeft="-108" endTop="454" endWidth="1296" startHeight="927.3000000000001" startLeft="-54" startTop="496" startWidth="1188" type="kenBurns"/>
+      </image>
+      <transition begin="15120" duration="400" type="wipeUp"/>
+    </layer>
+    <layer title="Photo%202%20%7B%22cie%22%3A%22-500%22%7D" volume="1.0">
+      <transition begin="4560" duration="400" type="wipeDown"/>
+      <text autoFit="false" backgroundColor="#fff56f" begin="4960" duration="320" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0.47619047619047616"/>
+          <entry time="320" value="0"/>
+        </opacity>
+      </text>
+      <transition begin="8080" duration="400" type="wipeLeft"/>
+      <image begin="8480" duration="3120" inPoint="400" src="/api/5/media/1359957092/content?suffix=" title="Layer+8+copy" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+        <filter endHeight="1011.5999999999999" endLeft="-85.90909090909092" endTop="466.2727272727272" endWidth="1296" startHeight="1011.5999999999999" startLeft="-130.0909090909091" startTop="412.27272727272725" startWidth="1296" type="kenBurns"/>
+      </image>
+      <transition begin="11600" duration="400" type="wipeLeft"/>
+    </layer>
+    <layer title="Photo%201" volume="1.0">
+      <transition begin="4560" duration="400" type="wipeDown"/>
+      <image begin="4960" duration="3120" inPoint="400" src="/api/5/media/1359957092/content?suffix=" title="Layer+8+copy" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+        <filter endHeight="1011.5999999999999" endLeft="-108.00000000000003" endTop="458.90909090909093" endWidth="1296" startHeight="1011.5999999999999" startLeft="-7.3636363636363615" startTop="427.00000000000006" startWidth="1296" type="kenBurns"/>
+      </image>
+      <transition begin="8080" duration="400" type="wipeDown"/>
+    </layer>
+    <layer title="Intro%20Text" volume="1.0">
+      <video begin="0" duration="4560" height="1920" left="0" loopable="true" src="/api/5/media/1431057792/content?suffix=" title="Intro_V" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4560" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Color" volume="1.0">
+      <transition begin="36240" duration="400" type="wipeLeft"/>
+      <text autoFit="false" backgroundColor="#59bfff7F" begin="36640" duration="3520" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3520" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="BG%2010" volume="1.0">
+      <transition begin="32720" duration="400" type="wipeDown"/>
+      <text autoFit="false" backgroundColor="#fff56f7F" begin="33120" duration="3520" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="BG%209" volume="1.0">
+      <transition begin="29200" duration="400" type="wipeRight"/>
+      <text autoFit="false" backgroundColor="#ff32007F" begin="29600" duration="3520" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="BG%208" volume="1.0">
+      <transition begin="25680" duration="400" type="wipeUp"/>
+      <text autoFit="false" backgroundColor="#ff9d207F" begin="26080" duration="3520" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="BG%207" volume="1.0">
+      <transition begin="22160" duration="400" type="wipeLeft"/>
+      <text autoFit="false" backgroundColor="#59bfff7F" begin="22560" duration="3520" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="BG%206" volume="1.0">
+      <transition begin="18640" duration="400" type="wipeDown"/>
+      <text autoFit="false" backgroundColor="#fff56f7F" begin="19040" duration="3520" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="BG%205" volume="1.0">
+      <transition begin="15120" duration="400" type="wipeRight"/>
+      <text autoFit="false" backgroundColor="#ff32007F" begin="15520" duration="3520" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="BG%204" volume="1.0">
+      <transition begin="11600" duration="400" type="wipeUp"/>
+      <text autoFit="false" backgroundColor="#ff9d207F" begin="12000" duration="3520" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="BG%203" volume="1.0">
+      <transition begin="8080" duration="400" type="wipeLeft"/>
+      <text autoFit="false" backgroundColor="#59bfff7F" begin="8480" duration="3520" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="BG%202" volume="1.0">
+      <transition begin="4560" duration="400" type="wipeDown"/>
+      <text autoFit="false" backgroundColor="#fff56f7F" begin="4960" duration="3520" height="1971" inPoint="400" left="-54" processHtml="false" top="-37" width="1323"><![CDATA[<div align="left"><span style="font-size: 72px; font-family: Montserrat-Regular; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="BG" volume="1.0">
+      <video begin="0" duration="4560" height="1939" left="-5" loopable="true" src="/api/5/media/1431694224/content?suffix=" title="BG" top="-9" volume="1.0" width="1091">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4560" value="1"/>
+        </opacity>
+        <filter brightness="0" contrast="0" hue="5" saturation="0" type="colorCorrection"/>
+      </video>
+      <transition begin="4560" duration="400" type="crossFade"/>
+      <video begin="4960" duration="35200" height="1920" inPoint="1120" left="0" loopable="true" src="https://d3tvj3lw2y3r4c.cloudfront.net/gfx/clipart/prod/2019_03_11_788ac5cc-6da8-42bf-a1ae-dfc279d3d045" title="Stage+Show" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="35200" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

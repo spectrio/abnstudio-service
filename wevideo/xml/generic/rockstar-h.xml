@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<timeline version="1">
+  <layers>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="40" duration="1000" type="directionalWipe"/>
+      <image begin="1040" duration="4000" height="196" inPoint="1000" left="1485" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="836" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="5040" duration="1000" type="3dTileHorizontal"/>
+      <image begin="6040" duration="4280" height="196" inPoint="1000" left="48" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="857" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4280" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="10320" duration="1000" type="directionalWipe"/>
+      <image begin="11320" duration="19320" height="196" inPoint="1000" left="1511" src="http://wevideo-images.s3.amazonaws.com/2018_05_14_f09348f2-d51e-4075-9a29-661aa228f252" title="YOURLOGO" top="866" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="19320" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Heading%204" volume="1.0">
+      <transition begin="22880" duration="1000" type="directionalWipe"/>
+      <text begin="23880" duration="6760" height="408" inPoint="1000" left="111" processHtml="false" rotation="353" top="319" width="1807">&lt;div align="center" style="text-align: left;"&gt;&lt;span style="font-size: 134px; color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;"&gt;{{Thank you for being awesome!}}&lt;/span&gt;&lt;/div&gt;
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6760" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Paragraph%203" volume="1.0">
+      <transition begin="10320" duration="1000" type="3dTileVertical"/>
+      <text begin="11320" duration="11560" height="555" inPoint="1000" left="736" processHtml="false" top="295" valign="top" width="1065">&lt;div align="center" style="text-align: left;"&gt;&lt;span style="font-size: 42px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;{{Lore&lt;/span&gt;&lt;span style="font-size: 42px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;m&lt;/span&gt;&lt;span style="font-size: 42px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt; i&lt;/span&gt;&lt;span style="font-size: 42px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;p&lt;/span&gt;&lt;span style="font-size: 42px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;sum do&lt;/span&gt;&lt;span style="font-size: 42px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;l&lt;/span&gt;&lt;span style="font-size: 42px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;or&lt;/span&gt;&lt;span style="font-size: 42px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt; &lt;/span&gt;&lt;span style="font-size: 42px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;si&lt;/span&gt;&lt;span style="font-size: 42px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;t&lt;/span&gt;&lt;span style="font-size: 42px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt; am&lt;/span&gt;&lt;span style="font-size: 42px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;e&lt;/span&gt;&lt;span style="font-size: 42px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;t, consectetur adipiscing elit. Nam eu ex maximus, venenatis nisl id.}}&lt;/span&gt;&lt;/div&gt;&lt;div align="center" style="text-align: left;"&gt;&lt;span style="font-size: 42px; font-family: Lato; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align="center" style="text-align: left;"&gt;&lt;span style="font-size: 42px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;{{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu ex maximus, venenatis nisl id.}}&lt;/span&gt;&lt;/div&gt;&lt;div align="center" style="text-align: left;"&gt;&lt;span style="font-size: 42px; font-family: Lato; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align="center" style="text-align: left;"&gt;&lt;span style="font-size: 42px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;{{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu ex maximus, venenatis nisl id.}}&lt;/span&gt;&lt;/div&gt;
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10826" value="1"/>
+          <entry time="11560" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Heading%203" volume="1.0">
+      <transition begin="10320" duration="1000" type="3dTileVertical"/>
+      <text begin="11320" duration="11560" height="408" inPoint="1000" left="752" processHtml="false" top="-67" width="1464">&lt;div align="center" style="text-align: left;"&gt;&lt;span style="font-size: 160px; color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;"&gt;{{&lt;/span&gt;&lt;span style="font-size: 160px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;"&gt;Sample text&lt;/span&gt;&lt;span style="font-size: 160px; color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;"&gt;}}&lt;/span&gt;&lt;/div&gt;
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10809" value="1"/>
+          <entry time="11560" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Heading%202a" volume="1.0">
+      <transition begin="5040" duration="1000" type="3dTileHorizontal"/>
+      <text begin="6040" duration="4280" height="249" inPoint="1000" left="55" processHtml="false" rotation="8" top="124" width="1464">&lt;div align="center" style="text-align: left;"&gt;&lt;span style="font-size: 120px; color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;"&gt;{{NAME HERE}}&lt;/span&gt;&lt;/div&gt;
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4280" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="10320" duration="1000" type="directionalWipe"/>
+    </layer>
+    <layer title="Heading%202b" volume="1.0">
+      <transition begin="5040" duration="1000" type="3dTileHorizontal"/>
+      <text begin="6040" duration="4280" height="249" inPoint="1000" left="55" processHtml="false" rotation="8" top="252" width="1464">&lt;div align="center" style="text-align: left;"&gt;&lt;span style="font-size: 72px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;"&gt;{{Title Here}}&lt;/span&gt;&lt;/div&gt;
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4280" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="10320" duration="1000" type="directionalWipe"/>
+    </layer>
+    <layer title="Heading%201b" volume="1.0">
+      <transition begin="680" duration="1000" type="directionalWipe"/>
+      <text begin="1680" duration="3360" height="408" inPoint="1680" left="503" processHtml="false" rotation="339" top="328" width="1523">&lt;div align="center" style="text-align: center;"&gt;&lt;span style="font-size: 206px; color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;"&gt;{{Rockstar}}&lt;/span&gt;&lt;/div&gt;
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3360" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="5040" duration="1000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Heading%201a" volume="1.0">
+      <transition begin="680" duration="1000" type="directionalWipe"/>
+      <text begin="1680" duration="3360" height="326" inPoint="1680" left="58" processHtml="false" rotation="348" top="223" width="912">&lt;div align="center" style="text-align: left;"&gt;&lt;span style="font-size: 126px; color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;"&gt;{{You are a}}&lt;/span&gt;&lt;/div&gt;
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3360" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="5040" duration="1000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="slide_1" volume="1.0">
+      <video begin="40" duration="5000" height="1080" left="0" loopable="false" src="http://wevideo-original-videos.s3.amazonaws.com/2018_09_25_bb31c30d-b030-40aa-ba05-4bc594e68f09" title="H_DS_Banner_01" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="5040" duration="1000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="slide_2" volume="1.0">
+      <transition begin="5040" duration="1000" type="3dTileHorizontal"/>
+      <image begin="6040" duration="4280" height="1080" inPoint="1000" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_09_20_d2a335a4-b7ff-4443-93b8-bb20073c89b1" title="slide+2" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4280" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="10320" duration="1000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Photo%201" volume="1.0">
+      <transition begin="5040" duration="1000" type="3dTileHorizontal"/>
+      <image begin="6040" duration="4280" height="1210" inPoint="1000" left="1167" src="http://wevideo-images.s3.amazonaws.com/2019_07_30_3d589aff-f120-4ff8-bd71-f450240240b1" title="woman+2" top="-67" volume="1.0" width="865">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4280" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="10320" duration="1000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="slide_3" volume="1.0">
+      <transition begin="10320" duration="1000" type="3dTileVertical"/>
+      <image begin="11320" duration="11560" height="1080" inPoint="1000" left="0" src="http://wevideo-images.s3.amazonaws.com/2018_09_20_335f1e8a-a9b5-4554-99c6-ede953e8dbb6" title="slide+3" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10791" value="1"/>
+          <entry time="11560" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Photo%202" volume="1.0">
+      <transition begin="10320" duration="1000" type="3dTileVertical"/>
+      <image begin="11320" duration="11560" height="1123" inPoint="1000" left="-60" src="http://wevideo-images.s3.amazonaws.com/2019_07_30_3d589aff-f120-4ff8-bd71-f450240240b1" title="woman+2" top="-22" volume="1.0" width="803">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10789" value="1"/>
+          <entry time="11560" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="slide%204" volume="1.0">
+      <video begin="22000" duration="8640" height="1080" left="0" loopable="false" src="/api/5/media/1208967641/content?suffix=" title="H_DS_Banner_02" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="8640" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

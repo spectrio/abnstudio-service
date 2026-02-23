@@ -1,0 +1,39 @@
+<timeline version="1">
+  <layers>
+    <layer title="Password" volume="1.0">
+      <transition begin="9080" duration="480" type="wipeRight"/>
+      <text autoFit="false" begin="9560" duration="20400" height="74" inPoint="480" left="302" processHtml="false" top="1449" width="734"><![CDATA[<div align="center" style="text-align: left;"><i style="font-family: Roboto;"><span style="font-size: 42px; color: rgb(255, 255, 255); line-height: 90%; letter-spacing: 1px;">{{</span></i><span style="font-size: 42px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: 90%; letter-spacing: 1px;"><i>a</i></span><span style="font-size: 42px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 90%; letter-spacing: 1px;"><i>bcdefghi</i></span><i style="font-family: Roboto;"><span style="font-size: 42px; color: rgb(255, 255, 255); line-height: 90%; letter-spacing: 1px;">}}</span></i></div>]]>
+        <opacity>
+          <entry time="520" value="1"/>
+          <entry time="20400" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Network%20ID" volume="1.0">
+      <transition begin="9080" duration="480" type="wipeRight"/>
+      <text autoFit="false" begin="9560" duration="20400" height="68" inPoint="480" left="306" processHtml="false" top="1350" width="733"><![CDATA[<div align="center" style="text-align: left;"><i style="font-family: Roboto;"><span style="font-size: 42px; color: rgb(255, 255, 255); line-height: 90%; letter-spacing: 1px;">{{123456789}}</span></i></div>]]>
+        <opacity>
+          <entry time="520" value="1"/>
+          <entry time="20400" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="2760" duration="1000" type="crossFade"/>
+      <image begin="3760" duration="26200" height="138" inPoint="1000" left="401" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1642" volume="1.0" width="270">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="26200" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="AE%20Video" volume="1.0">
+      <video begin="0" duration="29960" height="1920" left="0" loopable="true" src="/api/5/media/2029601949/content?suffix=" title="V_DS_WEVIDEO_GENERIC_WIFI_CD" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="29960" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

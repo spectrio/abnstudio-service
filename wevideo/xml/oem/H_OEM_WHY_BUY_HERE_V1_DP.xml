@@ -1,0 +1,337 @@
+<timeline version="1">
+  <layers>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="400" duration="75160" height="196" left="1430" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="827" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1684" value="1"/>
+          <entry time="75160" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Title%20%7B%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22g%22%2C%22honda%22%3A%221%22%2C%22buick%22%3A%22g%22%2C%22gmc%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="4240" duration="1000" type="crossBlur"/>
+      <text autoFit="false" begin="5240" duration="70320" height="224" inPoint="2000" left="82" processHtml="false" top="25" width="1772"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(18, 84, 74); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Why Buy From </span></div><div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(18, 84, 74); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{Dealership}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="70320" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Intro%20Headline%20%7B%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="0" duration="1000" type="crossBlur"/>
+      <text autoFit="false" begin="1000" duration="2240" height="342" inPoint="1000" left="300" processHtml="false" top="350" valign="center" width="1342"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 120px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">Why Buy From {{Dealership}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="3240" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="intro_banner%20%7B%22bts%22%3A%22bg%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22g%22%2C%22buick%22%3A%221%22%2C%22gmc%22%3A%221%22%2C%22honda%22%3A%221%22%7D%7D" volume="1.0">
+      <transition begin="0" duration="1000" type="crossBlur"/>
+      <text autoFit="false" backgroundColor="#12544a" begin="1000" duration="2240" height="400" inPoint="2000" left="0" processHtml="false" top="325" width="1925"><![CDATA[<div align="left"><span style="font-size: 172px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="3240" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="number_10%20%7B%22bts%22%3A%22obj%22%2C%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevrolet%22%3A%22w%22%7D%2C%20%22bta%22%3A%7B%22chevrolet%22%3A%220%2C-10%22%2C%22honda%22%3A%220%2C20%22%2C%22buick%22%3A%220%2C20%22%7D%7D" volume="1.0">
+      <transition begin="69720" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="70720" duration="4840" height="422" inPoint="2280" left="262" processHtml="false" top="336" valign="center" width="420"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 278px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">10</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%2010%20%7B%22cie%22%3A%22-3000%22%2C%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22b%22%7D%7D" volume="1.0">
+      <transition begin="69720" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="70720" duration="4840" height="375" inPoint="2280" left="748" processHtml="false" top="362" valign="center" width="984"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{RENTAL</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">CAR</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">AVAILABLE}} </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="banner_10%20%7B%22bis%22%3A%221361408786%22%7D" volume="1.0">
+      <video begin="68360" duration="7200" height="1080" left="0" loopable="true" src="/api/5/media/1419622101/content?suffix=" title="H" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6200" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="number_09%20%7B%22bts%22%3A%22obj%22%2C%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevrolet%22%3A%22w%22%7D%2C%20%22bta%22%3A%7B%22chevrolet%22%3A%220%2C-10%22%2C%22honda%22%3A%220%2C20%22%2C%22buick%22%3A%220%2C20%22%7D%7D" volume="1.0">
+      <transition begin="62600" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="63600" duration="3840" height="422" inPoint="2280" left="262" processHtml="false" top="336" valign="center" width="420"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 278px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">9</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="67440" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Reason%209%20%7B%22cie%22%3A%22-3000%22%2C%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22b%22%7D%7D" volume="1.0">
+      <transition begin="62600" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="63600" duration="3840" height="375" inPoint="2280" left="748" processHtml="false" top="362" valign="center" width="984"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{RENTAL</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">CAR</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">AVAILABLE}} </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="67440" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="banner_09%20%7B%22bis%22%3A%221361408786%22%7D" volume="1.0">
+      <video begin="61320" duration="6200" height="1080" left="0" loopable="true" src="/api/5/media/1419622101/content?suffix=" title="H" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6200" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="67520" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="number_08%20%7B%22bts%22%3A%22obj%22%2C%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevrolet%22%3A%22w%22%7D%2C%20%22bta%22%3A%7B%22chevrolet%22%3A%220%2C-10%22%2C%22honda%22%3A%220%2C20%22%2C%22buick%22%3A%220%2C20%22%7D%7D" volume="1.0">
+      <transition begin="55480" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="56480" duration="3840" height="422" inPoint="2280" left="262" processHtml="false" top="336" valign="center" width="420"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 278px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">8</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="60320" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Reason%208%20%7B%22cie%22%3A%22-3000%22%2C%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22b%22%7D%7D" volume="1.0">
+      <transition begin="55480" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="56480" duration="3840" height="375" inPoint="2280" left="748" processHtml="false" top="362" valign="center" width="984"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{RENTAL</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">CAR</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">AVAILABLE}} </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="60320" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="banner_08%20%7B%22bis%22%3A%221361408786%22%7D" volume="1.0">
+      <video begin="54120" duration="6200" height="1080" left="0" loopable="true" src="/api/5/media/1419622101/content?suffix=" title="H" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6200" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="60320" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="number_07%20%7B%22bts%22%3A%22obj%22%2C%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevrolet%22%3A%22w%22%7D%2C%20%22bta%22%3A%7B%22chevrolet%22%3A%220%2C-10%22%2C%22honda%22%3A%220%2C20%22%2C%22buick%22%3A%220%2C20%22%7D%7D" volume="1.0">
+      <transition begin="48360" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="49360" duration="3840" height="422" inPoint="2280" left="262" processHtml="false" top="336" valign="center" width="420"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 278px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">7</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="53200" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Reason%207%20%7B%22cie%22%3A%22-3000%22%2C%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22b%22%7D%7D" volume="1.0">
+      <transition begin="48360" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="49360" duration="3840" height="375" inPoint="2280" left="748" processHtml="false" top="362" valign="center" width="984"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{RENTAL</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">CAR</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">AVAILABLE}} </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="53200" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="banner_07%20%7B%22bis%22%3A%221361408786%22%7D" volume="1.0">
+      <video begin="47080" duration="6200" height="1080" left="0" loopable="true" src="/api/5/media/1419622101/content?suffix=" title="H" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6200" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="53280" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="number_06%20%7B%22bts%22%3A%22obj%22%2C%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevrolet%22%3A%22w%22%7D%2C%20%22bta%22%3A%7B%22chevrolet%22%3A%220%2C-10%22%2C%22honda%22%3A%220%2C20%22%2C%22buick%22%3A%220%2C20%22%7D%7D" volume="1.0">
+      <transition begin="41240" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="42240" duration="3840" height="422" inPoint="2280" left="262" processHtml="false" top="336" valign="center" width="420"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 278px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">6</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="46080" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Reason%206%20%7B%22cie%22%3A%22-3000%22%2C%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22b%22%7D%7D" volume="1.0">
+      <transition begin="41240" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="42240" duration="3840" height="375" inPoint="2280" left="748" processHtml="false" top="362" valign="center" width="984"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{RENTAL</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">CAR</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">AVAILABLE}} </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="46080" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="banner_06%20%7B%22bis%22%3A%221361408786%22%7D" volume="1.0">
+      <video begin="39880" duration="6200" height="1080" left="0" loopable="true" src="/api/5/media/1419622101/content?suffix=" title="H" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6200" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="46080" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="number_05%20%7B%22bts%22%3A%22obj%22%2C%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevrolet%22%3A%22w%22%7D%2C%20%22bta%22%3A%7B%22chevrolet%22%3A%220%2C-10%22%2C%22honda%22%3A%220%2C20%22%2C%22buick%22%3A%220%2C20%22%7D%7D" volume="1.0">
+      <transition begin="34120" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="35120" duration="3840" height="422" inPoint="2280" left="262" processHtml="false" top="336" valign="center" width="420"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 278px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">5</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="38960" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Reason%205%20%7B%22cie%22%3A%22-3000%22%2C%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22b%22%7D%7D" volume="1.0">
+      <transition begin="34120" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="35120" duration="3840" height="375" inPoint="2280" left="748" processHtml="false" top="362" valign="center" width="984"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;">{{RENTAL</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;">CAR</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: normal; letter-spacing: 0px;">AVAILABLE}} </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="38960" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="banner_05%20%7B%22bis%22%3A%221361408786%22%7D" volume="1.0">
+      <video begin="32680" duration="6200" height="1080" left="0" loopable="true" src="/api/5/media/1419622101/content?suffix=" title="H" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6200" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="38880" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="number_04%20%7B%22bts%22%3A%22obj%22%2C%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevrolet%22%3A%22w%22%7D%2C%20%22bta%22%3A%7B%22chevrolet%22%3A%220%2C-10%22%2C%22honda%22%3A%220%2C20%22%2C%22buick%22%3A%220%2C20%22%7D%7D" volume="1.0">
+      <transition begin="27000" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="28000" duration="3840" height="422" inPoint="2280" left="262" processHtml="false" top="336" valign="center" width="420"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 278px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">4</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="31840" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Reason%204%20%7B%22cie%22%3A%22-3000%22%2C%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22b%22%7D%7D" volume="1.0">
+      <transition begin="27000" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="28000" duration="3840" height="375" inPoint="2280" left="748" processHtml="false" top="362" valign="center" width="984"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{RENTAL CAR AVAILABLE}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="31840" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="banner_04%20%7B%22bis%22%3A%221361408786%22%7D" volume="1.0">
+      <video begin="25560" duration="6200" height="1080" left="0" loopable="true" src="/api/5/media/1419622101/content?suffix=" title="H" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6200" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="31760" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="number_03%20%7B%22bts%22%3A%22obj%22%2C%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevrolet%22%3A%22w%22%7D%2C%20%22bta%22%3A%7B%22chevrolet%22%3A%220%2C-10%22%2C%22honda%22%3A%220%2C20%22%2C%22buick%22%3A%220%2C20%22%7D%7D" volume="1.0">
+      <transition begin="19880" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="20880" duration="3840" height="422" inPoint="2280" left="262" processHtml="false" top="336" valign="center" width="420"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 278px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">3</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="24720" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Reason%203%20%7B%22cie%22%3A%22-3000%22%2C%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22b%22%7D%7D" volume="1.0">
+      <transition begin="19880" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="20880" duration="3840" height="385" inPoint="2280" left="748" processHtml="false" top="350" valign="center" width="984"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{RENTAL</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">CAR</span><span style="font-size: 70px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">AVAILABLE}} </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="24720" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="banner_03%20%7B%22bis%22%3A%221361408786%22%7D" volume="1.0">
+      <video begin="18600" duration="6200" height="1080" left="0" loopable="true" src="/api/5/media/1419622101/content?suffix=" title="H" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6200" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="24800" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="number_02%20%7B%22bts%22%3A%22obj%22%2C%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevrolet%22%3A%22w%22%7D%2C%20%22bta%22%3A%7B%22chevrolet%22%3A%220%2C-10%22%2C%22honda%22%3A%220%2C20%22%2C%22buick%22%3A%220%2C20%22%7D%7D" volume="1.0">
+      <transition begin="12760" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="13760" duration="3840" height="422" inPoint="2280" left="262" processHtml="false" top="336" valign="center" width="420"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 278px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">2</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="17600" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Reason%202%20%7B%22cie%22%3A%22-3000%22%2C%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22b%22%7D%7D" volume="1.0">
+      <transition begin="12760" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="13760" duration="3840" height="382" inPoint="2280" left="748" processHtml="false" top="353" valign="center" width="984"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{RENTAL CAR AVAILABLE}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="17600" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="banner_02%20%7B%22bis%22%3A%221361408786%22%7D" volume="1.0">
+      <video begin="11400" duration="6200" height="1080" left="0" loopable="true" src="/api/5/media/1419622101/content?suffix=" title="H" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6200" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="17600" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="number_01%20%7B%22bts%22%3A%22obj%22%2C%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%22chevrolet%22%3A%22w%22%7D%2C%20%22bta%22%3A%7B%22chevrolet%22%3A%220%2C-10%22%2C%22honda%22%3A%220%2C20%22%2C%22buick%22%3A%220%2C20%22%7D%7D" volume="1.0">
+      <transition begin="5640" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="6640" duration="3840" height="422" inPoint="2280" left="262" processHtml="false" top="336" valign="center" width="420"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 278px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">1</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="10480" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Reason%201%20%7B%22cie%22%3A%22-3000%22%2C%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22b%22%7D%7D" volume="1.0">
+      <transition begin="5640" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="6640" duration="3840" height="375" inPoint="2280" left="748" processHtml="false" top="362" valign="center" width="984"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{RENTAL CAR AVAILABLE}} </span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3840" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="10480" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="banner_01%20%7B%22bis%22%3A%221361408786%22%7D" volume="1.0">
+      <video begin="4240" duration="6200" height="1080" left="0" loopable="true" src="/api/5/media/1419622101/content?suffix=" title="H" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6200" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="10440" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="bk%20%7B%22bis%22%3A%221361408732%22%7D" volume="1.0">
+      <image begin="0" duration="75560" height="1213" left="0" src="/api/5/media/1420628241/content?suffix=" title="Artboard+3-100" top="-67" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="75560" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+  </layers>
+</timeline>

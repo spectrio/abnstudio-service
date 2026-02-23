@@ -1,0 +1,283 @@
+<timeline version="1">
+  <layers>
+    <layer title="Intro%20Title" volume="1.0">
+      <motionTitle begin="0" duration="6560" height="1920" id="908187867" left="-1" top="0" width="1080">
+        <lines>
+          <line font="Roboto" fontSize="90">{{Dare to}}</line>
+          <line font="Roboto-Bold" fontSize="140">{{Compare}}</line>
+          <line font="Roboto-RegularItalic" fontSize="65">{{Dealership Name}} </line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(162,205,58,1)" version="2"/>
+          <color key="1" value="rgba(255,255,255,1)" version="2"/>
+          <color key="2" value="rgba(162,205,58,1)" version="2"/>
+          <color key="3" value="rgba(255,255,255,1)" version="2"/>
+          <color key="4" value="rgba(255,255,255,1)" version="2"/>
+          <color key="5" value="rgba(255,255,255,1)" version="2"/>
+          <color key="6" value="rgba(162,205,58,1)" version="2"/>
+          <color key="7" value="rgba(50,50,50,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6560" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Headline" volume="1.0">
+      <text autoFit="false" begin="5120" duration="54880" height="127" left="40" processHtml="false" top="104" valign="center" width="611"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;">{{DARE TO COMPARE}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54880" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Subhead" volume="1.0">
+      <text autoFit="false" begin="5120" duration="54880" height="147" left="150" processHtml="false" top="275" valign="bottom" width="338"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto-RegularItalic; line-height: 115%; letter-spacing: 0px;">{{Services}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54880" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Dealership%20Name%202" volume="1.0">
+      <transition begin="7400" duration="1000" type="wipeDown"/>
+      <text autoFit="false" begin="8400" duration="51600" height="161" inPoint="1000" left="722" processHtml="false" top="266" valign="bottom" width="226"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 28px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{Competitor 1}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="51600" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Dealership%20Name%201" volume="1.0">
+      <transition begin="6560" duration="1000" type="wipeDown"/>
+      <text autoFit="false" begin="7560" duration="52440" height="169" inPoint="1000" left="496" processHtml="false" top="258" valign="bottom" width="224"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 28px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;">{{Your Dealership}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="52440" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Main%20Column%20Shades" volume="1.0">
+      <image begin="5720" duration="54280" height="1920" left="0" src="/api/5/media/1491020855/content?suffix=" title="V_GENERIC_COMPARISON_BOARD_TEMPLATE_01_2_SLIDING_COLUMNS_2019_KF_SHADES_MAIN" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54280" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="2nd%20Column%20Shades" volume="1.0">
+      <image begin="6960" duration="53040" height="1920" left="0" src="/api/5/media/1491020859/content?suffix=" title="V_GENERIC_COMPARISON_BOARD_TEMPLATE_01_2_SLIDING_COLUMNS_2019_KF_SHADES_01" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="53040" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Column%202%20Row%201" volume="1.0">
+      <transition begin="7480" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="7960" duration="52040" height="126" inPoint="480" left="720" processHtml="false" top="460" valign="top" width="232"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="52040" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%202%20Row%202" volume="1.0">
+      <transition begin="7680" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="8160" duration="51840" height="126" inPoint="480" left="725" processHtml="false" top="645" valign="top" width="224"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="51840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%202%20Row%203" volume="1.0">
+      <transition begin="7880" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="8360" duration="51640" height="126" inPoint="480" left="722" processHtml="false" top="820" valign="top" width="224"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="51640" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%202%20Row%204" volume="1.0">
+      <transition begin="8080" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="8560" duration="51440" height="126" inPoint="480" left="722" processHtml="false" top="1000" valign="top" width="226"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="51440" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%202%20Row%205" volume="1.0">
+      <transition begin="8280" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="8760" duration="51240" height="126" inPoint="480" left="728" processHtml="false" top="1180" valign="top" width="221"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="51240" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%202%20Row%206" volume="1.0">
+      <transition begin="8480" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="8960" duration="51040" height="126" inPoint="480" left="725" processHtml="false" top="1360" valign="top" width="224"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="51040" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%202%20Row%207" volume="1.0">
+      <transition begin="8680" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="9160" duration="50840" height="126" inPoint="480" left="722" processHtml="false" top="1541" valign="top" width="224"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 34px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="50840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%201%20Row%201" volume="1.0">
+      <transition begin="6960" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="7440" duration="52560" height="126" inPoint="480" left="493" processHtml="false" top="460" valign="top" width="232"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="52560" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%201%20Row%202" volume="1.0">
+      <transition begin="7120" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="7600" duration="52400" height="126" inPoint="480" left="496" processHtml="false" top="645" valign="top" width="229"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="52400" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%201%20Row%203" volume="1.0">
+      <transition begin="7280" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="7760" duration="52240" height="126" inPoint="480" left="493" processHtml="false" top="820" valign="top" width="229"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="52240" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%201%20Row%204" volume="1.0">
+      <transition begin="7480" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="7960" duration="52040" height="126" inPoint="480" left="493" processHtml="false" top="1000" valign="top" width="232"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="52040" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%201%20Row%205" volume="1.0">
+      <transition begin="7640" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="8120" duration="51880" height="126" inPoint="480" left="493" processHtml="false" top="1180" valign="top" width="229"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="51880" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%201%20Row%206" volume="1.0">
+      <transition begin="7840" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="8320" duration="51680" height="126" inPoint="1480" left="493" processHtml="false" top="1360" valign="top" width="232"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="51680" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Column%201%20Row%207" volume="1.0">
+      <transition begin="8000" duration="480" type="crossFade"/>
+      <text autoFit="false" begin="8480" duration="51520" height="126" inPoint="480" left="493" processHtml="false" top="1540" valign="top" width="232"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 35px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: 175%; letter-spacing: 0px;">{{$99.99}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="51520" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Service%201" volume="1.0">
+      <text autoFit="false" begin="5720" duration="54280" height="188" left="150" processHtml="false" top="470" valign="top" width="342"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 30px; color: rgb(255, 255, 255); font-family: Roboto-RegularItalic; line-height: 115%; letter-spacing: 0px;">{{Rotate, Balance and Four Wheel Alignment}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54280" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Service%202" volume="1.0">
+      <text autoFit="false" begin="5720" duration="54280" height="168" left="150" processHtml="false" top="650" valign="top" width="342"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 30px; color: rgb(255, 255, 255); font-family: Roboto-RegularItalic; line-height: 115%; letter-spacing: 0px;">{{Rotate, Balance and Four Wheel Alignment}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54280" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Service%203" volume="1.0">
+      <text autoFit="false" begin="5720" duration="54280" height="165" left="150" processHtml="false" top="830" valign="top" width="342"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 30px; color: rgb(255, 255, 255); font-family: Roboto-RegularItalic; line-height: 115%; letter-spacing: 0px;">{{Rotate, Balance and Four Wheel Alignment}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54280" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Service%204" volume="1.0">
+      <text autoFit="false" begin="5720" duration="54280" height="173" left="150" processHtml="false" top="1010" valign="top" width="342"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 30px; color: rgb(255, 255, 255); font-family: Roboto-RegularItalic; line-height: 115%; letter-spacing: 0px;">{{Rotate, Balance and Four Wheel Alignment}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54280" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Service%205" volume="1.0">
+      <text autoFit="false" begin="5720" duration="54280" height="160" left="150" processHtml="false" top="1190" valign="top" width="342"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 30px; color: rgb(255, 255, 255); font-family: Roboto-RegularItalic; line-height: 115%; letter-spacing: 0px;">{{Rotate, Balance and Four Wheel Alignment}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54280" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Service%206" volume="1.0">
+      <text autoFit="false" begin="5720" duration="54280" height="160" left="150" processHtml="false" top="1370" valign="top" width="340"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 30px; color: rgb(255, 255, 255); font-family: Roboto-RegularItalic; line-height: 115%; letter-spacing: 0px;">{{Rotate, Balance and Four Wheel Alignment}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54280" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Service%207" volume="1.0">
+      <text autoFit="false" begin="5720" duration="54280" height="165" left="150" processHtml="false" top="1550" valign="top" width="342"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 30px; color: rgb(255, 255, 255); font-family: Roboto-RegularItalic; line-height: 115%; letter-spacing: 0px;">{{Rotate, Balance and Four Wheel Alignment}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54280" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="4120" duration="55880" height="165" left="700" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="75" volume="1.0" width="324">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="55880" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Intro%20Background" volume="1.0">
+      <text autoFit="false" backgroundColor="#a2cd3a" begin="0" duration="3120" height="1916" left="-428" processHtml="false" top="3" width="1933"><![CDATA[<div align="center"><span style="font-size: 172px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Background" volume="1.0">
+      <video begin="5720" duration="54280" height="1920" left="0" loopable="false" src="/api/5/media/1490825568/content?suffix=" title="V_GENERIC_COMPARISON_BOARD_TEMPLATE_01_2_SLIDING_COLUMNS_2019_KF_BG" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54280" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

@@ -1,0 +1,373 @@
+<timeline version="1">
+  <layers>
+    <layer title="Transition" volume="1.0">
+      <video begin="3000" duration="6840" height="1080" left="0" loopable="true" src="/api/5/media/1605887926/content?suffix=" title="H_DS_GENERIC_TESTMONIALS_TRANSITION_2020_BM" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6840" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="0" duration="5360" height="196" left="1450" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="85" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5360" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Quotation%20mark" volume="1.0">
+      <transition begin="4360" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="5360" duration="12200" flipH="true" flipV="true" height="108" inPoint="1000" left="209" src="/api/5/media/1605527850/content?suffix=" title="quotation+marks" top="167" volume="1.0" width="132">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3000" value="1"/>
+          <entry time="12200" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="17560" duration="1000" type="3dFlipHorizontal"/>
+      <transition begin="18600" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="19600" duration="11200" flipH="true" flipV="true" height="108" inPoint="1000" left="209" src="/api/5/media/1605527850/content?suffix=" title="quotation+marks" top="167" volume="1.0" width="132">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3000" value="1"/>
+          <entry time="11200" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="30800" duration="1000" type="3dFlipHorizontal"/>
+      <transition begin="32280" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="33280" duration="10760" flipH="true" flipV="true" height="108" inPoint="1400" left="209" src="/api/5/media/1605527850/content?suffix=" title="quotation+marks" top="167" volume="1.0" width="132">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3000" value="1"/>
+          <entry time="10760" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="44040" duration="1000" type="3dFlipHorizontal"/>
+      <transition begin="45560" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="46560" duration="10800" flipH="true" flipV="true" height="108" inPoint="1000" left="209" src="/api/5/media/1605527850/content?suffix=" title="quotation+marks" top="167" volume="1.0" width="132">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3000" value="1"/>
+          <entry time="10800" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="57360" duration="1000" type="3dFlipHorizontal"/>
+      <transition begin="58760" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="59760" duration="10760" flipH="true" flipV="true" height="108" inPoint="1000" left="209" src="/api/5/media/1605527850/content?suffix=" title="quotation+marks" top="167" volume="1.0" width="132">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3000" value="1"/>
+          <entry time="10760" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="4360" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="5360" duration="12200" height="147" inPoint="1000" left="1452" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="779" volume="1.0" width="288">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3107" value="1"/>
+          <entry time="12200" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="17560" duration="1000" type="3dFlipHorizontal"/>
+      <transition begin="18600" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="19600" duration="11240" height="147" inPoint="2000" left="1452" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="779" volume="1.0" width="288">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2107" value="1"/>
+          <entry time="11240" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="30840" duration="1000" type="3dFlipHorizontal"/>
+      <transition begin="32280" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="33280" duration="10800" height="147" inPoint="3000" left="1452" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="779" volume="1.0" width="288">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1107" value="1"/>
+          <entry time="10800" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="44080" duration="1000" type="3dFlipHorizontal"/>
+      <transition begin="45520" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="46520" duration="10800" height="147" inPoint="2000" left="1452" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="779" volume="1.0" width="288">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2107" value="1"/>
+          <entry time="10800" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="57320" duration="1000" type="3dFlipHorizontal"/>
+      <transition begin="58760" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="59760" duration="10760" height="147" inPoint="2000" left="1452" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="779" volume="1.0" width="288">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2107" value="1"/>
+          <entry time="10760" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Stars%205" volume="1.0">
+      <text autoFit="false" begin="58320" duration="12200" height="168" left="490" processHtml="false" top="732" width="960"><![CDATA[<div align="center"><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;">{{</span></span><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;"></span><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;">}}{{}}{{}}{{}}{{}}</span></span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2943" value="1"/>
+          <entry time="12200" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Rater%205" volume="1.0">
+      <text autoFit="true" begin="58320" duration="12200" height="126" left="725" processHtml="false" top="699" valign="center" width="501"><![CDATA[<div align="center"><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{DEALER RATER}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3032" value="1"/>
+          <entry time="12200" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Name%205%20%7B%22cie%22%3A%22-400%22%7D" volume="1.0">
+      <text autoFit="true" begin="58360" duration="12160" height="133" left="178" processHtml="false" top="625" valign="center" width="1590"><![CDATA[<div align="center"><span style="font-size: 46px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{NAME HERE}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3032" value="1"/>
+          <entry time="12160" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Review%205" volume="1.0">
+      <text autoFit="true" begin="58320" duration="12200" height="385" left="492" processHtml="false" top="215" valign="center" width="958"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 80px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: -1px;">{{Lorem ipsum dolor sit amet, consectetur adipiscing elit.}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3003" value="1"/>
+          <entry time="12200" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="white_bk_05" volume="1.0">
+      <transition begin="57320" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="58320" duration="12200" height="842" inPoint="2240" left="156" src="/api/5/media/1323720155/content?suffix=" title="Rectangle+1" top="115" volume="1.0" width="1613">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12200" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Stars%204" volume="1.0">
+      <text autoFit="false" begin="45080" duration="12280" height="168" left="490" processHtml="false" top="732" width="960"><![CDATA[<div align="center"><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;">{{</span></span><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;"></span><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;">}}{{}}{{}}{{}}{{}}</span></span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2943" value="1"/>
+          <entry time="12280" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="57360" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Rater%204" volume="1.0">
+      <text autoFit="true" begin="45080" duration="12240" height="126" left="725" processHtml="false" top="699" valign="center" width="501"><![CDATA[<div align="center"><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{DEALER RATER}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3032" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="57320" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Name%204%20%7B%22cie%22%3A%22-400%22%7D" volume="1.0">
+      <text autoFit="true" begin="45040" duration="12240" height="133" left="178" processHtml="false" top="625" valign="center" width="1590"><![CDATA[<div align="center"><span style="font-size: 46px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{NAME HERE}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3032" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="57280" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Review%204" volume="1.0">
+      <text autoFit="true" begin="45080" duration="12240" height="385" left="492" processHtml="false" top="215" valign="center" width="958"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 80px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: -1px;">{{Lorem ipsum dolor sit amet, consectetur adipiscing elit.}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3003" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="57320" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="white_bk_04" volume="1.0">
+      <transition begin="44080" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="45080" duration="12240" height="842" inPoint="2240" left="156" src="/api/5/media/1323720155/content?suffix=" title="Rectangle+1" top="115" volume="1.0" width="1613">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="57320" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Stars%203" volume="1.0">
+      <text autoFit="false" begin="31800" duration="12280" height="168" left="490" processHtml="false" top="732" width="960"><![CDATA[<div align="center"><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;">{{</span></span><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;"></span><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;">}}{{}}{{}}{{}}{{}}</span></span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2943" value="1"/>
+          <entry time="12280" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="44080" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Rater%203" volume="1.0">
+      <text autoFit="true" begin="31800" duration="12240" height="126" left="725" processHtml="false" top="699" valign="center" width="501"><![CDATA[<div align="center"><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{DEALER RATER}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3032" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="44040" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Name%203%20%7B%22cie%22%3A%22-400%22%7D" volume="1.0">
+      <text autoFit="true" begin="31840" duration="12240" height="133" left="178" processHtml="false" top="625" valign="center" width="1590"><![CDATA[<div align="center"><span style="font-size: 46px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{NAME HERE}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3032" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="44080" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Review%203" volume="1.0">
+      <text autoFit="true" begin="31800" duration="12240" height="385" left="492" processHtml="false" top="215" valign="center" width="958"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 80px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: -1px;">{{Lorem ipsum dolor sit amet, consectetur adipiscing elit.}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3003" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="44040" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="white_bk_03" volume="1.0">
+      <transition begin="30800" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="31800" duration="12240" height="842" inPoint="2240" left="156" src="/api/5/media/1323720155/content?suffix=" title="Rectangle+1" top="115" volume="1.0" width="1613">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="44040" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Stars%202" volume="1.0">
+      <text autoFit="false" begin="18560" duration="12240" height="168" left="490" processHtml="false" top="732" width="960"><![CDATA[<div align="center"><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;">{{</span></span><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;"></span><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;">}}{{}}{{}}{{}}{{}}</span></span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2943" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="30800" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Rater%202" volume="1.0">
+      <text autoFit="true" begin="18560" duration="12240" height="126" left="725" processHtml="false" top="699" valign="center" width="501"><![CDATA[<div align="center"><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{DEALER RATER}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3032" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="30800" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Name%202%20%7B%22cie%22%3A%22-400%22%7D" volume="1.0">
+      <text autoFit="true" begin="18560" duration="12240" height="133" left="178" processHtml="false" top="625" valign="center" width="1590"><![CDATA[<div align="center"><span style="font-size: 46px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{NAME HERE}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3032" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="30800" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Review%202" volume="1.0">
+      <text autoFit="true" begin="18560" duration="12240" height="385" left="492" processHtml="false" top="215" valign="center" width="958"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 80px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: -1px;">{{Lorem ipsum dolor sit amet, consectetur adipiscing elit.}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3003" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="30800" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="white_bk_02" volume="1.0">
+      <transition begin="17560" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="18560" duration="12240" height="842" inPoint="2240" left="156" src="/api/5/media/1323720155/content?suffix=" title="Rectangle+1" top="115" volume="1.0" width="1613">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="30800" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Stars%201" volume="1.0">
+      <text autoFit="false" begin="5360" duration="12240" height="168" left="490" processHtml="false" top="732" width="960"><![CDATA[<div align="center"><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;">{{</span></span><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;"></span><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(235, 180, 10); line-height: normal; letter-spacing: 0px;">}}{{}}{{}}{{}}{{}}</span></span></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2943" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="17600" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Rater%201" volume="1.0">
+      <text autoFit="true" begin="5360" duration="12240" height="126" left="725" processHtml="false" top="699" width="501"><![CDATA[<div align="center"><span style="font-size: 36px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{DEALER RATER}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3032" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="17600" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Name%201" volume="1.0">
+      <text autoFit="true" begin="5360" duration="12240" height="133" left="178" processHtml="false" top="625" valign="center" width="1590"><![CDATA[<div align="center"><span style="font-size: 44px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{NAME HERE}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3032" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="17600" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="Review%201" volume="1.0">
+      <text autoFit="true" begin="5360" duration="12240" height="385" left="492" processHtml="false" top="215" valign="center" width="958"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 80px; color: rgb(0, 0, 0); font-family: Lato; line-height: normal; letter-spacing: -1px;">{{Lorem ipsum dolor sit amet, consectetur adipiscing elit.}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="3003" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="17600" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="white_bk_01" volume="1.0">
+      <transition begin="4360" duration="1000" type="3dFlipHorizontal"/>
+      <image begin="5360" duration="12240" height="842" inPoint="2240" left="156" src="/api/5/media/1323720155/content?suffix=" title="Rectangle+1" top="115" volume="1.0" width="1613">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12240" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="17600" duration="1000" type="3dFlipHorizontal"/>
+    </layer>
+    <layer title="white_bk_01" volume="1.0">
+      <video begin="0" duration="5360" height="1080" left="0" loopable="true" src="/api/5/media/1605884321/content?suffix=" title="H_DS_GENERIC_TESTIMONIALS_INTRO_2020_BM" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5360" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="main_bk" volume="1.0">
+      <image begin="0" duration="70520" height="1080" left="-9" src="/api/5/media/1323718751/content?suffix=" title="Wide+White+Background+3d+illustration" top="0" volume="1.0" width="1938">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="70520" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+  </layers>
+</timeline>

@@ -1,0 +1,155 @@
+<timeline version="1">
+  <layers>
+    <layer title="Title%20%7B%22bts%22%3A%22h3%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="8200" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="9200" duration="5720" height="117" inPoint="2160" left="4" processHtml="false" top="612" width="828"><![CDATA[<div align="center" style="text-align: right;"><span style="font-size: 54px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 90%; letter-spacing: 0px;">{{Title}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5720" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="1440" duration="4480" height="196" inPoint="1440" left="1491" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="847" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="463" value="1"/>
+          <entry time="4480" value="0.9986424088463838"/>
+        </opacity>
+      </image>
+      <transition begin="5920" duration="1000" type="animationPaperPlane"/>
+      <transition begin="8920" duration="1000" type="crossFade"/>
+      <image begin="9920" duration="5000" height="196" inPoint="8280" left="38" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="851" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="0.9986424088463838"/>
+          <entry time="5000" value="0.9925712306491564"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+      <transition begin="16960" duration="1000" type="crossFade"/>
+      <image begin="17960" duration="15440" height="196" inPoint="15680" left="1502" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="850" volume="1.0" width="384">
+        <opacity>
+          <entry time="1000" value="0.9925712306491564"/>
+          <entry time="15440" value="0.9870916031480691"/>
+        </opacity>
+      </image>
+      <transition begin="33400" duration="1000" type="patternBubble"/>
+      <transition begin="34440" duration="1000" type="crossBlur"/>
+      <image begin="35440" duration="6320" height="196" inPoint="16640" left="40" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="49" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="0.9925712306491564"/>
+          <entry time="6320" value="0.9870916031480691"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="blank%202%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22w%22%2C%22honda%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="33400" duration="2000" type="patternBubble"/>
+      <text autoFit="false" begin="35400" duration="6360" height="339" inPoint="2000" left="0" processHtml="false" top="761" width="1920"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 114px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 90%; letter-spacing: 0px;">Thanks for Being Awesome</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6360" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="crowd_bk" volume="1.0">
+      <transition begin="33400" duration="2000" type="patternBubble"/>
+      <image begin="35400" duration="6360" height="1080" inPoint="2000" left="0" src="/api/5/media/1204176526/content?suffix=" title="4" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6360" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="text_02%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%223%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22g%22%7D%7D" volume="1.0">
+      <transition begin="15040" duration="2000" type="3dTileHorizontal"/>
+      <text autoFit="false" begin="17040" duration="16600" height="237" inPoint="2000" left="786" processHtml="false" top="-3" width="1105"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 146px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 90%; letter-spacing: 0px;">Fun Facts</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16600" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="33640" duration="2000" type="patternBubble"/>
+    </layer>
+    <layer title="paragraph%20%7B%22bts%22%3A%22p%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%223%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22g%22%7D%7D" volume="1.0">
+      <transition begin="15040" duration="2000" type="3dTileHorizontal"/>
+      <text autoFit="false" begin="17040" duration="16600" height="691" inPoint="2000" left="789" processHtml="false" top="147" width="1094"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 54px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">{{How long has the employee worked at the dealership?}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 54px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: 110%; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 54px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">{{Favorite football team or favorite hobbies?}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 54px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: 110%; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 54px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">{{Do they have pets or kids? What are the names?}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16600" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="33640" duration="2000" type="patternBubble"/>
+    </layer>
+    <layer title="frame_01%20%7B%22bis%22%3A%221202875970%22%7D" volume="1.0">
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+      <image begin="16920" duration="16720" height="1080" inPoint="2000" left="0" src="/api/5/media/1418282422/content?suffix=" title="3" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16720" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="33640" duration="2000" type="patternBubble"/>
+    </layer>
+    <layer title="image" volume="1.0">
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+      <image begin="16920" duration="16720" height="1080" inPoint="2000" left="-25" src="/api/5/media/1431976960/content?suffix=" title="woman+2" top="0" volume="1.0" width="772">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14720" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="33640" duration="2000" type="patternBubble"/>
+    </layer>
+    <layer title="name%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%20%22buick%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="7680" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="8680" duration="6240" height="192" inPoint="1000" left="-117" processHtml="false" top="474" width="951"><![CDATA[<div align="center" style="text-align: right;"><span style="font-size: 80px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{Name goes here}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6240" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="frame_02" volume="1.0">
+      <transition begin="5920" duration="2000" type="3dTileHorizontal"/>
+      <image begin="7920" duration="7000" height="950" inPoint="2000" left="982" src="/api/5/media/1145606826/content?suffix=" title="FRAME" top="55" volume="1.0" width="714">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Employee%20Photo" volume="1.0">
+      <transition begin="5920" duration="2000" type="3dTileHorizontal"/>
+      <image begin="7920" duration="7000" height="745" inPoint="2000" left="1076" src="/api/5/media/1431976960/content?suffix=" title="woman+2" top="156" volume="1.0" width="533">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="7000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="banner_02%20%7B%22bis%22%3A%221202875662%22%7D" volume="1.0">
+      <transition begin="5920" duration="2000" type="gridDiagonal"/>
+      <image begin="7920" duration="7000" height="1080" inPoint="2000" left="0" src="/api/5/media/1418248173/content?suffix=" title="2" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="7000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="gridDiagonal"/>
+    </layer>
+    <layer title="default_bk" volume="1.0">
+      <transition begin="200" duration="2000" type="animationPaperPlane"/>
+      <image begin="2200" duration="2720" height="1080" inPoint="2000" left="0" src="/api/5/media/1202072796/content?suffix=" title="slide+1" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="720" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="4920" duration="2000" type="animationPaperPlane"/>
+    </layer>
+  </layers>
+</timeline>

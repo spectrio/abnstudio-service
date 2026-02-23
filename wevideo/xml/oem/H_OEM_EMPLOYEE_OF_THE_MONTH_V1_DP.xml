@@ -1,0 +1,81 @@
+<timeline version="1">
+  <layers>
+    <layer title="fade_in_out" volume="1.0">
+      <text autoFit="false" backgroundColor="#000000" begin="0" duration="1000" height="1417" left="-74" processHtml="false" top="-22" width="2107"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="218" value="1"/>
+          <entry time="1000" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="0" duration="20000" height="196" left="1468" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="872" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Title%20Line%201%20%7B%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%2C%22buick%22%3A%22g%22%2C%22honda%22%3A%22b%22%2C%22gmc%22%3A%221%22%7D%7D" volume="1.0">
+      <transition begin="600" duration="2000" type="directionalWipe"/>
+      <text autoFit="false" begin="2600" duration="17400" height="407" inPoint="3000" left="890" processHtml="false" top="8" valign="bottom" width="935"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 100px; color: rgb(45, 47, 48); font-family: Roboto; line-height: 110%; letter-spacing: -1px;">{{Employee of the Month}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="17400" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Name%20%7B%22bts%22%3A%22h2%22%2C%22bto%22%3A%7B%22honda%22%3A%221%22%2C%22chevrolet%22%3A%223%22%2C%22buick%22%3A%221%22%2C%22gmc%22%3A%221%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="1160" duration="1120" height="154" inPoint="5600" left="893" processHtml="false" top="396" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(14, 102, 92); font-family: Roboto; line-height: 90%; letter-spacing: -1px;">{{Name Goes Here}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="747" value="0"/>
+          <entry time="1120" value="1"/>
+          <entry time="1120" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1547" endTop="350" endWidth="608" startHeight="1080" startLeft="1547" startTop="280" startWidth="608" type="kenBurns"/>
+      </text>
+      <text autoFit="false" begin="2280" duration="17720" height="154" inPoint="5760" left="893" processHtml="false" top="350" width="957"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 70px; color: rgb(14, 102, 92); font-family: Roboto; line-height: 90%; letter-spacing: -1px;">{{Name Goes Here}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="17720" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1547" endTop="350" endWidth="608" startHeight="1080" startLeft="1547" startTop="350" startWidth="608" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="Paragraph%20%7B%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22honda%22%3A%22b%22%2C%22chevrolet%22%3A%22g%22%2C%22buick%22%3A%22g%22%2C%22gmc%22%3A%221%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="1680" duration="1120" height="417" inPoint="3680" left="975" processHtml="false" top="525" valign="top" width="892"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 32px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{</span><span style="color: rgb(45, 47, 48); font-family: Roboto; font-size: 32px; line-height: normal; letter-spacing: 0px;">INTRO - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget massa ut massa tincidunt posuere. Doec pulvinar tincidunt enim, ut tempus quam vestibulum et. Phasellus at quam vitae ante rhoncus faucibus id nec mi. Praesent sed purus ante. Sed varius placerat nisi, eu laoreet orci molestie sed.</span><span style="font-size: 32px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="647" value="0"/>
+          <entry time="1120" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1547" endTop="475" endWidth="608" startHeight="1080" startLeft="1547" startTop="290" startWidth="608" type="kenBurns"/>
+      </text>
+      <text autoFit="false" begin="2800" duration="17200" height="417" inPoint="4320" left="900" processHtml="false" top="475" valign="top" width="892"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 32px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{</span><span style="color: rgb(45, 47, 48); font-family: Roboto; font-size: 32px; line-height: normal; letter-spacing: 0px;">INTRO - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget massa ut massa tincidunt posuere. Doec pulvinar tincidunt enim, ut tempus quam vestibulum et. Phasellus at quam vitae ante rhoncus faucibus id nec mi. Praesent sed purus ante. Sed varius placerat nisi, eu laoreet orci molestie sed.</span><span style="font-size: 32px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="17200" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1547" endTop="475" endWidth="608" startHeight="1080" startLeft="1547" startTop="475" startWidth="608" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="background" volume="1.0">
+      <text autoFit="false" backgroundColor="#ffffff" begin="0" duration="20000" height="1426" left="850" processHtml="false" top="-75" width="1136"><![CDATA[<div align="left"><span style="font-size: 57px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20000" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Employee%20Photo" volume="1.0">
+      <image begin="0" duration="20000" height="1080" left="0" src="/api/5/media/1431969918/content?suffix=" title="woman_bk_left+new" top="0" volume="1.0" width="853">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+  </layers>
+</timeline>

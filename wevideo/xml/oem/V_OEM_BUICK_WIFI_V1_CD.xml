@@ -1,0 +1,39 @@
+<timeline version="1">
+  <layers>
+    <layer title="Password" volume="0.0">
+      <transition begin="9080" duration="1000" type="gridDiagonal"/>
+      <text autoFit="false" begin="10080" duration="14920" height="95" inPoint="7680" left="301" processHtml="false" top="1374" width="733"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 43px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: 150%; letter-spacing: 1px;">{{webuycars}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14920" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Network%20ID" volume="0.0">
+      <transition begin="8080" duration="1000" type="gridDiagonal"/>
+      <text autoFit="false" begin="9080" duration="15920" height="95" inPoint="6680" left="304" processHtml="false" top="1294" width="735"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 43px; color: rgb(255, 255, 255); font-family: BUIFUBK_; line-height: 150%; letter-spacing: 1px;">{{GM GuestWIFI}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="15920" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%20%221%22%7D" volume="0.0">
+      <transition begin="2400" duration="1000" type="crossMosaic"/>
+      <image begin="3400" duration="21600" height="220" inPoint="1000" left="323" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1638" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="21600" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="After%20Effects%20Video" volume="0.0">
+      <video begin="0" duration="25000" height="1920" left="0" loopable="true" src="/api/5/media/2028166095/content?suffix=" title="V_DS_WEVIDEO_BUICK_WIFI_CD" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="25000" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

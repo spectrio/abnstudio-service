@@ -1,0 +1,12 @@
+<timeline version="1">
+  <layers>
+    <layer title="Video%201" volume="1.0">
+      <video begin="0" duration="19800" loopable="false" src="/api/5/media/1035705555/content?suffix=" title="deal+body+shop" volume="1.0">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="19800" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

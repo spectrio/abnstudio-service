@@ -1,0 +1,284 @@
+<timeline version="1">
+  <layers>
+    <layer title="Quotation%20Mark" volume="1.0">
+      <image begin="6120" duration="82920" flipH="true" flipV="true" height="132" left="68" src="/api/5/media/1606141551/content?suffix=" title="quotationmarksgray" top="80" volume="1.0" width="162">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2290" value="1"/>
+          <entry time="82920" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%22w%22%7D" volume="1.0">
+      <image begin="6120" duration="82920" height="220" left="605" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1661" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="2292" value="1"/>
+          <entry time="82920" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Headline%201%20%7B%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22w%22%7D%7D" volume="1.0">
+      <motionTitle begin="0" duration="6120" height="2458" id="908187168" left="-151" top="-269" width="1382">
+        <lines>
+          <line font="Roboto-Bold" fontSize="88">SEE WHAT OUR</line>
+          <line font="Roboto" fontSize="50">CUSTOMERS ARE SAYING</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(255,255,255,1)" version="2"/>
+          <color key="1" value="rgba(255,255,255,1)" version="2"/>
+          <color key="2" value="rgb(255, 255, 255)" version="2"/>
+          <color key="3" value="rgb(255, 255, 255)" version="2"/>
+          <color key="4" value="rgb(255, 255, 255)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6120" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="headline_bg%20%7B%22bts%22%3A%22bg%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%221%22%2C%22honda%22%3A%221%22%2C%22buick%22%3A%221%22%2C%22gmc%22%3A%22b%22%7D%7D" volume="0">
+      <video begin="0" duration="6120" flipH="true" height="1070" left="-411" loopable="true" rotation="90" src="/api/5/media/1607496370/content?suffix=" title="H_DS_OEM_TESTIMONIALS_FRAME_BM" top="425" volume="1.0" width="1901">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6120" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="6120" value="1"/>
+        </volume>
+      </video>
+    </layer>
+    <layer title="intro_slide" volume="1.0">
+      <image begin="0" duration="6120" height="1920" left="-1167" src="/api/5/media/1195053350/content?suffix=" title="default_cover" top="0" volume="1.0" width="3413">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6120" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="6120" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Name%205%20%7B%22mtc%22%3A%5B%224%22%2C%224%22%2C%221%22%5D%2C%20%22mtf%22%3A%5B%22b%22%2C%22r%22%5D%7D" volume="1.0">
+      <motionTitle begin="73280" duration="14760" height="1374" id="908187234" left="52" top="25" width="773">
+        <lines>
+          <line font="Roboto" fontSize="130">Name Goes Here</line>
+          <line font="Roboto" fontSize="82">website</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(45,47,48,1)" version="2"/>
+          <color key="1" value="rgba(45,47,48,1)" version="2"/>
+          <color key="2" value="rgba(14,102,92,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Stars%205%20%7B%22bts%22%3A%22fg%22%7D" volume="1.0">
+      <transition begin="72280" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="73280" duration="14760" height="81" inPoint="1000" left="104" processHtml="false" top="1326" valign="top" width="502"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">    </span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="88040" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Review%205%20%7B%22cie%22%3A%221%22%2C%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%7D%7D" volume="1.0">
+      <transition begin="72280" duration="1000" type="crossFade"/>
+      <text autoFit="true" begin="73280" duration="14760" height="723" inPoint="1000" left="103" processHtml="false" top="264" valign="center" width="897"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">Lore</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">m</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;"> i</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">p</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">sum do</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">l</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">or sit am</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">e</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">t,</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">con</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">s</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">ectet</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">u</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">r adipiscing eli</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">t</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">.</span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="88040" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Name%204%20%7B%22mtc%22%3A%5B%224%22%2C%224%22%2C%221%22%5D%2C%20%22mtf%22%3A%5B%22b%22%2C%22r%22%5D%7D" volume="1.0">
+      <motionTitle begin="56520" duration="14760" height="1374" id="908187234" left="52" top="25" width="773">
+        <lines>
+          <line font="Roboto" fontSize="130">Name Goes Here</line>
+          <line font="Roboto" fontSize="82">website</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(45,47,48,1)" version="2"/>
+          <color key="1" value="rgba(45,47,48,1)" version="2"/>
+          <color key="2" value="rgba(14,102,92,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Stars%204%20%7B%22bts%22%3A%22fg%22%7D" volume="1.0">
+      <transition begin="55520" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="56520" duration="14760" height="81" inPoint="1000" left="104" processHtml="false" top="1326" valign="top" width="502"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">    </span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="71280" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Review%204%20%7B%22cie%22%3A%221%22%2C%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%7D%7D" volume="1.0">
+      <transition begin="55520" duration="1000" type="crossFade"/>
+      <text autoFit="true" begin="56520" duration="14760" height="723" inPoint="1000" left="103" processHtml="false" top="264" valign="center" width="897"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">Lore</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">m</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;"> i</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">p</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">sum do</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">l</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">or sit am</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">e</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">t,</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">con</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">s</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">ectet</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">u</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">r adipiscing eli</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">t</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">.</span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="71280" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Name%203%20%7B%22mtc%22%3A%5B%224%22%2C%224%22%2C%221%22%5D%2C%20%22mtf%22%3A%5B%22b%22%2C%22r%22%5D%7D" volume="1.0">
+      <motionTitle begin="39760" duration="14760" height="1374" id="908187234" left="52" top="25" width="773">
+        <lines>
+          <line font="Roboto" fontSize="130">Name Goes Here</line>
+          <line font="Roboto" fontSize="82">website</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(45,47,48,1)" version="2"/>
+          <color key="1" value="rgba(45,47,48,1)" version="2"/>
+          <color key="2" value="rgba(14,102,92,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Stars%203%20%7B%22bts%22%3A%22fg%22%7D" volume="1.0">
+      <transition begin="38760" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="39760" duration="14760" height="81" inPoint="1000" left="104" processHtml="false" top="1326" valign="top" width="502"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">    </span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="54520" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Review%203%20%7B%22cie%22%3A%221%22%2C%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%7D%7D" volume="1.0">
+      <transition begin="38760" duration="1000" type="crossFade"/>
+      <text autoFit="true" begin="39760" duration="14760" height="723" inPoint="1000" left="103" processHtml="false" top="264" valign="center" width="897"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">Lore</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">m</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;"> i</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">p</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">sum do</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">l</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">or sit am</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">e</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">t,</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">con</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">s</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">ectet</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">u</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">r adipiscing eli</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">t</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">.</span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="54520" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Name%202%20%7B%22mtc%22%3A%5B%224%22%2C%224%22%2C%221%22%5D%2C%20%22mtf%22%3A%5B%22b%22%2C%22r%22%5D%7D" volume="1.0">
+      <motionTitle begin="23000" duration="14760" height="1374" id="908187234" left="52" top="25" width="773">
+        <lines>
+          <line font="Roboto" fontSize="130">Name Goes Here</line>
+          <line font="Roboto" fontSize="82">website</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(45,47,48,1)" version="2"/>
+          <color key="1" value="rgba(45,47,48,1)" version="2"/>
+          <color key="2" value="rgba(14,102,92,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Stars%202%20%7B%22bts%22%3A%22fg%22%7D" volume="1.0">
+      <transition begin="22000" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="23000" duration="14760" height="81" inPoint="1000" left="104" processHtml="false" top="1326" valign="top" width="502"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">    </span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="37760" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Review%202%20%7B%22cie%22%3A%221%22%2C%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%7D%7D" volume="1.0">
+      <transition begin="22000" duration="1000" type="crossFade"/>
+      <text autoFit="true" begin="23000" duration="14760" height="723" inPoint="1000" left="103" processHtml="false" top="264" valign="center" width="897"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">Lore</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">m</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;"> i</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">p</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">sum do</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">l</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">or sit am</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">e</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">t,</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">con</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">s</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">ectet</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">u</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">r adipiscing eli</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">t</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">.</span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="37760" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Name%201%20%7B%22mtc%22%3A%5B%224%22%2C%224%22%2C%221%22%5D%2C%20%22mtf%22%3A%5B%22b%22%2C%22r%22%5D%7D" volume="1.0">
+      <motionTitle begin="6240" duration="14760" height="1374" id="908187234" left="52" top="25" width="773">
+        <lines>
+          <line font="Roboto" fontSize="130">Name Goes Here</line>
+          <line font="Roboto" fontSize="82">website</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(45,47,48,1)" version="2"/>
+          <color key="1" value="rgba(45,47,48,1)" version="2"/>
+          <color key="2" value="rgba(14,102,92,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </motionTitle>
+      <motionTitle begin="25160" duration="6480" id="908187234">
+        <lines>
+          <line font="Arial-BoldMT" fontSize="129">Primary text</line>
+          <line font="ArialMT" fontSize="92">Secondary text</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(14, 102, 92, 1)" version="2"/>
+          <color key="1" value="rgba(45, 47, 48, 1)" version="2"/>
+          <color key="2" value="rgba(45, 47, 48, 1)" version="2"/>
+          <color key="3" value="rgba(14, 102, 92, 1)" version="2"/>
+          <color key="4" value="rgba(45, 47, 48, 1)" version="2"/>
+          <color key="5" value="rgba(45, 47, 48, 1)" version="2"/>
+          <color key="6" value="rgba(14, 102, 92, 1)" version="2"/>
+          <color key="7" value="rgba(45, 47, 48, 1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6480" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Stars%201%20%7B%22bts%22%3A%22fg%22%7D" volume="1.0">
+      <transition begin="5240" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="6240" duration="14760" height="81" inPoint="1000" left="104" processHtml="false" top="1326" valign="top" width="502"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 38px; color: rgb(0, 0, 0); font-family: FontAwesome; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">    </span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="21000" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Review%201%20%7B%22cie%22%3A%221%22%2C%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%223%22%7D%7D" volume="1.0">
+      <transition begin="5240" duration="1000" type="crossFade"/>
+      <text autoFit="true" begin="6240" duration="14760" height="723" inPoint="1000" left="103" processHtml="false" top="264" valign="center" width="897"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">Lore</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">m</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;"> i</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">p</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">sum do</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">l</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">or sit am</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">e</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">t,</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;"> </span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">con</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">s</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">ectet</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">u</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">r adipiscing eli</span></span><span style="font-size: 82px; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">t</span></span></span><span style="font-size: 82px; color: rgb(0, 0, 0); font-family: Roboto; line-height: normal; letter-spacing: 0px;"><span style="color: rgb(45, 47, 48); line-height: normal; letter-spacing: 0px;">.</span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14760" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="21000" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="color_bk%20%7B%22bts%22%3A%22bg%22%7D" volume="1.0">
+      <text autoFit="false" backgroundColor="#ffffff" begin="0" duration="89040" height="1944" left="0" processHtml="false" top="0" width="1089"><![CDATA[<div align="left"><span style="font-size: 60px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1000" value="0.9"/>
+          <entry time="89040" value="0.9"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="main_bk" volume="1.0">
+      <image begin="0" duration="89040" height="1920" left="-1167" src="/api/5/media/1195053350/content?suffix=" title="default_cover" top="0" volume="1.0" width="3413">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="89040" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+  </layers>
+</timeline>

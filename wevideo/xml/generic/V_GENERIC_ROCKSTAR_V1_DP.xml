@@ -1,0 +1,158 @@
+<timeline version="1">
+  <layers>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="0" duration="1000" type="directionalWipe"/>
+      <image begin="1000" duration="3520" height="220" inPoint="1000" left="600" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1650" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3520" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="4520" duration="1000" type="3dTileHorizontal"/>
+      <image begin="5520" duration="4280" height="220" inPoint="1000" left="50" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1655" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4280" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="9800" duration="1000" type="directionalWipe"/>
+      <image begin="10800" duration="19320" height="220" inPoint="1000" left="604" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1649" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="19320" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Heading%204" volume="1.0">
+      <transition begin="22840" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="23840" duration="6280" height="415" inPoint="1000" left="32" processHtml="false" rotation="353" top="690" width="1014"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 152px; color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;">{{Thank you for being awesome!}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6280" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Paragraph%203" volume="1.0">
+      <transition begin="10800" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="11800" duration="11040" height="555" inPoint="2480" left="85" processHtml="false" top="1133" valign="top" width="900"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 36px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{How long has the employee worked at the dealership?}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 36px; font-family: Lato; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 36px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{Favorite football team or favorite hobbies?}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 36px; font-family: Lato; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 36px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{Do they have pets or kids? What are the names?}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10072" value="1"/>
+          <entry time="11040" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Heading%203" volume="1.0">
+      <transition begin="10800" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="11800" duration="11040" height="408" inPoint="2000" left="32" processHtml="false" top="730" width="1019"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 160px; color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;">{{</span><span style="font-size: 160px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;">Sample text</span><span style="font-size: 160px; color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;">}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10165" value="1"/>
+          <entry time="11040" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Heading%202a" volume="1.0">
+      <transition begin="4520" duration="1000" type="3dTileHorizontal"/>
+      <text autoFit="false" begin="5520" duration="4280" height="249" inPoint="1000" left="13" processHtml="false" rotation="8" top="901" width="1050"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 120px; color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;">{{NAME HERE}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4280" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="9800" duration="1000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Heading%202b" volume="1.0">
+      <transition begin="4520" duration="1000" type="3dTileHorizontal"/>
+      <text autoFit="false" begin="5520" duration="4280" height="249" inPoint="1000" left="13" processHtml="false" rotation="8" top="1043" width="1051"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 72px; color: rgb(255, 255, 255); font-family: Lato; line-height: normal; letter-spacing: 0px;">{{Title Here}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4280" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="9800" duration="1000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Heading%201b" volume="1.0">
+      <transition begin="640" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="1640" duration="2880" height="408" inPoint="1680" left="20" processHtml="false" rotation="5" top="1035" valign="center" width="1034"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 198px; color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;">{{Rockstar}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="4520" duration="1000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Heading%201a" volume="1.0">
+      <transition begin="640" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="1640" duration="2880" height="326" inPoint="1680" left="49" processHtml="false" rotation="335" top="350" width="979"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 158px; color: rgb(255, 255, 255); font-family: Bangers; line-height: normal; letter-spacing: 0px;">{{You are a}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2880" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="4520" duration="1000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="slide_1" volume="1.0">
+      <transition begin="0" duration="400" type="fadeThroughWhite"/>
+      <video begin="400" duration="4120" height="1920" inPoint="400" left="0" loopable="false" src="/api/5/media/1360380263/content?suffix=" title="slide+1" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="600" value="1"/>
+          <entry time="4120" value="1"/>
+        </opacity>
+      </video>
+      <transition begin="4520" duration="1000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="slide_2" volume="1.0">
+      <transition begin="4520" duration="1000" type="3dTileHorizontal"/>
+      <image begin="5520" duration="4280" height="1212" inPoint="1280" left="0" src="/api/5/media/1360095201/content?suffix=" title="banner+%28merged%29" top="713" volume="1.0" width="1166">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4280" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="9800" duration="1000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Photo%201" volume="1.0">
+      <transition begin="4520" duration="1000" type="3dTileHorizontal"/>
+      <image begin="5520" duration="4280" height="1080" inPoint="1000" left="-3" src="/api/5/media/1436987339/content?suffix=" title="woman-square" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4280" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="9800" duration="1000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="slide_3" volume="1.0">
+      <transition begin="10280" duration="1000" type="3dTileHorizontal"/>
+      <image begin="11280" duration="10520" height="1182" inPoint="1000" left="-25" src="/api/5/media/1360356633/content?suffix=" title="11111" top="725" volume="1.0" width="1123">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10520" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="21800" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="Photo%202" volume="1.0">
+      <transition begin="10280" duration="1000" type="3dTileHorizontal"/>
+      <image begin="11280" duration="10520" height="1080" inPoint="1000" left="-3" src="/api/5/media/1436987339/content?suffix=" title="woman-square" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10520" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="21800" duration="1000" type="crossFade"/>
+    </layer>
+    <layer title="slide_4" volume="1.0">
+      <video begin="21800" duration="8320" height="1920" left="0" loopable="false" src="/api/5/media/1361487910/content?suffix=" title="H_DS_" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="8320" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="8320" value="1"/>
+        </volume>
+      </video>
+    </layer>
+  </layers>
+</timeline>
