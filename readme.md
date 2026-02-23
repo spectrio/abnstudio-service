@@ -8,4 +8,4 @@ editable) templates.
 
 ## Perform matching of templates if needed to export from wevideo again
 Run this:
-php match_template.php <xml_file_path>
+php match_template.php <xml_folder_path>
