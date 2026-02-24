@@ -120,65 +120,65 @@ class ProcessXml
       Log::info('=== PROCESSXML REPLACING WEVIDEO MEDIA URLS START ===');
 
       // Convert /api/3/ to /api/5/ in image src attributes
-	  $xmlFinal = preg_replace_callback(
-		  '/<image([^>]*?)src="([^"]*)"([^>]*?)>/i',
-		  function($matches) use ($templateOrientation) {
-			  $beforeSrc = $matches[1];
-			  $src = $matches[2];
-			  $afterSrc = $matches[3];
-			  $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
-			  Log::info("Image layer: Converting {$src} to {$convertedSrc}");
+        $xmlFinal = preg_replace_callback(
+            '/<image([^>]*?)src="([^"]*)"([^>]*?)>/i',
+            function($matches) {
+                $beforeSrc = $matches[1];
+                $src = $matches[2];
+                $afterSrc = $matches[3];
+                if (preg_match('#/api/\d+/media/(\d+)/content#i', $src)) {
+                    $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
+                    Log::info("Image layer: Converting {$src} to {$convertedSrc}");
+                    return "<image{$beforeSrc}src=\"{$convertedSrc}\"{$afterSrc}>";
+                }
 
-			  return "<image{$beforeSrc}src=\"{$convertedSrc}\"{$afterSrc}>";
-		  },
-		  $xmlFinal
-	  );
+                return "<image{$beforeSrc}src=\"{$src}\"{$afterSrc}>";
+            },
+            $xmlFinal
+        );
 
-	  // Convert /api/3/ to /api/5/ in video src attributes and validate to CDN
-	  $xmlFinal = preg_replace_callback(
-		  '/<video([^>]*?)src="([^"]*)"([^>]*?)>/i',
-		  function($matches) use ($templateOrientation) {
-			  $beforeSrc = $matches[1];
-			  $src = $matches[2];
-			  $afterSrc = $matches[3];
+        // Convert /api/3/ to /api/5/ in video src attributes and validate to CDN
+        $xmlFinal = preg_replace_callback(
+            '/<video([^>]*?)src="([^"]*)"([^>]*?)>/i',
+            function($matches) use ($templateOrientation) {
+                $beforeSrc = $matches[1];
+                $src = $matches[2];
+                $afterSrc = $matches[3];
 
-			  Log::info("Video Orientation: {$templateOrientation}");
-			  if($templateOrientation == 'V'){
-				  $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
-			  }else{
-				  $convertedSrc = str_replace('/api/3/', '/api/5/', $src);
-				  if (preg_match('#/api/\d+/media/(\d+)/content#i', $convertedSrc)) {
-					  Log::info("Video layer: Found WeVideo API URL: {$convertedSrc}");
+                // Log::info("Video Orientation: {$templateOrientation}");
+                if (preg_match('#/api/\d+/media/(\d+)/content#i', $src)) {
+                    if ($templateOrientation == 'V') {
+                        Log::info("in vertical video orientation");
+                        $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
+                    } else {
+                        $convertedSrc = str_replace('/api/3/', '/api/5/', $src);
+                        Log::info("Video layer: Found WeVideo API URL: {$convertedSrc}");
 
-					  $fullUrl = 'https://www.wevideo.com/' . ltrim($convertedSrc, '/');
-					  Log::info("Video layer: Prepended domain to create full URL: {$fullUrl}");
+						$fullUrl = 'https://www.wevideo.com/' . ltrim($convertedSrc, '/');
+						Log::info("Video layer: Prepended domain to create full URL: {$fullUrl}");
 
-					  $validatedUrl = $this->validateMediaRedirect($fullUrl);
+						$validatedUrl = $this->validateMediaRedirect($fullUrl);
 
-					  if ($validatedUrl && $validatedUrl !== $fullUrl) {
-						  Log::info("Video layer: Replaced with validated URL: {$validatedUrl}");
-						  $convertedSrc = $validatedUrl;
-					  } else {
-						  Log::info("Video layer: No redirect found, using full URL: {$fullUrl}");
-						  $convertedSrc = $fullUrl;
-					  }
+						if ($validatedUrl && $validatedUrl !== $fullUrl) {
+							Log::info("Video layer: Replaced with validated URL: {$validatedUrl}");
+							$convertedSrc = $validatedUrl;
+						}
 
-					  // Escape ampersands for XML validity
-					  $convertedSrc = str_replace('&', '&amp;', $convertedSrc);
-				  }
-			  }
+						// Escape ampersands for XML validity
+						$convertedSrc = str_replace('&', '&amp;', $convertedSrc);
+                   	}
 
-			  if ($convertedSrc !== $src) {
-				  Log::info("Video layer: Converting {$src} to {$convertedSrc}");
-			  }
+                    Log::info("Video layer: Converting {$src} to {$convertedSrc}");
+                    return "<video{$beforeSrc}src=\"{$convertedSrc}\"{$afterSrc}>";
+                }
 
-			  return "<video{$beforeSrc}src=\"{$convertedSrc}\"{$afterSrc}>";
-		  },
-		  $xmlFinal
-	  );
+                return "<video{$beforeSrc}src=\"{$src}\"{$afterSrc}>";
+            },
+            $xmlFinal
+        );
 
-      Log::info('=== PROCESSXML REPLACING WEVIDEO MEDIA URLS END ===');
-      return $xmlFinal;
+        Log::info('=== PROCESSXML REPLACING WEVIDEO MEDIA URLS END ===');
+	  	return $xmlFinal;
   }
 
   public function validateMediaRedirect($url = null)

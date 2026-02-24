@@ -9,9 +9,7 @@ use App\RenderLog;
 use App\Jira;
 use Carbon\Carbon;
 use Log;
-//use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-//use Mail; // Laravel
 use Illuminate\Support\Facades\Mail; // Lumen
 
 class ModifyTemplateController extends Controller
