@@ -57,6 +57,9 @@ class ModifiedProcessXml
             $this->removeNode($xmlObj, '//audio/..');
         }
 
+        // Remove metadata and decode layer titles
+        $xmlObj = $this->objRemoveMeta($xmlObj);
+
         // Convert object back into XML
         $xmlFinal = $this->objToXml($xmlObj);
 
@@ -926,6 +929,17 @@ class ModifiedProcessXml
         }
 
         return $output;
+    }
+
+    // Remove metadata from layer titles (and apply friendly title names)
+    public function objRemoveMeta($xmlObj) {
+        $result = $xmlObj->xpath("//layer/@title");
+        foreach ($result as $node) {
+            $title = urldecode($node[0]);
+            $titleArr = explode('{', $title, 2);
+            $node[0] = trim($titleArr[0]);
+        }
+        return $xmlObj;
     }
 
 }

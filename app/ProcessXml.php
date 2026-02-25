@@ -47,6 +47,9 @@ class ProcessXml
       // Strip out any layers with audio
       //$this::removeNode($xmlObj, "//audio/..");
 
+      // Remove metadata and decode layer titles
+      $xmlObj = $this::objRemoveMeta($xmlObj);
+
       // Convert object back into XML
       $xmlFinal = $this::objToXml($xmlObj);
 
@@ -54,6 +57,9 @@ class ProcessXml
       //$xmlFinal = $this::postProcess($xmlFinal);
 
       $json = $this::generateJsonManifest($xmlObj,$xmlFinal, $filename,$orgFilename);
+
+      // Debug: Save processed XML to xml_debug/processed folder
+      $this->saveProcessedXmlDebug($xmlFinal, $orgFilename);
 
       return $json;
 
@@ -352,7 +358,7 @@ class ProcessXml
         $friendlyTitle = trim($titleArr[0]);
         $json['elements'][$friendlyTitle]['meta'] = '{' . trim($titleArr[1]);
       }
-      $json['elements'][$friendlyTitle]['title'] = $title; //rawurlencode($friendlyTitle);
+      $json['elements'][$friendlyTitle]['title'] = $friendlyTitle; // Use friendly name for consistency
 
       // Layer has TEXT elements
       if (property_exists($layer, 'text')) {
@@ -440,10 +446,9 @@ class ProcessXml
   public function objRemoveMeta($xmlObj) {
     $result = $xmlObj->xpath("//layer/@title");
     foreach ($result as $node) {
-      $title = $this->friendlyName($node[0]);
-      //$titleArr = explode('%20%7B', $title, 2);
+      $title = urldecode($node[0]);
       $titleArr = explode('{', $title, 2);
-      $node[0] = rawurlencode( trim($titleArr[0]) );
+      $node[0] = trim($titleArr[0]);
     }
     return $xmlObj;
   }
@@ -602,5 +607,24 @@ class ProcessXml
   private function removeExtraSpaces($str) {
     $str = trim(preg_replace('/\s\s+/', ' ', str_replace("\n", " ", $str)));
     return $str;
+  }
+
+  // Save processed XML to debug folder
+  private function saveProcessedXmlDebug($xmlContent, $orgFilename) {
+    $debugDir = storage_path('logs/xml_debug/processed');
+
+    // Create directory if it doesn't exist
+    if (!is_dir($debugDir)) {
+      mkdir($debugDir, 0755, true);
+    }
+
+    // Generate timestamped filename
+    $timestamp = date('Y-m-d_His');
+    $baseName = pathinfo($orgFilename, PATHINFO_FILENAME);
+    $safeName = preg_replace('/[^a-zA-Z0-9_-]/', '_', $baseName);
+    $debugFile = $debugDir . '/' . $safeName . '_' . $timestamp . '.xml';
+
+    // Save the XML content
+    file_put_contents($debugFile, $xmlContent);
   }
 }

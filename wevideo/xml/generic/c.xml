@@ -1,0 +1,78 @@
+<timeline version="1">
+    <layers>
+        <layer title="Dealer%20Logo%7B%22clo%22%3A%221%22%7D" volume="1.0">
+            <transition begin="4600" duration="1000" type="crossFade"/>
+            <image begin="5600" duration="29480" height="157" inPoint="2560" left="130" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="863" volume="1.0" width="307">
+                <opacity>
+                    <entry time="0" value="1"/>
+                    <entry time="29480" value="1"/>
+                </opacity>
+            </image>
+        </layer>
+        <layer title="Bday%20Date" volume="1.0">
+            <transition begin="8200" duration="1000" type="crossFade"/>
+            <text autoFit="false" begin="9200" duration="25880" height="97" inPoint="6160" left="1174" processHtml="false" top="797" width="710"><![CDATA[<div align="center"><span style="font-size: 50px; color: rgb(166, 77, 121); font-family: AvenirNextRoundedStd-Demi; line-height: normal; letter-spacing: 0px;">{{February 27th, 2999}}</span></div>]]>
+                <opacity>
+                    <entry time="0" value="1"/>
+                    <entry time="25880" value="1"/>
+                </opacity>
+            </text>
+        </layer>
+        <layer title="Title" volume="1.0">
+            <transition begin="7200" duration="1000" type="crossFade"/>
+            <text autoFit="false" begin="8200" duration="26880" height="104" inPoint="5160" left="1167" processHtml="false" top="720" width="726"><![CDATA[<div align="center"><span style="font-size: 50px; color: rgb(166, 77, 121); font-family: AvenirNextRoundedStd-Demi; line-height: normal; letter-spacing: 0px;">{{Employee Title}}</span></div>]]>
+                <opacity>
+                    <entry time="0" value="1"/>
+                    <entry time="26880" value="1"/>
+                </opacity>
+            </text>
+        </layer>
+        <layer title="Name" volume="1.0">
+            <transition begin="6200" duration="1000" type="crossFade"/>
+            <text autoFit="false" begin="7200" duration="27880" height="97" inPoint="4160" left="1161" processHtml="false" top="639" width="723"><![CDATA[<div align="center"><span style="font-size: 50px; color: rgb(166, 77, 121); font-family: AvenirNextRoundedStd-Demi; line-height: normal; letter-spacing: 0px;">{{Employee Name}}</span></div>]]>
+                <opacity>
+                    <entry time="0" value="1"/>
+                    <entry time="27880" value="1"/>
+                </opacity>
+            </text>
+        </layer>
+        <layer title="Body%20Copy" volume="1.0">
+            <transition begin="10880" duration="1000" type="crossFade"/>
+            <text autoFit="false" begin="11880" duration="23200" height="312" inPoint="11880" left="90" processHtml="false" top="221" width="837"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 48px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">{{We would like to wish e</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">mpl</span><span style="font-size: 48px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">oye</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">e </span><span style="font-size: 48px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">Name Name a Happy Bir</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">t</span><span style="font-size: 48px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">hday on Saturday, F</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">e</span><span style="font-size: 48px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">bruary 30</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">t</span><span style="font-size: 48px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: normal; letter-spacing: 0px;">h, 2025. We hope its the best one yet!}}</span></div>]]>
+                <opacity>
+                    <entry time="0" value="1"/>
+                    <entry time="23200" value="1"/>
+                </opacity>
+            </text>
+        </layer>
+        <layer title="Header" volume="1.0">
+            <transition begin="4600" duration="1000" type="crossFade"/>
+            <text autoFit="false" begin="5600" duration="29480" height="193" inPoint="5600" left="85" processHtml="false" top="54" width="1053"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 116px; color: rgb(255, 255, 255); font-family: CaveatBrush; line-height: normal; letter-spacing: 0px;">{{HAPPY BIRTHDAY}}</span></div>]]>
+                <opacity>
+                    <entry time="0" value="1"/>
+                    <entry time="29480" value="1"/>
+                </opacity>
+            </text>
+        </layer>
+        <layer title="Footage" volume="0.17">
+            <video begin="0" duration="35080" height="1080" left="0" loopable="true" src="/api/5/media/3420986673/content?suffix=" title="H_DS_GEN_BIRTHDAY_X6" top="0" volume="1.0" width="1920">
+                <opacity>
+                    <entry time="0" value="1"/>
+                    <entry time="35080" value="1"/>
+                </opacity>
+                <volume>
+                    <entry time="0" value="1"/>
+                    <entry time="35080" value="1"/>
+                </volume>
+            </video>
+        </layer>
+        <layer title="Image%20Replace" volume="1.0">
+            <image begin="4120" duration="30960" height="539" left="1279" src="/api/5/media/1469685325/content?suffix=" title="woman-3" top="126" volume="1.0" width="499">
+                <opacity>
+                    <entry time="0" value="1"/>
+                    <entry time="30960" value="1"/>
+                </opacity>
+            </image>
+        </layer>
+    </layers>
+</timeline>
