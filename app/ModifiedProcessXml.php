@@ -32,6 +32,15 @@ class ModifiedProcessXml
         $xmlMeta = $this->loadMeta($xmlObj);
 	//Log::debug('Loading xmlMeta - '.print_r($xmlMeta,true));
 
+        // URL-decode layer title attributes AND strip JSON metadata suffix so xpath
+        // in loadBrandingData/loadTemplateData works correctly. Titles like
+        // "Headline 1 {\"bts\":\"h3\",...}" contain double-quotes which break XPath.
+        foreach ($xmlObj->xpath('//layer/@title') as $titleAttr) {
+            $decoded = urldecode((string) $titleAttr[0]);
+            $parts = explode('{', $decoded, 2);
+            $titleAttr[0] = trim($parts[0]);
+        }
+
         // Load the branding data into the XML object
         $xmlObj = $this->loadBrandingData($xmlObj, $data, $xmlMeta);
         //$xmlFinal = $this::objToXml($xmlObj);die($xmlFinal);
@@ -101,6 +110,24 @@ class ModifiedProcessXml
                 }
 
                 return "<image{$beforeSrc}src=\"{$src}\"{$afterSrc}>";
+            },
+            $xmlFinal
+        );
+
+        // Convert audio tags from api/5 to api/3
+        $xmlFinal = preg_replace_callback(
+            '/<audio([^>]*?)src="([^"]*)"([^>]*?)>/i',
+            function($matches) {
+                $beforeSrc = $matches[1];
+                $src = $matches[2];
+                $afterSrc = $matches[3];
+                if (preg_match('#/api/\d+/media/(\d+)/content#i', $src)) {
+                    $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
+                    Log::info("Audio layer: Converting {$src} to {$convertedSrc}");
+                    return "<audio{$beforeSrc}src=\"{$convertedSrc}\"{$afterSrc}>";
+                }
+
+                return "<audio{$beforeSrc}src=\"{$src}\"{$afterSrc}>";
             },
             $xmlFinal
         );
@@ -613,6 +640,13 @@ class ModifiedProcessXml
             //return nl2br( str_replace("\r\n","\n",$replacement) );
         };
         foreach ($data['templateFields'] as $field) {
+            // Defensive: callers sometimes submit URL-encoded layer names (e.g. "Header%201")
+            // and may include JSON metadata suffix (e.g. 'Headline 1 {"bts":"h3",...}').
+            // Urldecode and strip suffix at first '{' so XPath matches cleaned XML titles.
+            $field['layer'] = urldecode($field['layer']);
+            $layerParts = explode('{', $field['layer'], 2);
+            $field['layer'] = trim($layerParts[0]);
+
             // Find and replace TEXT or HTML
             $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/html|//*[@title="'.$field['layer'].'"]/text');
 	    if (!empty($result)) {
