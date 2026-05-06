@@ -779,10 +779,29 @@ class ModifiedProcessXml
         $thumbnailTime *= 1000;
 
         if (!$orientation) {$orientation = 'H';}
+
+        Log::info('renderModified: incoming orientation = ' . var_export($orientation, true) . ', dtv = ' . var_export($dtv, true));
+
+        // Defensive: auto-detect orientation from XML layer coordinates so a bad
+        // DB value cannot squash a horizontal template into a portrait canvas
+        // (or vice-versa). Scan all left/top/width/height on image|video|text
+        // elements and infer the intended canvas size from the maximum extents.
+        if (!$dtv) {
+            $detected = $this->detectOrientationFromXml($xmlFinal);
+            if ($detected && $detected !== $orientation) {
+                Log::warning('renderModified: orientation mismatch — caller passed "' . $orientation . '" but XML coordinates indicate "' . $detected . '". Overriding to "' . $detected . '".');
+                $orientation = $detected;
+            } elseif ($detected) {
+                Log::info('renderModified: orientation confirmed by XML coords as "' . $detected . '"');
+            }
+        }
+
         $resolution = '1080p';
         if ($orientation == 'V') {$resolution = '1080x1920';}
 
         if ($dtv) {$resolution = '932x524';}
+
+        Log::info('renderModified: final orientation = ' . $orientation . ', resolution = ' . $resolution);
 
         $xmlFinal = $this->embedFonts($xmlFinal);
 
@@ -974,6 +993,37 @@ class ModifiedProcessXml
             $node[0] = trim($titleArr[0]);
         }
         return $xmlObj;
+    }
+
+    /**
+     * Infer the intended canvas orientation ('H' or 'V') from the maximum
+     * left+width / top+height extents of layer elements in the final XML.
+     * Returns '' if the XML cannot be parsed or extents are inconclusive.
+     */
+    public function detectOrientationFromXml($xmlFinal)
+    {
+        $maxX = 0;
+        $maxY = 0;
+        if (preg_match_all('/<(?:image|video|text)\b([^>]*)>/i', $xmlFinal, $matches)) {
+            foreach ($matches[1] as $attrs) {
+                $left = 0; $top = 0; $w = 0; $h = 0;
+                if (preg_match('/\bleft="(-?\d+(?:\.\d+)?)"/', $attrs, $m))   { $left = (float)$m[1]; }
+                if (preg_match('/\btop="(-?\d+(?:\.\d+)?)"/', $attrs, $m))    { $top  = (float)$m[1]; }
+                if (preg_match('/\bwidth="(-?\d+(?:\.\d+)?)"/', $attrs, $m))  { $w    = (float)$m[1]; }
+                if (preg_match('/\bheight="(-?\d+(?:\.\d+)?)"/', $attrs, $m)) { $h    = (float)$m[1]; }
+                $maxX = max($maxX, $left + $w);
+                $maxY = max($maxY, $top + $h);
+            }
+        }
+        Log::info('detectOrientationFromXml: maxX=' . $maxX . ', maxY=' . $maxY);
+        if ($maxX <= 0 || $maxY <= 0) {
+            return '';
+        }
+        // Coordinates >1200 in width strongly suggest 1920-wide horizontal canvas.
+        // Coordinates >1200 in height strongly suggest 1920-tall vertical canvas.
+        if ($maxX > $maxY) { return 'H'; }
+        if ($maxY > $maxX) { return 'V'; }
+        return '';
     }
 
 }
