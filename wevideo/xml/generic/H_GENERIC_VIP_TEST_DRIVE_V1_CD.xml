@@ -1,0 +1,56 @@
+<timeline version="1">
+  <layers>
+    <layer title="Body" volume="1.0">
+      <transition begin="6680" duration="1000" type="gridDiagonal"/>
+      <text autoFit="false" begin="7680" duration="22440" height="299" inPoint="1000" left="978" processHtml="false" top="454" width="799"><![CDATA[<div align="center" style="text-align: right;"><span style="font-size: 45px; color: rgb(0, 0, 0); font-family: Mohave-Medium; line-height: 130%; letter-spacing: 0px;">{{Complimentary car wash and vacuum. Get today's oil change at no charge. We have 2020 Models in stock and can lower your payment.}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="22440" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Call%20to%20Action" volume="1.0">
+      <transition begin="13000" duration="1000" type="gridDiagonal"/>
+      <text autoFit="false" begin="14000" duration="16120" height="164" inPoint="7320" left="1063" processHtml="false" top="703" width="725"><![CDATA[<div align="center" style="text-align: right;"><span style="font-size: 55px; color: rgb(0, 0, 0); font-family: Mohave-Bold; line-height: 110%; letter-spacing: 0px;"><span style="color: rgb(0, 0, 0); line-height: 110%; letter-spacing: 0px;">{{Call to Action}}</span></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="880" duration="400" type="wipeRight"/>
+      <image begin="1280" duration="3600" height="196" inPoint="1280" left="1172" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="829" volume="1.0" width="384">
+        <opacity>
+          <entry time="600" value="1"/>
+          <entry time="3000" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="4880" duration="400" type="wipeRight"/>
+      <transition begin="6080" duration="600" type="wipeRight"/>
+      <image begin="6680" duration="23440" height="147" inPoint="600" left="1197" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="882" volume="1.0" width="288">
+        <opacity>
+          <entry time="400" value="1"/>
+          <entry time="23440" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="After%20Effects%20Main%20VIdeo" volume="1.0">
+      <video begin="0" duration="30120" height="1080" left="0" loopable="false" src="/api/5/media/1479000661/content?suffix=" title="H_DS_GENERIC_VIP_TEST_DRIVE_CD_3" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="30120" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Audio%201" volume="5.0">
+      <audio begin="0" duration="30120" src="/api/5/media/2180272702/content?suffix=" title="Corporat-Uplifting-Inspiration_AdobeStock_429392384" volume="1.0">
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="28193" value="1"/>
+          <entry time="30120" value="0"/>
+        </volume>
+      </audio>
+    </layer>
+  </layers>
+</timeline>
