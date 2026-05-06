@@ -52,7 +52,7 @@
     </layer>
     <layer title="text_02%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%223%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22g%22%7D%7D" volume="1.0">
       <transition begin="16920" duration="2000" type="3dTileHorizontal"/>
-      <text autoFit="false" begin="18920" duration="14600" height="177" inPoint="2000" left="145" processHtml="false" top="898" valign="top" width="830"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 146px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 90%; letter-spacing: 0px;">Fun Facts</span></div>]]>
+      <text autoFit="false" begin="18920" duration="14600" height="177" inPoint="2000" left="145" processHtml="false" top="1080" valign="top" width="830"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 146px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 90%; letter-spacing: 0px;">Fun Facts</span></div>]]>
         <opacity>
           <entry time="0" value="1"/>
           <entry time="14600" value="1"/>
@@ -62,7 +62,7 @@
     </layer>
     <layer title="paragraph%20%7B%22bts%22%3A%22p%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%223%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22g%22%7D%7D" volume="1.0">
       <transition begin="16920" duration="2000" type="3dTileHorizontal"/>
-      <text autoFit="false" begin="18920" duration="14600" height="598" inPoint="2000" left="56" processHtml="false" top="1077" valign="top" width="969"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">{{How long has the employee worked at the dealership?}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: 110%; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">{{Favorite football team or favorite hobbies?}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: 110%; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">{{Do they have pets or kids? What are the names?}}</span></div>]]>
+      <text autoFit="false" begin="18920" duration="14600" height="598" inPoint="2000" left="56" processHtml="false" top="1260" valign="top" width="969"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">{{How long has the employee worked at the dealership?}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: 110%; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">{{Favorite football team or favorite hobbies?}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: 110%; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">{{Do they have pets or kids? What are the names?}}</span></div>]]>
         <opacity>
           <entry time="0" value="1"/>
           <entry time="14600" value="1"/>
@@ -70,9 +70,9 @@
       </text>
       <transition begin="33520" duration="2000" type="3dTileHorizontal"/>
     </layer>
-    <layer title="frame_01%20%7B%22bis%22%3A%221359813336%22%7D" volume="1.0">
+    <layer title="Employee%20Photo%202" volume="1.0">
       <transition begin="16920" duration="2000" type="3dTileHorizontal"/>
-      <image begin="18920" duration="14600" height="1920" inPoint="2040" left="-120" src="/api/5/media/1418770013/content?suffix=" title="Grunge+striped+paper+texture+with+copy+space+copy+2+%28merged%29" top="250" volume="1.0" width="1319">
+      <image begin="18920" duration="14600" height="1080" inPoint="2000" left="0" src="/api/5/media/1436987339/content?suffix=" title="woman-square" top="0" volume="1.0" width="1080">
         <opacity>
           <entry time="0" value="1"/>
           <entry time="14600" value="1"/>
@@ -80,9 +80,9 @@
       </image>
       <transition begin="33520" duration="2000" type="3dTileHorizontal"/>
     </layer>
-    <layer title="Employee%20Photo%202" volume="1.0">
+    <layer title="frame_01%20%7B%22bis%22%3A%221359813336%22%7D" volume="1.0">
       <transition begin="16920" duration="2000" type="3dTileHorizontal"/>
-      <image begin="18920" duration="14600" height="1080" inPoint="2000" left="0" src="/api/5/media/1436987339/content?suffix=" title="woman-square" top="0" volume="1.0" width="1080">
+      <image begin="18920" duration="14600" height="1920" inPoint="2040" left="-120" src="/api/5/media/1418770013/content?suffix=" title="Grunge+striped+paper+texture+with+copy+space+copy+2+%28merged%29" top="250" volume="1.0" width="1319">
         <opacity>
           <entry time="0" value="1"/>
           <entry time="14600" value="1"/>

@@ -81,9 +81,9 @@
       </text>
       <transition begin="33640" duration="2000" type="patternBubble"/>
     </layer>
-    <layer title="frame_01%20%7B%22bis%22%3A%221202875970%22%7D" volume="1.0">
+    <layer title="image" volume="1.0">
       <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
-      <image begin="16920" duration="16720" height="1080" inPoint="2000" left="0" src="/api/5/media/1418282422/content?suffix=" title="3" top="0" volume="1.0" width="1920">
+      <image begin="16920" duration="16720" height="1080" inPoint="0" left="-25" src="/api/5/media/1431976960/content?suffix=" title="woman+2" top="0" volume="1.0" width="772">
         <opacity>
           <entry time="0" value="1"/>
           <entry time="16720" value="1"/>
@@ -91,12 +91,12 @@
       </image>
       <transition begin="33640" duration="2000" type="patternBubble"/>
     </layer>
-    <layer title="image" volume="1.0">
+    <layer title="frame_01%20%7B%22bis%22%3A%221202875970%22%7D" volume="1.0">
       <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
-      <image begin="16920" duration="16720" height="1080" inPoint="2000" left="-25" src="/api/5/media/1431976960/content?suffix=" title="woman+2" top="0" volume="1.0" width="772">
+      <image begin="16920" duration="16720" height="1080" inPoint="2000" left="0" src="/api/5/media/1418282422/content?suffix=" title="3" top="0" volume="1.0" width="1920">
         <opacity>
           <entry time="0" value="1"/>
-          <entry time="14720" value="1"/>
+          <entry time="16720" value="1"/>
         </opacity>
       </image>
       <transition begin="33640" duration="2000" type="patternBubble"/>

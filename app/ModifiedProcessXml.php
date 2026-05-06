@@ -14,14 +14,14 @@ class ModifiedProcessXml
 
     public function process($filename, $data, $thumbnailTime, $orientation, $dtv)
     {
-	$xml = $filename;
-	//Log::debug('filename - '.$xml);
+        $xml = $filename;
+        //Log::debug('filename - '.$xml);
 
-        // Convert XML to object
-        libxml_use_internal_errors(true);
-        $xmlObj = simplexml_load_string($xml);
-	//Log::debug('xmlObj - '.print_r($xmlObj,true));
-	if ($xmlObj === false) {
+		// Convert XML to object
+		libxml_use_internal_errors(true);
+		$xmlObj = simplexml_load_string($xml);
+        //Log::debug('xmlObj - '.print_r($xmlObj,true));
+        if ($xmlObj === false) {
             return (libxml_get_errors());
         }
 
@@ -30,19 +30,10 @@ class ModifiedProcessXml
 
         // Load the template metadata to an array
         $xmlMeta = $this->loadMeta($xmlObj);
-	//Log::debug('Loading xmlMeta - '.print_r($xmlMeta,true));
-
-        // URL-decode layer title attributes AND strip JSON metadata suffix so xpath
-        // in loadBrandingData/loadTemplateData works correctly. Titles like
-        // "Headline 1 {\"bts\":\"h3\",...}" contain double-quotes which break XPath.
-        foreach ($xmlObj->xpath('//layer/@title') as $titleAttr) {
-            $decoded = urldecode((string) $titleAttr[0]);
-            $parts = explode('{', $decoded, 2);
-            $titleAttr[0] = trim($parts[0]);
-        }
+        //Log::debug('Loading xmlMeta - '.print_r($xmlMeta,true));
 
         // Load the branding data into the XML object
-        $xmlObj = $this->loadBrandingData($xmlObj, $data, $xmlMeta);
+        $xmlObj = $this->loadBrandingData($xmlObj, $data, $xmlMeta, $orientation);
         //$xmlFinal = $this::objToXml($xmlObj);die($xmlFinal);
 
         // Load the template data into the XML object
@@ -65,9 +56,6 @@ class ModifiedProcessXml
         if (!$dtv) {
             $this->removeNode($xmlObj, '//audio/..');
         }
-
-        // Remove metadata and decode layer titles
-        $xmlObj = $this->objRemoveMeta($xmlObj);
 
         // Convert object back into XML
         $xmlFinal = $this->objToXml($xmlObj);
@@ -103,6 +91,13 @@ class ModifiedProcessXml
                 $beforeSrc = $matches[1];
                 $src = $matches[2];
                 $afterSrc = $matches[3];
+                $attrs = $beforeSrc . $afterSrc;
+                if (strpos($attrs, 'data-bir="1"') !== false) {
+                    Log::info("Image layer: Skipping URL rewrite (bir-swapped): {$src}");
+                    $beforeSrc = preg_replace('/\s*data-bir="1"/', '', $beforeSrc);
+                    $afterSrc = preg_replace('/\s*data-bir="1"/', '', $afterSrc);
+                    return "<image{$beforeSrc}src=\"{$src}\"{$afterSrc}>";
+                }
                 if (preg_match('#/api/\d+/media/(\d+)/content#i', $src)) {
                     $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
                     Log::info("Image layer: Converting {$src} to {$convertedSrc}");
@@ -114,24 +109,6 @@ class ModifiedProcessXml
             $xmlFinal
         );
 
-        // Convert audio tags from api/5 to api/3
-        $xmlFinal = preg_replace_callback(
-            '/<audio([^>]*?)src="([^"]*)"([^>]*?)>/i',
-            function($matches) {
-                $beforeSrc = $matches[1];
-                $src = $matches[2];
-                $afterSrc = $matches[3];
-                if (preg_match('#/api/\d+/media/(\d+)/content#i', $src)) {
-                    $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
-                    Log::info("Audio layer: Converting {$src} to {$convertedSrc}");
-                    return "<audio{$beforeSrc}src=\"{$convertedSrc}\"{$afterSrc}>";
-                }
-
-                return "<audio{$beforeSrc}src=\"{$src}\"{$afterSrc}>";
-            },
-            $xmlFinal
-        );
-
         // Convert /api/3/ to /api/5/ in video src attributes and validate to CDN
         $xmlFinal = preg_replace_callback(
             '/<video([^>]*?)src="([^"]*)"([^>]*?)>/i',
@@ -139,6 +116,14 @@ class ModifiedProcessXml
                 $beforeSrc = $matches[1];
                 $src = $matches[2];
                 $afterSrc = $matches[3];
+
+                $attrs = $beforeSrc . $afterSrc;
+                if (strpos($attrs, 'data-bir="1"') !== false) {
+                    Log::info("Video layer: Skipping URL rewrite (bir-swapped): {$src}");
+                    $beforeSrc = preg_replace('/\s*data-bir="1"/', '', $beforeSrc);
+                    $afterSrc = preg_replace('/\s*data-bir="1"/', '', $afterSrc);
+                    return "<video{$beforeSrc}src=\"{$src}\"{$afterSrc}>";
+                }
 
                 // Log::info("Video Orientation: {$templateOrientation}");
                 if (preg_match('#/api/\d+/media/(\d+)/content#i', $src)) {
@@ -239,7 +224,7 @@ class ModifiedProcessXml
     }
 
     // Apply branding data
-    public function loadBrandingData($xmlObj, $data, $xmlMeta)
+    public function loadBrandingData($xmlObj, $data, $xmlMeta, $orientation = 'H')
     {
 
         // Non OEM-specific data (logo)
@@ -517,35 +502,63 @@ class ModifiedProcessXml
 
                         // Apply bir meta (Brand Image Replace)
                         if (isset($xmlMeta[$layer]['bir']) && isset($brandTemplate['bir'])) {
+                            $birKey = $xmlMeta[$layer]['bir'];
                             $json = json_decode($brandTemplate['bir'], 1);
-                            $bir = $json[$xmlMeta[$layer]['bir']];
-                            $node->attributes()->src = $bir;
+                            if (!isset($json[$birKey])) {
+                                Log::warning('[bir] NO MATCH found for birKey='.$birKey.' in brandTemplate bir JSON (layer='.$layer.')');
+                            } else {
+                                $bir = $json[$birKey];
+                                Log::debug('[bir] resolved src='.var_export($bir, true));
+                                $node->attributes()->src = $bir;
+                                $node->addAttribute('data-bir', '1');
+                                Log::debug('[bir] node after swap: src='.var_export((string)$node->attributes()->src, true));
+                            }
+                            Log::debug('[bir] ===== End bir processing for layer: '.$layer.' =====');
                         }
 
                         // Apply bis meta (Brand Image Swap)
                         if (isset($xmlMeta[$layer]['bis'])) {
+                            Log::debug('[bis] ===== Begin bis processing for layer: '.$layer.' =====');
                             $oem = $data['template']['oem'];
                             $folderId = $xmlMeta[$layer]['bis'];
+                            $isVideo = (strtolower($node->getName()) === 'video');
                             $WeVideo = new WeVideo();
-                            $folder = $WeVideo->get_media($folderId);
+                            $folder = $WeVideo->get_media($folderId, $orientation, $isVideo);
                             //$folder = json_decode($this->getFolder($folderId),1);
+                            Log::debug('[bis] folder lookup result: '.print_r($folder, true));
                             $url = '';
                             $title = '';
-                            foreach ($folder['data'] as $file) {
-                                if (stripos($file['title'], $oem) !== false) {
-                                    $urlParts = parse_url($file['url']);
-                                    $urlExplode = explode('/', $urlParts['path']);
-                                    $urlExplode[2] = '3';
-                                    $urlCombine = implode('/', $urlExplode);
-                                    $url = $urlCombine; //$urlParts['path']; //$this->validateMediaRedirect($file['url']);
-                                    $title = $file['title'];
-                                    $title = str_replace(' ', '+', $title);
-                                    $title = 'chevy+compliant';
-                                    $node->attributes()->src = $url;
-                                    $node->attributes()->title = $title;
-                                    break;
+                            $matched = false;
+                            if (!empty($folder['data']) && is_array($folder['data'])) {
+                                foreach ($folder['data'] as $idx => $file) {
+                                    $fileTitle = isset($file['title']) ? $file['title'] : '';
+                                    $fileUrl = isset($file['url']) ? $file['url'] : '';
+                                    Log::debug('[bis] checking file['.$idx.'] title='.var_export($fileTitle, true).' url='.var_export($fileUrl, true));
+                                    if (stripos($fileTitle, $oem) !== false) {
+                                        Log::debug('[bis] MATCH file['.$idx.'] for oem='.$oem);
+                                        $urlParts = parse_url($fileUrl);
+                                        $urlExplode = explode('/', $urlParts['path']);
+                                        $urlCombine = implode('/', $urlExplode);
+                                        if (isset($urlParts['query']) && $urlParts['query'] !== '') {
+                                            $urlCombine .= '?'.$urlParts['query'];
+                                        }
+                                        $url = $urlCombine; // preserve account ID and query string returned by WeVideo
+                                        $title = $fileTitle;
+                                        $title = str_replace(' ', '+', $title);
+                                        Log::debug('[bis] applying src='.$url.' title='.$title);
+                                        $node->attributes()->src = $url;
+                                        $node->attributes()->title = $title;
+                                        $matched = true;
+                                        break;
+                                    }
                                 }
+                            } else {
+                                Log::warning('[bis] folder data missing or not iterable for folderId='.$folderId);
                             }
+                            if (!$matched) {
+                                Log::warning('[bis] frsw='.$oem.' in folderId='.$folderId.' (layer='.$layer.') - node left untouched');
+                            }
+                            Log::debug('[bis] ===== End bis processing for layer: '.$layer.' =====');
                         }
 
                     }
@@ -640,17 +653,11 @@ class ModifiedProcessXml
             //return nl2br( str_replace("\r\n","\n",$replacement) );
         };
         foreach ($data['templateFields'] as $field) {
-            // Defensive: callers sometimes submit URL-encoded layer names (e.g. "Header%201")
-            // and may include JSON metadata suffix (e.g. 'Headline 1 {"bts":"h3",...}').
-            // Urldecode and strip suffix at first '{' so XPath matches cleaned XML titles.
-            $field['layer'] = urldecode($field['layer']);
-            $layerParts = explode('{', $field['layer'], 2);
-            $field['layer'] = trim($layerParts[0]);
-
             // Find and replace TEXT or HTML
             $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/html|//*[@title="'.$field['layer'].'"]/text');
-	    if (!empty($result)) {
-		//Log::info("TEXT or HTML found: ".print_r($result,true));
+
+            if (!empty($result)) {
+            //Log::info("TEXT or HTML found: ".print_r($result,true));
                 foreach ($result as $node) {
                     $pattern = '/{{([\s\S]*?)}}/';
                     $content = (string) $node[0];
@@ -721,14 +728,14 @@ class ModifiedProcessXml
             }
 
             // Find and replace MOTIONTITLE
-	    $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/motionTitle');
-	    Log::info("field: ");
-	    Log::info(print_r($field,true));
-	    Log::info("field[layer]: ");
-	    Log::info(print_r($field['layer'],true));
-	    if (!empty($result)) {
-		   //Log::info("motion title text found: ".print_r($result,true));   
-		 foreach ($result as $node) {
+            $result = $xmlObj->xpath('//*[@title="'.$field['layer'].'"]/motionTitle');
+            Log::info("field: ");
+            Log::info(print_r($field,true));
+            Log::info("field[layer]: ");
+            Log::info(print_r($field['layer'],true));
+            if (!empty($result)) {
+				//Log::info("motion title text found: ".print_r($result,true));
+				foreach ($result as $node) {
                     $i = 0;
                     $pattern = '/{{([\s\S]*?)}}/';
                     preg_match_all($pattern, $field['content'], $matches);
@@ -779,29 +786,10 @@ class ModifiedProcessXml
         $thumbnailTime *= 1000;
 
         if (!$orientation) {$orientation = 'H';}
-
-        Log::info('renderModified: incoming orientation = ' . var_export($orientation, true) . ', dtv = ' . var_export($dtv, true));
-
-        // Defensive: auto-detect orientation from XML layer coordinates so a bad
-        // DB value cannot squash a horizontal template into a portrait canvas
-        // (or vice-versa). Scan all left/top/width/height on image|video|text
-        // elements and infer the intended canvas size from the maximum extents.
-        if (!$dtv) {
-            $detected = $this->detectOrientationFromXml($xmlFinal);
-            if ($detected && $detected !== $orientation) {
-                Log::warning('renderModified: orientation mismatch — caller passed "' . $orientation . '" but XML coordinates indicate "' . $detected . '". Overriding to "' . $detected . '".');
-                $orientation = $detected;
-            } elseif ($detected) {
-                Log::info('renderModified: orientation confirmed by XML coords as "' . $detected . '"');
-            }
-        }
-
         $resolution = '1080p';
         if ($orientation == 'V') {$resolution = '1080x1920';}
 
         if ($dtv) {$resolution = '932x524';}
-
-        Log::info('renderModified: final orientation = ' . $orientation . ', resolution = ' . $resolution);
 
         $xmlFinal = $this->embedFonts($xmlFinal);
 
@@ -982,48 +970,6 @@ class ModifiedProcessXml
         }
 
         return $output;
-    }
-
-    // Remove metadata from layer titles (and apply friendly title names)
-    public function objRemoveMeta($xmlObj) {
-        $result = $xmlObj->xpath("//layer/@title");
-        foreach ($result as $node) {
-            $title = urldecode($node[0]);
-            $titleArr = explode('{', $title, 2);
-            $node[0] = trim($titleArr[0]);
-        }
-        return $xmlObj;
-    }
-
-    /**
-     * Infer the intended canvas orientation ('H' or 'V') from the maximum
-     * left+width / top+height extents of layer elements in the final XML.
-     * Returns '' if the XML cannot be parsed or extents are inconclusive.
-     */
-    public function detectOrientationFromXml($xmlFinal)
-    {
-        $maxX = 0;
-        $maxY = 0;
-        if (preg_match_all('/<(?:image|video|text)\b([^>]*)>/i', $xmlFinal, $matches)) {
-            foreach ($matches[1] as $attrs) {
-                $left = 0; $top = 0; $w = 0; $h = 0;
-                if (preg_match('/\bleft="(-?\d+(?:\.\d+)?)"/', $attrs, $m))   { $left = (float)$m[1]; }
-                if (preg_match('/\btop="(-?\d+(?:\.\d+)?)"/', $attrs, $m))    { $top  = (float)$m[1]; }
-                if (preg_match('/\bwidth="(-?\d+(?:\.\d+)?)"/', $attrs, $m))  { $w    = (float)$m[1]; }
-                if (preg_match('/\bheight="(-?\d+(?:\.\d+)?)"/', $attrs, $m)) { $h    = (float)$m[1]; }
-                $maxX = max($maxX, $left + $w);
-                $maxY = max($maxY, $top + $h);
-            }
-        }
-        Log::info('detectOrientationFromXml: maxX=' . $maxX . ', maxY=' . $maxY);
-        if ($maxX <= 0 || $maxY <= 0) {
-            return '';
-        }
-        // Coordinates >1200 in width strongly suggest 1920-wide horizontal canvas.
-        // Coordinates >1200 in height strongly suggest 1920-tall vertical canvas.
-        if ($maxX > $maxY) { return 'H'; }
-        if ($maxY > $maxX) { return 'V'; }
-        return '';
     }
 
 }
