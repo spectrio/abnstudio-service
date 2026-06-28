@@ -1,0 +1,61 @@
+<timeline version="1">
+  <layers>
+    <layer title="Dealer%20Logo%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="0" duration="1000" type="crossFade"/>
+      <image begin="1000" duration="15960" height="220" inPoint="1000" left="323" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1644" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="15960" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Heading%202" volume="1.0">
+      <transition begin="3880" duration="2000" type="wipeRight"/>
+      <text autoFit="false" begin="5880" duration="11080" height="172" inPoint="5880" left="179" processHtml="false" top="1400" valign="top" width="739"><![CDATA[<div align="center"><span style="font-size: 48px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Reg; line-height: 140%; letter-spacing: 0px;">{{For exceptional performance in all facets of operations}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="11080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Heading%201" volume="1.0">
+      <transition begin="2520" duration="2000" type="wipeRight"/>
+      <text autoFit="false" begin="4520" duration="12440" height="92" inPoint="5400" left="25" processHtml="false" top="1300" valign="bottom" width="1048"><![CDATA[<div align="center"><span style="font-size: 54px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Demi; line-height: 90%; letter-spacing: 0px;">{{This distinction 20 consecutive years}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12440" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Year" volume="1.0">
+      <transition begin="4160" duration="3000" type="wipeRight"/>
+      <text autoFit="false" begin="7160" duration="9800" height="96" inPoint="7480" left="385" processHtml="false" top="1062" valign="bottom" width="328"><![CDATA[<div align="center"><span style="font-size: 64px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Demi; line-height: 90%; letter-spacing: 0px;">{{2023}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="9800" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Dealership%20Name" volume="1.0">
+      <transition begin="0" duration="3000" type="directionalWipe"/>
+      <text autoFit="false" begin="3000" duration="13960" height="110" inPoint="3400" left="133" processHtml="false" top="239" valign="bottom" width="828"><![CDATA[<div align="center"><span style="font-size: 72px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Demi; line-height: 90%; letter-spacing: 0px;">{{Space Coast Honda}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="13960" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%201" volume="1.0">
+      <video begin="0" duration="16960" height="1920" left="0" loopable="false" src="/api/5/media/3092457311/content?suffix=" title="V_ABNSTUDIO_PRESIDENTSAWARD_BG" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16960" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="16960" value="1"/>
+        </volume>
+      </video>
+    </layer>
+  </layers>
+</timeline>

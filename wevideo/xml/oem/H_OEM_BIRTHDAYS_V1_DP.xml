@@ -1,0 +1,45 @@
+<timeline version="1">
+  <layers>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="0" duration="45120" height="196" left="1350" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="825" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="45120" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Line%202%20%7B%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22w%22%2C%22honda%22%3A%221%22%7D%2C%20%22bta%22%3A%7B%22chevrolet%22%3A%220%2C-5%22%2C%22honda%22%3A%220%2C-7%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="0" duration="45120" height="156" left="181" processHtml="false" rotation="357" top="270" valign="center" width="713"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 88px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{Birthdays}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="45120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Line%201%20%7B%22bts%22%3A%22h1%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22w%22%2C%22honda%22%3A%221%22%7D%2C%20%22bta%22%3A%7B%22chevrolet%22%3A%220%2C-5%22%2C%22honda%22%3A%220%2C-7%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="0" duration="45120" height="165" left="295" processHtml="false" rotation="352" top="121" valign="center" width="505"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{</span><span style="font-size: 70px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">S</span><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">eptember}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="45120" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Names%20%7B%22cie%22%3A%22/1800%22%2C%20%22bts%22%3A%22p%22%2C%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%7D%7D" volume="1.0">
+      <text autoFit="false" begin="0" duration="45120" height="3612" left="1088" processHtml="false" top="-1893" width="902"><![CDATA[<div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div><div style="text-align: center;"><span style="font-size: 45px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 300%; letter-spacing: 4px;">{{Month/Day - Name}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="45120" value="1"/>
+        </opacity>
+        <filter endHeight="1080" endLeft="1088" endTop="-3400" endWidth="1920" startHeight="1080" startLeft="1088" startTop="609" startWidth="1920" type="kenBurns"/>
+      </text>
+    </layer>
+    <layer title="bk%20%7B%22bis%22%3A%221352397359%22%7D" volume="1.0">
+      <video begin="0" duration="45120" height="1080" left="0" loopable="false" src="/api/5/media/1420183940/content?suffix=" title="generic_1" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="45120" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

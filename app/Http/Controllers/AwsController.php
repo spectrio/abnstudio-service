@@ -17,7 +17,7 @@ class AwsController extends Controller
      $result["preview"] = $s3->putObject([
       'Bucket' => 'wevideo',
       'Key'    => 'client_uploads/'.$file,
-      'Body'   => fopen('uploads/img/'.$file, 'r'),
+      'Body'   => fopen(public_path('uploads/img/'.$file), 'r'),
       'ACL'    => 'public-read',
      ]);
      return $filename;

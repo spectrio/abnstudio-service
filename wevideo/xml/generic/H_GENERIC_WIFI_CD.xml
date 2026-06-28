@@ -1,0 +1,49 @@
+<timeline version="1">
+  <layers>
+    <layer title="Password" volume="1.0">
+      <transition begin="8640" duration="480" type="wipeRight"/>
+      <text autoFit="false" begin="9120" duration="20840" height="86" inPoint="480" left="1171" processHtml="false" top="552" width="730"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 42px; color: rgb(255, 255, 255); font-family: Roboto-RegularItalic; line-height: 90%; letter-spacing: 1px;">{{abcdefghi}}</span></div>]]>
+        <opacity>
+          <entry time="520" value="1"/>
+          <entry time="20840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Network%20ID" volume="1.0">
+      <transition begin="8640" duration="480" type="wipeRight"/>
+      <text autoFit="false" begin="9120" duration="20840" height="93" inPoint="560" left="1172" processHtml="false" top="465" width="717"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 42px; color: rgb(255, 255, 255); font-family: Roboto-RegularItalic; line-height: 90%; letter-spacing: 1px;">{{123456789}}</span></div>]]>
+        <opacity>
+          <entry time="520" value="1"/>
+          <entry time="20840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="2080" duration="1000" type="crossFade"/>
+      <image begin="3080" duration="26880" height="196" inPoint="3080" left="1190" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="793" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="26880" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="AE%20Video" volume="1.0">
+      <video begin="0" duration="29960" height="1080" left="0" loopable="true" src="/api/5/media/2029603876/content?suffix=" title="H_DS_WEVIDEO_GENERIC_WIFI_CD" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="29960" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Audio%201" volume="0.0">
+      <audio begin="0" duration="29960" src="/api/5/media/1975752234/content?suffix=" title="GM_VERSION_WIFI_AUDIO_TRAVEL_CD" volume="1.0">
+        <volume>
+          <entry time="0" value="0"/>
+          <entry time="2375" value="1"/>
+          <entry time="26472" value="1"/>
+          <entry time="29960" value="0"/>
+        </volume>
+      </audio>
+    </layer>
+  </layers>
+</timeline>

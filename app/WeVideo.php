@@ -241,9 +241,11 @@ class WeVideo extends Model
         if (isset($result['metadata']) && $result['metadata']['noResults'] > 0) {
             return $result;
         } else {
-            // Nothing found, use search method instead
+            Log::info("*** No results from folder listing for folder: {$folder}, attempting search method");
             $body = '{"query": {"bool": {"must": [{"terms": {"mediaType": ["upload","export"]}}],"must_not": [],"should": [{"term": {"parentFolderId": "'.$folder.'"}},{"terms": {"sharedFolders": ["'.$folder.'"]}}],"minimum_should_match": 1}},"from": 0,"size": 120}';
+            Log::info("*** Search media body: {$body}");
             $result = $this->CallWeVideoAPI('POST', 'api/3/media/search', '', $this->token, false, $body);
+            Log::info("*** Search media result: ".print_r($result, true));
             if (isset($result['metadata']) && $result['metadata']['noResults'] > 0) {
                 return $result;
             } else {

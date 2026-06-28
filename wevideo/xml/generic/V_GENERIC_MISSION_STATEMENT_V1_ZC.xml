@@ -1,0 +1,92 @@
+<timeline version="1">
+  <layers>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="0" duration="1000" type="wipeLeft"/>
+      <image begin="1000" duration="3880" height="358" inPoint="1000" left="198" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="525" volume="1.0" width="702">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3880" value="1"/>
+        </opacity>
+      </image>
+      <image begin="4880" duration="560" height="358" inPoint="4480" left="198" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="525" volume="1.0" width="702">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="560" value="0"/>
+        </opacity>
+      </image>
+      <image begin="6440" duration="240" inPoint="360" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" volume="1.0">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="95" value="0"/>
+          <entry time="192" value="1"/>
+          <entry time="240" value="1"/>
+        </opacity>
+        <filter endHeight="220" endLeft="618" endTop="1674" endWidth="432" startHeight="220" startLeft="618" startTop="2000" startWidth="432" type="kenBurns"/>
+      </image>
+      <image begin="6680" duration="16320" height="220" inPoint="600" left="618" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1674" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16320" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Name%20and%20Mission" volume="1.0">
+      <motionTitle begin="0" duration="5000" height="1574" id="908188256" left="71" top="353" width="886">
+        <lines>
+          <line font="Roboto" fontSize="66">{{DEALER NAME}}</line>
+          <line font="Roboto" fontSize="66">{{OUR MISSION}}</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(37,142,122,1)" version="2"/>
+          <color key="1" value="rgba(37,142,122,1)" version="2"/>
+          <color key="2" value="rgba(37,142,122,1)" version="2"/>
+          <color key="3" value="rgba(37,142,122,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5000" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Video%205" volume="1.0">
+      <image begin="0" duration="6360" height="1920" left="0" src="https://d3tvj3lw2y3r4c.cloudfront.net/gfx/clipart/prod/2019_03_11_8f4923ac-637c-4478-8981-c92aa19578d0" title="White" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6360" value="1"/>
+        </opacity>
+      </image>
+      <image begin="6360" duration="800" height="1920" inPoint="280" left="0" src="https://d3tvj3lw2y3r4c.cloudfront.net/gfx/clipart/prod/2019_03_11_8f4923ac-637c-4478-8981-c92aa19578d0" title="White" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="0.8653846153846154"/>
+          <entry time="800" value="0"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Body" volume="1.0">
+      <transition begin="7160" duration="1480" type="wipeDown"/>
+      <text autoFit="false" begin="8640" duration="14360" height="725" inPoint="1480" left="17" processHtml="false" top="1021" width="1048"><![CDATA[<div align="center"><span style="font-size: 46px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 115%; letter-spacing: 0px;">{{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo laoreet sit amet cursus. Eget magn</span><span style="font-size: 46px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: 115%; letter-spacing: 0px;">a</span><span style="font-size: 46px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 115%; letter-spacing: 0px;"> fer</span><span style="font-size: 46px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: 115%; letter-spacing: 0px;">m</span><span style="font-size: 46px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 115%; letter-spacing: 0px;">entum iacu</span><span style="font-size: 46px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: 115%; letter-spacing: 0px;">l</span><span style="font-size: 46px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 115%; letter-spacing: 0px;">is</span><span style="font-size: 46px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: Roboto; line-height: 115%; letter-spacing: 0px;"> e</span><span style="font-size: 46px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 115%; letter-spacing: 0px;">u. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris. Habitasse platea dictumst ve.}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14360" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Headline" volume="1.0">
+      <transition begin="6960" duration="680" type="wipeLeft"/>
+      <text autoFit="false" begin="7640" duration="15360" height="317" inPoint="680" left="374" processHtml="false" top="67" width="745"><![CDATA[<div align="center" style="text-align: left;"><span style="font-family: Roboto-Bold; line-height: 145%; letter-spacing: 0px;"><span style="font-size: 96px; color: rgb(255, 255, 255); line-height: 145%; letter-spacing: 0px;">{{</span></span><span style="font-size: 96px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: 145%; letter-spacing: 0px;">MISSION </span></div><div align="center" style="text-align: left;"><span style="font-family: Roboto-Bold; line-height: 145%; letter-spacing: 0px;"><span style="font-size: 96px; color: rgb(255, 255, 255); line-height: 145%; letter-spacing: 0px;">   </span></span><span style="font-size: 96px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: 145%; letter-spacing: 0px;">STATEMENT}}</span></div>]]>
+        <opacity>
+          <entry time="320" value="1"/>
+          <entry time="15360" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Video%203" volume="1.0">
+      <video begin="6080" duration="16920" height="1920" left="0" loopable="true" src="/api/5/media/1420596610/content?suffix=" title="V_GENERIC_ONLY_MISSIONSTATEMENT_TEMPLATE_01_MOUTAINCLIMBERS" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16920" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+  </layers>
+</timeline>

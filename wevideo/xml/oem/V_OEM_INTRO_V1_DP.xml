@@ -1,0 +1,72 @@
+<timeline version="1">
+  <layers>
+    <layer title="Overlay%20%7B%22bis%22%3A%221352452325%22%7D" volume="1.0">
+      <image begin="0" duration="20000" height="1920" left="0" src="/api/5/media/1371042121/content?suffix=" title="Empty_V" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="0" duration="20000" height="220" left="311" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1680" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Name%20and%20Title%20%7B%22mtc%22%3A%5B%22d%22%2C%22d%22%2C%22a%22%2C%22a%22%2C%22a%22%5D%2C%20%22mtf%22%3A%5B%22b%22%2C%22r%22%5D%7D" volume="1.0">
+      <motionTitle begin="0" duration="20000" height="1920" id="908187168" left="0" top="25" width="1080">
+        <lines>
+          <line font="Lato" fontSize="90">{{Name Here}}</line>
+          <line font="Lato" fontSize="45">{{Title Here}}</line>
+        </lines>
+        <colors>
+          <color key="0" value="rgba(45,47,48,1)" version="2"/>
+          <color key="1" value="rgba(45,47,48,1)" version="2"/>
+          <color key="2" value="rgba(14,102,92,1)" version="2"/>
+          <color key="3" value="rgba(14,102,92,1)" version="2"/>
+          <color key="4" value="rgba(14,102,92,1)" version="2"/>
+        </colors>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20000" value="1"/>
+        </opacity>
+      </motionTitle>
+    </layer>
+    <layer title="Intro%20%7B%22bts%22%3A%22p%22%2C%20%22bto%22%3A%7B%22honda%22%3A%22w%22%2C%20%22chevrolet%22%3A%22g%22%2C%20%22buick%22%3A%22g%22%7D%7D" volume="1.0">
+      <text autoFit="true" begin="0" duration="760" height="663" left="125" processHtml="false" top="1050" valign="center" width="837"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{Lorem ipsum dolor sit </span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">am</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">et, consectetur adi</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">p</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">iscing elit. A</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">l</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">iquam rhoncus ultric</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">e</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">s</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;"> </span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">ip</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">su</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">m, malesuada fringilla mi aliquet nec. Cura</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">b</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">i</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">t</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">ur eget vulputate nunc. Donec convallis viverra el</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">it</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">, a mo</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">les</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">tie erat</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;"> f</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">acilisis id. Pellentesque scelerisque, mau</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">r</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">is</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;"> </span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">n</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">o</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">n conseq</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">u</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">at</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;"> </span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">fac</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">i</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">lisis}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="194" value="0"/>
+          <entry time="760" value="1"/>
+        </opacity>
+        <filter endHeight="1920" endLeft="125" endTop="1050" endWidth="1080" startHeight="1920" startLeft="125" startTop="900" startWidth="1080" type="kenBurns"/>
+      </text>
+      <text autoFit="true" begin="760" duration="19240" height="663" inPoint="1000" left="125" processHtml="false" top="1050" valign="center" width="837"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{Lorem ipsum dolor sit </span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">am</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">et, consectetur adi</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">p</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">iscing elit. A</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">l</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">iquam rhoncus ultric</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">e</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">s</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;"> </span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">ip</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">su</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">m, malesuada fringilla mi aliquet nec. Cura</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">b</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">i</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">t</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">ur eget vulputate nunc. Donec convallis viverra el</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">it</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">, a mo</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">les</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">tie erat</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;"> f</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">acilisis id. Pellentesque scelerisque, mau</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">r</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">is</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;"> </span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">n</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">o</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">n conseq</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">u</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">at</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;"> </span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">fac</span><span style="font-size: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">i</span><span style="font-size: 48px; color: rgb(45, 47, 48); font-family: Roboto; line-height: normal; letter-spacing: 0px;">lisis}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="17990" value="1"/>
+          <entry time="19240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="frame%20%7B%22bts%22%3A%22bg%22%2C%20%22bto%22%3A%7B%22honda%22%3A%221%22%7D%7D" volume="1.0">
+      <text autoFit="false" backgroundColor="#ffffff" begin="0" duration="20000" height="1080" left="-20" processHtml="false" top="844" width="1108"><![CDATA[<div align="left"><span style="font-size: 60px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: normal; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20000" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Employee%20Photo" volume="1.0">
+      <image begin="0" duration="20000" height="1080" left="0" src="/api/5/media/1436987339/content?suffix=" title="woman-square" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="20000" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+  </layers>
+</timeline>

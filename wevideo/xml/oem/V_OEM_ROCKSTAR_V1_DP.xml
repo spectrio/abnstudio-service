@@ -1,0 +1,174 @@
+<timeline version="1">
+  <layers>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="80" duration="4480" height="220" inPoint="1440" left="600" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1655" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="0"/>
+          <entry time="1463" value="1"/>
+          <entry time="4480" value="0.9986424088463838"/>
+        </opacity>
+      </image>
+      <transition begin="4560" duration="2000" type="animationPaperPlane"/>
+      <transition begin="6960" duration="1000" type="3dTileHorizontal"/>
+      <image begin="7960" duration="6960" height="220" inPoint="8280" left="600" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1655" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="0.9986424088463838"/>
+          <entry time="6960" value="0.9925712306491564"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+      <transition begin="16960" duration="2000" type="3dTileHorizontal"/>
+      <image begin="18960" duration="14560" height="220" inPoint="17680" left="600" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1655" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="0.9925712306491564"/>
+          <entry time="14560" value="0.9870916031480691"/>
+        </opacity>
+      </image>
+      <transition begin="33520" duration="2000" type="3dTileHorizontal"/>
+      <image begin="35520" duration="6360" height="220" inPoint="16640" left="43" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="44" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="0.9925712306491564"/>
+          <entry time="6360" value="0.9870916031480691"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Thanks%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22buick%22%3A%22w%22%2C%22gmc%22%3A%22w%22%2C%22honda%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="33520" duration="2000" type="3dTileHorizontal"/>
+      <text autoFit="false" begin="35520" duration="6360" height="410" inPoint="2000" left="0" processHtml="false" top="1475" valign="top" width="1072"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 120px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 1px;">Thanks for </span></div><div align="center" style="text-align: center;"><span style="font-size: 120px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 1px;">Being Awesome</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6360" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="crowd_bk" volume="1.0">
+      <transition begin="34520" duration="1000" type="crossFade"/>
+      <image begin="35520" duration="6360" height="1920" inPoint="1000" left="0" src="/api/5/media/1359998353/content?suffix=" title="Vertical+slide+4" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6360" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="text_02%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%223%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22g%22%7D%7D" volume="1.0">
+      <transition begin="16920" duration="2000" type="3dTileHorizontal"/>
+      <text autoFit="false" begin="18920" duration="14600" height="177" inPoint="2000" left="145" processHtml="false" top="1080" valign="top" width="830"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 146px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 90%; letter-spacing: 0px;">Fun Facts</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14600" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="33520" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="paragraph%20%7B%22bts%22%3A%22p%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%223%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22g%22%7D%7D" volume="1.0">
+      <transition begin="16920" duration="2000" type="3dTileHorizontal"/>
+      <text autoFit="false" begin="18920" duration="14600" height="598" inPoint="2000" left="56" processHtml="false" top="1260" valign="top" width="969"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">{{How long has the employee worked at the dealership?}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: 110%; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">{{Favorite football team or favorite hobbies?}}</span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: 110%; letter-spacing: 0px;"></span></div><div align="center" style="text-align: left;"><span style="font-size: 50px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 110%; letter-spacing: 0px;">{{Do they have pets or kids? What are the names?}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14600" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="33520" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Employee%20Photo%202" volume="1.0">
+      <transition begin="16920" duration="2000" type="3dTileHorizontal"/>
+      <image begin="18920" duration="14600" height="1080" inPoint="2000" left="0" src="/api/5/media/1436987339/content?suffix=" title="woman-square" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14600" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="33520" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="frame_01%20%7B%22bis%22%3A%221359813336%22%7D" volume="1.0">
+      <transition begin="16920" duration="2000" type="3dTileHorizontal"/>
+      <image begin="18920" duration="14600" height="1920" inPoint="2040" left="-120" src="/api/5/media/1418770013/content?suffix=" title="Grunge+striped+paper+texture+with+copy+space+copy+2+%28merged%29" top="250" volume="1.0" width="1319">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="14600" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="33520" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Title%20%7B%22bts%22%3A%22h3%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%22buick%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="8120" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="9120" duration="5800" height="117" inPoint="2400" left="47" processHtml="false" top="1483" width="828"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 54px; color: rgb(255, 255, 255); font-family: Roboto; line-height: 90%; letter-spacing: 0px;">{{Title}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5800" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="name%20%7B%22bts%22%3A%22h1%22%2C%20%22bto%22%3A%7B%22chevrolet%22%3A%22w%22%2C%22honda%22%3A%22w%22%2C%20%22buick%22%3A%22w%22%7D%7D" volume="1.0">
+      <transition begin="8120" duration="1000" type="crossFade"/>
+      <text autoFit="false" begin="9120" duration="5800" height="144" inPoint="2000" left="49" processHtml="false" top="1356" width="1001"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 80px; color: rgb(255, 255, 255); font-family: Roboto; line-height: normal; letter-spacing: 0px;">{{Name goes here}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5800" value="1"/>
+        </opacity>
+      </text>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="image" volume="1.0">
+      <transition begin="6560" duration="2000" type="3dTileHorizontal"/>
+      <image begin="8560" duration="6360" height="312" inPoint="2000" left="343" src="/api/5/media/1359718970/content?suffix=" title="lights" top="0" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6360" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="banner_02%20%7B%22bis%22%3A%221359813049%22%7D" volume="1.0">
+      <transition begin="6560" duration="2000" type="3dTileHorizontal"/>
+      <image begin="8560" duration="6360" height="394" inPoint="2000" left="0" src="/api/5/media/1418221027/content?suffix=" title="MASK" top="1306" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4360" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="frame_02" volume="1.0">
+      <transition begin="6560" duration="2000" type="3dTileHorizontal"/>
+      <image begin="8560" duration="6360" height="1265" inPoint="2000" left="67" src="/api/5/media/1145606826/content?suffix=" title="FRAME" top="260" volume="1.0" width="950">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6360" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="Employee%20Photo%201" volume="1.0">
+      <transition begin="6560" duration="2000" type="3dTileHorizontal"/>
+      <image begin="8560" duration="6360" height="997" inPoint="2000" left="191" src="/api/5/media/1431976960/content?suffix=" title="woman+2" top="389" volume="1.0" width="713">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6360" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="banner_02%20%7B%22bis%22%3A%221363241749%22%7D" volume="1.0">
+      <transition begin="6560" duration="2000" type="3dTileHorizontal"/>
+      <image begin="8560" duration="6360" height="1920" inPoint="2240" left="0" src="/api/5/media/1359712926/content?suffix=" title="Vertical+slide+2" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="6360" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="14920" duration="2000" type="3dTileHorizontal"/>
+    </layer>
+    <layer title="intro_slide" volume="1.0">
+      <transition begin="80" duration="2000" type="animationPaperPlane"/>
+      <image begin="2080" duration="2480" height="1920" inPoint="4000" left="0" src="/api/5/media/1359666393/content?suffix=" title="Vertical+slide+1" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2480" value="1"/>
+        </opacity>
+      </image>
+      <transition begin="4560" duration="2000" type="animationPaperPlane"/>
+    </layer>
+  </layers>
+</timeline>

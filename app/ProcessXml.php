@@ -34,7 +34,7 @@ class ProcessXml
 
       // Convert XML to object
       libxml_use_internal_errors(true);
-      $xmlObj = simplexml_load_string($xml, null, LIBXML_NOCDATA);
+      $xmlObj = simplexml_load_string($xml);
       if ($xmlObj === false) {
         return( libxml_get_errors() );
       }
@@ -47,6 +47,9 @@ class ProcessXml
       // Strip out any layers with audio
       //$this::removeNode($xmlObj, "//audio/..");
 
+      // Remove metadata and decode layer titles
+      $xmlObj = $this::objRemoveMeta($xmlObj);
+
       // Convert object back into XML
       $xmlFinal = $this::objToXml($xmlObj);
 
@@ -54,6 +57,9 @@ class ProcessXml
       //$xmlFinal = $this::postProcess($xmlFinal);
 
       $json = $this::generateJsonManifest($xmlObj,$xmlFinal, $filename,$orgFilename);
+
+      // Debug: Save processed XML to xml_debug/processed folder
+      $this->saveProcessedXmlDebug($xmlFinal, $orgFilename);
 
       return $json;
 
@@ -117,54 +123,68 @@ class ProcessXml
 
   public function replaceWeVideoMediaUrls($xmlFinal)
   {
-      Log::info('=== REPLACING WEVIDEO MEDIA URLS START ===');
+      Log::info('=== PROCESSXML REPLACING WEVIDEO MEDIA URLS START ===');
 
-      $pattern = '/(src|href)="([^"]+)"/i';
+      // Convert /api/3/ to /api/5/ in image src attributes
+        $xmlFinal = preg_replace_callback(
+            '/<image([^>]*?)src="([^"]*)"([^>]*?)>/i',
+            function($matches) {
+                $beforeSrc = $matches[1];
+                $src = $matches[2];
+                $afterSrc = $matches[3];
+                if (preg_match('#/api/\d+/media/(\d+)/content#i', $src)) {
+                    $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
+                    Log::info("Image layer: Converting {$src} to {$convertedSrc}");
+                    return "<image{$beforeSrc}src=\"{$convertedSrc}\"{$afterSrc}>";
+                }
 
-      $xmlFinal = preg_replace_callback($pattern, function($matches) {
-          $attribute = $matches[1];
-          $originalUrl = $matches[2];
+                return "<image{$beforeSrc}src=\"{$src}\"{$afterSrc}>";
+            },
+            $xmlFinal
+        );
 
-          if (preg_match('#api/\d+/media/\d+/content\?suffix=#i', $originalUrl)) {
-              Log::info("Found relative WeVideo API URL: {$originalUrl}");
+        // Convert /api/3/ to /api/5/ in video src attributes and validate to CDN
+        $xmlFinal = preg_replace_callback(
+            '/<video([^>]*?)src="([^"]*)"([^>]*?)>/i',
+            function($matches) use ($templateOrientation) {
+                $beforeSrc = $matches[1];
+                $src = $matches[2];
+                $afterSrc = $matches[3];
 
-              $fullUrl = 'https://www.wevideo.com/' . ltrim($originalUrl, '/');
-              Log::info("Prepended domain to create full URL: {$fullUrl}");
+                // Log::info("Video Orientation: {$templateOrientation}");
+                if (preg_match('#/api/\d+/media/(\d+)/content#i', $src)) {
+                    if ($templateOrientation == 'V') {
+                        Log::info("in vertical video orientation");
+                        $convertedSrc = str_replace('/api/5/', '/api/3/', $src);
+                    } else {
+                        $convertedSrc = str_replace('/api/3/', '/api/5/', $src);
+                        Log::info("Video layer: Found WeVideo API URL: {$convertedSrc}");
 
-              $validatedUrl = $this->validateMediaRedirect($fullUrl);
+						$fullUrl = 'https://www.wevideo.com/' . ltrim($convertedSrc, '/');
+						Log::info("Video layer: Prepended domain to create full URL: {$fullUrl}");
 
-              if ($validatedUrl && $validatedUrl !== $fullUrl) {
-                  Log::info("Replaced with validated URL: {$validatedUrl}");
-                  return "{$attribute}=\"{$validatedUrl}\"";
-              }
+						$validatedUrl = $this->validateMediaRedirect($fullUrl);
 
-              Log::info("No redirect found, using full URL: {$fullUrl}");
-              return "{$attribute}=\"{$fullUrl}\"";
-          }
+						if ($validatedUrl && $validatedUrl !== $fullUrl) {
+							Log::info("Video layer: Replaced with validated URL: {$validatedUrl}");
+							$convertedSrc = $validatedUrl;
+						}
 
-          if (preg_match('#^https?://.*wevideo#i', $originalUrl)) {
-              Log::info("Found absolute WeVideo URL: {$originalUrl}");
+						// Escape ampersands for XML validity
+						$convertedSrc = str_replace('&', '&amp;', $convertedSrc);
+                   	}
 
-              if (strpos($originalUrl, 's3.amazonaws.com') !== false) {
-                  Log::info("S3 URL detected - keeping as-is for WeVideo to handle: {$originalUrl}");
-                  return $matches[0];
-              }
+                    Log::info("Video layer: Converting {$src} to {$convertedSrc}");
+                    return "<video{$beforeSrc}src=\"{$convertedSrc}\"{$afterSrc}>";
+                }
 
-              $validatedUrl = $this->validateMediaRedirect($originalUrl);
+                return "<video{$beforeSrc}src=\"{$src}\"{$afterSrc}>";
+            },
+            $xmlFinal
+        );
 
-              if ($validatedUrl && $validatedUrl !== $originalUrl) {
-                  Log::info("Replaced with: {$validatedUrl}");
-                  return "{$attribute}=\"{$validatedUrl}\"";
-              }
-
-              Log::info("No replacement needed, keeping original URL");
-          }
-
-          return $matches[0];
-      }, $xmlFinal);
-
-      Log::info('=== REPLACING WEVIDEO MEDIA URLS END ===');
-      return $xmlFinal;
+        Log::info('=== PROCESSXML REPLACING WEVIDEO MEDIA URLS END ===');
+	  	return $xmlFinal;
   }
 
   public function validateMediaRedirect($url = null)
@@ -215,6 +235,7 @@ class ProcessXml
                       return $url;
                   }
               }
+              Log::info("end of validatemediaRedirect process xml");
               Log::info($mediaRedirect);
           }
       }
@@ -241,6 +262,7 @@ class ProcessXml
     //echo $postdata;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, "https://$server.wevideo.com:443/api/3/videos/create");
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -336,7 +358,7 @@ class ProcessXml
         $friendlyTitle = trim($titleArr[0]);
         $json['elements'][$friendlyTitle]['meta'] = '{' . trim($titleArr[1]);
       }
-      $json['elements'][$friendlyTitle]['title'] = $title; //rawurlencode($friendlyTitle);
+      $json['elements'][$friendlyTitle]['title'] = $friendlyTitle; // Use friendly name for consistency
 
       // Layer has TEXT elements
       if (property_exists($layer, 'text')) {
@@ -424,10 +446,9 @@ class ProcessXml
   public function objRemoveMeta($xmlObj) {
     $result = $xmlObj->xpath("//layer/@title");
     foreach ($result as $node) {
-      $title = $this->friendlyName($node[0]);
-      //$titleArr = explode('%20%7B', $title, 2);
+      $title = urldecode($node[0]);
       $titleArr = explode('{', $title, 2);
-      $node[0] = rawurlencode( trim($titleArr[0]) );
+      $node[0] = trim($titleArr[0]);
     }
     return $xmlObj;
   }
@@ -586,5 +607,24 @@ class ProcessXml
   private function removeExtraSpaces($str) {
     $str = trim(preg_replace('/\s\s+/', ' ', str_replace("\n", " ", $str)));
     return $str;
+  }
+
+  // Save processed XML to debug folder
+  private function saveProcessedXmlDebug($xmlContent, $orgFilename) {
+    $debugDir = storage_path('logs/xml_debug/processed');
+
+    // Create directory if it doesn't exist
+    if (!is_dir($debugDir)) {
+      mkdir($debugDir, 0755, true);
+    }
+
+    // Generate timestamped filename
+    $timestamp = date('Y-m-d_His');
+    $baseName = pathinfo($orgFilename, PATHINFO_FILENAME);
+    $safeName = preg_replace('/[^a-zA-Z0-9_-]/', '_', $baseName);
+    $debugFile = $debugDir . '/' . $safeName . '_' . $timestamp . '.xml';
+
+    // Save the XML content
+    file_put_contents($debugFile, $xmlContent);
   }
 }

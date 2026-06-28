@@ -1,0 +1,70 @@
+<timeline version="1">
+  <layers>
+    <layer title="OEM%20Logo%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <transition begin="0" duration="1000" type="crossFade"/>
+      <image begin="1000" duration="15960" height="196" inPoint="1000" left="1489" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="42" volume="1.0" width="384">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="15960" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Year" volume="1.0">
+      <transition begin="3000" duration="3000" type="wipeDown"/>
+      <text autoFit="false" begin="6000" duration="10960" height="115" inPoint="3000" left="802" processHtml="false" top="528" valign="top" width="318"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 64px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Demi; line-height: 90%; letter-spacing: 0px;">{{2023}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="10960" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Heading%202" volume="1.0">
+      <transition begin="1880" duration="3000" type="wipeRight"/>
+      <text autoFit="false" begin="4880" duration="12080" height="108" inPoint="3000" left="211" processHtml="false" top="873" valign="top" width="1484"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 52px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Reg; line-height: 90%; letter-spacing: 0px;">{{For exceptional performance in all facets of operations}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12080" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Heading%201" volume="1.0">
+      <transition begin="1000" duration="3000" type="wipeRight"/>
+      <text autoFit="false" begin="4000" duration="12960" height="94" inPoint="3000" left="260" processHtml="false" top="800" valign="top" width="1391"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 52px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Med; line-height: 90%; letter-spacing: 0px;">{{Has achieved this distinction 17 consecutive years}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="12960" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Dealership%20Name" volume="1.0">
+      <transition begin="0" duration="3000" type="wipeRight"/>
+      <text autoFit="false" begin="3000" duration="13960" height="131" inPoint="3000" left="503" processHtml="false" top="662" valign="bottom" width="921"><![CDATA[<div align="center" style="text-align: center;"><span style="font-size: 68px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Demi; line-height: normal; letter-spacing: 0px;">-{{ </span><span style="font-size: 68px; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Demi; line-height: normal; letter-spacing: 0px;">S</span><span style="font-size: 68px; color: rgb(255, 255, 255); font-family: AvenirNextRoundedStd-Demi; line-height: normal; letter-spacing: 0px;">pace Coast Honda }}-</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="13960" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Background" volume="1.0">
+      <video begin="0" duration="16960" height="1080" left="0" loopable="false" src="/api/5/media/3092456567/content?suffix=" title="H_ABNSTUDIO_PRESIDENTSAWARD_BG" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="16960" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="16960" value="1"/>
+        </volume>
+      </video>
+    </layer>
+    <layer title="Audio%201" volume="0.45">
+      <audio begin="0" duration="16960" src="/api/5/media/3092462079/content?suffix=" title="ANBR+-+Constellation" volume="1.0">
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="12119" value="1"/>
+          <entry time="16960" value="0"/>
+        </volume>
+      </audio>
+    </layer>
+  </layers>
+</timeline>

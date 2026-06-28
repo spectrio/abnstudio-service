@@ -1,0 +1,33 @@
+<timeline version="1">
+  <layers>
+    <layer title="Dealer%20Name" volume="1.0">
+      <transition begin="7640" duration="3000" type="wipeRight"/>
+      <text autoFit="false" begin="10640" duration="11440" height="143" inPoint="3000" left="451" processHtml="false" top="72" valign="center" width="1361"><![CDATA[<div align="center" style="text-align: left;"><span style="font-size: 40px; color: rgb(255, 255, 255); font-family: Roboto-Bold; line-height: normal; letter-spacing: 0px;">{{Dealer Name Here}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="11440" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Background" volume="1.0">
+      <video begin="0" duration="22080" height="1080" left="0" loopable="false" src="/api/5/media/3170890820/content?suffix=" title="H_CARBRAVO_CERTIFIED_2023_GG" top="0" volume="1.0" width="1920">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="22080" value="1"/>
+        </opacity>
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="22080" value="1"/>
+        </volume>
+      </video>
+    </layer>
+    <layer title="Music" volume="1.0">
+      <audio begin="0" duration="22120" src="/api/5/media/3170890183/content?suffix=" title="H_ABNSTUDIO_CARBRAVO_MUSIC_PAPER_SUBMARINE_2023_GG" volume="1.0">
+        <volume>
+          <entry time="0" value="1"/>
+          <entry time="22120" value="1"/>
+        </volume>
+      </audio>
+    </layer>
+  </layers>
+</timeline>

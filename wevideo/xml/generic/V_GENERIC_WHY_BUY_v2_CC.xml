@@ -1,0 +1,229 @@
+<timeline version="1">
+  <layers>
+    <layer title="Overlay" volume="1.0">
+      <video begin="0" duration="54040" height="1920" left="0" loopable="true" src="/api/5/media/1423467205/content?suffix=" title="V_GENERIC_WHYBUYHERE_OVERLAY_2019_CC" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54040" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Logo%20%7B%22clo%22%3A%221%22%7D" volume="1.0">
+      <image begin="5520" duration="48520" height="220" left="323" src="/api/5/media/1143731468/content?suffix=" title="YOURLOGO" top="1630" volume="1.0" width="432">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="48520" value="1"/>
+        </opacity>
+      </image>
+    </layer>
+    <layer title="Reason%2010%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="50240" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="51240" duration="2800" height="454" inPoint="1000" left="66" processHtml="false" top="1149" width="945"><![CDATA[<div align="center"><span style="font-size: 95px; color: rgb(255, 255, 255); font-family: Bangers; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="2800" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%2010" volume="1.0">
+      <text autoFit="false" begin="50240" duration="3800" height="454" left="319" processHtml="false" top="619" width="452"><![CDATA[<div align="center"><span style="font-size: 230px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 150%; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3800" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%209%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="45400" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="46400" duration="4240" height="454" inPoint="1000" left="71" processHtml="false" top="1149" width="945"><![CDATA[<div align="center"><span style="font-size: 95px; color: rgb(255, 255, 255); font-family: Bangers; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3841" value="1"/>
+          <entry time="4240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%209" volume="1.0">
+      <text autoFit="false" begin="45400" duration="4840" height="454" left="319" processHtml="false" top="619" width="452"><![CDATA[<div align="center"><span style="font-size: 230px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 150%; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%208%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="40560" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="41560" duration="4240" height="454" inPoint="1000" left="69" processHtml="false" top="1149" width="947"><![CDATA[<div align="center"><span style="font-size: 95px; color: rgb(255, 255, 255); font-family: Bangers; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3841" value="1"/>
+          <entry time="4240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%208" volume="1.0">
+      <text autoFit="false" begin="40560" duration="4840" height="454" left="319" processHtml="false" top="619" width="452"><![CDATA[<div align="center"><span style="font-size: 230px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 150%; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%207%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="35720" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="36720" duration="4240" height="454" inPoint="1000" left="66" processHtml="false" top="1149" width="943"><![CDATA[<div align="center"><span style="font-size: 95px; color: rgb(255, 255, 255); font-family: Bangers; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3841" value="1"/>
+          <entry time="4240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%207" volume="1.0">
+      <text autoFit="false" begin="35720" duration="4840" height="454" left="319" processHtml="false" top="619" width="452"><![CDATA[<div align="center"><span style="font-size: 230px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 150%; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%206%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="30880" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="31880" duration="4240" height="454" inPoint="1000" left="71" processHtml="false" top="1149" width="940"><![CDATA[<div align="center"><span style="font-size: 95px; color: rgb(255, 255, 255); font-family: Bangers; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3841" value="1"/>
+          <entry time="4240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%206" volume="1.0">
+      <text autoFit="false" begin="30880" duration="4840" height="454" left="319" processHtml="false" top="619" width="452"><![CDATA[<div align="center"><span style="font-size: 230px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 150%; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%205%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="26040" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="27040" duration="4240" height="454" inPoint="1000" left="76" processHtml="false" top="1149" width="933"><![CDATA[<div align="center"><span style="font-size: 95px; color: rgb(255, 255, 255); font-family: Bangers; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3841" value="1"/>
+          <entry time="4240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%205" volume="1.0">
+      <text autoFit="false" begin="26040" duration="4840" height="454" left="319" processHtml="false" top="619" width="452"><![CDATA[<div align="center"><span style="font-size: 230px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 150%; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%204%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="21200" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="22200" duration="4240" height="454" inPoint="1000" left="71" processHtml="false" top="1149" width="938"><![CDATA[<div align="center"><span style="font-size: 95px; color: rgb(255, 255, 255); font-family: Bangers; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3841" value="1"/>
+          <entry time="4240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%204" volume="1.0">
+      <text autoFit="false" begin="21200" duration="4840" height="454" left="319" processHtml="false" top="619" width="452"><![CDATA[<div align="center"><span style="font-size: 230px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 150%; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%203%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="16360" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="17360" duration="4240" height="454" inPoint="1000" left="78" processHtml="false" top="1149" width="916"><![CDATA[<div align="center"><span style="font-size: 95px; color: rgb(255, 255, 255); font-family: Bangers; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3841" value="1"/>
+          <entry time="4240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%203" volume="1.0">
+      <text autoFit="false" begin="16360" duration="4840" height="454" left="319" processHtml="false" top="619" width="452"><![CDATA[<div align="center"><span style="font-size: 230px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 150%; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%202%20%7B%22cie%22%3A%22-1500%22%7D" volume="1.0">
+      <transition begin="11520" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="12520" duration="4240" height="454" inPoint="1000" left="73" processHtml="false" top="1149" width="930"><![CDATA[<div align="center"><span style="font-size: 95px; color: rgb(255, 255, 255); font-family: Bangers; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3841" value="1"/>
+          <entry time="4240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%202" volume="1.0">
+      <text autoFit="false" begin="11520" duration="4840" height="454" left="319" processHtml="false" top="619" width="452"><![CDATA[<div align="center"><span style="font-size: 230px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 150%; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Reason%201" volume="1.0">
+      <transition begin="6680" duration="1000" type="directionalWipe"/>
+      <text autoFit="false" begin="7680" duration="4240" height="454" inPoint="1000" left="76" processHtml="false" top="1149" width="930"><![CDATA[<div align="center"><span style="font-size: 95px; color: rgb(255, 255, 255); font-family: Bangers; line-height: 109%; letter-spacing: 5px;">{{ |family owned/operated|active community partner|locally owned|conveniently located|rental cars|free loaners|commercial vehicles|no charge delivery|courtesy transportation|shuttle service|online service scheduling|scheduled maintenance|years of experience|ASE and factory trained technicians|10 service bays|Carfax|market based pre-owned vehicle prices|loyalty rewards program|award winning service|award winning sales|72 hour exchange program|free transfers|buy back guarantee|first oil change free|vehicle tech experts|engine warranty|customer satisfaction|friendly staff|best selection, amazing prices|no hassle pricing|senior discount|free monthly car washes|free car washes for life|customized trucks in stock|EV charging stations|state inspections|no unwanted add-ons}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="3841" value="1"/>
+          <entry time="4240" value="0"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Icon%201" volume="1.0">
+      <text autoFit="false" begin="6680" duration="4840" height="454" left="319" processHtml="false" top="619" width="452"><![CDATA[<div align="center"><span style="font-size: 230px; color: rgb(255, 255, 255); font-family: FontAwesome; line-height: 150%; letter-spacing: 0px;">{{ |||||||||||||||||||||||||||||||||||||}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="4840" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Why%20Buy%20Text" volume="1.0">
+      <video begin="0" duration="54040" height="1920" left="0" loopable="true" src="/api/5/media/1423467537/content?suffix=" title="V_GENERIC_WHYBUYHERE_BACKGROUND_2019_CC" top="0" volume="1.0" width="1080">
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54040" value="1"/>
+        </opacity>
+      </video>
+    </layer>
+    <layer title="Dealership%20Name" volume="1.0">
+      <text autoFit="true" begin="0" duration="5520" height="135" left="139" processHtml="false" rotation="348" top="1003" width="868"><![CDATA[<div align="center"><span style="font-size: 70px; color: rgb(255, 255, 255); font-family: Bangers; line-height: 130%; letter-spacing: 0px;">{{Dealership}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="5520" value="1"/>
+        </opacity>
+      </text>
+      <text autoFit="true" begin="5520" duration="48520" height="122" left="212" processHtml="false" rotation="348" top="336" width="715"><![CDATA[<div align="center"><span style="font-size: 56px; color: rgb(255, 255, 255); font-family: Bangers; line-height: 130%; letter-spacing: 0px;">{{Dealership}}</span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="48520" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+    <layer title="Background" volume="1.0">
+      <text autoFit="false" backgroundColor="#cf3339" begin="0" duration="54040" height="1912" left="0" processHtml="false" top="5" width="1105"><![CDATA[<div align="center"><span style="font-size: 150px; font-family: Roboto; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); line-height: 150%; letter-spacing: 0px;"></span></div>]]>
+        <opacity>
+          <entry time="0" value="1"/>
+          <entry time="54040" value="1"/>
+        </opacity>
+      </text>
+    </layer>
+  </layers>
+</timeline>
